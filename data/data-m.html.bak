@@ -1,0 +1,110 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Welcome to Clocktree Portfolio Site</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css'>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./js/move.js"></script>
+	</head>
+
+	<body style="background:#fff">
+		<div id="filter-conbox-contentswrapall" class="filter-conbox-contentswrap">
+			
+			<div id="filter-conbox-contents1" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					영화 타짜 패러디
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/tajja1.png" alt="">
+						<a href="https://www.youtube.com/watch?v=hqnifXU-_X8" target="new">https://www.youtube.com/watch?v=hqnifXU-_X8</a>
+						<br>
+					</div>
+					<div id="" class="contents-view-word">
+						영화 타짜의 페러디 영상 제작<br>
+						<br>
+						프리미어 CS6<br>
+						<br>
+						영화 타짜를 패러디하여 촬영 및 편집.
+						스텝 활동 및 단역으로 출연 하였으며,
+						약간의 영상 편집과 소스 검색을
+						주로 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents2" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					검색광고 CF
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/we4.png" alt="">
+						<a href="https://www.youtube.com/embed/rb6SE-fKYys" target="new">https://www.youtube.com/embed/rb6SE-fKYys</a>
+						<br>
+					</div>
+					<div id="" class="contents-view-word">
+						검색광고 CF 동영상 제작<br>
+						<br>
+						애프터이펙트 CS6, 포토샵 CS6<br>
+						<br>
+						짧고 임펙트 있는 CF 영상 제작에
+						중점을 두고 가상의 검색광고 회사의
+						CF를 제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			
+			<div id="filter-conbox-contents3" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					비타500 CF공모
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="https://cl0cktree.github.io/imagebox/bita6.png" alt="">
+						<a href="https://www.youtube.com/watch?v=dTMCDvBh2eA" target="new">https://www.youtube.com/watch?v=dTMCDvBh2eA</a>
+						<br>
+					</div>
+					<div id="" class="contents-view-word">
+						비타500 CF 공모전 참여 동영상 제작<br>
+						<br>
+						프리미어 CS6, 애프터이펙트 CS6,<br>
+						일러스트레이터 CS6, 포토샵 CS6<br>
+						<br>
+						비타500 CF 공모전에 맞추어 촬영 및
+						영상편집, 영상 속의 일러스트적 요소
+						작업, 화면구도 및 콘티/시나리오와
+						영상 효과를 담당하여 작업 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents4" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					내용없음
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.dothome.co.kr/portfolioindex/images/project/mistery3.gif" alt="">
+						???
+						<br>
+					</div>
+					<div id="" class="contents-view-word">
+						<br>
+						이 글을 확인 하셨다는 것은 아직 만들지
+						않았거나 그 시기에 제작한 내용이 없다는
+						것 입니다. 무엇을 만들어 볼까요?<br>
+						<br>
+					</div>
+				</div>
+			</div>
+			
+		
+		</div>
+	</body>
+</html>

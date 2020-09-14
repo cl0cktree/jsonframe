@@ -1,10 +1,7 @@
 [
-    {"img_url":"./images/slide/banner1.png","link_url":"","alt_text":"event "},
-    {"img_url":"./images/slide/banner2.png","link_url":"","alt_text":"event "},
-    {"img_url":"./images/slide/banner3.png","link_url":"","alt_text":"event "},
-    {"img_url":"./images/slide/banner4.png","link_url":"","alt_text":"event "},
-    {"img_url":"./images/slide/banner5.png","link_url":"","alt_text":"event "},
-    {"img_url":"./images/slide/banner6.png","link_url":"","alt_text":"event "},
-    {"img_url":"./images/slide/banner7.png","link_url":"","alt_text":"event "},
-    {"img_url":"./images/slide/banner8.png","link_url":"","alt_text":"event "}
+    {"img_url":"https://cl0cktree.github.io/portfolioindex/images/slide/2016.png","link_url":"","alt_text":"클릭시 2016년 작업들로 이동","click_move":""},
+    {"img_url":"https://cl0cktree.github.io/portfolioindex/images/slide/2017.png","link_url":"","alt_text":"클릭시 2017년 작업들로 이동","click_move":""},
+    {"img_url":"https://cl0cktree.github.io/portfolioindex/images/slide/2018.png","link_url":"","alt_text":"클릭시 2018년 작업들로 이동","click_move":""},
+    {"img_url":"https://cl0cktree.github.io/portfolioindex/images/slide/2019.png","link_url":"","alt_text":"클릭시 2019년 작업들로 이동","click_move":""},
+    {"img_url":"https://cl0cktree.github.io/portfolioindex/images/slide/2020.png","link_url":"","alt_text":"클릭시 2020년 작업들로 이동","click_move":""}
 ]

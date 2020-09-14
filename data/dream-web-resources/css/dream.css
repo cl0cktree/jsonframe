@@ -1,0 +1,79 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, p, pre, code, blockquote {
+	margin:0;
+	padding:0;
+	border-width:0;
+}
+td, th {
+	border-style:solid;
+	border-width:1px;
+}
+table {
+	border-collapse:collapse;
+}
+li {
+	display:block;
+}
+body {
+	font-size:12px;
+	-epub-hyphens:auto;
+}
+div.frame-1 {
+	margin:0px auto 0px auto;
+	text-align:center;
+}
+img.frame-2 {
+	height:658px;
+	width:538px;
+}
+img.frame-3 {
+	height:778px;
+	width:480px;
+}
+img.frame-4 {
+	height:778px;
+	width:416px;
+}
+img.frame-5 {
+	height:778px;
+	width:481px;
+}
+img.frame-6 {
+	height:530px;
+	width:540px;
+}
+img.frame-7 {
+	height:786px;
+	width:502px;
+}
+img.frame-8 {
+	height:807px;
+	width:540px;
+}
+img.frame-9 {
+	height:489px;
+	width:540px;
+}
+img.frame-10 {
+	height:777px;
+	width:438px;
+}
+img.frame-11 {
+	height:467px;
+	width:540px;
+}
+img.frame-12 {
+	height:427px;
+	width:540px;
+}
+img.frame-13 {
+	height:514px;
+	width:540px;
+}
+img.frame-14 {
+	height:692px;
+	width:539px;
+}
+img.frame-15 {
+	height:757px;
+	width:540px;
+}

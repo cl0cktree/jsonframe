@@ -1,0 +1,5 @@
+(http://clocktree.dothome.co.kr/portfolioindex/robots.txt)
+User-agent: *
+Disallow: /sub/
+Disallow: /data/
+Disallow: /cover/

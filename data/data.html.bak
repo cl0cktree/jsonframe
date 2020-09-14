@@ -1,0 +1,488 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Welcome to Clocktree Portfolio Site</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css'>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="./js/move.js"></script>
+	</head>
+
+	<body style="background:#fff">
+		<div id="filter-conbox-contentswrapall" class="filter-conbox-contentswrap">
+			<div id="filter-conbox-contents1" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					팝업호텔
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/pop2.png" alt="">
+						<a href="http://qksha.cafe24.com/web/popuphotel/index.html" target="new">http://qksha.cafe24.com/web/popuphotel/index.html</a>
+						<br>
+					</div>
+					<div id="" class="contents-view-word">
+						가상의 펜션 사이트 제작<br>
+						<br>
+						사진 소스 및 게시판 외 모든 부분 창작<br>
+						<br>
+						가상의 펜션인 팝업호텔의 컨셉을
+						가평에 있는 글램핑 펜션으로 설정하여,
+						숲과 아웃도어의 느낌을 주기 위해 녹색
+						계통으로 색을 설정하여 디자인 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents2" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					맛있는 술집 여기 미술관
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/misool2.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/misoolgwan/index.html" target="new">http://clocktree.dothome.co.kr/misoolgwan/index.html</a>
+						<br>
+					</div>
+					<div id="" class="contents-view-word">
+						실존브랜드 미술관의 홈페이지 리디자인<br>
+						<br>
+						사진 소스 및 게시판 외 모든 부분 창작<br>
+						<br>
+						맥주의 시원한 느낌을 주기 위해 디자인 변경.
+						빠른 시간 캡쳐하는게 목표였기 때문에
+						서브페이지 숫자를 줄이고,
+						최대한 비슷한 효과를 내어 작업함.
+						<br>						
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents3" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					열정커피
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/pascof03.png" alt="">
+						<a href="http://qksha.cafe24.com/web/passioncoffee/index.html" target="new">http://qksha.cafe24.com/web/passioncoffee/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						실존브랜드 열정커피 홈페이지 리디자인<br>
+						<br>
+						사진 소스 및 게시판 외 모든 부분 창작<br>
+						<br>
+						본래의 홈페이지가 매우 정보가 부족하고
+						심심하며, 레이아웃도 잡히지 않음.
+						분위기도 매우 잔잔하여 이름과 분위기가
+						달라서 이름에 맞는 홈페이지로 개편 함.
+						원래의 홈페이지에는 본점에 대한 정보만
+						나와있어, 망우역점을 모델로 제작.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents4" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					Quik & Slow
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/w1-10.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/quik&slow/index.html" target="new">http://clocktree.dothome.co.kr/quik&slow/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						가상브랜드 커피숍의 홈페이지 제작<br>
+						<br>
+						사진 소스 및 게시판 외 모든 부분 창작<br>
+						<br>
+						메뉴바가 시야를 가리지 않게 할 수 없을까
+						생각하여, 원형 버튼의 따라다니는 메뉴바 제작.
+						클릭시 가로로 펼쳐지고, 더블클릭시 아래로
+						펼쳐지도록 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents5" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					온라인 포트폴리오 모음집<br>
+					(2016년 8월까지)
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/wpa.png" alt="">
+						<a href="http://clocktree.cafe24.com/web/portfolio/onepage/index.html" target="new">http://clocktree.cafe24.com/web/portfolio/onepage/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						기존 원페이지 형식의 오픈소스로 포트폴리오 구현<br>
+						<br>
+						사진 소스 및 색상 변경 적용<br>
+						<br>
+						원페이지 형식의 오픈 소스를 활용하여 색상 및
+						배경 이미지 등을 바꾸고 작업결과물을 적용.
+						기존의 템플릿 및 소스 활용을 시험 하고자,
+						포트폴리오 홈페이지로 변경함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents6" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					자투리 홈페이지
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/zatoory.png" alt="">
+						<a href="http://qksha.cafe24.com/web/zatoory/index.html" target="new">http://qksha.cafe24.com/web/zatoory/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						기존 원페이지 형식의 오픈소스 활용<br>
+						<br>
+						사진 소스 및 색상 변경 적용<br>
+						<br>
+						원페이지 형식의 오픈 소스를 활용하여
+						색상 및 갤러리 배경 이미지 등을 적용.
+						정적인 요소의 소스들을 소개하기 위한
+						포트폴리오 갤러리 홈페이지로 변경함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents7" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					덤프114
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/dump114.jpg" alt="">
+						<a href="http://clocktree.dothome.co.kr/dump114/index.html" target="new">http://clocktree.dothome.co.kr/dump114/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						회사 요구사항에 따른 사내 샘플용<br>
+						<br>
+						현장 인력들끼리 소통할 수 있는 앱 샘플
+						사내에서 고객에게 보여주기 위한 구조만
+						제작되어 비 반응형으로 만들어 졌으나,
+						반응형으로 변경함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents8" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					부동산 홈페이지 샘플1
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/sangweb.png" alt="">
+						<a href="http://clocktree.woobi.co.kr/sangsangweb/index.html" target="new">http://clocktree.woobi.co.kr/sangsangweb/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						회사 요구사항에 따른 사내 샘플용<br>
+						<br>
+						전형적인 부동산 소개 사이트의 사내
+						샘플로 제작 되었으며, 당시 반응형에
+						대한 시안은 나오지 않아 비반응형으로
+						제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents9" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					밥도장
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/bobstemp.png" alt="">
+						<a href="http://clocktree.woobi.co.kr/bobstemp/index.html" target="new">http://clocktree.woobi.co.kr/bobstemp/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객 요구사항에 따른 외부 샘플용<br>
+						<br>
+						시안을 수정해달라는 고객 요청에
+						시안 확정 차 고객 확인용으로 제작.
+						최초 비반응형으로 작업 하였으나 ,
+						후에 작업을 거쳐 반응형으로 제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents10" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					엑스바디 사내영업용 홈페이지
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/exbody.png" alt="">
+						<a href="http://clocktree.woobi.co.kr/exbody/index.html" target="new">http://clocktree.woobi.co.kr/exbody/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객 요구사항에 따른 외부 샘플용<br>
+						<br>
+						개발 중인 상품의 중간확인을 요구하는 
+						고객의 요청에 고객 확인용으로 제작.
+						샘플은 비반응형으로 작업 하였으나 ,
+						후에 상품은 반응형으로 제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents11" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					오늘어때
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/todaylove.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/todaylove/index.html" target="new">http://clocktree.dothome.co.kr/todaylove/index.html</a>						
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객 요구사항에 따른 외부 샘플용<br>
+						<br>
+						개발 중인 상품의 중간확인을 요구하는 
+						고객의 요청에 고객 확인용으로 제작.
+						최초 비반응형으로 작업 하였으나,
+						후에 반응형으로 제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents12" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					부동산 홈페이지 샘플2
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/housetips.png" alt="">
+						<a href="http://clocktree.woobi.co.kr/housetips/index.html" target="new">http://clocktree.woobi.co.kr/housetips/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						회사 요구사항에 따른 사내 샘플용<br>
+						<br>
+						전형적인 부동산 소개 사이트의 사내
+						샘플로 제작 되었으며, 당시 반응형에
+						대한 시안은 나오지 않아 비반응형으로
+						제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents13" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					어서와
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/eoseowa.png" alt="">
+						<a href="http://clocktree.woobi.co.kr/eoseowa/index.html" target="new">http://clocktree.woobi.co.kr/eoseowa/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객 요구사항에 따른 외부 샘플용<br>
+						<br>
+						개발 중인 상품의 중간확인을 요구하는 
+						고객의 요청에 고객 확인용으로 제작.
+						최초 비반응형으로 작업 하였으나,
+						후에 반응형으로 제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents14" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					나란히
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/naranhee.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/naranhee/index.html" target="new">http://clocktree.dothome.co.kr/naranhee/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객 요구사항에 따른 외부 샘플용<br>
+						<br>
+						개발 중인 상품의 중간확인을 요구하는 
+						고객의 요청에 고객 확인용으로 제작.
+						최초 비반응형으로 작업 하였으나,
+						후에 반응형으로 제작 함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents15" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					용호고시텔
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/yhgo.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/yhgositel/index.html" target="new">http://clocktree.dothome.co.kr/yhgositel/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						완성은 되었으나 고객과의 트러블로 미사용<br>
+						<br>
+						시안 및 요구사항도 없이 제작의뢰를
+						맞긴 고객이 후에 클래임을 제기하며 미사용.
+						이전에 있었던 모바일용 홈페이지만을	새로 
+						디자인 해달라고 하여 모바일 버전만 제작.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents16" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					바디랭귀지
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/bodylang.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/bodylanguage/index.html" target="new">http://clocktree.dothome.co.kr/bodylanguage/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						시안작업 완료 후 고객 연락두절로 미사용<br>
+						<br>
+						최종 시안작업 이후 고객이 잠적하여
+						연락이 되지 않아 잔금을 포기하고 작업중단.
+						이후 사내 샘플용으로 제작 하였으나, 
+						비슷한 유형의 어플 의뢰가 없었음.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents17" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					보험구멍가게
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/boguga.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/boguga/index.html" target="new">http://clocktree.dothome.co.kr/boguga/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객의 일정 계산 미스로 일부만 제작<br>
+						<br>
+						여행자보험 및 골프보험의 가입창구로 제작.
+						그러나 여행자보험의 경우 고객이 받을 허가와
+						절차가 많았고, 그로인해 자료전달이 미뤄져서, 
+						일단 전체적인 모습이라도 확인하고자 하여 제작.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents18" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					비트코 - 메인페이지
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/bitco.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/bitco-main/index.html" target="new">http://clocktree.dothome.co.kr/bitco-main/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객의 요구로 샘플용 메인페이지만 제작<br>
+						<br>
+						전자화폐 거래소 홈페이지 제작을 원하던 고객이
+						아직 거래가 성사 되기 전에 메인페이지의 시안 및
+						샘플을 보기 원하여 제작 함. 
+						계약 성사 여부를 알기 전에 퇴사함.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents19" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					있지요
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/itjiyo.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/itjiyo/index.html" target="new">http://clocktree.dothome.co.kr/itjiyo/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						시안을 토대로 제작<br>
+						<br>
+						고객 요구사항에 따른 외부 샘플용<br>
+						<br>
+						개발 중인 상품의 중간확인을 요구하는 
+						고객의 요청에 고객 확인용으로 제작.
+						고객의 클래임 및 결과물 확인 요구에
+						제작 했으나, 작업 직후 퇴사.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents20" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					온라인 포트폴리오 모음집<br>
+					(현재 진행형1)
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/clocktreehome.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/portfolioindex/index.html" target="new">http://clocktree.dothome.co.kr/portfolioindex/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						자체 디자인 및 제작<br>
+						<br>
+						포트폴리오 사이트<br>
+						<br>
+						하드코딩으로 제작한 포트폴리오 사이트.
+						jQuery 라이브러리 외에 모두 손수 코딩.
+						SPA 구조로 제작한 사이트로 PJAX 적용.
+						디자인 및 이미지 제작.
+						<br>
+					</div>
+				</div>
+			</div>
+			<div id="filter-conbox-contents21" class="filter-conbox-contents">
+				<div id="" class="conbox-contents-title">
+					온라인 포트폴리오 모음집<br>
+					(현재 진행형2)
+				</div>
+				<div id="" class="conbox-contents-view">
+					<div id="" class="contents-view-img">
+						<img src="http://clocktree.cafe24.com/web/portfolio/onepage/data/board/leehome.png" alt="">
+						<a href="http://clocktree.dothome.co.kr/portfolio/index.html" target="new">http://clocktree.dothome.co.kr/portfolio/index.html</a>					
+					</div>
+					<div id="" class="contents-view-word">
+						자체 디자인 및 제작<br>
+						<br>
+						포트폴리오 사이트<br>
+						<br>
+						하드코딩으로 제작한 포트폴리오 사이트.
+						jQuery 라이브러리 외에 모두 손수 코딩.
+						SPA 구조로 제작한 사이트로 AJAX 적용.
+						디자인 및 이미지 제작.
+						<br>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
