@@ -1,0 +1,179 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Welcome to Clocktree Portfolio Site</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0" >
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/earlyaccess/nanumgothic.css'>
+		<link rel="stylesheet" type="text/css" href="../css/style.css">
+		<script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>		
+		<!--[if lte IE 8]>
+		<script type="text/javascript" src="../js/jquery-1.7.2.min.js"></script>
+		<script type="text/javascript" src="../js/Respond-master/dest/respond.min.js"></script>
+		<script type="text/javascript" src="../js/Respond-master/dest/respond.src.js"></script>
+		<script type="text/javascript" src="../js/Respond-master/src/respond.js"></script>
+		
+		<![endif]-->
+		
+	</head>
+
+	<body>
+		<header class="body-all-header">
+			<div class="section-num1-article">
+				<nav class="section1-article1-nav" id="section1-article1-nav1">
+					<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1">
+						<h1>
+							<a href="http://clocktree.dothome.co.kr/portfolioindex/index.html">
+								<img src="http://clocktree.dothome.co.kr/portfolioindex/images/logo2.png" alt="mainlogo - 클릭시 메인페이지로 이동">
+							</a>
+						</h1>
+					</div>
+					<div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1">
+						<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1">
+							<li class="nav1-topmenu1-list" id="nav1-topmenu1-list1">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub1.html">
+									<span class="topmenu1-list-span" id="topmenu1-list-span1">
+										숙련도&소개
+										<span class="list-span-leftborder"></span>
+										<span class="list-span-rightborder"></span>
+									</span>
+								</a>
+							</li>
+							<li class="nav1-topmenu1-list" id="nav1-topmenu1-list2">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub2.html">
+									<span class="topmenu1-list-span" id="topmenu1-list-span2">
+										웹&앱 퍼블리싱
+										<span class="list-span-leftborder"></span>
+										<span class="list-span-rightborder"></span>
+									</span>
+								</a>
+							</li>
+							<li class="nav1-topmenu1-list" id="nav1-topmenu1-list3">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub3.html">
+									<span class="topmenu1-list-span" id="topmenu1-list-span3">
+										동영상 편집작업
+										<span class="list-span-leftborder"></span>
+										<span class="list-span-rightborder"></span>
+									</span>
+								</a>
+							</li>
+							<li class="nav1-topmenu1-list" id="nav1-topmenu1-list4">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub4.html">
+									<span class="topmenu1-list-span" id="topmenu1-list-span4">
+										플래시
+										<span class="list-span-leftborder"></span>
+										<span class="list-span-rightborder"></span>
+									</span>
+								</a>
+							</li>
+							<li class="nav1-topmenu1-list" id="nav1-topmenu1-list5">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub5.html">
+									<span class="topmenu1-list-span" id="topmenu1-list-span5">
+										2D랜더링&편집작업
+										<span class="list-span-leftborder"></span>
+										<span class="list-span-rightborder"></span>
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="top-icon" id="phon-icon">
+						<h2>
+							<span>
+								HP icon - 모바일 기기에서 터치시 전화 연결
+							</span>
+							
+						</h2>
+					</div>
+					<div class="top-icon" id="menu-icon" tabindex="0">
+						<h2>
+							<input type="checkbox" id="menu-icon-click" name="menu-icon-click">
+							<label for="menu-icon-click">
+								<span class="menu-icon-menubar">
+									홈페이지 하단에 링크 가능한 메뉴바 표시 
+								</span>
+							</label>
+						</h2>
+					</div>	
+				</nav>				
+			</div>
+		</header>
+		
+		<footer>
+			<div class="body-footer-contaner">
+				<div id="body-footer-add1" class="body-footer-add">
+					<address>
+						이현섭 <span class="footer-add-num">010-9954-3410</span><br>
+						서울특별시 강북구 수유3동 192-74번지<br>
+						<a href="mailto:clocktree@live.co.kr">clocktree@live.co.kr</a><br>
+						<span class="Copyright">Copyright © 2018 Lee.Hyunsup(Clocktree) All rights reserved.</span><br>
+					</address>
+				</div>
+				<div class="nav1-side-menu">
+					<div class="side-menu-listwrap">
+						<ul class="menu-list-ul">
+							<li class="list-ul-li">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub1.html" id="list-ul-li1" class="ul-li-img1">
+									<span>
+										터치 및 클릭시 소개 페이지로 이동
+									</span>
+								</a>
+							</li>
+							<li class="list-ul-li">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub2.html" id="list-ul-li2" class="ul-li-img1">
+									<span>
+										터치 및 클릭시 웹 및 앱 작업 결과 페이지로 이동
+									</span>
+								</a>
+							</li>
+							<li class="list-ul-li">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub3.html" id="list-ul-li3" class="ul-li-img1">
+									<span>
+										터치 및 클릭시 동영상 편집 작업 페이지로 이동
+									</span>
+								</a>
+							</li>
+							<li class="list-ul-li">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub4.html" id="list-ul-li4" class="ul-li-img1">
+									<span>
+										터치 및 클릭시 플래시 작업 페이지로 이동
+									</span>
+								</a>
+							</li>
+							<li class="list-ul-li">
+								<a href="http://clocktree.dothome.co.kr/portfolioindex/sub/sub5.html" id="list-ul-li5" class="ul-li-img1">
+									<span>
+										터치 및 클릭시 2D 이미지 작업  페이지로 이동
+									</span>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="top-btn" style="top-btn">
+					Top
+				</div>
+			</div>
+		</footer>
+		<div id="click-all-filter" class="click-all-filter">
+			<div id="all-filter-conbox" class="all-filter-conbox">
+				<div id="filter-title-closebtn" class="filter-title-closebtn">
+					<img src="http://clocktree.dothome.co.kr/portfolioindex/images/closebtn.png" alt="결과물 자세히보기 종료">	
+				</div>
+				<div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap">
+					
+				</div>
+			</div>
+		</div>
+		<div class="body-filter-preloader">
+			<div class="filter-preloader-loadingbox">
+				<div class="preloader-loadingbox-spin">
+					<div class="loadingbox-spin-inaround">
+					</div>
+				</div>				
+			</div>
+		</div>
+		
+	</body>
+</html>
