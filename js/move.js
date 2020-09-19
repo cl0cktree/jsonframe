@@ -1,5 +1,7 @@
 $(function(){
 	var portfolioindex_url = 'https://cl0cktree.github.io/jsonframe';
+	var split_url = portfolioindex_url.split('/');
+	var split_last = split_url[2];
 	// var portfolioindex_url = 'http://clocktree.dothome.co.kr/portfolioindex';
 	var scroll_framespeed = 1000/60;
 	/*loader 제어*/
@@ -28,7 +30,26 @@ $(function(){
 	});
 
 	/*-----------*/
-
+	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
+	function title_changer(){
+		var title_text;
+		if (split_last=='index.html'){
+			title_text = 'main';
+		}else if (split_last=='sub1.html'){
+			title_text = 'introduce';
+		}else if (split_last=='sub2html'){
+			title_text = 'web&app';
+		}else if (split_last=='sub3.html'){
+			title_text = 'movie';
+		}else if (split_last=='sub4.html'){
+			title_text = 'flash';
+		}else if (split_last=='sub5.html'){
+			title_text = '2D&Editing';
+		}
+		document.title = 'Welcome to Portfolio Site - '+title_text;
+	}
+	title_changer();
+	/*---------------------------------------------------------------------*/
 	/*커버소환*/
 	var scall1 = $('#main-scroll1-con').children('.scrollall-con-box').each(Array).length;
 	var scall2 = $('#main-scroll2-con').children('.scrollall-con-box').each(Array).length;
