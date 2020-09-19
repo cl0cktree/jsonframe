@@ -2023,7 +2023,7 @@ $(function(){
 		var sort_index;
 		var app_sort;
 		var slideNum=0;
-		var jsonLocation = portfolioindex_url+'/data/data.json';
+		var jsonLocation = portfolioindex_url+'/data/slide_data.json';
 		var sort_slide;
 		$.getJSON(jsonLocation, function(data){
 			$.each(data, function(I, item){
