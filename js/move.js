@@ -1,6 +1,5 @@
 $(function(){
 	var portfolioindex_url = 'https://cl0cktree.github.io/jsonframe';
-	var split_url = this.location.href.split('/').reverse()[0];
 	// var portfolioindex_url = 'http://clocktree.dothome.co.kr/portfolioindex';
 	var scroll_framespeed = 1000/60;
 	/*loader 제어*/
@@ -31,6 +30,7 @@ $(function(){
 	/*-----------*/
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
+		var split_url = this.location.href.split('/').reverse()[0];
 		var title_text;
 		if (split_url=='index.html'){
 			title_text = 'main';
