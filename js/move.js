@@ -46,6 +46,7 @@ $(function(){
 		}else if (split_last=='sub5.html'){
 			title_text = '2D&Editing';
 		}
+		console.log(split_last);
 		document.title = 'Welcome to Portfolio Site - '+title_text;
 	}
 	title_changer();
