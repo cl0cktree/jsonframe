@@ -36,7 +36,7 @@ $(function(){
 			title_text = 'main';
 		}else if (split_url=='sub1.html'){
 			title_text = 'introduce';
-		}else if (split_url=='sub2html'){
+		}else if (split_url=='sub2.html'){
 			title_text = 'web&app';
 		}else if (split_url=='sub3.html'){
 			title_text = 'movie';
