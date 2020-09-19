@@ -1,5 +1,5 @@
 $(function(){
-	var portfolioindex_url = 'https://cl0cktree.github.io/portfolioindex';
+	var portfolioindex_url = 'https://cl0cktree.github.io/jsonframe';
 	// var portfolioindex_url = 'http://clocktree.dothome.co.kr/portfolioindex';
 	var scroll_framespeed = 1000/60;
 	/*loader 제어*/
