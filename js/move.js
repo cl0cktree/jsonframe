@@ -1,7 +1,6 @@
 $(function(){
 	var portfolioindex_url = 'https://cl0cktree.github.io/jsonframe';
 	var split_url = this.location.href.split('/').reverse()[0];
-	//var split_last = split_url;
 	// var portfolioindex_url = 'http://clocktree.dothome.co.kr/portfolioindex';
 	var scroll_framespeed = 1000/60;
 	/*loader 제어*/
@@ -49,7 +48,6 @@ $(function(){
 		console.log(split_url);
 		document.title = 'Welcome to Portfolio Site - '+title_text;
 	}
-	title_changer();
 	/*---------------------------------------------------------------------*/
 	/*커버소환*/
 	var scall1 = $('#main-scroll1-con').children('.scrollall-con-box').each(Array).length;
@@ -309,7 +307,8 @@ $(function(){
 				$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
 				$('.body-filter-preloader').hide();
-				history.pushState(null,null,portfolioindex_url+'/index.html')
+				history.pushState(null,null,portfolioindex_url+'/index.html');
+				title_changer();
 
 			}else{
 				location.href=portfolioindex_url+'/index.html'
@@ -344,8 +343,8 @@ $(function(){
 			$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
 			$('.body-filter-preloader').hide();
-			history.pushState(null,null,portfolioindex_url+'/index.html')
-
+			history.pushState(null,null,portfolioindex_url+'/index.html');
+			title_changer();
 		}
 
 	})
@@ -451,8 +450,8 @@ $(function(){
 						$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
 						$('.body-filter-preloader').hide();
-						history.pushState(null,null,portfolioindex_url+'/sub/sub1.html')
-
+						history.pushState(null,null,portfolioindex_url+'/sub/sub1.html');
+						
 					}else{
 						location.href=portfolioindex_url+'/sub/sub1.html'
 
@@ -490,8 +489,8 @@ $(function(){
 					$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
 					$('.body-filter-preloader').hide();
-					history.pushState(null,null,portfolioindex_url+'/sub/sub1.html')
-
+					history.pushState(null,null,portfolioindex_url+'/sub/sub1.html');
+					
 				}
 
 			}else if (this==document.getElementById('topmenu1-list-span2'))
@@ -811,6 +810,7 @@ $(function(){
 
 			}
 		}
+		title_changer();
 	})
 	/*--------------------------------------------------------*/
 	/*footer 소환동작 기종체크 후 문자보내기*/
