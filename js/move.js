@@ -655,6 +655,7 @@ $(function(){
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub5.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub5.html .index-btn-wrap')
 			}
+			title_changer();
 			$('.body-filter-preloader').hide();
 		})
 	};
