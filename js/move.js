@@ -5,6 +5,19 @@ $(function(){
 	var nav_num;
 	/*loader 제어*/
 	$(document).ready(function(){
+		function header_creat(){
+			if($('body').find('.header')){
+				var headerNum;
+				var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
+				$('.header').append('<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul>');
+				$.getJSON(jsonHeader_data, function(data){
+					$.each(data, function(I, item){
+						headerNum++;
+						$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.data-nav-section+'" data-nav-kinds="'+item.data-nav-kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+item.data-nav-url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.data-nav-title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
+					});
+				});
+			};
+		};
 		$('.body-filter-preloader').load(portfolioindex_url+'/cover/cover.html .filter-preloader-loadingbox',function(){
 			$('.body-filter-preloader').hide();
 			var msheight = $('.slide img').height();
