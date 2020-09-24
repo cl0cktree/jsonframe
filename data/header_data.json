@@ -1,7 +1,7 @@
 [
-    {"data-nav-section":"header","data-nav-kinds":"gnb","data-nav-title":"숙련도&소개","data-nav-img":"","data-nav-alt":"","data-nav-url":"https://cl0cktree.github.io/portfolioindex/sub/sub1.html","data-nav-num":"1"},
-    {"data-nav-section":"header","data-nav-kinds":"gnb","data-nav-title":"웹&앱 퍼블리싱","data-nav-img":"","data-nav-alt":"","data-nav-url":"https://cl0cktree.github.io/portfolioindex/sub/sub2.html","data-nav-num":"2"},
-    {"data-nav-section":"header","data-nav-kinds":"gnb","data-nav-title":"동영상 편집작업","data-nav-img":"","data-nav-alt":"","data-nav-url":"https://cl0cktree.github.io/portfolioindex/sub/sub3.html","data-nav-num":"3"},
-    {"data-nav-section":"header","data-nav-kinds":"gnb","data-nav-title":"플래시","data-nav-img":"","data-nav-alt":"","data-nav-url":"https://cl0cktree.github.io/portfolioindex/sub/sub4.html","data-nav-num":"4"},
-    {"data-nav-section":"header","data-nav-kinds":"gnb","data-nav-title":"2D랜더링&편집작업","data-nav-img":"","data-nav-alt":"","data-nav-url":"https://cl0cktree.github.io/portfolioindex/sub/sub5.html","data-nav-num":"5"}
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"숙련도&소개","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/portfolioindex/sub/sub1.html","nav_num":"1"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"웹&앱 퍼블리싱","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/portfolioindex/sub/sub2.html","nav_num":"2"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"동영상 편집작업","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/portfolioindex/sub/sub3.html","nav_num":"3"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"플래시","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/portfolioindex/sub/sub4.html","nav_num":"4"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"2D랜더링&편집작업","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/portfolioindex/sub/sub5.html","nav_num":"5"}
 ]
