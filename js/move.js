@@ -20,6 +20,7 @@ $(function(){
 		};
 		$('.body-filter-preloader').load(portfolioindex_url+'/cover/cover.html .filter-preloader-loadingbox',function(){
 			$('.body-filter-preloader').hide();
+			header_creat();
 			var msheight = $('.slide img').height();
 			$('#slide-wrap').css({'height':msheight});
 
