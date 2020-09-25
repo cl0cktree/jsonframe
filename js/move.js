@@ -5,25 +5,10 @@ $(function(){
 	var nav_num;
 	/*loader 제어*/
 	$(document).ready(function(){
-		function header_creat(){
-			if($('body').find('.header')){
-				var headerNum;
-				var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
-				$('.header').append('<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul>');
-				$.getJSON(jsonHeader_data, function(data){
-					$.each(data, function(I, item){
-						headerNum++;
-						$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
-					});
-				});
-			};
-		};
 		$('.body-filter-preloader').load(portfolioindex_url+'/cover/cover.html .filter-preloader-loadingbox',function(){
 			$('.body-filter-preloader').hide();
-			header_creat();
 			var msheight = $('.slide img').height();
 			$('#slide-wrap').css({'height':msheight});
-
 			var agent = navigator.userAgent.toLowerCase();
 			if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1) || (agent.search( "edge/")>-1) || (agent.indexOf("safari") >-1))
 			{
@@ -41,7 +26,19 @@ $(function(){
 		var footerIcon= $('.ul-li-img1').width();
 		$('.ul-li-img1').css({'height':footerIcon});
 	});
-
+	function header_creat(){
+		if($('body').find('.header')){
+			var headerNum;
+			var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
+			$('.header').append('<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul>');
+			$.getJSON(jsonHeader_data, function(data){
+				$.each(data, function(I, item){
+					headerNum++;
+					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
+				});
+			});
+		};
+	};
 	/*-----------*/
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
@@ -168,6 +165,7 @@ $(function(){
 	$('body').ready(function(){
 		$('.body-section-all').load(portfolioindex_url+'/cover/cover.html .section-num1-article',function(){
 			/*ie9에서 탑메뉴 이동 후 동작*/
+			header_creat();
 			for (scib1=1;scib1<=scall1 ;scib1++ )
 			{
 				var ibheight1 = $('#con-box1-imgborder'+scib1+'img').height();
