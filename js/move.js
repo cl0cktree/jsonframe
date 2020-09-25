@@ -28,7 +28,7 @@ $(function(){
 	});
 	function header_creat(){
 		if($('body').find('.header')){
-			var headerNum;
+			var headerNum=0;
 			var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
 			$('.header').append('<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul>');
 			$.getJSON(jsonHeader_data, function(data){
