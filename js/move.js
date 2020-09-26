@@ -26,6 +26,7 @@ $(function(){
 		var footerIcon= $('.ul-li-img1').width();
 		$('.ul-li-img1').css({'height':footerIcon});
 	});
+	/*header를 구성하는 요소들을 json에서 data로 받아와서 자동으로 구성*/
 	function header_creat(){
 		if($('body').find('.header')){
 			var headerNum=0;
@@ -39,6 +40,7 @@ $(function(){
 			});
 		};
 	};
+	/*------------------------------------------------------------*/
 	/*-----------*/
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
