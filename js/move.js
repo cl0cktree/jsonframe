@@ -27,7 +27,7 @@ $(function(){
 		$('.ul-li-img1').css({'height':footerIcon});
 	});
 	/*header를 구성하는 요소들을 json에서 data로 받아와서 자동으로 구성*/
-	function header_creat(){
+	var header_creat=
 		new Promise(function(){
 			
 			if($('body').find('.header')){
@@ -43,7 +43,6 @@ $(function(){
 			};
 
 		});
-	};
 	/*------------------------------------------------------------*/
 	/*-----------*/
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
@@ -199,7 +198,7 @@ $(function(){
 				$('.body-all-header').stop().animate({'height':'100px'},100)
 				$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
 			}
-			header_creat(true).then(function(){
+			header_creat.then(function(){
 				if (location.href==portfolioindex_url+'/sub/sub1.html')
 				{
 					$('#slide-wrap').css({'display':'none'})
