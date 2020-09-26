@@ -167,7 +167,7 @@ $(function(){
 	$('body').ready(function(){
 		$('.body-section-all').load(portfolioindex_url+'/cover/cover.html .section-num1-article',function(){
 			/*ie9에서 탑메뉴 이동 후 동작*/
-			//header_creat();
+			header_creat();
 			for (scib1=1;scib1<=scall1 ;scib1++ )
 			{
 				var ibheight1 = $('#con-box1-imgborder'+scib1+'img').height();
