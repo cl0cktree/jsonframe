@@ -28,17 +28,21 @@ $(function(){
 	});
 	/*header를 구성하는 요소들을 json에서 data로 받아와서 자동으로 구성*/
 	function header_creat(){
-		if($('body').find('.header')){
-			var headerNum=0;
-			var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
-			$('.header').append('<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul>');
-			$.getJSON(jsonHeader_data, function(data){
-				$.each(data, function(I, item){
-					headerNum++;
-					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
+		new Promise(function(){
+			
+			if($('body').find('.header')){
+				var headerNum=0;
+				var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
+				$('.header').append('<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul>');
+				$.getJSON(jsonHeader_data, function(data){
+					$.each(data, function(I, item){
+						headerNum++;
+						$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
+					});
 				});
-			});
-		};
+			};
+
+		});
 	};
 	/*------------------------------------------------------------*/
 	/*-----------*/
@@ -167,7 +171,7 @@ $(function(){
 	$('body').ready(function(){
 		$('.body-section-all').load(portfolioindex_url+'/cover/cover.html .section-num1-article',function(){
 			/*ie9에서 탑메뉴 이동 후 동작*/
-			header_creat();
+			//header_creat();
 			for (scib1=1;scib1<=scall1 ;scib1++ )
 			{
 				var ibheight1 = $('#con-box1-imgborder'+scib1+'img').height();
@@ -195,7 +199,7 @@ $(function(){
 				$('.body-all-header').stop().animate({'height':'100px'},100)
 				$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
 			}
-			header_creat().then(function(){
+			header_creat(true).then(function(){
 				if (location.href==portfolioindex_url+'/sub/sub1.html')
 				{
 					$('#slide-wrap').css({'display':'none'})
