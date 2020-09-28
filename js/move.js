@@ -31,9 +31,10 @@ $(function(){
 		if($('body').find('.header')){
 			var headerNum=0;
 			var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
+			$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"></nav>');
 			$.getJSON(jsonHeader_data, function(data){
 				$.each(data, function(I, item){
-					$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.logo_url+'"><img src="'+portfolioindex_url+item.logo_url+item.logo_img+'" alt="'+item.logo_alt+'"></a></h1></div><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div></nav>');
+					$('.section1-article1-nav').append('<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.logo_url+'"><img src="'+portfolioindex_url+item.logo_url+item.logo_img+'" alt="'+item.logo_alt+'"></a></h1></div><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div>');
 				});
 				$.each(data, function(I, item){
 					headerNum++;
