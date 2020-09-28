@@ -31,11 +31,8 @@ $(function(){
 		if($('body').find('.header')){
 			var headerNum=0;
 			var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
-			$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"></nav>');
+			$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="https://cl0cktree.github.io/portfolioindex/index.html"><img src="https://cl0cktree.github.io/portfolioindex/images/logo2.png" alt="mainlogo - 클릭시 메인페이지로 이동"></a></h1></div><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div></nav>');
 			$.getJSON(jsonHeader_data, function(data){
-				$.each(data, function(I, item){
-					$('.section1-article1-nav').append('<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.logo_url+'"><img src="'+portfolioindex_url+item.logo_img+'" alt="'+item.logo_alt+'"></a></h1></div><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div>');
-				});
 				$.each(data, function(I, item){
 					headerNum++;
 					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+portfolioindex_url+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
