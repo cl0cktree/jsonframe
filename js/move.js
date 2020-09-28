@@ -31,11 +31,11 @@ $(function(){
 		if($('body').find('.header')){
 			var headerNum=0;
 			var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
-			$('.header').append('<ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul>');
 			$.getJSON(jsonHeader_data, function(data){
 				$.each(data, function(I, item){
 					headerNum++;
-					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
+					$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.logo_url+'"><img src="'+portfolioindex_url+item.logo_url+item.logo_img+'" alt="'+item.logo_alt+'"></a></h1></div><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div></nav>');
+					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+portfolioindex_url+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
 				});
 				if (location.href==portfolioindex_url+'/sub/sub1.html')
 				{
@@ -86,6 +86,33 @@ $(function(){
 					$('#landing-contents-title, #landing-contents-buttonwrap').stop().animate({'text-indent':'0'},500)
 				}
 			});
+			for (scib1=1;scib1<=scall1 ;scib1++ )
+			{
+				var ibheight1 = $('#con-box1-imgborder'+scib1+'img').height();
+				$('#con-box1-imgborder'+scib1).css({'height':ibheight1,'line-height':ibheight1});
+
+			}
+			for (scib2=1;scib2<=scall2 ;scib2++ )
+			{
+				var ibheight2 = $('#con-box2-imgborder'+scib2+'img').height();
+				$('#con-box2-imgborder'+scib2).css({'height':ibheight2,'line-height':ibheight2});
+
+			}
+			for (scib3=1;scib3<=scall3 ;scib3++ )
+			{
+				var ibheight3 = $('#con-box3-imgborder'+scib3+'img').height();
+				$('#con-box3-imgborder'+scib3).css({'height':ibheight3,'line-height':ibheight3});
+
+			}
+
+			if ($('#article1-nav1-topmenu1').css('display')=='block')
+			{
+				$('.body-all-header').stop().animate({'height':'150px'},100)
+				$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
+			}else{
+				$('.body-all-header').stop().animate({'height':'100px'},100)
+				$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
+			}
 		};
 	};
 	/*------------------------------------------------------------*/
@@ -246,33 +273,7 @@ $(function(){
 		// })
 		function header_start(){
 			header_creat();
-			for (scib1=1;scib1<=scall1 ;scib1++ )
-			{
-				var ibheight1 = $('#con-box1-imgborder'+scib1+'img').height();
-				$('#con-box1-imgborder'+scib1).css({'height':ibheight1,'line-height':ibheight1});
-
-			}
-			for (scib2=1;scib2<=scall2 ;scib2++ )
-			{
-				var ibheight2 = $('#con-box2-imgborder'+scib2+'img').height();
-				$('#con-box2-imgborder'+scib2).css({'height':ibheight2,'line-height':ibheight2});
-
-			}
-			for (scib3=1;scib3<=scall3 ;scib3++ )
-			{
-				var ibheight3 = $('#con-box3-imgborder'+scib3+'img').height();
-				$('#con-box3-imgborder'+scib3).css({'height':ibheight3,'line-height':ibheight3});
-
-			}
-
-			if ($('#article1-nav1-topmenu1').css('display')=='block')
-			{
-				$('.body-all-header').stop().animate({'height':'150px'},100)
-				$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
-			}else{
-				$('.body-all-header').stop().animate({'height':'100px'},100)
-				$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
-			}
+			
 		};
 		header_start();
 		$('footer').load(portfolioindex_url+'/cover/cover.html .body-footer-contaner',function(){

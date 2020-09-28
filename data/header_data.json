@@ -1,7 +1,8 @@
 [
-    {"nav_section":"header","nav_kinds":"gnb","nav_title":"숙련도&소개","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/jsonframe/sub/sub1.html","nav_num":"1"},
-    {"nav_section":"header","nav_kinds":"gnb","nav_title":"웹&앱 퍼블리싱","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/jsonframe/sub/sub2.html","nav_num":"2"},
-    {"nav_section":"header","nav_kinds":"gnb","nav_title":"동영상 편집작업","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/jsonframe/sub/sub3.html","nav_num":"3"},
-    {"nav_section":"header","nav_kinds":"gnb","nav_title":"플래시","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/jsonframe/sub/sub4.html","nav_num":"4"},
-    {"nav_section":"header","nav_kinds":"gnb","nav_title":"2D랜더링&편집작업","nav_img":"","nav_alt":"","nav_url":"https://cl0cktree.github.io/jsonframe/sub/sub5.html","nav_num":"5"}
+    {"logo_section":"header","logo_kinds":"gnb","logo_title":"logo","logo_img":"/images/logo2.png","logo_alt":"mainlogo - 클릭시 메인페이지로 이동","logo_url":"/index.html","logo_num":"1"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"숙련도&소개","nav_img":"","nav_alt":"","nav_url":"/sub/sub1.html","nav_num":"1"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"웹&앱 퍼블리싱","nav_img":"","nav_alt":"","nav_url":"/sub/sub2.html","nav_num":"2"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"동영상 편집작업","nav_img":"","nav_alt":"","nav_url":"/sub/sub3.html","nav_num":"3"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"플래시","nav_img":"","nav_alt":"","nav_url":"/sub/sub4.html","nav_num":"4"},
+    {"nav_section":"header","nav_kinds":"gnb","nav_title":"2D랜더링&편집작업","nav_img":"","nav_alt":"","nav_url":"/sub/sub5.html","nav_num":"5"}
 ]
