@@ -31,7 +31,7 @@ $(function(){
 		if($('body').find('.header')){
 			var headerNum=0;
 			var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
-			$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="https://cl0cktree.github.io/portfolioindex/index.html"><img src="https://cl0cktree.github.io/portfolioindex/images/logo2.png" alt="mainlogo - 클릭시 메인페이지로 이동"></a></h1></div><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div></nav>');
+			$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="https://cl0cktree.github.io/portfolioindex/index.html"><img src="https://cl0cktree.github.io/portfolioindex/images/logo2.png" alt="mainlogo - 클릭시 메인페이지로 이동"></a></h1></div><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div><div class="top-icon" id="phon-icon"><h2><span>HP icon - 모바일 기기에서 터치시 전화 연결</span></h2></div><div class="top-icon" id="menu-icon" tabindex="0"><h2><input type="checkbox" id="menu-icon-click" name="menu-icon-click"><label for="menu-icon-click"><span class="menu-icon-menubar">홈페이지 하단에 링크 가능한 메뉴바 표시</span></label></h2></div></nav>');
 			$.getJSON(jsonHeader_data, function(data){
 				$.each(data, function(I, item){
 					headerNum++;
