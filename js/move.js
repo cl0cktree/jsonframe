@@ -213,8 +213,38 @@ $(function(){
 	var scib3;
 
 	$('body').ready(function(){
-		$('.body-section-all').load(portfolioindex_url+'/cover/cover.html .section-num1-article',function(){
-			/*ie9에서 탑메뉴 이동 후 동작*/
+		// $('.body-section-all').load(portfolioindex_url+'/cover/cover.html .section-num1-article',function(){
+		// 	/*ie9에서 탑메뉴 이동 후 동작*/
+		// 	header_creat();
+		// 	for (scib1=1;scib1<=scall1 ;scib1++ )
+		// 	{
+		// 		var ibheight1 = $('#con-box1-imgborder'+scib1+'img').height();
+		// 		$('#con-box1-imgborder'+scib1).css({'height':ibheight1,'line-height':ibheight1});
+
+		// 	}
+		// 	for (scib2=1;scib2<=scall2 ;scib2++ )
+		// 	{
+		// 		var ibheight2 = $('#con-box2-imgborder'+scib2+'img').height();
+		// 		$('#con-box2-imgborder'+scib2).css({'height':ibheight2,'line-height':ibheight2});
+
+		// 	}
+		// 	for (scib3=1;scib3<=scall3 ;scib3++ )
+		// 	{
+		// 		var ibheight3 = $('#con-box3-imgborder'+scib3+'img').height();
+		// 		$('#con-box3-imgborder'+scib3).css({'height':ibheight3,'line-height':ibheight3});
+
+		// 	}
+
+		// 	if ($('#article1-nav1-topmenu1').css('display')=='block')
+		// 	{
+		// 		$('.body-all-header').stop().animate({'height':'150px'},100)
+		// 		$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
+		// 	}else{
+		// 		$('.body-all-header').stop().animate({'height':'100px'},100)
+		// 		$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
+		// 	}
+		// })
+		function header_start(){
 			header_creat();
 			for (scib1=1;scib1<=scall1 ;scib1++ )
 			{
@@ -243,7 +273,8 @@ $(function(){
 				$('.body-all-header').stop().animate({'height':'100px'},100)
 				$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
 			}
-		})
+		};
+		header_start();
 		$('footer').load(portfolioindex_url+'/cover/cover.html .body-footer-contaner',function(){
 			if (location.href==portfolioindex_url+'/sub/sub1.html')
 			{
