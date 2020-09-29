@@ -144,7 +144,9 @@ $(function(){
 			$.getJSON(jsonCover_data, function(data){
 				$('.body-footer-contaner').append('<div id="body-footer-add1" class="body-footer-add"><address></address></div>')
 				$.each(data, function(I, item){
-					$('.body-footer-contaner').find('address').append(item.cover_name+' <span class="footer-add-num">'+item.cover_phone+'</span><br>'+item.cover_address+'<br><a href="mailto:'+item.cover_email+'">'+item.cover_email+'</a><br><span class="Copyright">'+item.cover_Copyright+'</span><br>')
+					if(item.cover_kinds=='footer'){
+						$('.body-footer-contaner').find('address').append(item.cover_name+' <span class="footer-add-num">'+item.cover_phone+'</span><br>'+item.cover_address+'<br><a href="mailto:'+item.cover_email+'">'+item.cover_email+'</a><br><span class="Copyright">'+item.cover_Copyright+'</span><br>')
+					}
 				});
 			});
 		};
