@@ -36,7 +36,7 @@ $(function(){
 			$.getJSON(jsonCover_data, function(data){
 				$.each(data, function(I, item){
 					if(item.cover_kinds=='header'){
-						$('.section1-article1-nav').prepend('<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+'/index.html"><img src="'+portfolioindex_url+'/images/logo2.png" alt="mainlogo - 클릭시 메인페이지로 이동"></a></h1></div>');
+						$('.section1-article1-nav').prepend('<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1></div>');
 					};
 				});
 				if ($('#article1-nav1-topmenu1').css('display')=='block')
