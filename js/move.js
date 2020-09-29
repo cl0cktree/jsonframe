@@ -28,6 +28,20 @@ $(function(){
 		var footerIcon= $('.ul-li-img1').width();
 		$('.ul-li-img1').css({'height':footerIcon});
 	});
+	/*footer 자동 구성*/
+	function footer_creat(){
+		if($('footer').find('.body-footer-contaner')){
+			$.getJSON(jsonCover_data, function(data){
+				$('.body-footer-contaner').append('<div id="body-footer-add1" class="body-footer-add"><address></address></div>')
+				$.each(data, function(I, item){
+					if(item.cover_kinds=='footer'){
+						$('.body-footer-contaner').find('address').append(item.cover_name+' <span class="footer-add-num">'+item.cover_phone+'</span><br>'+item.cover_address+'<br><a href="mailto:'+item.cover_email+'">'+item.cover_email+'</a><br><span class="Copyright">'+item.cover_Copyright+'</span><br>')
+					}
+				});
+			});
+		};
+	};
+	/*-----------*/
 	/*header를 구성하는 요소들을 json에서 data로 받아와서 자동으로 구성*/
 	function header_creat(){
 		if(($('body').find('.header'))&&($('footer').find('.body-footer-contaner'))){
@@ -139,19 +153,6 @@ $(function(){
 		};
 	};
 	/*------------------------------------------------------------*/
-	function footer_creat(){
-		if($('footer').find('.body-footer-contaner')){
-			$.getJSON(jsonCover_data, function(data){
-				$('.body-footer-contaner').append('<div id="body-footer-add1" class="body-footer-add"><address></address></div>')
-				$.each(data, function(I, item){
-					if(item.cover_kinds=='footer'){
-						$('.body-footer-contaner').find('address').append(item.cover_name+' <span class="footer-add-num">'+item.cover_phone+'</span><br>'+item.cover_address+'<br><a href="mailto:'+item.cover_email+'">'+item.cover_email+'</a><br><span class="Copyright">'+item.cover_Copyright+'</span><br>')
-					}
-				});
-			});
-		};
-	};
-	/*-----------*/
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
 		var split_url = this.location.href.split('/').reverse()[0];
