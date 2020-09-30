@@ -1120,7 +1120,7 @@ $(function(){
 				datasum = portfolioindex_url+'/data/data-m.html #filter-conbox-contents4';
 			}
 
-			$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn"><img src="https://cl0cktree.github.io/jsonframe/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
+			$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 			$('.click-all-filter').fadeIn('fast')
 			$('.filter-conbox-contentswrap').load(datasum)
 			return false;
