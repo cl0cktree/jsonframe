@@ -1120,10 +1120,12 @@ $(function(){
 				datasum = portfolioindex_url+'/data/data-m.html #filter-conbox-contents4';
 			}
 
-			$('.click-all-filter').fadeOut('fast').load(portfolioindex_url+'/cover/cover.html .all-filter-conbox',function(){
-				$('.click-all-filter').fadeIn('fast')
-				$('.filter-conbox-contentswrap').load(datasum)
-			}).fadeIn('fast')
+			// $('.click-all-filter').fadeOut('fast').load(portfolioindex_url+'/cover/cover.html .all-filter-conbox',function(){
+			// 	$('.click-all-filter').fadeIn('fast')
+			// 	$('.filter-conbox-contentswrap').load(datasum)
+			// }).fadeIn('fast')
+			$('.click-all-filter').append('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn"><img src="https://cl0cktree.github.io/jsonframe/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
+			$('.filter-conbox-contentswrap').load(datasum)
 			return false;
 		}
 		return false;
