@@ -987,7 +987,6 @@ $(function(){
 		}else if (event.type=='click')
 		{
 			var datasum;
-			$('.click-all-filter').append('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn"><img src="https://cl0cktree.github.io/jsonframe/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents1';
@@ -1125,6 +1124,7 @@ $(function(){
 			// 	$('.click-all-filter').fadeIn('fast')
 			// 	$('.filter-conbox-contentswrap').load(datasum)
 			// }).fadeIn('fast')
+			$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn"><img src="https://cl0cktree.github.io/jsonframe/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 			$('.filter-conbox-contentswrap').load(datasum)
 			return false;
 		}
