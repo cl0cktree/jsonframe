@@ -111,7 +111,6 @@ $(function(){
 			{
 				var ibheight3 = $('#con-box3-imgborder'+scib3+'img').height();
 				$('#con-box3-imgborder'+scib3).css({'height':ibheight3,'line-height':ibheight3});
-
 			}
 
 		};
@@ -255,82 +254,12 @@ $(function(){
 	var scib3;
 
 	$('body').ready(function(){
-		// $('.body-section-all').load(portfolioindex_url+'/cover/cover.html .section-num1-article',function(){
-		// 	/*ie9에서 탑메뉴 이동 후 동작*/
-		// 	header_creat();
-		// 	for (scib1=1;scib1<=scall1 ;scib1++ )
-		// 	{
-		// 		var ibheight1 = $('#con-box1-imgborder'+scib1+'img').height();
-		// 		$('#con-box1-imgborder'+scib1).css({'height':ibheight1,'line-height':ibheight1});
-
-		// 	}
-		// 	for (scib2=1;scib2<=scall2 ;scib2++ )
-		// 	{
-		// 		var ibheight2 = $('#con-box2-imgborder'+scib2+'img').height();
-		// 		$('#con-box2-imgborder'+scib2).css({'height':ibheight2,'line-height':ibheight2});
-
-		// 	}
-		// 	for (scib3=1;scib3<=scall3 ;scib3++ )
-		// 	{
-		// 		var ibheight3 = $('#con-box3-imgborder'+scib3+'img').height();
-		// 		$('#con-box3-imgborder'+scib3).css({'height':ibheight3,'line-height':ibheight3});
-
-		// 	}
-
-		// 	if ($('#article1-nav1-topmenu1').css('display')=='block')
-		// 	{
-		// 		$('.body-all-header').stop().animate({'height':'150px'},100)
-		// 		$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
-		// 	}else{
-		// 		$('.body-all-header').stop().animate({'height':'100px'},100)
-		// 		$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
-		// 	}
-		// })
+		/*ie9에서 탑메뉴 이동 후 동작*/
 		function cover_start(){
 			footer_creat();
 			header_creat();
 		};
 		cover_start();
-		// $('footer').load(portfolioindex_url+'/cover/cover.html .body-footer-contaner',function(){
-		// 	if (location.href==portfolioindex_url+'/sub/sub1.html')
-		// 	{
-		// 		$('.ul-li-img1').css({'border':'0px solid #999'})
-		// 		$('#list-ul-li1').css({'border':'3px solid #999'})
-		// 		$('#slide-wrap').css({'display':'none'})
-		// 		$('#slide-wrap-i').css({'display':'block'})
-		// 	}else if (location.href==portfolioindex_url+'/sub/sub2.html')
-		// 	{
-		// 		$('.ul-li-img1').css({'border':'0px solid #999'})
-		// 		$('#list-ul-li2').css({'border':'3px solid #999'})
-		// 		$('#slide-wrap').css({'display':'block'})
-		// 		$('#slide-wrap-i').css({'display':'none'})
-		// 	}else if (location.href==portfolioindex_url+'/sub/sub3.html')
-		// 	{
-		// 		$('.ul-li-img1').css({'border':'0px solid #999'})
-		// 		$('#list-ul-li3').css({'border':'3px solid #999'})
-		// 		$('#slide-wrap').css({'display':'block'})
-		// 		$('#slide-wrap-i').css({'display':'none'})
-		// 	}else if (location.href==portfolioindex_url+'/sub/sub4.html')
-		// 	{
-		// 		$('.ul-li-img1').css({'border':'0px solid #999'})
-		// 		$('#list-ul-li4').css({'border':'3px solid #999'})
-		// 		$('#slide-wrap').css({'display':'block'})
-		// 		$('#slide-wrap-i').css({'display':'none'})
-		// 	}else if (location.href==portfolioindex_url+'/sub/sub5.html')
-		// 	{
-		// 		$('.ul-li-img1').css({'border':'0px solid #999'})
-		// 		$('#list-ul-li5').css({'border':'3px solid #999'})
-		// 		$('#slide-wrap').css({'display':'block'})
-		// 		$('#slide-wrap-i').css({'display':'none'})
-		// 	}else if (location.href==portfolioindex_url+'/index.html')
-		// 	{
-		// 		$('.topmenu1-list-span').css({'border-bottom':'0px solid #fff'})
-		// 		$('.topmenu1-list-span').children('.list-span-leftborder, .list-span-rightborder').css({'bottom':'0px'})
-		// 		$('.ul-li-img1').css({'border':'0px solid #999'})
-		// 		$('#slide-wrap').css({'display':'block'})
-		// 		$('#slide-wrap-i').css({'display':'none'})
-		// 	}
-		// })
 	})
 	/*------------------------------------------------------------------*/
 	/*전체창 리사이즈시 반응형 동작 빈틈보강*/
