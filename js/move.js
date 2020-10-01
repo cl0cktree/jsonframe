@@ -8,7 +8,7 @@ $(function(){
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
 	var name_header=document.getElementsByClassName('header');
 	var name_footer=document.getElementsByTagName('footer');
-
+	
 	/*loader 제어*/
 	$(document).ready(function(){
 		$('.body-filter-preloader').load(portfolioindex_url+'/cover/cover.html .filter-preloader-loadingbox',function(){
@@ -523,7 +523,7 @@ $(function(){
 	})
 	/*--------------------------------------------------------*/
 	/*footer 소환동작 기종체크 후 문자보내기*/
-	name_footer.on('click','.footer-add-num',function(){
+	$('footer').on('click','.footer-add-num',function(){
 		if (navigator.userAgent.match(/android/i)) {
 			location.href='sms:010-9954-3410','_self';
 		} else if (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i)){
@@ -534,7 +534,7 @@ $(function(){
 	})
 	/*--------------------------------------------------------*/
 	/*햄버거 메뉴 클릭시 bottom:0에 앱형태 ui의 네비 생성 및 네비동작*/
-	name_footer.on('click mouseover mouseleave','a',function(event){
+	$('footer').on('click mouseover mouseleave','a',function(event){
 		var agent = navigator.userAgent.toLowerCase();
 		$(document).on('click history','.list-ul-li a',function(event){
 			event.preventDefault();//a tag 동작제어 - 바로 링크되지 못하도록 방지
