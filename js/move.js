@@ -35,7 +35,7 @@ $(function(){
 	});
 	/*footer 자동 구성*/
 	function footer_creat(){
-		if(foote_contaner==true){
+		if(foote_contaner){
 			$.getJSON(jsonCover_data, function(data){
 				$('.body-footer-contaner').prepend('<div id="body-footer-add1" class="body-footer-add"><address></address></div>')
 				$.each(data, function(I, item){
@@ -49,7 +49,7 @@ $(function(){
 	/*-----------*/
 	/*header를 구성하는 요소들을 json에서 data로 받아와서 자동으로 구성*/
 	function header_creat(){
-		if(($('body').find('.header'))&&(foote_contaner==true)){
+		if(($('body').find('.header'))&&(foote_contaner)){
 			var headerNum=0;
 			$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div><div class="top-icon" id="phon-icon"><h2><span>HP icon - 모바일 기기에서 터치시 전화 연결</span></h2></div><div class="top-icon" id="menu-icon" tabindex="0"><h2><input type="checkbox" id="menu-icon-click" name="menu-icon-click"><label for="menu-icon-click"><span class="menu-icon-menubar">홈페이지 하단에 링크 가능한 메뉴바 표시</span></label></h2></div></nav>');
 			$('.body-footer-contaner').append('<div class="nav1-side-menu"><div class="side-menu-listwrap"><ul class="menu-list-ul"></ul></div></div><div class="top-btn">Top</div>')
