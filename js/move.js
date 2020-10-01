@@ -8,7 +8,7 @@ $(function(){
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
 	var name_header=document.querySelector('.header');
 	var name_footer=document.getElementsByTagName('footer');
-	var foote_contaner=document.querySelector('footer .body-footer-contaner');
+	var footer_contaner=document.querySelector('footer .body-footer-contaner');
 	
 	/*loader 제어*/
 	$(document).ready(function(){
@@ -35,7 +35,7 @@ $(function(){
 	});
 	/*footer 자동 구성*/
 	function footer_creat(){
-		if(foote_contaner){
+		if(footer_contaner){
 			$.getJSON(jsonCover_data, function(data){
 				$('.body-footer-contaner').prepend('<div id="body-footer-add1" class="body-footer-add"><address></address></div>')
 				$.each(data, function(I, item){
