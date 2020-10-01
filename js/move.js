@@ -6,6 +6,9 @@ $(function(){
 	var nav_num_start;
 	var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
+	var name_header=document.getElementsByClassName('header');
+	var name_footer=document.getElementsByTagName('footer');
+
 	/*loader 제어*/
 	$(document).ready(function(){
 		$('.body-filter-preloader').load(portfolioindex_url+'/cover/cover.html .filter-preloader-loadingbox',function(){
@@ -31,7 +34,7 @@ $(function(){
 	});
 	/*footer 자동 구성*/
 	function footer_creat(){
-		if($('footer').find('.body-footer-contaner')){
+		if(name_footer.find('.body-footer-contaner')){
 			$.getJSON(jsonCover_data, function(data){
 				$('.body-footer-contaner').prepend('<div id="body-footer-add1" class="body-footer-add"><address></address></div>')
 				$.each(data, function(I, item){
@@ -45,7 +48,7 @@ $(function(){
 	/*-----------*/
 	/*header를 구성하는 요소들을 json에서 data로 받아와서 자동으로 구성*/
 	function header_creat(){
-		if(($('body').find('.header'))&&($('footer').find('.body-footer-contaner'))){
+		if(($('body').find('.header'))&&(name_footer.find('.body-footer-contaner'))){
 			var headerNum=0;
 			$('.header').append('<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div><div class="top-icon" id="phon-icon"><h2><span>HP icon - 모바일 기기에서 터치시 전화 연결</span></h2></div><div class="top-icon" id="menu-icon" tabindex="0"><h2><input type="checkbox" id="menu-icon-click" name="menu-icon-click"><label for="menu-icon-click"><span class="menu-icon-menubar">홈페이지 하단에 링크 가능한 메뉴바 표시</span></label></h2></div></nav>');
 			$('.body-footer-contaner').append('<div class="nav1-side-menu"><div class="side-menu-listwrap"><ul class="menu-list-ul"></ul></div></div><div class="top-btn">Top</div>')
@@ -520,7 +523,7 @@ $(function(){
 	})
 	/*--------------------------------------------------------*/
 	/*footer 소환동작 기종체크 후 문자보내기*/
-	$('footer').on('click','.footer-add-num',function(){
+	name_footer.on('click','.footer-add-num',function(){
 		if (navigator.userAgent.match(/android/i)) {
 			location.href='sms:010-9954-3410','_self';
 		} else if (navigator.userAgent.match(/(iphone)|(ipod)|(ipad)/i)){
@@ -531,7 +534,7 @@ $(function(){
 	})
 	/*--------------------------------------------------------*/
 	/*햄버거 메뉴 클릭시 bottom:0에 앱형태 ui의 네비 생성 및 네비동작*/
-	$('footer').on('click mouseover mouseleave','a',function(event){
+	name_footer.on('click mouseover mouseleave','a',function(event){
 		var agent = navigator.userAgent.toLowerCase();
 		$(document).on('click history','.list-ul-li a',function(event){
 			event.preventDefault();//a tag 동작제어 - 바로 링크되지 못하도록 방지
