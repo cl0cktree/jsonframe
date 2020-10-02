@@ -54,11 +54,11 @@ $(function(){
 			name_header.innerHTML='<nav class="section1-article1-nav" id="section1-article1-nav1"><div class="article1-nav1-topmenuwrap" id="article1-nav1-topmenuwrap1"><ul class="article1-nav1-topmenu" id="article1-nav1-topmenu1"></ul></div><div class="top-icon" id="phon-icon"><h2><span>HP icon - 모바일 기기에서 터치시 전화 연결</span></h2></div><div class="top-icon" id="menu-icon" tabindex="0"><h2><input type="checkbox" id="menu-icon-click" name="menu-icon-click"><label for="menu-icon-click"><span class="menu-icon-menubar">홈페이지 하단에 링크 가능한 메뉴바 표시</span></label></h2></div></nav>';
 			footer_contaner.innerHTML='<div class="nav1-side-menu"><div class="side-menu-listwrap"><ul class="menu-list-ul"></ul></div></div><div class="top-btn">Top</div>';
 			var headerNum=0;
-			var section1_article1_nav=docoment.queryselector('.section1-article1-nav');
+			var article1_nav=docoment.queryselector('.section1-article1-nav');
 			$.getJSON(jsonCover_data, function(data){
 				$.each(data, function(I, item){
 					if(item.cover_kinds=='header'){
-						section1_article1_nav.prepend('<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1></div>');
+						article1_nav.prepend('<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1></div>');
 					};
 				});
 				if ($('#article1-nav1-topmenu1').css('display')=='block')
