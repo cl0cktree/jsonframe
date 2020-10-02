@@ -55,11 +55,11 @@ $(function(){
 			footer_contaner.innerHTML='<div class="nav1-side-menu"><div class="side-menu-listwrap"><ul class="menu-list-ul"></ul></div></div><div class="top-btn">Top</div>';
 			var headerNum=0;
 			var article1_nav=document.querySelector('.section1-article1-nav');
+			var toplogo=document.innerHTML='<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1></div>';
 			$.getJSON(jsonCover_data, function(data){
 				$.each(data, function(I, item){
 					if(item.cover_kinds=='header'){
-						// article1_nav.prepend('<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1></div>');
-						article1_nav.innerHTML='<div class="article1-nav1-toplogo" id="article1-nav1-toplogo1"><h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1></div>';
+						article1_nav.prepend(toplogo);
 					};
 				});
 				if ($('#article1-nav1-topmenu1').css('display')=='block')
