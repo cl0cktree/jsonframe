@@ -58,7 +58,7 @@ $(function(){
 			$.getJSON(jsonCover_data, function(data){
 				$.each(data, function(I, item){
 					if(item.cover_kinds=='header'){
-						nav1_toplogo.append('<h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1>');
+						nav1_toplogo.innerHTML='<h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1>';
 					};
 				});
 				if ($('#article1-nav1-topmenu1').css('display')=='block')
