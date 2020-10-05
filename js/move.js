@@ -611,8 +611,10 @@ $(function(){
 			$.getJSON(jsonFrame_data, function(data){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
-					if(item.data_section=='portfolio'){
-						console.log(frame_year);
+					var frame_length;
+					if((item.data_section=='portfolio'&&(frame_year!==frame_year))){
+						frame_length++;
+						console.log(frame_length);
 					};
 				});
 			});
