@@ -612,7 +612,7 @@ $(function(){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
 					var frame_length=1;
-					if((item.data_section=='portfolio'&&(frame_year==frame_year))){
+					if((item.data_section=='portfolio')&&(frame_year!==frame_year)){
 						frame_length++;
 						console.log(frame_length);
 					};
