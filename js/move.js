@@ -6,10 +6,12 @@ $(function(){
 	var nav_num_start;
 	var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
+	var jsonFrame_data=portfolioindex_url+'/data/frame_data.json';
 	var name_header=document.querySelector('.header');
 	var name_footer=document.getElementsByTagName('footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
-	
+	var split_url = this.location.href.split('/').reverse()[0];
+
 	/*loader 제어*/
 	$(document).ready(function(){
 		$('.body-filter-preloader').load(portfolioindex_url+'/cover/cover.html .filter-preloader-loadingbox',function(){
@@ -124,7 +126,6 @@ $(function(){
 	/*------------------------------------------------------------*/
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
-		var split_url = this.location.href.split('/').reverse()[0];
 		var title_text;
 		if (split_url=='index.html'){
 			title_text = 'main';
@@ -573,6 +574,54 @@ $(function(){
 			title_changer();
 		}
 	})
+	/*------------------------------------------------------------------*/
+
+	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
+	function frameSommon(){
+		// var contents_head;
+		// var contents_title;
+		// if (split_url=='index.html'){
+		// 	contents_head='메인페이지 콘텐츠 묶음';
+		// 	contents_title='환영합니다.';
+		// }else if (split_url=='sub1.html'){
+		// 	contents_head='메인페이지 콘텐츠 묶음';
+		// 	contents_title='환영합니다.';
+		// }else if (split_url=='sub2.html'){
+		// 	contents_head='메인페이지 콘텐츠 묶음';
+		// 	contents_title='환영합니다.';
+		// }else if (split_url=='sub3.html'){
+		// 	contents_head='메인페이지 콘텐츠 묶음';
+		// 	contents_title='환영합니다.';
+		// }else if (split_url=='sub4.html'){
+		// 	contents_head='메인페이지 콘텐츠 묶음';
+		// 	contents_title='환영합니다.';
+		// }else if (split_url=='sub5.html'){
+		// 	contents_head='메인페이지 콘텐츠 묶음';
+		// 	contents_title='환영합니다.';
+		// }
+
+		// if ($('.body-section-content').find('.section-heading')){
+		// 	$('.section-heading').append(contents_head);
+		// 	$('.main-welcolme-summon').find('h2').append(contents_title);
+		// }
+		if ($('body').find('.portfolio_box')){
+			// $('portfolio_box').append('<div class="article-main-scrollall" id="article-main-scroll1"><div class="main-scrollall-head" id="main-scroll1-head"><h3>2016</h3>\
+			// </div><div id="main-scroll1-con" class="main-scrollall-con"><div class="move-wrap1"></div></div></div>')
+
+			$.getJSON(jsonFrame_data, function(data){
+				$.each(data, function(I, item){
+					var frame_year=item.data_years.length;
+					if(item.data_section=='portfolio'){
+						console.log(frame_year);
+					};
+				});
+			});
+
+		}
+
+
+	};
+	frameSommon();
 	/*------------------------------------------------------------------*/
 
 	/*------------------------popState 전체제어--------------------------*/
