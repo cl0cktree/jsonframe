@@ -611,11 +611,13 @@ $(function(){
 			$.getJSON(jsonFrame_data, function(data){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
-					var year_kinds=frame_year.length;
+					var year_filter=frame_year.filter(function(){
+						frame_year/frame_year!==0;
+					})
 					var frame_length=1;
 					if(item.data_section=='portfolio'){
 						// frame_length++;
-						console.log(year_kinds);
+						console.log(year_filter);
 					};
 				});
 			});
