@@ -612,7 +612,7 @@ $(function(){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
 					var start_year=2016;
-					var year_filter=frame_year.reduce(function(pre,value){
+					var year_filter=Object.keys(frame_year).reduce(function(pre,value){
 						return pre-value;
 					})
 					var frame_length=1;
