@@ -612,7 +612,7 @@ $(function(){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
 					var year_filter=frame_year.filter(function(){
-						frame_year/frame_year!==0;
+						return frame_year/frame_year!==0;
 					})
 					var frame_length=1;
 					if(item.data_section=='portfolio'){
