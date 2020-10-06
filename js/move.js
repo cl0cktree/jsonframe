@@ -618,7 +618,7 @@ $(function(){
 						for (var prop in frame_year) {
 							frame_length += frame_year[prop];
 						}
-						console.log(year_filter);
+						console.log(frame_year);
 					};
 				});
 			});
