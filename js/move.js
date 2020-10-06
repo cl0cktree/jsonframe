@@ -611,10 +611,11 @@ $(function(){
 			$.getJSON(jsonFrame_data, function(data){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
+					var year_kinds=frame_year.length;
 					var frame_length=1;
-					if((item.data_section=='portfolio')&&(frame_year!==frame_year)){
-						frame_length++;
-						console.log(frame_length);
+					if(item.data_section=='portfolio'){
+						// frame_length++;
+						console.log(year_kinds);
 					};
 				});
 			});
