@@ -612,8 +612,8 @@ $(function(){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
 					var start_year=2016;
-					var year_filter=frame_year.filter(function(start_year){
-						return frame_year-start_year!==0;
+					var year_filter=frame_year.reduce(function(pre,value){
+						return pre-value;
 					})
 					var frame_length=1;
 					if(item.data_section=='portfolio'){
