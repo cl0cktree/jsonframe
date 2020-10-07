@@ -614,24 +614,24 @@ $(function(){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
 					if(item.data_section=='portfolio'){
-						if(item.data_years=='2016'){
+						if(frame_year=='2016'){
 							data_year='2016';
 							box_num=1;
 							// contents_maker();
-						}else if(item.data_years=='2017'){
+						}else if(frame_year=='2017'){
 							data_year='2017';
 							box_num=2;
 							// contents_maker();
-						}else if(item.data_years=='2018'){
+						}else if(frame_year=='2018'){
 							data_year='2018';
 							box_num=3;
 							box_maker();
 							// contents_maker();
-						}else if(item.data_years=='2019'){
+						}else if(frame_year=='2019'){
 							data_year='2019';
 							box_num=4;
 							// contents_maker();
-						}else if(item.data_years=='2020'){
+						}else if(frame_year=='2020'){
 							data_year='2020';
 							box_num=5;
 							// contents_maker();
