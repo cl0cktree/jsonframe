@@ -641,7 +641,7 @@ $(function(){
 							contents_maker();
 						}
 						function box_maker(){
-							$('.article-main-scrollall').setAttribute("id", "article-main-scroll"+box_num);
+							$('.article-main-scrollall').attr("id", "article-main-scroll"+box_num);
 							$('.article-main-scrollall').append('<div id="main-scroll'+box_num+'-con" class="main-scrollall-con"></div>');
 							$('.main-scrollall-head').find('h3').append(data_year);
 							if($('.article-main-scrollall').find('.main-scrollall-con')){
