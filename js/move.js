@@ -578,54 +578,91 @@ $(function(){
 
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
 	function frameSommon(){
-		// var contents_head;
-		// var contents_title;
-		// if (split_url=='index.html'){
-		// 	contents_head='메인페이지 콘텐츠 묶음';
-		// 	contents_title='환영합니다.';
-		// }else if (split_url=='sub1.html'){
-		// 	contents_head='메인페이지 콘텐츠 묶음';
-		// 	contents_title='환영합니다.';
-		// }else if (split_url=='sub2.html'){
-		// 	contents_head='메인페이지 콘텐츠 묶음';
-		// 	contents_title='환영합니다.';
-		// }else if (split_url=='sub3.html'){
-		// 	contents_head='메인페이지 콘텐츠 묶음';
-		// 	contents_title='환영합니다.';
-		// }else if (split_url=='sub4.html'){
-		// 	contents_head='메인페이지 콘텐츠 묶음';
-		// 	contents_title='환영합니다.';
-		// }else if (split_url=='sub5.html'){
-		// 	contents_head='메인페이지 콘텐츠 묶음';
-		// 	contents_title='환영합니다.';
-		// }
+		var contents_head;
+		var contents_title;
+		var data_year;
+		var box_num;
 
-		// if ($('.body-section-content').find('.section-heading')){
-		// 	$('.section-heading').append(contents_head);
-		// 	$('.main-welcolme-summon').find('h2').append(contents_title);
-		// }
+		if (split_url=='index.html'){
+			contents_head='메인페이지 콘텐츠 묶음';
+			contents_title='환영합니다.';
+		}else if (split_url=='sub1.html'){
+			contents_head='메인페이지 콘텐츠 묶음';
+			contents_title='환영합니다.';
+		}else if (split_url=='sub2.html'){
+			contents_head='메인페이지 콘텐츠 묶음';
+			contents_title='환영합니다.';
+		}else if (split_url=='sub3.html'){
+			contents_head='메인페이지 콘텐츠 묶음';
+			contents_title='환영합니다.';
+		}else if (split_url=='sub4.html'){
+			contents_head='메인페이지 콘텐츠 묶음';
+			contents_title='환영합니다.';
+		}else if (split_url=='sub5.html'){
+			contents_head='메인페이지 콘텐츠 묶음';
+			contents_title='환영합니다.';
+		}
+
+		if ($('.body-section-content').find('.section-heading')){
+			$('.section-heading').append(contents_head);
+			$('.main-welcolme-summon').find('h2').append(contents_title);
+		}
 		if ($('body').find('.portfolio_box')){
-			// $('portfolio_box').append('<div class="article-main-scrollall" id="article-main-scroll1"><div class="main-scrollall-head" id="main-scroll1-head"><h3>2016</h3>\
-			// </div><div id="main-scroll1-con" class="main-scrollall-con"><div class="move-wrap1"></div></div></div>')
+			$('portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
 
 			$.getJSON(jsonFrame_data, function(data){
 				$.each(data, function(I, item){
 					var frame_year=item.data_years;
-					var start_year=2016;
-					var frame_length=1;
 					if(item.data_section=='portfolio'){
-						// frame_length++;
-						for (var prop in frame_year) {
-							frame_length += frame_year[prop];
+						if(frame_year=='2016'){
+							data_year='2016';
+							box_num=1;
+							box_maker();
+							contents_maker();
+						}else if(frame_year=='2017'){
+							data_year='2017';
+							box_num=2;
+							box_maker();
+							contents_maker();
+						}else if(frame_year=='2018'){
+							data_year='2018';
+							box_num=3;
+							box_maker();
+							contents_maker();
+						}else if(frame_year=='2019'){
+							data_year='2019';
+							box_num=4;
+							box_maker();
+							contents_maker();
+						}else if(frame_year=='2020'){
+							data_year='2020';
+							box_num=5;
+							box_maker();
+							contents_maker();
 						}
-						console.log(frame_length);
+						function box_maker(){
+							$('.article-main-scrollall').setAttribute("id", "article-main-scroll"+box_num);
+							$('.article-main-scrollall').append('<div id="main-scroll'+box_num+'-con" class="main-scrollall-con"></div>');
+							$('.main-scrollall-head').find('h3').append(data_year);
+							if($('.article-main-scrollall').find('.main-scrollall-con')){
+								$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
+							}
+						};
+						function contents_maker(){
+							var contents_count=0;
+							$.each(data, function(I, item){
+								if(data_year==frame_year){
+									contents_count++;
+									$('.move-wrap'+box_num).append('<div class="scrollall-con-box" id="scroll'+box_num+'-con-box1"><div id="con-box'+box_num+'-imgborder'+contents_count+'" class="con-box-imgborder">\
+									<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+box_num+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
+								}
+							});
+						};
 					};
 				});
 			});
 
 		}
-
-
 	};
 	frameSommon();
 	/*------------------------------------------------------------------*/
