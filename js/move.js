@@ -618,27 +618,27 @@ $(function(){
 							data_year='2016';
 							box_num=1;
 							box_maker();
-							contents_maker();
+							// contents_maker();
 						}else if(frame_year=='2017'){
 							data_year='2017';
 							box_num=2;
 							box_maker();
-							contents_maker();
+							// contents_maker();
 						}else if(frame_year=='2018'){
 							data_year='2018';
 							box_num=3;
 							box_maker();
-							contents_maker();
+							// contents_maker();
 						}else if(frame_year=='2019'){
 							data_year='2019';
 							box_num=4;
 							box_maker();
-							contents_maker();
+							// contents_maker();
 						}else if(frame_year=='2020'){
 							data_year='2020';
 							box_num=5;
 							box_maker();
-							contents_maker();
+							// contents_maker();
 						}
 						function box_maker(){
 							$('.article-main-scrollall').attr('id', 'article-main-scroll'+box_num);
