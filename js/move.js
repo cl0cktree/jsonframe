@@ -636,9 +636,9 @@ $(function(){
 							// contents_maker();
 						}
 					};
+					box_maker();
 				});
-				box_maker();
-				contents_maker();
+				// contents_maker();
 				function box_maker(){
 					$('.article-main-scrollall').attr('id', 'article-main-scroll'+box_num);
 					$('.article-main-scrollall').append('<div id="main-scroll'+box_num+'-con" class="main-scrollall-con"></div>');
