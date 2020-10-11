@@ -617,6 +617,7 @@ $(function(){
 						if(frame_year=='2016'){
 							data_year='2016';
 							box_num=1;
+							box_maker();
 							// contents_maker();
 						}else if(frame_year=='2017'){
 							data_year='2017';
@@ -636,7 +637,6 @@ $(function(){
 							// contents_maker();
 						}
 					};
-					box_maker();
 				});
 				// contents_maker();
 				function box_maker(){
