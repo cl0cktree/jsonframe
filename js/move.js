@@ -646,6 +646,7 @@ $(function(){
 					if($('.article-main-scrollall').find('.main-scrollall-con')){
 						$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
 					}
+					console.log(box_num);
 				};
 				function contents_maker(){
 					var contents_count=0;
