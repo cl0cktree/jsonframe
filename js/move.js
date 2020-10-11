@@ -625,7 +625,6 @@ $(function(){
 						}else if(frame_year=='2018'){
 							data_year='2018';
 							box_num=3;
-							box_maker();
 							// contents_maker();
 						}else if(frame_year=='2019'){
 							data_year='2019';
