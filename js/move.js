@@ -611,12 +611,12 @@ $(function(){
 			$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
 
 			$.getJSON(jsonFrame_data, function(data){
-				var frame_year;
+				var frame_year=jsonFrame_data.data_years;
 				// var arr_data=Object.keys(ObjData);
 				box_maker(data);
 				// contents_maker();
 				function box_maker(data){
-					frame_year=jsonFrame_data.data_years;
+					
 					if(frame_year=='2016'){
 						data_year='2016';
 						box_num=1;
