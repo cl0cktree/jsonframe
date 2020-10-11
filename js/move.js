@@ -612,10 +612,11 @@ $(function(){
 
 			$.getJSON(jsonFrame_data, function(data){
 				var frame_year;
+				// var arr_data=Object.keys(ObjData);
 				box_maker();
 				// contents_maker();
-				function box_maker(item,data_years){
-					frame_year=item.data_years;
+				function box_maker(data){
+					frame_year=jsonFrame_data.data_years;
 					if(frame_year=='2016'){
 						data_year='2016';
 						box_num=1;
