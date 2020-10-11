@@ -608,7 +608,7 @@ $(function(){
 			$('.main-welcolme-summon').find('h2').append(contents_title);
 		}
 		if ($('.content-article-wraper').find('.portfolio_box')){
-			$('portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
+			$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
 
 			$.getJSON(jsonFrame_data, function(data){
 				$.each(data, function(I, item){
