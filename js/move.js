@@ -636,28 +636,28 @@ $(function(){
 							// contents_maker();
 						}
 					};
-					box_maker();
-					contents_maker();
-					function box_maker(){
-						$('.article-main-scrollall').attr('id', 'article-main-scroll'+box_num);
-						$('.article-main-scrollall').append('<div id="main-scroll'+box_num+'-con" class="main-scrollall-con"></div>');
-						$('.main-scrollall-head').find('h3').append(data_year);
-						if($('.article-main-scrollall').find('.main-scrollall-con')){
-							$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
-						}
-						console.log(box_num);
-					};
-					function contents_maker(){
-						var contents_count=0;
-						$.each(data, function(I, item){
-							if(data_year==frame_year){
-								contents_count++;
-								$('.move-wrap'+box_num).append('<div class="scrollall-con-box" id="scroll'+box_num+'-con-box1"><div id="con-box'+box_num+'-imgborder'+contents_count+'" class="con-box-imgborder">\
-								<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+box_num+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
-							}
-						});
-					};
 				});
+				box_maker();
+				contents_maker();
+				function box_maker(){
+					$('.article-main-scrollall').attr('id', 'article-main-scroll'+box_num);
+					$('.article-main-scrollall').append('<div id="main-scroll'+box_num+'-con" class="main-scrollall-con"></div>');
+					$('.main-scrollall-head').find('h3').append(data_year);
+					if($('.article-main-scrollall').find('.main-scrollall-con')){
+						$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
+					}
+					console.log(box_num);
+				};
+				function contents_maker(){
+					var contents_count=0;
+					$.each(data, function(I, item){
+						if(data_year==frame_year){
+							contents_count++;
+							$('.move-wrap'+box_num).append('<div class="scrollall-con-box" id="scroll'+box_num+'-con-box1"><div id="con-box'+box_num+'-imgborder'+contents_count+'" class="con-box-imgborder">\
+							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+box_num+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
+						}
+					});
+				};
 			});
 		}
 	};
