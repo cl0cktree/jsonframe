@@ -612,6 +612,7 @@ $(function(){
 
 			$.getJSON(jsonFrame_data, function(data){
 				var frame_year=data.data_years;
+				console.log(frame_year);
 				// var arr_data=Object.keys(ObjData);
 				box_maker(data);
 				// contents_maker();
@@ -644,7 +645,7 @@ $(function(){
 					if($('.article-main-scrollall').find('.main-scrollall-con')){
 						$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
 					}
-					console.log(frame_year);
+					
 				};
 				$.each(data, function(I, item){
 					frame_year=item.data_years;
