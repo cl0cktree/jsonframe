@@ -611,10 +611,11 @@ $(function(){
 			$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
 
 			$.getJSON(jsonFrame_data, function(data){
-				var frame_year=item.data_years;
-				box_maker(data);
+				var frame_year;
+				box_maker();
 				// contents_maker();
-				function box_maker(){
+				function box_maker(data){
+					frame_year=item.data_years;
 					if(frame_year=='2016'){
 						data_year='2016';
 						box_num=1;
@@ -645,6 +646,7 @@ $(function(){
 					console.log(box_num);
 				};
 				$.each(data, function(I, item){
+					frame_year=item.data_years;
 					if(item.data_section=='portfolio'){
 						if(frame_year=='2016'){
 							// data_year='2016';
