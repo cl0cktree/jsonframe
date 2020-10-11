@@ -614,7 +614,7 @@ $(function(){
 				var frame_year;
 				box_maker();
 				// contents_maker();
-				function box_maker(item){
+				function box_maker(item,data_years){
 					frame_year=item.data_years;
 					if(frame_year=='2016'){
 						data_year='2016';
