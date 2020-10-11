@@ -613,7 +613,7 @@ $(function(){
 			$.getJSON(jsonFrame_data, function(data){
 				var frame_year;
 				// var arr_data=Object.keys(ObjData);
-				box_maker();
+				box_maker(data);
 				// contents_maker();
 				function box_maker(data){
 					frame_year=jsonFrame_data.data_years;
