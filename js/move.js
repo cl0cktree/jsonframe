@@ -644,7 +644,7 @@ $(function(){
 					if($('.article-main-scrollall').find('.main-scrollall-con')){
 						$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
 					}
-					console.log(box_num);
+					console.log(frame_year);
 				};
 				$.each(data, function(I, item){
 					frame_year=item.data_years;
