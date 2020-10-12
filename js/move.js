@@ -614,10 +614,11 @@ $(function(){
 				var frame_year;
 				$.each(data, function(data_years, item){
 					frame_year=item.data_years;
-					console.log(frame_year);
+					
 					if(frame_year=='2016'){
 						data_year='2016';
 						box_num=1;
+						console.log(frame_year);
 						// contents_maker();
 					}else if(frame_year=='2017'){
 						data_year='2017';
