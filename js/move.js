@@ -613,7 +613,7 @@ $(function(){
 			$.getJSON(jsonFrame_data, function(data){
 				var frame_year;
 				$.each(data, function(data_years, item){
-					frame_year=jsonFrame_data.data_years;
+					frame_year=data_years;
 					console.log(frame_year);
 					if(frame_year=='2016'){
 						data_year='2016';
