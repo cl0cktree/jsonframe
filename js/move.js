@@ -611,13 +611,9 @@ $(function(){
 			$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
 
 			$.getJSON(jsonFrame_data, function(data){
-				var frame_year=jsonFrame_data.data_years;
-				console.log(frame_year);
-				// var arr_data=Object.keys(ObjData);
-				box_maker(data);
-				// contents_maker();
-				function box_maker(data){
-					
+				var frame_year;
+				$.each(data, function(data_years, item){
+					frame_year=jsonFrame_data.data_years;
 					if(frame_year=='2016'){
 						data_year='2016';
 						box_num=1;
@@ -645,8 +641,10 @@ $(function(){
 					if($('.article-main-scrollall').find('.main-scrollall-con')){
 						$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
 					}
-					
-				};
+					console.log(frame_year);
+					// var arr_data=Object.keys(ObjData);
+					// contents_maker();
+				});
 				$.each(data, function(I, item){
 					frame_year=item.data_years;
 					if(item.data_section=='portfolio'){
