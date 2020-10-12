@@ -638,7 +638,7 @@ $(function(){
 						}else if(frame_year=='2020'){
 							data_year='2020';
 							box_num=5;
-							// contents_maker();
+							contents_maker();
 						}
 					};
 				});
