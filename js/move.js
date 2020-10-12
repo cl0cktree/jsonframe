@@ -612,7 +612,7 @@ $(function(){
 
 			$.getJSON(jsonFrame_data, function(data){
 				var frame_year=jsonFrame_data.data_years;
-				console.log(frame_year);
+				// console.log(frame_year);
 				// var arr_data=Object.keys(ObjData);
 				
 				$.each(data, function(I, item){
@@ -622,7 +622,7 @@ $(function(){
 							data_year='2016';
 							box_num=1;
 							// contents_maker();
-							box_maker();
+							
 						}else if(frame_year=='2017'){
 							// data_year='2017';
 							// box_num=2;
@@ -674,6 +674,7 @@ $(function(){
 					}
 					console.log(frame_year);
 				};
+				box_maker();
 			});
 			
 			function contents_maker(){
