@@ -624,20 +624,20 @@ $(function(){
 							// contents_maker();
 							
 						}else if(frame_year=='2017'){
-							// data_year='2017';
-							// box_num=2;
+							data_year='2017';
+							box_num=2;
 							// contents_maker();
 						}else if(frame_year=='2018'){
-							// data_year='2018';
-							// box_num=3;
+							data_year='2018';
+							box_num=3;
 							// contents_maker();
 						}else if(frame_year=='2019'){
-							// data_year='2019';
-							// box_num=4;
+							data_year='2019';
+							box_num=4;
 							// contents_maker();
 						}else if(frame_year=='2020'){
-							// data_year='2020';
-							// box_num=5;
+							data_year='2020';
+							box_num=5;
 							// contents_maker();
 						}
 					};
