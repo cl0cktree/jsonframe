@@ -677,11 +677,11 @@ $(function(){
 				function contents_maker(){
 					var contents_count=0;
 					$.each(data, function(I, item){
-						// if(data_year==frame_year){
+						if(data_year==frame_year){
 							contents_count++;
 							$('.move-wrap'+box_num).append('<div class="scrollall-con-box" id="scroll'+box_num+'-con-box1"><div id="con-box'+box_num+'-imgborder'+contents_count+'" class="con-box-imgborder">\
 							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+box_num+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
-						// }
+						}
 					});
 				};
 				box_maker();
