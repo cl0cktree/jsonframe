@@ -632,7 +632,7 @@ $(function(){
 			};
 			box_maker();
 			$.getJSON(jsonFrame_data, function(data){
-				var frame_year=jsonFrame_data.data_years;
+				var frame_year=item.data_years;
 				// console.log(frame_year);
 				// var arr_data=Object.keys(ObjData);
 				
