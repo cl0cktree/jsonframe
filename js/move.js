@@ -608,8 +608,6 @@ $(function(){
 			$('.main-welcolme-summon').find('h2').append(contents_title);
 		}
 		if ($('.content-article-wraper').find('.portfolio_box')){
-			$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
-
 			$.getJSON(jsonFrame_data, function(data){
 				var frame_year=jsonFrame_data.data_years;
 				// console.log(frame_year);
@@ -647,40 +645,20 @@ $(function(){
 					var start_year;
 					var this_year=2020;
 					var work_years=0;
-					
-					for (start_year=2016;start_year<=this_year;start_year++){
-						work_years++;
-						$('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
-						$('.article-main-scrollall').append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
-						$('.main-scrollall-head').find('h3').append(start_year);
-						if($('.article-main-scrollall').find('.main-scrollall-con')){
-							$('.main-scrollall-con').append('<div class="move-wrap'+work_years+'"></div>');
+					if(item.data_section=='portfolio'){
+						for (start_year=2016;start_year<=this_year;start_year++){
+							work_years++;
+							$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
+							$('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
+							$('.article-main-scrollall').append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
+							$('#article-main-scroll'+work_years).find('h3').append(start_year);
+							if($('.article-main-scrollall').find('.main-scrollall-con')){
+								$('.main-scrollall-con').append('<div class="move-wrap'+work_years+'"></div>');
+							}
+							contents_maker();
+							console.log(work_years);
 						}
-						contents_maker();
-						console.log(work_years);
 					}
-					// if(frame_year=='2016'){
-					// 	data_year='2016';
-					// 	box_num=1;
-					// 	// contents_maker();
-					// }else if(frame_year=='2017'){
-					// 	data_year='2017';
-					// 	box_num=2;
-					// 	// contents_maker();
-					// }else if(frame_year=='2018'){
-					// 	data_year='2018';
-					// 	box_num=3;
-					// 	// contents_maker();
-					// }else if(frame_year=='2019'){
-					// 	data_year='2019';
-					// 	box_num=4;
-					// 	// contents_maker();
-					// }else if(frame_year=='2020'){
-					// 	data_year='2020';
-					// 	box_num=5;
-					// 	// contents_maker();
-					// }
-					
 				};
 				function contents_maker(){
 					var contents_count=0;
