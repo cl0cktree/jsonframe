@@ -688,18 +688,21 @@ $(function(){
 							}
 						}else if($('.content-article-wraper').find('.portfolio_web')){
 							page_kind='web';
+							console.log('out = '+page_kind);
 							sub_kind();
 						}else if($('.content-article-wraper').find('.portfolio_move')){
 							page_kind='movie';
+							console.log('out = '+page_kind);
 							sub_kind();
 						}else if($('.content-article-wraper').find('.portfolio_flash')){
 							page_kind='flash';
+							console.log('out = '+page_kind);
 							sub_kind();
 						}else if($('.content-article-wraper').find('.portfolio_2d')){
 							page_kind='image';
+							console.log('out = '+page_kind);
 							sub_kind();
 						}
-						console.log('out = '+page_kind);
 					});
 				};
 				contents_maker();
