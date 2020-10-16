@@ -587,27 +587,27 @@ $(function(){
 		if (split_url=='index.html'){
 			contents_head='메인페이지 콘텐츠 묶음';
 			contents_title='환영합니다.';
-			$('.content-article-wraper').addClass('portfolio_main');
+			$('.article-summon-wrap').addClass('portfolio_main');
 		}else if (split_url=='sub1.html'){
 			contents_head='소개페이지 콘텐츠 묶음';
 			contents_title='숙련도&소개';
-			$('.content-article-wraper').addClass('portfolio_intro');
+			$('.article-summon-wrap').addClass('portfolio_intro');
 		}else if (split_url=='sub2.html'){
 			contents_head='웹작업페이지 콘텐츠 묶음';
 			contents_title='웹&앱 퍼블리싱';
-			$('.content-article-wraper').addClass('portfolio_web');
+			$('.article-summon-wrap').addClass('portfolio_web');
 		}else if (split_url=='sub3.html'){
 			contents_head='동영상작업페이지 콘텐츠 묶음';
 			contents_title='동영상 편집작업';
-			$('.content-article-wraper').addClass('portfolio_move');
+			$('.article-summon-wrap').addClass('portfolio_move');
 		}else if (split_url=='sub4.html'){
 			contents_head='플래시작업페이지 콘텐츠 묶음';
 			contents_title='플래시';
-			$('.content-article-wraper').addClass('portfolio_flash');
+			$('.article-summon-wrap').addClass('portfolio_flash');
 		}else if (split_url=='sub5.html'){
 			contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 			contents_title='2D랜더링&편집작업';
-			$('.content-article-wraper').addClass('portfolio_2d');
+			$('.article-summon-wrap').addClass('portfolio_2d');
 		}
 
 		if ($('.body-section-content').find('.section-heading')){
@@ -665,7 +665,7 @@ $(function(){
 									contents_box();
 								}
 							}
-						}
+						};
 						if($('.content-article-wraper').find('.portfolio_main')){
 							if(item.data_section=='portfolio'){
 								if((frame_year=='2016')&&(item.years_num!=='0')){
