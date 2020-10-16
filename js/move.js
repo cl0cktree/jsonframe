@@ -648,6 +648,7 @@ $(function(){
 						};
 						function sub_kind(){
 							if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
+								console.log(page_kind);
 								if(frame_year=='2016'){
 									work_years=1;
 									contents_box();
