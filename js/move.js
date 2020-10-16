@@ -632,7 +632,6 @@ $(function(){
 			};
 			box_maker();
 			$.getJSON(jsonFrame_data, function(data){
-				var frame_year=data_years;
 				// console.log(frame_year);
 				// var arr_data=Object.keys(ObjData);
 				
@@ -668,6 +667,7 @@ $(function(){
 				function contents_maker(){
 					var contents_count=0;
 					$.each(data, function(I, item){
+						var frame_year=item.data_years;
 						if(item.data_section=='portfolio'){
 							console.log('frame_year = '+frame_year);
 							if(print_year==frame_year){
