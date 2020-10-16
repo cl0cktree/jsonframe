@@ -669,6 +669,7 @@ $(function(){
 					var contents_count=0;
 					$.each(data, function(I, item){
 						if(item.data_section=='portfolio'){
+							console.log('frame_year = '+frame_year);
 							if(print_year==frame_year){
 								contents_count++;
 								$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box1"><div id="con-box'+work_years+'-imgborder'+contents_count+'" class="con-box-imgborder">\
