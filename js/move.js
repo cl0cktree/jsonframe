@@ -617,8 +617,8 @@ $(function(){
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
 						print_year++;
-						$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
-						$('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
+						$('.portfolio_box').append('<div class="article-main-scrollall" id="article-main-scroll'+work_years+'"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
+						// $('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
 						if($('#article-main-scroll'+work_years).find('h3')){
 							$('#article-main-scroll'+work_years).find('h3').append(print_year);
 							$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
@@ -633,11 +633,9 @@ $(function(){
 			box_maker();
 			$.getJSON(jsonFrame_data, function(data){
 				function contents_maker(){
-					var contents_count=0;
 					$.each(data, function(I, item){
 						var frame_year=item.data_years;
 						if(item.data_section=='portfolio'){
-							console.log('frame_year = '+frame_year);
 							if(frame_year=='2016'){
 								work_years=1;
 								contents_box();
