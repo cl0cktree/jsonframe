@@ -638,74 +638,68 @@ $(function(){
 			box_maker();
 			
 			$.getJSON(jsonFrame_data, function(data){
-				function contents_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
-					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
-				};
 
-				function contents_main(){
+				function contents_maker(){
 					$.each(data, function(I, item){
 						var frame_year=item.data_years;
-						if(item.data_section=='portfolio'){
-							if((frame_year=='2016')&&(item.years_num!=='0')){
-								work_years=1;
-								contents_box();
-							}else if((frame_year=='2017')&&(item.years_num!=='0')){
-								work_years=2;
-								contents_box();
-							}else if((frame_year=='2018')&&(item.years_num!=='0')){
-								work_years=3;
-								contents_box();
-							}else if((frame_year=='2019')&&(item.years_num!=='0')){
-								work_years=4;
-								contents_box();
-							}else if((frame_year=='2020')&&(item.years_num!=='0')){
-								work_years=5;
-								contents_box();
+						function contents_box(){
+							$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
+						};
+						function sub_kind(){
+							if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
+								if(frame_year=='2016'){
+									work_years=1;
+									contents_box();
+								}else if(frame_year=='2017'){
+									work_years=2;
+									contents_box();
+								}else if(frame_year=='2018'){
+									work_years=3;
+									contents_box();
+								}else if(frame_year=='2019'){
+									work_years=4;
+									contents_box();
+								}else if(frame_year=='2020'){
+									work_years=5;
+									contents_box();
+								}
 							}
+						}
+						if($('.content-article-wraper').find('.portfolio_main')){
+							if(item.data_section=='portfolio'){
+								if((frame_year=='2016')&&(item.years_num!=='0')){
+									work_years=1;
+									contents_box();
+								}else if((frame_year=='2017')&&(item.years_num!=='0')){
+									work_years=2;
+									contents_box();
+								}else if((frame_year=='2018')&&(item.years_num!=='0')){
+									work_years=3;
+									contents_box();
+								}else if((frame_year=='2019')&&(item.years_num!=='0')){
+									work_years=4;
+									contents_box();
+								}else if((frame_year=='2020')&&(item.years_num!=='0')){
+									work_years=5;
+									contents_box();
+								}
+							}
+						}else if($('.content-article-wraper').find('.portfolio_web')){
+							page_kind='web';
+							sub_kind();
+						}else if($('.content-article-wraper').find('.portfolio_move')){
+							page_kind='movie';
+							sub_kind();
+						}else if($('.content-article-wraper').find('.portfolio_flash')){
+							page_kind='flash';
+							sub_kind();
+						}else if($('.content-article-wraper').find('.portfolio_2d')){
+							page_kind='image';
+							sub_kind();
 						}
 					});
 				};
-
-				function contents_sub(){
-					$.each(data, function(I, item){
-						var frame_year=item.data_years;
-						if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
-							if(frame_year=='2016'){
-								work_years=1;
-								contents_box();
-							}else if(frame_year=='2017'){
-								work_years=2;
-								contents_box();
-							}else if(frame_year=='2018'){
-								work_years=3;
-								contents_box();
-							}else if(frame_year=='2019'){
-								work_years=4;
-								contents_box();
-							}else if(frame_year=='2020'){
-								work_years=5;
-								contents_box();
-							}
-						}
-					});
-				};
-				
-				if($('.content-article-wraper').find('.portfolio_main')){
-					contents_main();
-				}else if($('.content-article-wraper').find('.portfolio_web')){
-					page_kind='web';
-					contents_sub();
-				}else if($('.content-article-wraper').find('.portfolio_move')){
-					page_kind='movie';
-					contents_sub();
-				}else if($('.content-article-wraper').find('.portfolio_flash')){
-					page_kind='flash';
-					contents_sub();
-				}else if($('.content-article-wraper').find('.portfolio_2d')){
-					page_kind='image';
-					contents_sub();
-				}
 			});
 		}
 	};
