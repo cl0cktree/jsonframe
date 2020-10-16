@@ -670,7 +670,23 @@ $(function(){
 						var frame_year=item.data_years;
 						if(item.data_section=='portfolio'){
 							console.log('frame_year = '+frame_year);
-							if(print_year==frame_year){
+							if(frame_year=='2016'){
+								contents_count++;
+								$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box1"><div id="con-box'+work_years+'-imgborder'+contents_count+'" class="con-box-imgborder">\
+								<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
+							}else if(frame_year=='2017'){
+								contents_count++;
+								$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box1"><div id="con-box'+work_years+'-imgborder'+contents_count+'" class="con-box-imgborder">\
+								<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
+							}else if(frame_year=='2018'){
+								contents_count++;
+								$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box1"><div id="con-box'+work_years+'-imgborder'+contents_count+'" class="con-box-imgborder">\
+								<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
+							}else if(frame_year=='2019'){
+								contents_count++;
+								$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box1"><div id="con-box'+work_years+'-imgborder'+contents_count+'" class="con-box-imgborder">\
+								<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
+							}else if(frame_year=='2020'){
 								contents_count++;
 								$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box1"><div id="con-box'+work_years+'-imgborder'+contents_count+'" class="con-box-imgborder">\
 								<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+contents_count+'" class="con-box-caption">'+item.data_title+'</div></div>');
