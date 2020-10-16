@@ -636,19 +636,19 @@ $(function(){
 					$.each(data, function(I, item){
 						var frame_year=item.data_years;
 						if(item.data_section=='portfolio'){
-							if(frame_year=='2016'){
+							if((frame_year=='2016')&&(item.years_num!==0)){
 								work_years=1;
 								contents_box();
-							}else if(frame_year=='2017'){
+							}else if((frame_year=='2017')&&(item.years_num!==0)){
 								work_years=2;
 								contents_box();
-							}else if(frame_year=='2018'){
+							}else if((frame_year=='2018')&&(item.years_num!==0)){
 								work_years=3;
 								contents_box();
-							}else if(frame_year=='2019'){
+							}else if((frame_year=='2019')&&(item.years_num!==0)){
 								work_years=4;
 								contents_box();
-							}else if(frame_year=='2020'){
+							}else if((frame_year=='2020')&&(item.years_num!==0)){
 								work_years=5;
 								contents_box();
 							}
