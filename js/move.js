@@ -651,7 +651,9 @@ $(function(){
 							$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
 							$('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
 							$('.article-main-scrollall').append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
-							$('#article-main-scroll'+work_years).find('h3').append(start_year);
+							if($('#article-main-scroll'+work_years).find('h3')){
+								$('#article-main-scroll'+work_years).find('h3').append(start_year);
+							}
 							if($('.article-main-scrollall').find('.main-scrollall-con')){
 								$('.main-scrollall-con').append('<div class="move-wrap'+work_years+'"></div>');
 							}
