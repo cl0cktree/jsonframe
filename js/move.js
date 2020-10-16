@@ -671,23 +671,18 @@ $(function(){
 						if(item.data_section=='portfolio'){
 							console.log('frame_year = '+frame_year);
 							if(frame_year=='2016'){
-								contents_count++;
 								work_years=1;
 								contents_box();
 							}else if(frame_year=='2017'){
-								contents_count++;
 								work_years=2;
 								contents_box();
 							}else if(frame_year=='2018'){
-								contents_count++;
 								work_years=3;
 								contents_box();
 							}else if(frame_year=='2019'){
-								contents_count++;
 								work_years=4;
 								contents_box();
 							}else if(frame_year=='2020'){
-								contents_count++;
 								work_years=5;
 								contents_box();
 							}
@@ -1220,16 +1215,19 @@ $(function(){
 
 			else if ((this==document.getElementById('con-box3-imgborder1'))||(this==document.getElementById('con-box3-caption1')))
 			{
-				datasum = portfolioindex_url+'/data/data-g.html #filter-conbox-contents7';
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents20';
 			}else if ((this==document.getElementById('con-box3-imgborder2'))||(this==document.getElementById('con-box3-caption2')))
 			{
-				datasum = portfolioindex_url+'/data/data-g.html #filter-conbox-contents8';
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents21';
 			}else if ((this==document.getElementById('con-box3-imgborder3'))||(this==document.getElementById('con-box3-caption3')))
 			{
-				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents21';
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents22';
 			}else if ((this==document.getElementById('con-box3-imgborder4'))||(this==document.getElementById('con-box3-caption4')))
 			{
-				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents22';
+				datasum = portfolioindex_url+'/data/data-g.html #filter-conbox-contents7';
+			}else if ((this==document.getElementById('con-box3-imgborder5'))||(this==document.getElementById('con-box3-caption5')))
+			{
+				datasum = portfolioindex_url+'/data/data-g.html #filter-conbox-contents8';
 			}else if ((this==document.getElementById('con-box4-imgborder1'))||(this==document.getElementById('con-box4-caption1')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents23';
