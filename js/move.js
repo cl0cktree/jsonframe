@@ -656,7 +656,7 @@ $(function(){
 						if($('.article-main-scrollall').find('.main-scrollall-con')){
 							$('.main-scrollall-con').append('<div class="move-wrap'+work_years+'"></div>');
 						}
-						console.log(frame_year);
+						console.log(work_years);
 					}
 					// if(frame_year=='2016'){
 					// 	data_year='2016';
