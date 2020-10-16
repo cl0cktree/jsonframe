@@ -644,7 +644,20 @@ $(function(){
 				});
 				// contents_maker();
 				function box_maker(){
+					var start_year;
+					var this_year=2020;
+					var work_years=0;
 					
+					for (start_year=2016;start_year<=this_year;start_year++){
+						work_years++;
+						$('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
+						$('.article-main-scrollall').append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
+						$('.main-scrollall-head').find('h3').append(start_year);
+						if($('.article-main-scrollall').find('.main-scrollall-con')){
+							$('.main-scrollall-con').append('<div class="move-wrap'+work_years+'"></div>');
+						}
+						console.log(frame_year);
+					}
 					// if(frame_year=='2016'){
 					// 	data_year='2016';
 					// 	box_num=1;
@@ -666,13 +679,7 @@ $(function(){
 					// 	box_num=5;
 					// 	// contents_maker();
 					// }
-					$('.article-main-scrollall').attr('id', 'article-main-scroll'+box_num);
-					$('.article-main-scrollall').append('<div id="main-scroll'+box_num+'-con" class="main-scrollall-con"></div>');
-					$('.main-scrollall-head').find('h3').append(data_year);
-					if($('.article-main-scrollall').find('.main-scrollall-con')){
-						$('.main-scrollall-con').append('<div class="move-wrap'+box_num+'"></div>');
-					}
-					console.log(frame_year);
+					
 				};
 				function contents_maker(){
 					var contents_count=0;
