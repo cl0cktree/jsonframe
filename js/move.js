@@ -623,7 +623,7 @@ $(function(){
 							$('#article-main-scroll'+work_years).find('h3').append(print_year);
 							$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
 						}
-						if($('.article-main-scrollall').find('.main-scrollall-con')){
+						if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 							$('.main-scrollall-con').append('<div class="move-wrap'+work_years+'"></div>');
 						}
 						console.log(work_years+' / '+print_year);
