@@ -666,7 +666,7 @@ $(function(){
 							}
 						};
 						$(document).ready(function(){
-							if($('.content-article-wraper').find('.portfolio_main')){
+							if($('body').find('.portfolio_main')){
 								if(item.data_section=='portfolio'){
 									if((frame_year=='2016')&&(item.years_num!=='0')){
 										work_years=1;
@@ -685,19 +685,19 @@ $(function(){
 										contents_box();
 									}
 								}
-							}else if($('.content-article-wraper').find('.portfolio_web')){
+							}else if($('body').find('.portfolio_web')){
 								page_kind='web';
 								console.log('out = '+page_kind);
 								sub_kind();
-							}else if($('.content-article-wraper').find('.portfolio_move')){
+							}else if($('body').find('.portfolio_move')){
 								page_kind='movie';
 								console.log('out = '+page_kind);
 								sub_kind();
-							}else if($('.content-article-wraper').find('.portfolio_flash')){
+							}else if($('body').find('.portfolio_flash')){
 								page_kind='flash';
 								console.log('out = '+page_kind);
 								sub_kind();
-							}else if($('.content-article-wraper').find('.portfolio_2d')){
+							}else if($('body').find('.portfolio_2d')){
 								page_kind='image';
 								console.log('out = '+page_kind);
 								sub_kind();
