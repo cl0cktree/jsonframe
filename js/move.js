@@ -699,6 +699,7 @@ $(function(){
 							page_kind='image';
 							sub_kind();
 						}
+						console.log('out = '+page_kind);
 					});
 				};
 				contents_maker();
