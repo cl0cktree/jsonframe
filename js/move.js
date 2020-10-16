@@ -700,6 +700,7 @@ $(function(){
 						}
 					});
 				};
+				contents_maker();
 			});
 		}
 	};
