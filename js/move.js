@@ -645,7 +645,7 @@ $(function(){
 					var start_year;
 					var this_year=2020;
 					var work_years=0;
-					if(item.data_section=='portfolio'){
+					if($('.content-article-wraper').find('.portfolio_box')){
 						for (start_year=2016;start_year<=this_year;start_year++){
 							work_years++;
 							$('.portfolio_box').append('<div class="article-main-scrollall"><div class="main-scrollall-head" id="main-scroll1-head"><h3></h3></div></div>')
