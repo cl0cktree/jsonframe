@@ -610,10 +610,10 @@ $(function(){
 		if (split_url!=='sub1.html'){
 			var work_years=0;
 			var print_year=2015;
+			$('.portfolio_box').html('');
 			function box_maker(){
 				var start_year;
 				var this_year=2020;
-				$('.portfolio_box').html('');
 				for (start_year=2016;start_year<=this_year;start_year++){
 					work_years++;
 					print_year++;
