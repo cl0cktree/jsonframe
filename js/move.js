@@ -597,7 +597,7 @@ $(function(){
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
 	function frameSommon(){
 		var page_kind;
-
+		title_changer();
 		if ($('.body-section-content').find('.section-heading')){
 			$('.section-heading').append(contents_head);
 			$('.main-welcolme-summon').find('h2').append(contents_title);
