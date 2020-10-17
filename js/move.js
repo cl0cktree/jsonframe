@@ -6,6 +6,7 @@ $(function(){
 	var nav_num_start;
 	var contents_head;
 	var contents_title;
+	var class_add;
 	var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
 	var jsonFrame_data=portfolioindex_url+'/data/frame_data.json';
@@ -637,13 +638,11 @@ $(function(){
 				function contents_maker(){
 					$.each(data, function(I, item){
 						var frame_year=item.data_years;
-						var class_add;
 						function contents_box(){
 							$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
 							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
 						};
 						function sub_kind(){
-							$('.portfolio_box').addClass(class_add);
 							if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
 								console.log(page_kind);
 								if(frame_year=='2016'){
