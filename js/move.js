@@ -183,7 +183,8 @@ $(function(){
 					$('#slide-wrap').css({'display':'none'})
 					$('#slide-wrap-i').css({'display':'block'})
 				}
-				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
+				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
+				frameSommon();
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
 
 				var topbtnm
@@ -226,7 +227,8 @@ $(function(){
 				$('#slide-wrap').css({'display':'none'})
 				$('#slide-wrap-i').css({'display':'block'})
 			}
-			$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
+			// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
+			frameSommon();
 			$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
 
 			var topbtnm
@@ -724,19 +726,15 @@ $(function(){
 							}
 						}else if (split_url=='sub2.html'){
 							page_kind='web';
-							console.log('out = '+page_kind);
 							sub_kind();
 						}else if (split_url=='sub3.html'){
 							page_kind='movie';
-							console.log('out = '+page_kind);
 							sub_kind();
 						}else if (split_url=='sub4.html'){
 							page_kind='flash';
-							console.log('out = '+page_kind);
 							sub_kind();
 						}else if (split_url=='sub5.html'){
 							page_kind='image';
-							console.log('out = '+page_kind);
 							sub_kind();
 						}
 					});
