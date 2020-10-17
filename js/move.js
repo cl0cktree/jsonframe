@@ -154,6 +154,10 @@ $(function(){
 			contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 			contents_title='2D랜더링&편집작업';
 		}
+		if ($('.body-section-content').find('.section-heading')){
+			$('.section-heading').append(contents_head);
+			$('.main-welcolme-summon').find('h2').append(contents_title);
+		}
 		// console.log(split_url);
 		document.title = 'Welcome to Portfolio Site - '+title_text;
 	}
@@ -598,10 +602,6 @@ $(function(){
 	function frameSommon(){
 		var page_kind;
 		title_changer();
-		if ($('.body-section-content').find('.section-heading')){
-			$('.section-heading').append(contents_head);
-			$('.main-welcolme-summon').find('h2').append(contents_title);
-		}
 		if ($('.content-article-wraper').find('.portfolio_box')){
 			var work_years=0;
 			var print_year=2015;
