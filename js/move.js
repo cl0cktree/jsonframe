@@ -380,7 +380,8 @@ $(function(){
 				})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				$('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
+				// $('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
+				frameSommon();
 				$('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
 
 				var topbtnm
@@ -416,7 +417,8 @@ $(function(){
 			})
 			$('#slide-wrap').css({'display':'block'})
 			$('#slide-wrap-i').css({'display':'none'})
-			$('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
+			// $('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
+			frameSommon();
 			$('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
 
 			var topbtnm
@@ -759,7 +761,8 @@ $(function(){
 				$('.ul-li-img1').css({'border':'0px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				$('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
+				// $('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
+				frameSommon();
 				$('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub1.html'){
 				$('.article-main-welcolme').load(portfolioindex_url+'/sub/sub1.html .main-welcolme-summon')
