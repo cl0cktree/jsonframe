@@ -665,44 +665,80 @@ $(function(){
 								}
 							}
 						};
-						$(document).ready(function(){
-							if($('body').find('.portfolio_main')){
-								if(item.data_section=='portfolio'){
-									if((frame_year=='2016')&&(item.years_num!=='0')){
-										work_years=1;
-										contents_box();
-									}else if((frame_year=='2017')&&(item.years_num!=='0')){
-										work_years=2;
-										contents_box();
-									}else if((frame_year=='2018')&&(item.years_num!=='0')){
-										work_years=3;
-										contents_box();
-									}else if((frame_year=='2019')&&(item.years_num!=='0')){
-										work_years=4;
-										contents_box();
-									}else if((frame_year=='2020')&&(item.years_num!=='0')){
-										work_years=5;
-										contents_box();
-									}
+						// $(document).ready(function(){
+						// 	if($('body').find('.portfolio_main')){
+						// 		if(item.data_section=='portfolio'){
+						// 			if((frame_year=='2016')&&(item.years_num!=='0')){
+						// 				work_years=1;
+						// 				contents_box();
+						// 			}else if((frame_year=='2017')&&(item.years_num!=='0')){
+						// 				work_years=2;
+						// 				contents_box();
+						// 			}else if((frame_year=='2018')&&(item.years_num!=='0')){
+						// 				work_years=3;
+						// 				contents_box();
+						// 			}else if((frame_year=='2019')&&(item.years_num!=='0')){
+						// 				work_years=4;
+						// 				contents_box();
+						// 			}else if((frame_year=='2020')&&(item.years_num!=='0')){
+						// 				work_years=5;
+						// 				contents_box();
+						// 			}
+						// 		}
+						// 	}else if($('body').find('.portfolio_web')){
+						// 		page_kind='web';
+						// 		console.log('out = '+page_kind);
+						// 		sub_kind();
+						// 	}else if($('body').find('.portfolio_move')){
+						// 		page_kind='movie';
+						// 		console.log('out = '+page_kind);
+						// 		sub_kind();
+						// 	}else if($('body').find('.portfolio_flash')){
+						// 		page_kind='flash';
+						// 		console.log('out = '+page_kind);
+						// 		sub_kind();
+						// 	}else if($('body').find('.portfolio_2d')){
+						// 		page_kind='image';
+						// 		console.log('out = '+page_kind);
+						// 		sub_kind();
+						// 	}
+						// })
+						if (split_url=='index.html'){
+							if(item.data_section=='portfolio'){
+								if((frame_year=='2016')&&(item.years_num!=='0')){
+									work_years=1;
+									contents_box();
+								}else if((frame_year=='2017')&&(item.years_num!=='0')){
+									work_years=2;
+									contents_box();
+								}else if((frame_year=='2018')&&(item.years_num!=='0')){
+									work_years=3;
+									contents_box();
+								}else if((frame_year=='2019')&&(item.years_num!=='0')){
+									work_years=4;
+									contents_box();
+								}else if((frame_year=='2020')&&(item.years_num!=='0')){
+									work_years=5;
+									contents_box();
 								}
-							}else if($('body').find('.portfolio_web')){
-								page_kind='web';
-								console.log('out = '+page_kind);
-								sub_kind();
-							}else if($('body').find('.portfolio_move')){
-								page_kind='movie';
-								console.log('out = '+page_kind);
-								sub_kind();
-							}else if($('body').find('.portfolio_flash')){
-								page_kind='flash';
-								console.log('out = '+page_kind);
-								sub_kind();
-							}else if($('body').find('.portfolio_2d')){
-								page_kind='image';
-								console.log('out = '+page_kind);
-								sub_kind();
 							}
-						})
+						}else if (split_url=='sub2.html'){
+							page_kind='web';
+							console.log('out = '+page_kind);
+							sub_kind();
+						}else if (split_url=='sub3.html'){
+							page_kind='movie';
+							console.log('out = '+page_kind);
+							sub_kind();
+						}else if (split_url=='sub4.html'){
+							page_kind='flash';
+							console.log('out = '+page_kind);
+							sub_kind();
+						}else if (split_url=='sub5.html'){
+							page_kind='image';
+							console.log('out = '+page_kind);
+							sub_kind();
+						}
 					});
 				};
 				contents_maker();
