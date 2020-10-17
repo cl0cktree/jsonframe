@@ -603,7 +603,7 @@ $(function(){
 	function frameSommon(){
 		var page_kind;
 		title_changer();
-		if ($('.content-article-wraper').find('.portfolio_box')){
+		if (split_url!=='sub1.html'){
 			var work_years=0;
 			var print_year=2015;
 			function box_maker(){
