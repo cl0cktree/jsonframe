@@ -133,6 +133,8 @@ $(function(){
 			title_text = 'main';
 			contents_head='메인페이지 콘텐츠 묶음';
 			contents_title='환영합니다.';
+			// $('.article-summon-wrap').removeClass('.portfolio_box');
+			$('.portfolio_box').addClass('portfolio_main');
 		}else if (split_url=='sub1.html'){
 			title_text = 'introduce';
 			contents_head='소개페이지 콘텐츠 묶음';
@@ -141,18 +143,22 @@ $(function(){
 			title_text = 'web&app';
 			contents_head='웹작업페이지 콘텐츠 묶음';
 			contents_title='웹&앱 퍼블리싱';
+			$('.portfolio_box').addClass('portfolio_web');
 		}else if (split_url=='sub3.html'){
 			title_text = 'movie';
 			contents_head='동영상작업페이지 콘텐츠 묶음';
 			contents_title='동영상 편집작업';
+			$('.portfolio_box').addClass('portfolio_move');
 		}else if (split_url=='sub4.html'){
 			title_text = 'flash';
 			contents_head='플래시작업페이지 콘텐츠 묶음';
+			$('.portfolio_box').addClass('portfolio_flash');
 			contents_title='플래시';
 		}else if (split_url=='sub5.html'){
 			title_text = '2D&Editing';
 			contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 			contents_title='2D랜더링&편집작업';
+			$('.portfolio_box').addClass('portfolio_2d');
 		}
 		if ($('.body-section-content').find('.section-heading')){
 			$('.section-heading').append(contents_head);
@@ -633,7 +639,6 @@ $(function(){
 					$.each(data, function(I, item){
 						var frame_year=item.data_years;
 						function contents_box(){
-							
 							$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
 							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
 						};
@@ -658,24 +663,22 @@ $(function(){
 								}
 							}
 						};
-						if (split_url=='index.html'){
-							if(item.data_section=='portfolio'){
-								if((frame_year=='2016')&&(item.years_num!=='0')){
-									work_years=1;
-									contents_box();
-								}else if((frame_year=='2017')&&(item.years_num!=='0')){
-									work_years=2;
-									contents_box();
-								}else if((frame_year=='2018')&&(item.years_num!=='0')){
-									work_years=3;
-									contents_box();
-								}else if((frame_year=='2019')&&(item.years_num!=='0')){
-									work_years=4;
-									contents_box();
-								}else if((frame_year=='2020')&&(item.years_num!=='0')){
-									work_years=5;
-									contents_box();
-								}
+						if ((split_url=='index.html')&&(item.data_section=='portfolio')){
+							if((frame_year=='2016')&&(item.years_num!=='0')){
+								work_years=1;
+								contents_box();
+							}else if((frame_year=='2017')&&(item.years_num!=='0')){
+								work_years=2;
+								contents_box();
+							}else if((frame_year=='2018')&&(item.years_num!=='0')){
+								work_years=3;
+								contents_box();
+							}else if((frame_year=='2019')&&(item.years_num!=='0')){
+								work_years=4;
+								contents_box();
+							}else if((frame_year=='2020')&&(item.years_num!=='0')){
+								work_years=5;
+								contents_box();
 							}
 						}else if (split_url=='sub2.html'){
 							page_kind='web';
