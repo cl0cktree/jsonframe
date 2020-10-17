@@ -158,7 +158,7 @@ $(function(){
 			$('.section-heading').append(contents_head);
 			$('.main-welcolme-summon').find('h2').append(contents_title);
 		}
-		// console.log(split_url);
+		console.log(contents_title);
 		document.title = 'Welcome to Portfolio Site - '+title_text;
 	}
 	/*---------------------------------------------------------------------*/
