@@ -609,10 +609,10 @@ $(function(){
 			function box_maker(){
 				var start_year;
 				var this_year=2020;
+				$('.portfolio_box').html('');
 				for (start_year=2016;start_year<=this_year;start_year++){
 					work_years++;
 					print_year++;
-					$('.portfolio_box').html('');
 					$('.portfolio_box').append('<div class="article-main-scrollall" id="article-main-scroll'+work_years+'"><div class="main-scrollall-head" id="main-scroll'+work_years+'-head"><h3></h3></div></div>')
 					// $('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
 					if($('#article-main-scroll'+work_years).find('h3')){
