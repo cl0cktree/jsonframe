@@ -209,7 +209,6 @@ $(function(){
 				}
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
 				title_changer();
-				frameSommon();
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
 
 				var topbtnm
@@ -254,7 +253,6 @@ $(function(){
 			}
 			// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
 			title_changer();
-			frameSommon();
 			$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
 
 			var topbtnm
@@ -429,7 +427,6 @@ $(function(){
 				history.pushState(null,null,portfolioindex_url+'/index.html');
 				title_changer();
 				frameSommon();
-
 			}else{
 				location.href=portfolioindex_url+'/index.html'
 			}
@@ -465,7 +462,6 @@ $(function(){
 			$('.body-filter-preloader').hide();
 			history.pushState(null,null,portfolioindex_url+'/index.html');
 			title_changer();
-			frameSommon();
 		}
 	})
 	$('.body-section-all').on('click','#phon-icon',function(){
@@ -552,6 +548,7 @@ $(function(){
 			}
 			title_changer();
 			nav_move();
+			frameSommon();
 		}
 	})
 	/*--------------------------------------------------------*/
@@ -601,6 +598,7 @@ $(function(){
 			}
 			title_changer();
 			nav_move();
+			frameSommon();
 		}
 	})
 	/*------------------------------------------------------------------*/
@@ -608,7 +606,7 @@ $(function(){
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
 	function frameSommon(){
 		var page_kind;
-		// title_changer();
+		title_changer();
 		if (split_url!=='sub1.html'){
 			var work_years=0;
 			var print_year=2015;
@@ -779,7 +777,7 @@ $(function(){
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub5.html .index-btn-wrap')
 			}
 			title_changer();
-			frameSommon();
+			
 			$('.body-filter-preloader').hide();
 		})
 	};
