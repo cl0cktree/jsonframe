@@ -4,6 +4,8 @@ $(function(){
 	var scroll_framespeed = 1000/60;
 	var nav_num;
 	var nav_num_start;
+	var contents_head;
+	var contents_title;
 	var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
 	var jsonFrame_data=portfolioindex_url+'/data/frame_data.json';
@@ -129,16 +131,28 @@ $(function(){
 		var title_text;
 		if (split_url=='index.html'){
 			title_text = 'main';
+			contents_head='메인페이지 콘텐츠 묶음';
+			contents_title='환영합니다.';
 		}else if (split_url=='sub1.html'){
 			title_text = 'introduce';
+			contents_head='소개페이지 콘텐츠 묶음';
+			contents_title='숙련도&소개';
 		}else if (split_url=='sub2.html'){
 			title_text = 'web&app';
+			contents_head='웹작업페이지 콘텐츠 묶음';
+			contents_title='웹&앱 퍼블리싱';
 		}else if (split_url=='sub3.html'){
 			title_text = 'movie';
+			contents_head='동영상작업페이지 콘텐츠 묶음';
+			contents_title='동영상 편집작업';
 		}else if (split_url=='sub4.html'){
 			title_text = 'flash';
+			contents_head='플래시작업페이지 콘텐츠 묶음';
+			contents_title='플래시';
 		}else if (split_url=='sub5.html'){
 			title_text = '2D&Editing';
+			contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
+			contents_title='2D랜더링&편집작업';
 		}
 		// console.log(split_url);
 		document.title = 'Welcome to Portfolio Site - '+title_text;
@@ -582,35 +596,7 @@ $(function(){
 
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
 	function frameSommon(){
-		var contents_head;
-		var contents_title;
 		var page_kind;
-
-		if (split_url=='index.html'){
-			contents_head='메인페이지 콘텐츠 묶음';
-			contents_title='환영합니다.';
-			$('.article-summon-wrap').addClass('portfolio_main');
-		}else if (split_url=='sub1.html'){
-			contents_head='소개페이지 콘텐츠 묶음';
-			contents_title='숙련도&소개';
-			$('.article-summon-wrap').addClass('portfolio_intro');
-		}else if (split_url=='sub2.html'){
-			contents_head='웹작업페이지 콘텐츠 묶음';
-			contents_title='웹&앱 퍼블리싱';
-			$('.article-summon-wrap').addClass('portfolio_web');
-		}else if (split_url=='sub3.html'){
-			contents_head='동영상작업페이지 콘텐츠 묶음';
-			contents_title='동영상 편집작업';
-			$('.article-summon-wrap').addClass('portfolio_move');
-		}else if (split_url=='sub4.html'){
-			contents_head='플래시작업페이지 콘텐츠 묶음';
-			contents_title='플래시';
-			$('.article-summon-wrap').addClass('portfolio_flash');
-		}else if (split_url=='sub5.html'){
-			contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
-			contents_title='2D랜더링&편집작업';
-			$('.article-summon-wrap').addClass('portfolio_2d');
-		}
 
 		if ($('.body-section-content').find('.section-heading')){
 			$('.section-heading').append(contents_head);
