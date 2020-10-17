@@ -229,6 +229,7 @@ $(function(){
 
 				$('.body-filter-preloader').hide();
 				history.pushState(null,null,portfolioindex_url+'/sub/sub'+nav_num+'.html');
+				$('.portfolio_box').html('');
 			}else{
 				location.href=portfolioindex_url+'/sub/sub'+nav_num+'.html'
 
@@ -273,6 +274,7 @@ $(function(){
 
 			$('.body-filter-preloader').hide();
 			history.pushState(null,null,portfolioindex_url+'/sub/sub'+nav_num+'.html');
+			$('.portfolio_box').html('');
 		}
 
 	}
@@ -610,7 +612,6 @@ $(function(){
 		if (split_url!=='sub1.html'){
 			var work_years=0;
 			var print_year=2015;
-			$('.portfolio_box').html('');
 			function box_maker(){
 				var start_year;
 				var this_year=2020;
@@ -708,6 +709,7 @@ $(function(){
 	function popstate_con(){
 		$(window).on('popstate',function(event){
 			$('.body-filter-preloader').show();
+			$('.portfolio_box').html('');
 			if (location.href==portfolioindex_url+'/index.html')
 			{
 				$('.article-main-welcolme').load(portfolioindex_url+'/index.html .main-welcolme-summon')
