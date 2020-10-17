@@ -637,11 +637,13 @@ $(function(){
 				function contents_maker(){
 					$.each(data, function(I, item){
 						var frame_year=item.data_years;
+						var class_add;
 						function contents_box(){
 							$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
 							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
 						};
 						function sub_kind(){
+							$('.portfolio_box').addClass(class_add);
 							if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
 								console.log(page_kind);
 								if(frame_year=='2016'){
@@ -663,6 +665,7 @@ $(function(){
 							}
 						};
 						if ((split_url=='index.html')&&(item.data_section=='portfolio')){
+							$('.portfolio_box').addClass('portfolio_main');
 							if((frame_year=='2016')&&(item.years_num!=='0')){
 								work_years=1;
 								contents_box();
@@ -684,15 +687,19 @@ $(function(){
 						}
 						else if (split_url=='sub2.html'){
 							page_kind='web';
+							class_add='portfolio_web';
 							sub_kind();
 						}else if (split_url=='sub3.html'){
 							page_kind='movie';
+							class_add='portfolio_move';
 							sub_kind();
 						}else if (split_url=='sub4.html'){
 							page_kind='flash';
+							class_add='portfolio_flash';
 							sub_kind();
 						}else if (split_url=='sub5.html'){
 							page_kind='image';
+							class_add='portfolio_2d';
 							sub_kind();
 						}
 					});
