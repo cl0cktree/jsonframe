@@ -608,7 +608,7 @@ $(function(){
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
 	function frameSommon(){
 		var page_kind;
-		title_changer();
+		// title_changer();
 		if (split_url!=='sub1.html'){
 			var work_years=0;
 			var print_year=2015;
