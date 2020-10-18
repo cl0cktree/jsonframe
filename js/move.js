@@ -6,6 +6,7 @@ $(function(){
 	var nav_num_start;
 	var contents_head;
 	var contents_title;
+	var work_years;
 	var class_add;
 	var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
@@ -538,16 +539,19 @@ $(function(){
 			}else if (this==document.getElementById('topmenu1-list-span2'))
 			{
 				nav_num = 2;
+				$('.portfolio_box').addClass('portfolio_web');
 			}else if (this==document.getElementById('topmenu1-list-span3'))
 			{
-
 				nav_num = 3;
+				$('.portfolio_box').addClass('portfolio_move');
 			}else if (this==document.getElementById('topmenu1-list-span4'))
 			{
 				nav_num = 4;
+				$('.portfolio_box').addClass('portfolio_flash');
 			}else if (this==document.getElementById('topmenu1-list-span5'))
 			{
 				nav_num = 5;
+				$('.portfolio_box').addClass('portfolio_2d');
 			}
 			title_changer();
 			nav_move();
@@ -589,15 +593,19 @@ $(function(){
 			}else if (this==document.getElementById('list-ul-li2'))
 			{
 				nav_num = 2;
+				$('.portfolio_box').addClass('portfolio_web');
 			}else if (this==document.getElementById('list-ul-li3'))
 			{
 				nav_num = 3;
+				$('.portfolio_box').addClass('portfolio_move');
 			}else if (this==document.getElementById('list-ul-li4'))
 			{
 				nav_num = 4;
+				$('.portfolio_box').addClass('portfolio_flash');
 			}else if (this==document.getElementById('list-ul-li5'))
 			{
 				nav_num = 5;
+				$('.portfolio_box').addClass('portfolio_2d');
 			}
 			title_changer();
 			nav_move();
@@ -611,7 +619,7 @@ $(function(){
 		var page_kind;
 		title_changer();
 		if (split_url!=='sub1.html'){
-			var work_years=0;
+			work_years=0;
 			var print_year=2015;
 			function box_maker(){
 				var start_year;
