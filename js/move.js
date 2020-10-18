@@ -532,7 +532,7 @@ $(function(){
 			$(document).on('click history','.nav1-topmenu1-list a',function(event){
 				event.preventDefault();//a tag 동작제어 - 바로 링크되지 못하도록 방지
 			})
-			$('.portfolio_box').removeClass('.portfolio_main .portfolio_web .portfolio_move .portfolio_flash .portfolio_2d');
+			$('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
 			if (this==document.getElementById('topmenu1-list-span1'))
 			{
 				nav_num = 1;
@@ -587,7 +587,7 @@ $(function(){
 			$(this).stop().css({'border-radius':'12px'})
 		}else if (event.type=='click')
 		{
-			$('.portfolio_box').removeClass('.portfolio_main .portfolio_web .portfolio_move .portfolio_flash .portfolio_2d');
+			$('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
 			if (this==document.getElementById('list-ul-li1'))
 			{
 				nav_num = 1;
