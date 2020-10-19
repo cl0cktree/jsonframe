@@ -273,7 +273,6 @@ $(function(){
 			header_creat();
 			
 			if (split_url=='index.html'){
-				contents_head='메인페이지 콘텐츠 묶음';
 				mainSommon();
 			}else if (split_url=='sub1.html'){
 				$('.portfolio_box').html('');
@@ -281,16 +280,12 @@ $(function(){
 				$('.section-heading').html(contents_head);
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub1.html .article-main-scrollall');
 			}else if (split_url=='sub2.html'){
-				contents_head='웹작업페이지 콘텐츠 묶음';
 				webSommon();
 			}else if (split_url=='sub3.html'){
-				contents_head='동영상작업페이지 콘텐츠 묶음';
 				movieSommon();
 			}else if (split_url=='sub4.html'){
-				contents_head='플래시작업페이지 콘텐츠 묶음';
 				flashSommon();
 			}else if (split_url=='sub5.html'){
-				contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 				imageSommon();
 			}
 			$('.section-heading').html(contents_head);
@@ -643,6 +638,7 @@ $(function(){
 		}
 	};
 	function mainSommon(){
+		contents_head='메인페이지 콘텐츠 묶음';
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -675,6 +671,7 @@ $(function(){
 		$('.main-welcolme-summon').find('h2').html('환영합니다.');
 	};
 	function webSommon(){
+		contents_head='웹작업페이지 콘텐츠 묶음';
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -707,6 +704,7 @@ $(function(){
 		$('.main-welcolme-summon').find('h2').html('웹&앱 퍼블리싱');
 	};
 	function movieSommon(){
+		contents_head='동영상작업페이지 콘텐츠 묶음';
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -739,6 +737,7 @@ $(function(){
 		$('.main-welcolme-summon').find('h2').html('동영상 편집작업');
 	};
 	function flashSommon(){
+		contents_head='플래시작업페이지 콘텐츠 묶음';
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -771,6 +770,7 @@ $(function(){
 		$('.main-welcolme-summon').find('h2').html('플래시');
 	};
 	function imageSommon(){
+		contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
