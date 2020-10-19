@@ -627,9 +627,6 @@ $(function(){
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
 			}
-			$('.section-heading').html(contents_head);
-			$('.main-welcolme-summon').find('h2').html(contents_title);
-
 			console.log(contents_title);
 			console.log(work_years+' / '+print_year);
 		}
@@ -637,6 +634,8 @@ $(function(){
 	function mainSommon(){
 		contents_head='메인페이지 콘텐츠 묶음';
 		contents_title='환영합니다.';
+		$('.section-heading').html(contents_head);
+		$('.main-welcolme-summon').find('h2').html(contents_title);
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -669,6 +668,8 @@ $(function(){
 	function webSommon(){
 		contents_head='웹작업페이지 콘텐츠 묶음';
 		contents_title='웹&앱 퍼블리싱';
+		$('.section-heading').html(contents_head);
+		$('.main-welcolme-summon').find('h2').html(contents_title);
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -701,6 +702,8 @@ $(function(){
 	function movieSommon(){
 		contents_head='동영상작업페이지 콘텐츠 묶음';
 		contents_title='동영상 편집작업';
+		$('.section-heading').html(contents_head);
+		$('.main-welcolme-summon').find('h2').html(contents_title);
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -733,6 +736,8 @@ $(function(){
 	function flashSommon(){
 		contents_head='플래시작업페이지 콘텐츠 묶음';
 		contents_title='플래시';
+		$('.section-heading').html(contents_head);
+		$('.main-welcolme-summon').find('h2').html(contents_title);
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -765,6 +770,8 @@ $(function(){
 	function imageSommon(){
 		contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 		contents_title='2D랜더링&편집작업';
+		$('.section-heading').html(contents_head);
+		$('.main-welcolme-summon').find('h2').html(contents_title);
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
