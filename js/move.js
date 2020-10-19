@@ -273,6 +273,20 @@ $(function(){
 		function cover_start(){
 			footer_creat();
 			header_creat();
+			if (split_url=='index.html'){
+				mainSommon();
+			}else if (split_url=='sub1.html'){
+				$('.portfolio_box').html('');
+				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub1.html .article-main-scrollall');
+			}else if (split_url=='sub2.html'){
+				webSommon();
+			}else if (split_url=='sub3.html'){
+				movieSommon();
+			}else if (split_url=='sub4.html'){
+				flashSommon();
+			}else if (split_url=='sub5.html'){
+				imageSommon();
+			}
 		};
 		cover_start();
 	})
@@ -514,6 +528,7 @@ $(function(){
 			if (this==document.getElementById('topmenu1-list-span1'))
 			{
 				nav_num = 1;
+				$('.portfolio_box').html('');
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall');
 			}else if (this==document.getElementById('topmenu1-list-span2'))
 			{
@@ -568,6 +583,7 @@ $(function(){
 			if (this==document.getElementById('list-ul-li1'))
 			{
 				nav_num = 1;
+				$('.portfolio_box').html('');
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall');
 			}else if (this==document.getElementById('list-ul-li2'))
 			{
@@ -780,7 +796,6 @@ $(function(){
 			});
 		});
 	};
-	mainSommon();
 	/*------------------------------------------------------------------*/
 
 	/*------------------------popState 전체제어--------------------------*/
@@ -809,6 +824,7 @@ $(function(){
 				$('#list-ul-li1').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'none'})
 				$('#slide-wrap-i').css({'display':'block'})
+				$('.portfolio_box').html('');
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub1.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub1.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub2.html'){
