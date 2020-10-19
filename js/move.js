@@ -534,6 +534,7 @@ $(function(){
 			}else if (this==document.getElementById('topmenu1-list-span2'))
 			{
 				nav_num = 2;
+				webSommon();
 			}else if (this==document.getElementById('topmenu1-list-span3'))
 			{
 				nav_num = 3;
@@ -546,7 +547,6 @@ $(function(){
 			}
 			title_changer();
 			nav_move();
-			mainSommon();
 		}
 	})
 	/*--------------------------------------------------------*/
@@ -584,6 +584,7 @@ $(function(){
 			}else if (this==document.getElementById('list-ul-li2'))
 			{
 				nav_num = 2;
+				webSommon();
 			}else if (this==document.getElementById('list-ul-li3'))
 			{
 				nav_num = 3;
@@ -596,50 +597,11 @@ $(function(){
 			}
 			title_changer();
 			nav_move();
-			mainSommon();
 		}
 	})
 	/*------------------------------------------------------------------*/
 
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
-	function mainSommon(){
-		var page_kind;
-		title_changer();
-		if (split_url!=='sub1.html'){
-			box_maker();
-			
-			$.getJSON(jsonFrame_data, function(data){
-				function contents_main(){
-					$.each(data, function(I, item){
-						frame_year=item.data_years;
-						function contents_box(){
-							$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
-							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
-						};
-						if ((split_url=='index.html')&&(item.data_section=='portfolio')){
-							if((frame_year=='2016')&&(item.years_num!=='0')){
-								work_years=1;
-								contents_box();
-							}else if((frame_year=='2017')&&(item.years_num!=='0')){
-								work_years=2;
-								contents_box();
-							}else if((frame_year=='2018')&&(item.years_num!=='0')){
-								work_years=3;
-								contents_box();
-							}else if((frame_year=='2019')&&(item.years_num!=='0')){
-								work_years=4;
-								contents_box();
-							}else if((frame_year=='2020')&&(item.years_num!=='0')){
-								work_years=5;
-								contents_box();
-							}
-						}
-					});
-				};
-				contents_main();
-			});
-		}
-	};
 	function box_maker(){
 		work_years=0;
 		var print_year=2015;
@@ -659,6 +621,68 @@ $(function(){
 			}
 			console.log(work_years+' / '+print_year);
 		}
+	};
+	function mainSommon(){
+		title_changer();
+		box_maker();
+		$.getJSON(jsonFrame_data, function(data){
+			$.each(data, function(I, item){
+				frame_year=item.data_years;
+				function contents_box(){
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
+				};
+				if ((split_url=='index.html')&&(item.data_section=='portfolio')){
+					if((frame_year=='2016')&&(item.years_num!=='0')){
+						work_years=1;
+						contents_box();
+					}else if((frame_year=='2017')&&(item.years_num!=='0')){
+						work_years=2;
+						contents_box();
+					}else if((frame_year=='2018')&&(item.years_num!=='0')){
+						work_years=3;
+						contents_box();
+					}else if((frame_year=='2019')&&(item.years_num!=='0')){
+						work_years=4;
+						contents_box();
+					}else if((frame_year=='2020')&&(item.years_num!=='0')){
+						work_years=5;
+						contents_box();
+					}
+				}
+			});
+		});
+	};
+	function webSommon(){
+		title_changer();
+		box_maker();
+		$.getJSON(jsonFrame_data, function(data){
+			$.each(data, function(I, item){
+				frame_year=item.data_years;
+				function contents_box(){
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
+				};
+				if(item.data_kinds=='web'){
+					if(frame_year=='2016'){
+						work_years=1;
+						contents_box();
+					}else if(frame_year=='2017'){
+						work_years=2;
+						contents_box();
+					}else if(frame_year=='2018'){
+						work_years=3;
+						contents_box();
+					}else if(frame_year=='2019'){
+						work_years=4;
+						contents_box();
+					}else if(frame_year=='2020'){
+						work_years=5;
+						contents_box();
+					}
+				};
+			});
+		});
 	};
 	mainSommon();
 	function sub_kind(){
@@ -723,7 +747,7 @@ $(function(){
 				$('#list-ul-li2').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				mainSommon();
+				webSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub2.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub2.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub3.html'){
