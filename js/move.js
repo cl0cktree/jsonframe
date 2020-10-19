@@ -8,6 +8,7 @@ $(function(){
 	var contents_title;
 	var work_years;
 	var class_add;
+	var frame_year;
 	var jsonCover_data=portfolioindex_url+'/data/cover_data.json';
 	var jsonHeader_data=portfolioindex_url+'/data/header_data.json';
 	var jsonFrame_data=portfolioindex_url+'/data/frame_data.json';
@@ -424,7 +425,7 @@ $(function(){
 				$('.body-filter-preloader').hide();
 				history.pushState(null,null,portfolioindex_url+'/index.html');
 				title_changer();
-				frameSommon();
+				mainSommon();
 			}else{
 				location.href=portfolioindex_url+'/index.html'
 			}
@@ -460,7 +461,7 @@ $(function(){
 			$('.body-filter-preloader').hide();
 			history.pushState(null,null,portfolioindex_url+'/index.html');
 			title_changer();
-			frameSommon();
+			mainSommon();
 		}
 	})
 	$('.body-section-all').on('click','#phon-icon',function(){
@@ -545,7 +546,7 @@ $(function(){
 			}
 			title_changer();
 			nav_move();
-			frameSommon();
+			mainSommon();
 		}
 	})
 	/*--------------------------------------------------------*/
@@ -595,13 +596,13 @@ $(function(){
 			}
 			title_changer();
 			nav_move();
-			frameSommon();
+			mainSommon();
 		}
 	})
 	/*------------------------------------------------------------------*/
 
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
-	function frameSommon(){
+	function mainSommon(){
 		var page_kind;
 		title_changer();
 		if (split_url!=='sub1.html'){
@@ -628,35 +629,8 @@ $(function(){
 			box_maker();
 			
 			$.getJSON(jsonFrame_data, function(data){
-
-				function contents_maker(){
+				function contents_main(){
 					$.each(data, function(I, item){
-						var frame_year=item.data_years;
-						function contents_box(){
-							$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
-							<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
-						};
-						function sub_kind(){
-							if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
-								console.log(page_kind);
-								if(frame_year=='2016'){
-									work_years=1;
-									contents_box();
-								}else if(frame_year=='2017'){
-									work_years=2;
-									contents_box();
-								}else if(frame_year=='2018'){
-									work_years=3;
-									contents_box();
-								}else if(frame_year=='2019'){
-									work_years=4;
-									contents_box();
-								}else if(frame_year=='2020'){
-									work_years=5;
-									contents_box();
-								}
-							}
-						};
 						if ((split_url=='index.html')&&(item.data_section=='portfolio')){
 							if((frame_year=='2016')&&(item.years_num!=='0')){
 								work_years=1;
@@ -674,29 +648,40 @@ $(function(){
 								work_years=5;
 								contents_box();
 							}
-						}else if (split_url=='sub1.html'){
-							$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub1.html .article-main-scrollall');
-						}
-						else if ((split_url=='sub2.html')||($('.portfolio_box').find('.portfolio_web'))){
-							page_kind='web';
-							sub_kind();
-						}else if ((split_url=='sub3.html')||($('.portfolio_box').find('.portfolio_move'))){
-							page_kind='movie';
-							sub_kind();
-						}else if ((split_url=='sub4.html')||($('.portfolio_box').find('.portfolio_flash'))){
-							page_kind='flash';
-							sub_kind();
-						}else if ((split_url=='sub5.html')||($('.portfolio_box').find('.portfolio_2d'))){
-							page_kind='image';
-							sub_kind();
 						}
 					});
 				};
-				contents_maker();
+				contents_main();
 			});
 		}
 	};
-	frameSommon();
+	function contents_box(){
+		frame_year=item.data_years;
+		$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+		<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
+	};
+	mainSommon();
+	function sub_kind(){
+		if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
+			console.log(page_kind);
+			if(frame_year=='2016'){
+				work_years=1;
+				contents_box();
+			}else if(frame_year=='2017'){
+				work_years=2;
+				contents_box();
+			}else if(frame_year=='2018'){
+				work_years=3;
+				contents_box();
+			}else if(frame_year=='2019'){
+				work_years=4;
+				contents_box();
+			}else if(frame_year=='2020'){
+				work_years=5;
+				contents_box();
+			}
+		}
+	};
 	/*------------------------------------------------------------------*/
 
 	/*------------------------popState 전체제어--------------------------*/
@@ -713,7 +698,7 @@ $(function(){
 				$('.ul-li-img1').css({'border':'0px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				frameSommon();
+				mainSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub1.html'){
@@ -738,7 +723,7 @@ $(function(){
 				$('#list-ul-li2').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				frameSommon();
+				mainSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub2.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub2.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub3.html'){
@@ -751,7 +736,7 @@ $(function(){
 				$('#list-ul-li3').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				frameSommon();
+				mainSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub3.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub3.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub4.html'){
@@ -764,7 +749,7 @@ $(function(){
 				$('#list-ul-li4').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				frameSommon();
+				mainSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub4.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub4.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub5.html'){
@@ -777,7 +762,7 @@ $(function(){
 				$('#list-ul-li5').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				frameSommon();
+				mainSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub5.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub5.html .index-btn-wrap')
 			}
