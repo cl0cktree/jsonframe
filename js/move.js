@@ -134,34 +134,19 @@ $(function(){
 		var title_text;
 		if (split_url=='index.html'){
 			title_text = 'main';
-			contents_head='메인페이지 콘텐츠 묶음';
-			contents_title='환영합니다.';
 		}else if (split_url=='sub1.html'){
 			title_text = 'introduce';
-			contents_head='소개페이지 콘텐츠 묶음';
-			contents_title='숙련도&소개';
+			// contents_head='소개페이지 콘텐츠 묶음';
+			// contents_title='숙련도&소개';
 		}else if (split_url=='sub2.html'){
 			title_text = 'web&app';
-			contents_head='웹작업페이지 콘텐츠 묶음';
-			contents_title='웹&앱 퍼블리싱';
 		}else if (split_url=='sub3.html'){
 			title_text = 'movie';
-			contents_head='동영상작업페이지 콘텐츠 묶음';
-			contents_title='동영상 편집작업';
 		}else if (split_url=='sub4.html'){
 			title_text = 'flash';
-			contents_head='플래시작업페이지 콘텐츠 묶음';
-			contents_title='플래시';
 		}else if (split_url=='sub5.html'){
 			title_text = '2D&Editing';
-			contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
-			contents_title='2D랜더링&편집작업';
 		}
-		if ($('.body-section-content').find('.section-heading')){
-			$('.section-heading').append(contents_head);
-			$('.main-welcolme-summon').find('h2').append(contents_title);
-		}
-		console.log(contents_title);
 		document.title = 'Welcome to Portfolio Site - '+title_text;
 	}
 	/*---------------------------------------------------------------------*/
@@ -538,12 +523,15 @@ $(function(){
 			}else if (this==document.getElementById('topmenu1-list-span3'))
 			{
 				nav_num = 3;
+				movieSommon();
 			}else if (this==document.getElementById('topmenu1-list-span4'))
 			{
 				nav_num = 4;
+				flashSommon();
 			}else if (this==document.getElementById('topmenu1-list-span5'))
 			{
 				nav_num = 5;
+				imageSommon();
 			}
 			title_changer();
 			nav_move();
@@ -588,12 +576,15 @@ $(function(){
 			}else if (this==document.getElementById('list-ul-li3'))
 			{
 				nav_num = 3;
+				movieSommon();
 			}else if (this==document.getElementById('list-ul-li4'))
 			{
 				nav_num = 4;
+				flashSommon();
 			}else if (this==document.getElementById('list-ul-li5'))
 			{
 				nav_num = 5;
+				imageSommon();
 			}
 			title_changer();
 			nav_move();
@@ -619,11 +610,18 @@ $(function(){
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
 			}
+			if ($('.body-section-content').find('.section-heading')){
+				$('.section-heading').html(contents_head);
+				$('.main-welcolme-summon').find('h2').html(contents_title);
+			}
+			console.log(contents_title);
+
 			console.log(work_years+' / '+print_year);
 		}
 	};
 	function mainSommon(){
-		title_changer();
+		contents_head='메인페이지 콘텐츠 묶음';
+		contents_title='환영합니다.';
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -654,7 +652,8 @@ $(function(){
 		});
 	};
 	function webSommon(){
-		title_changer();
+		contents_head='웹작업페이지 콘텐츠 묶음';
+		contents_title='웹&앱 퍼블리싱';
 		box_maker();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
@@ -684,28 +683,103 @@ $(function(){
 			});
 		});
 	};
-	mainSommon();
-	function sub_kind(){
-		if((item.data_section=='portfolio')&&(item.data_kinds==page_kind)){
-			console.log(page_kind);
-			if(frame_year=='2016'){
-				work_years=1;
-				contents_box();
-			}else if(frame_year=='2017'){
-				work_years=2;
-				contents_box();
-			}else if(frame_year=='2018'){
-				work_years=3;
-				contents_box();
-			}else if(frame_year=='2019'){
-				work_years=4;
-				contents_box();
-			}else if(frame_year=='2020'){
-				work_years=5;
-				contents_box();
-			}
-		}
+	function movieSommon(){
+		contents_head='동영상작업페이지 콘텐츠 묶음';
+		contents_title='동영상 편집작업';
+		box_maker();
+		$.getJSON(jsonFrame_data, function(data){
+			$.each(data, function(I, item){
+				frame_year=item.data_years;
+				function contents_box(){
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
+				};
+				if(item.data_kinds=='movie'){
+					if(frame_year=='2016'){
+						work_years=1;
+						contents_box();
+					}else if(frame_year=='2017'){
+						work_years=2;
+						contents_box();
+					}else if(frame_year=='2018'){
+						work_years=3;
+						contents_box();
+					}else if(frame_year=='2019'){
+						work_years=4;
+						contents_box();
+					}else if(frame_year=='2020'){
+						work_years=5;
+						contents_box();
+					}
+				};
+			});
+		});
 	};
+	function flashSommon(){
+		contents_head='플래시작업페이지 콘텐츠 묶음';
+		contents_title='플래시';
+		box_maker();
+		$.getJSON(jsonFrame_data, function(data){
+			$.each(data, function(I, item){
+				frame_year=item.data_years;
+				function contents_box(){
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
+				};
+				if(item.data_kinds=='flash'){
+					if(frame_year=='2016'){
+						work_years=1;
+						contents_box();
+					}else if(frame_year=='2017'){
+						work_years=2;
+						contents_box();
+					}else if(frame_year=='2018'){
+						work_years=3;
+						contents_box();
+					}else if(frame_year=='2019'){
+						work_years=4;
+						contents_box();
+					}else if(frame_year=='2020'){
+						work_years=5;
+						contents_box();
+					}
+				};
+			});
+		});
+	};
+	function imageSommon(){
+		contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
+		contents_title='2D랜더링&편집작업';
+		box_maker();
+		$.getJSON(jsonFrame_data, function(data){
+			$.each(data, function(I, item){
+				frame_year=item.data_years;
+				function contents_box(){
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
+				};
+				if(item.data_kinds=='image'){
+					if(frame_year=='2016'){
+						work_years=1;
+						contents_box();
+					}else if(frame_year=='2017'){
+						work_years=2;
+						contents_box();
+					}else if(frame_year=='2018'){
+						work_years=3;
+						contents_box();
+					}else if(frame_year=='2019'){
+						work_years=4;
+						contents_box();
+					}else if(frame_year=='2020'){
+						work_years=5;
+						contents_box();
+					}
+				};
+			});
+		});
+	};
+	mainSommon();
 	/*------------------------------------------------------------------*/
 
 	/*------------------------popState 전체제어--------------------------*/
@@ -760,7 +834,7 @@ $(function(){
 				$('#list-ul-li3').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				mainSommon();
+				movieSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub3.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub3.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub4.html'){
@@ -773,7 +847,7 @@ $(function(){
 				$('#list-ul-li4').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				mainSommon();
+				flashSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub4.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub4.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub5.html'){
@@ -786,7 +860,7 @@ $(function(){
 				$('#list-ul-li5').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				mainSommon();
+				imageSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub5.html .article-main-scrollall')
 				$('.scr-index-box').load(portfolioindex_url+'/sub/sub5.html .index-btn-wrap')
 			}
