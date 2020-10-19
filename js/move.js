@@ -609,7 +609,7 @@ $(function(){
 			box_maker();
 			
 			$.getJSON(jsonFrame_data, function(data){
-				function contents_main(){
+				// function contents_main(){
 					$.each(data, function(I, item){
 						if ((split_url=='index.html')&&(item.data_section=='portfolio')){
 							if((frame_year=='2016')&&(item.years_num!=='0')){
@@ -630,8 +630,8 @@ $(function(){
 							}
 						}
 					});
-				};
-				contents_main();
+				// };
+				// contents_main();
 			});
 		}
 	};
