@@ -211,7 +211,6 @@ $(function(){
 
 				$('.body-filter-preloader').hide();
 				history.pushState(null,null,portfolioindex_url+'/sub/sub'+nav_num+'.html');
-				$('.portfolio_box').html('');
 			}else{
 				location.href=portfolioindex_url+'/sub/sub'+nav_num+'.html'
 
@@ -256,7 +255,6 @@ $(function(){
 
 			$('.body-filter-preloader').hide();
 			history.pushState(null,null,portfolioindex_url+'/sub/sub'+nav_num+'.html');
-			$('.portfolio_box').html('');
 		}
 
 	}
@@ -516,6 +514,7 @@ $(function(){
 			if (this==document.getElementById('topmenu1-list-span1'))
 			{
 				nav_num = 1;
+				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall');
 			}else if (this==document.getElementById('topmenu1-list-span2'))
 			{
 				nav_num = 2;
@@ -569,6 +568,7 @@ $(function(){
 			if (this==document.getElementById('list-ul-li1'))
 			{
 				nav_num = 1;
+				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall');
 			}else if (this==document.getElementById('list-ul-li2'))
 			{
 				nav_num = 2;
@@ -598,6 +598,7 @@ $(function(){
 		var print_year=2015;
 		var start_year;
 		var this_year=2020;
+		$('.portfolio_box').html('');
 		for (start_year=2016;start_year<=this_year;start_year++){
 			work_years++;
 			print_year++;
@@ -787,7 +788,6 @@ $(function(){
 	function popstate_con(){
 		$(window).on('popstate',function(event){
 			$('.body-filter-preloader').show();
-			$('.portfolio_box').html('');
 			if (location.href==portfolioindex_url+'/index.html')
 			{
 				$('.article-main-welcolme').load(portfolioindex_url+'/index.html .main-welcolme-summon')
