@@ -666,7 +666,7 @@ $(function(){
 					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption">'+item.data_title+'</div></div>');
 				};
-				if ((split_url=='index.html')&&(item.data_section=='portfolio')){
+				if (item.data_section=='portfolio'){
 					if((frame_year=='2016')&&(item.years_num!=='0')){
 						work_years=1;
 						contents_box();
