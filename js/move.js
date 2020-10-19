@@ -131,13 +131,10 @@ $(function(){
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
 		var title_text;
-		// $('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
 		if (split_url=='index.html'){
 			title_text = 'main';
 			contents_head='메인페이지 콘텐츠 묶음';
 			contents_title='환영합니다.';
-			// $('.article-summon-wrap').removeClass('.portfolio_box');
-			$('.portfolio_box').addClass('portfolio_main');
 		}else if (split_url=='sub1.html'){
 			title_text = 'introduce';
 			contents_head='소개페이지 콘텐츠 묶음';
@@ -146,22 +143,18 @@ $(function(){
 			title_text = 'web&app';
 			contents_head='웹작업페이지 콘텐츠 묶음';
 			contents_title='웹&앱 퍼블리싱';
-			$('.portfolio_box').addClass('portfolio_web');
 		}else if (split_url=='sub3.html'){
 			title_text = 'movie';
 			contents_head='동영상작업페이지 콘텐츠 묶음';
 			contents_title='동영상 편집작업';
-			$('.portfolio_box').addClass('portfolio_move');
 		}else if (split_url=='sub4.html'){
 			title_text = 'flash';
 			contents_head='플래시작업페이지 콘텐츠 묶음';
-			$('.portfolio_box').addClass('portfolio_flash');
 			contents_title='플래시';
 		}else if (split_url=='sub5.html'){
 			title_text = '2D&Editing';
 			contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 			contents_title='2D랜더링&편집작업';
-			$('.portfolio_box').addClass('portfolio_2d');
 		}
 		if ($('.body-section-content').find('.section-heading')){
 			$('.section-heading').append(contents_head);
@@ -431,8 +424,6 @@ $(function(){
 				$('.body-filter-preloader').hide();
 				history.pushState(null,null,portfolioindex_url+'/index.html');
 				title_changer();
-				$('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
-				$('.portfolio_box').addClass('portfolio_main');
 				frameSommon();
 			}else{
 				location.href=portfolioindex_url+'/index.html'
@@ -469,8 +460,6 @@ $(function(){
 			$('.body-filter-preloader').hide();
 			history.pushState(null,null,portfolioindex_url+'/index.html');
 			title_changer();
-			$('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
-			$('.portfolio_box').addClass('portfolio_main');
 			frameSommon();
 		}
 	})
@@ -538,26 +527,21 @@ $(function(){
 			$(document).on('click history','.nav1-topmenu1-list a',function(event){
 				event.preventDefault();//a tag 동작제어 - 바로 링크되지 못하도록 방지
 			})
-			$('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
 			if (this==document.getElementById('topmenu1-list-span1'))
 			{
 				nav_num = 1;
 			}else if (this==document.getElementById('topmenu1-list-span2'))
 			{
 				nav_num = 2;
-				$('.portfolio_box').addClass('portfolio_web');
 			}else if (this==document.getElementById('topmenu1-list-span3'))
 			{
 				nav_num = 3;
-				$('.portfolio_box').addClass('portfolio_move');
 			}else if (this==document.getElementById('topmenu1-list-span4'))
 			{
 				nav_num = 4;
-				$('.portfolio_box').addClass('portfolio_flash');
 			}else if (this==document.getElementById('topmenu1-list-span5'))
 			{
 				nav_num = 5;
-				$('.portfolio_box').addClass('portfolio_2d');
 			}
 			title_changer();
 			nav_move();
@@ -593,26 +577,21 @@ $(function(){
 			$(this).stop().css({'border-radius':'12px'})
 		}else if (event.type=='click')
 		{
-			$('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
 			if (this==document.getElementById('list-ul-li1'))
 			{
 				nav_num = 1;
 			}else if (this==document.getElementById('list-ul-li2'))
 			{
 				nav_num = 2;
-				$('.portfolio_box').addClass('portfolio_web');
 			}else if (this==document.getElementById('list-ul-li3'))
 			{
 				nav_num = 3;
-				$('.portfolio_box').addClass('portfolio_move');
 			}else if (this==document.getElementById('list-ul-li4'))
 			{
 				nav_num = 4;
-				$('.portfolio_box').addClass('portfolio_flash');
 			}else if (this==document.getElementById('list-ul-li5'))
 			{
 				nav_num = 5;
-				$('.portfolio_box').addClass('portfolio_2d');
 			}
 			title_changer();
 			nav_move();
@@ -679,7 +658,6 @@ $(function(){
 							}
 						};
 						if ((split_url=='index.html')&&(item.data_section=='portfolio')){
-							$('.portfolio_box').addClass('portfolio_main');
 							if((frame_year=='2016')&&(item.years_num!=='0')){
 								work_years=1;
 								contents_box();
@@ -701,19 +679,15 @@ $(function(){
 						}
 						else if ((split_url=='sub2.html')||($('.portfolio_box').find('.portfolio_web'))){
 							page_kind='web';
-							// class_add='portfolio_web';
 							sub_kind();
 						}else if ((split_url=='sub3.html')||($('.portfolio_box').find('.portfolio_move'))){
 							page_kind='movie';
-							// class_add='portfolio_move';
 							sub_kind();
 						}else if ((split_url=='sub4.html')||($('.portfolio_box').find('.portfolio_flash'))){
 							page_kind='flash';
-							// class_add='portfolio_flash';
 							sub_kind();
 						}else if ((split_url=='sub5.html')||($('.portfolio_box').find('.portfolio_2d'))){
 							page_kind='image';
-							// class_add='portfolio_2d';
 							sub_kind();
 						}
 					});
