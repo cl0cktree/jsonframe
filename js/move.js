@@ -131,7 +131,7 @@ $(function(){
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
 		var title_text;
-		$('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
+		// $('.portfolio_box').removeClass('portfolio_main portfolio_web portfolio_move portfolio_flash portfolio_2d');
 		if (split_url=='index.html'){
 			title_text = 'main';
 			contents_head='메인페이지 콘텐츠 묶음';
