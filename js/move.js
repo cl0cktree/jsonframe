@@ -627,12 +627,10 @@ $(function(){
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
 			}
-			if ($('.body-section-content').find('.section-heading')){
-				$('.section-heading').html(contents_head);
-				$('.main-welcolme-summon').find('h2').html(contents_title);
-			}
-			console.log(contents_title);
+			$('.section-heading').html(contents_head);
+			$('.main-welcolme-summon').find('h2').html(contents_title);
 
+			console.log(contents_title);
 			console.log(work_years+' / '+print_year);
 		}
 	};
