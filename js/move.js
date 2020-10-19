@@ -606,26 +606,6 @@ $(function(){
 		var page_kind;
 		title_changer();
 		if (split_url!=='sub1.html'){
-			work_years=0;
-			var print_year=2015;
-			function box_maker(){
-				var start_year;
-				var this_year=2020;
-				for (start_year=2016;start_year<=this_year;start_year++){
-					work_years++;
-					print_year++;
-					$('.portfolio_box').append('<div class="article-main-scrollall" id="article-main-scroll'+work_years+'"><div class="main-scrollall-head" id="main-scroll'+work_years+'-head"><h3></h3></div></div>')
-					// $('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
-					if($('#article-main-scroll'+work_years).find('h3')){
-						$('#article-main-scroll'+work_years).find('h3').append(print_year);
-						$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
-					}
-					if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
-						$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
-					}
-					console.log(work_years+' / '+print_year);
-				}
-			};
 			box_maker();
 			
 			$.getJSON(jsonFrame_data, function(data){
@@ -653,6 +633,26 @@ $(function(){
 				};
 				contents_main();
 			});
+		}
+	};
+	function box_maker(){
+		work_years=0;
+		var print_year=2015;
+		var start_year;
+		var this_year=2020;
+		for (start_year=2016;start_year<=this_year;start_year++){
+			work_years++;
+			print_year++;
+			$('.portfolio_box').append('<div class="article-main-scrollall" id="article-main-scroll'+work_years+'"><div class="main-scrollall-head" id="main-scroll'+work_years+'-head"><h3></h3></div></div>')
+			// $('.article-main-scrollall').attr('id', 'article-main-scroll'+work_years);
+			if($('#article-main-scroll'+work_years).find('h3')){
+				$('#article-main-scroll'+work_years).find('h3').append(print_year);
+				$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
+			}
+			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
+				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
+			}
+			console.log(work_years+' / '+print_year);
 		}
 	};
 	function contents_box(){
