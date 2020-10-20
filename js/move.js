@@ -653,6 +653,7 @@ $(function(){
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
 			}
+			$('.index-btn-wrap').html('<div class="index-btn-all" id="index-btn-num1">'+work_years+'</div>');
 			console.log(work_years+' / '+print_year);
 		}
 	};
