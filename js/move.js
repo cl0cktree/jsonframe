@@ -195,7 +195,7 @@ $(function(){
 				}
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
 				title_changer();
-				$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
+				// $('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
 
 				var topbtnm
 				if ($('.body-all-header').css('height')=='50px')
@@ -245,7 +245,7 @@ $(function(){
 			}
 			// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
 			title_changer();
-			$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
+			// $('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
 
 			var topbtnm
 			if ($('.body-all-header').css('height')=='50px')
@@ -291,6 +291,7 @@ $(function(){
 				$('.section-heading').html(contents_head);
 				$('.main-welcolme-summon').html('<h2>숙련도&소개</h2>');
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub1.html .article-main-scrollall');
+				$('.scr-index-box').load(portfolioindex_url+'/sub/sub1.html .index-btn-wrap');
 			}else if (split_url=='sub2.html'){
 				webSommon();
 			}else if (split_url=='sub3.html'){
@@ -419,7 +420,7 @@ $(function(){
 				$('#slide-wrap-i').css({'display':'none'})
 				// $('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
 				mainSommon();
-				$('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
+				// $('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
 
 				var topbtnm
 				if ($('.body-all-header').css('height')=='50px')
@@ -458,7 +459,7 @@ $(function(){
 			$('#slide-wrap-i').css({'display':'none'})
 			// $('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
 			mainSommon();
-			$('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
+			// $('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
 
 			var topbtnm
 			if ($('.body-all-header').css('height')=='50px')
@@ -553,6 +554,7 @@ $(function(){
 				$('.section-heading').html(contents_head);
 				$('.main-welcolme-summon').html('<h2>숙련도&소개</h2>');
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall');
+				$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap');
 			}else if (this==document.getElementById('topmenu1-list-span2'))
 			{
 				nav_num = 2;
@@ -611,6 +613,7 @@ $(function(){
 				$('.section-heading').html(contents_head);
 				$('.main-welcolme-summon').html('<h2>숙련도&소개</h2>');
 				$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall');
+				$('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap');
 			}else if (this==document.getElementById('list-ul-li2'))
 			{
 				nav_num = 2;
@@ -840,7 +843,7 @@ $(function(){
 				$('#slide-wrap-i').css({'display':'none'})
 				mainSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/index.html .article-main-scrollall')
-				$('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
+				// $('.scr-index-box').load(portfolioindex_url+'/index.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub1.html'){
 				// $('.article-main-welcolme').load(portfolioindex_url+'/sub/sub1.html .main-welcolme-summon')
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
@@ -869,7 +872,7 @@ $(function(){
 				$('#slide-wrap-i').css({'display':'none'})
 				webSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub2.html .article-main-scrollall')
-				$('.scr-index-box').load(portfolioindex_url+'/sub/sub2.html .index-btn-wrap')
+				// $('.scr-index-box').load(portfolioindex_url+'/sub/sub2.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub3.html'){
 				// $('.article-main-welcolme').load(portfolioindex_url+'/sub/sub3.html .main-welcolme-summon')
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
@@ -882,7 +885,7 @@ $(function(){
 				$('#slide-wrap-i').css({'display':'none'})
 				movieSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub3.html .article-main-scrollall')
-				$('.scr-index-box').load(portfolioindex_url+'/sub/sub3.html .index-btn-wrap')
+				// $('.scr-index-box').load(portfolioindex_url+'/sub/sub3.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub4.html'){
 				// $('.article-main-welcolme').load(portfolioindex_url+'/sub/sub4.html .main-welcolme-summon')
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
@@ -895,7 +898,7 @@ $(function(){
 				$('#slide-wrap-i').css({'display':'none'})
 				flashSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub4.html .article-main-scrollall')
-				$('.scr-index-box').load(portfolioindex_url+'/sub/sub4.html .index-btn-wrap')
+				// $('.scr-index-box').load(portfolioindex_url+'/sub/sub4.html .index-btn-wrap')
 			}else if(location.href==portfolioindex_url+'/sub/sub5.html'){
 				// $('.article-main-welcolme').load(portfolioindex_url+'/sub/sub5.html .main-welcolme-summon')
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
@@ -908,7 +911,7 @@ $(function(){
 				$('#slide-wrap-i').css({'display':'none'})
 				imageSommon();
 				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub5.html .article-main-scrollall')
-				$('.scr-index-box').load(portfolioindex_url+'/sub/sub5.html .index-btn-wrap')
+				// $('.scr-index-box').load(portfolioindex_url+'/sub/sub5.html .index-btn-wrap')
 			}
 			title_changer();
 			$('.body-filter-preloader').hide();
