@@ -172,14 +172,6 @@ $(function(){
 			if ((navigator.userAgent.search( "edge/")>-1)||(navigator.userAgent.search( "trident" ) > -1)||(navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1))
 			{
 				$('.body-filter-preloader').show();
-				// $('.article-main-welcolme').load(portfolioindex_url+'/sub/sub1.html .main-welcolme-summon',function(){
-				// 	$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
-				// 	$('#topmenu1-list-span'+nav_num).css({'border-bottom':'3px solid #bbb'})
-				// 	$('.topmenu1-list-span').children('.list-span-leftborder, .list-span-rightborder').css({'bottom':'0px'})
-				// 	$('#topmenu1-list-span'+nav_num).children('.list-span-leftborder, .list-span-rightborder').css({'bottom':'-3px','border-bottom':'3px solid #bbb'})
-				// 	$('.ul-li-img1').css({'border':'0px solid #999'})
-				// 	$('#list-ul-li'+nav_num).css({'border':'3px solid #999'})
-				// })
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span'+nav_num).css({'border-bottom':'3px solid #bbb'})
 				$('.topmenu1-list-span').children('.list-span-leftborder, .list-span-rightborder').css({'bottom':'0px'})
@@ -193,9 +185,7 @@ $(function(){
 					$('#slide-wrap').css({'display':'none'})
 					$('#slide-wrap-i').css({'display':'block'})
 				}
-				// $('.article-summon-wrap').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .article-main-scrollall')
 				title_changer();
-				// $('.scr-index-box').load(portfolioindex_url+'/sub/sub'+nav_num+'.html .index-btn-wrap')
 
 				var topbtnm
 				if ($('.body-all-header').css('height')=='50px')
