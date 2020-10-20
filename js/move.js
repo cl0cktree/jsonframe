@@ -641,6 +641,7 @@ $(function(){
 		var start_year;
 		var this_year=2020;
 		$('.article-summon-wrap').html('');
+		$('.index-btn-wrap').html('');
 		for (start_year=2016;start_year<=this_year;start_year++){
 			work_years++;
 			print_year++;
@@ -653,7 +654,7 @@ $(function(){
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
 			}
-			$('.index-btn-wrap').html('<div class="index-btn-all" id="index-btn-num1">'+work_years+'</div>');
+			$('.index-btn-wrap').apeend('<div class="index-btn-all" id="index-btn-num'+work_years+'">'+work_years+'</div>');
 			console.log(work_years+' / '+print_year);
 		}
 	};
