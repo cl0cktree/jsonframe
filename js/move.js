@@ -38,7 +38,7 @@ $(function(){
 
 		})
 		var footerIcon= $('.ul-li-img1').width();
-		$('.ul-li-img1').css({'height':footerIcon});
+		// $('.ul-li-img1').css({'height':footerIcon});
 	});
 	/*footer 자동 구성*/
 	function footer_creat(){
@@ -284,7 +284,7 @@ $(function(){
 	/*전체창 리사이즈시 반응형 동작 빈틈보강*/
 	$(window).resize(function(){
 		var footerIcon= $('.ul-li-img1').width();
-		$('.ul-li-img1').css({'height':footerIcon});
+		// $('.ul-li-img1').css({'height':footerIcon});
 
 		for (scib1=1;scib1<=scall1 ;scib1++ )
 		{
@@ -642,6 +642,7 @@ $(function(){
 		});
 		$('.section-heading').html(contents_head);
 		$('.main-welcolme-summon').html('<h2>환영합니다.</h2>');
+		return false;
 	};
 	function introSommon(){
 		contents_head='소개페이지 콘텐츠 묶음';
@@ -650,6 +651,7 @@ $(function(){
 		$('.main-welcolme-summon').html('<h2>숙련도&소개</h2>');
 		$('.article-summon-wrap').load(portfolioindex_url+'/sub/sub1.html .article-main-scrollall')
 		$('.scr-index-box').load(portfolioindex_url+'/sub/sub1.html .index-btn-wrap')
+		return false;
 	};
 	function webSommon(){
 		contents_head='웹작업페이지 콘텐츠 묶음';
@@ -683,6 +685,7 @@ $(function(){
 		});
 		$('.section-heading').html(contents_head);
 		$('.main-welcolme-summon').html('<h2>웹&앱 퍼블리싱</h2>');
+		return false;
 	};
 	function movieSommon(){
 		contents_head='동영상작업페이지 콘텐츠 묶음';
@@ -716,6 +719,7 @@ $(function(){
 		});
 		$('.section-heading').html(contents_head);
 		$('.main-welcolme-summon').html('<h2>동영상 편집작업</h2>');
+		return false;
 	};
 	function flashSommon(){
 		contents_head='플래시작업페이지 콘텐츠 묶음';
@@ -749,6 +753,7 @@ $(function(){
 		});
 		$('.section-heading').html(contents_head);
 		$('.main-welcolme-summon').html('<h2>플래시</h2>');
+		return false;
 	};
 	function imageSommon(){
 		contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
@@ -782,6 +787,7 @@ $(function(){
 		});
 		$('.section-heading').html(contents_head);
 		$('.main-welcolme-summon').html('<h2>2D랜더링&편집작업</h2>');
+		return false;
 	};
 	/*------------------------------------------------------------------*/
 
