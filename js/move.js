@@ -284,7 +284,7 @@ $(function(){
 	/*전체창 리사이즈시 반응형 동작 빈틈보강*/
 	$(window).resize(function(){
 		var footerIcon= $('.ul-li-img1').width();
-		$('.ul-li-img1').css({'height':footerIcon});
+		// $('.ul-li-img1').css({'height':footerIcon});
 
 		for (scib1=1;scib1<=scall1 ;scib1++ )
 		{
