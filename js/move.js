@@ -38,7 +38,7 @@ $(function(){
 
 		})
 		var footerIcon= $('.ul-li-img1').width();
-		$('.ul-li-img1').css({'height':footerIcon});
+		// $('.ul-li-img1').css({'height':footerIcon});
 	});
 	/*footer 자동 구성*/
 	function footer_creat(){
