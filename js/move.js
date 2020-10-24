@@ -307,7 +307,7 @@ $(function(){
 
 		if ($('.body-all-header').css('width')<'480px')
 		{
-
+			console.log($('.body-all-header').css('width'));
 			if ($('#article1-nav1-topmenu1').css('display')=='none')
 			{
 				$('.body-all-header').animate({'height':'100px'},100)
