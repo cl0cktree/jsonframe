@@ -199,7 +199,7 @@ $(function(){
 					topbtnm = 150;
 				}
 				$('body, html').stop().animate({ scrollTop: $("body").offset().top-topbtnm },200);
-				$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff'})
+				$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
 				$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
 				$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
@@ -239,7 +239,7 @@ $(function(){
 				topbtnm = 150;
 			}
 			$('body, html').stop().animate({ scrollTop: $("body").offset().top-topbtnm },200);
-			$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff'})
+			$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
 			$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
 			$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
@@ -401,7 +401,7 @@ $(function(){
 					topbtnm = 150;
 				}
 				$('body, html').stop().animate({ scrollTop: $("body").offset().top-topbtnm },200);
-				$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff'})
+				$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
 				$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
 				$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
@@ -433,7 +433,7 @@ $(function(){
 				topbtnm = 150;
 			}
 			$('body, html').stop().animate({ scrollTop: $("body").offset().top-topbtnm },200);
-			$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff'})
+			$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
 			$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
 			$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 
@@ -1011,7 +1011,7 @@ $(function(){
 							topbtnm = 150;
 						}
 						$('body, html').stop().animate({ scrollTop: $("body").offset().top-topbtnm },400);
-						$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff'})
+						$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
 						$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
 						$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 					})
@@ -1099,8 +1099,8 @@ $(function(){
 	})
 
 	$('.body-section-content').on('click','.index-btn-all',function(){
-		$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff'})
-		$(this).css({'background':'rgba(255,255,255,1)','border':'1px solid #000'})
+		$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
+		$(this).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
 		if ($('#article1-nav1-topmenu1').css('display')=='block')
 		{
 			var topminus = 50;
@@ -1141,8 +1141,8 @@ $(function(){
 					if ($(window).scrollTop()>=$(this).offset().top-topminus2)
 					{
 						var scm = $(this).attr('id').substring(19,20);
-						$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff'})
-						$('#index-btn-num'+scm).css({'background':'rgba(255,255,255,1)','border':'1px solid #000'})
+						$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
+						$('#index-btn-num'+scm).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
 					}
 				})
 			},scroll_framespeed);
