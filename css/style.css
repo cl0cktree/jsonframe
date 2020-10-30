@@ -160,7 +160,7 @@ footer .body-footer-contaner .top-btn{width:3em;background:rgba(0,0,0,1);border:
 .filter-conbox-contentswrap .filter-conbox-contents .conbox-contents-view .contents-view-img img{width:90%;margin:5%;border:1px solid #666;box-sizing:border-box;float:left;}
 .filter-conbox-contentswrap .filter-conbox-contents .conbox-contents-view .contents-view-img a{display:block;margin:0 auto;text-align:center;width:90%;min-height:20px;color:#000;text-decoration:none;word-break:break-all;}
 .filter-conbox-contentswrap .filter-conbox-contents .conbox-contents-view .contents-view-img a:hover{text-decoration:underline;}
-.filter-conbox-contentswrap .filter-conbox-contents .conbox-contents-view .contents-view-word{padding:5%;float:left;word-break:keep-all;}
+.filter-conbox-contentswrap .filter-conbox-contents .conbox-contents-view .contents-view-word{padding:5%;padding-right:3%;float:left;word-break:keep-all;}
 
 #click-all-filter-landing{width:100%;height:100%;background:rgba(255,255,255,0.9);position:fixed;top:0;left:0;bottom:0;right:0;z-index:60;box-sizing:content-box;overflow:auto;display:block;opacity:1;transition:all 0.3s;}
 #click-all-filter-landing .filter-landing-contents{position:absolute;margin-left:50%;margin-bottom:50px;}
