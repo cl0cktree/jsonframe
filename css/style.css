@@ -285,7 +285,7 @@ footer .body-footer-contaner .top-btn{width:3em;background:rgba(0,0,0,1);border:
 			 .filter-landing-contents{width:400px;height:320px;left:-200px;margin-top:30%;} #landing-contents-title{height:170px;font-size:60px;line-height:70px;font-weight:600;} #landing-contents-buttonwrap{height:80px;} #landing-contents-buttonwrap button{font-size:24px;} .landing-contents-clock{font-size:24px;text-align:center;line-height:30px;font-weight:700;} .cover-city{font-size:24px;text-align:center;line-height:30px;font-weight:700;}
 			 #main-scroll1-con{background:#fff;} #main-scroll2-con{background:#fff;} #main-scroll3-con{background:#fff;} #main-scroll4-con{background:#fff;} .ul-li-img1{width:60px;height:60px;}
 			 .filter-title-closebtn{width:30px;height:30px;} .pagecount,.controll{height:20px;line-height:20px;font-size:12px;}
-			 .scrollall-con-box .con-box-imgborder{height:110px;} .con-box-imgborder img{position:absolute;} .top-btn{right:10px;} .index-btn-wrap{right:10px;}
+			 .scrollall-con-box .con-box-imgborder{height:110px;} .con-box-imgborder img{position:absolute;} .top-btn{right:5px;} .index-btn-wrap{right:5px;}
 	/*sub1*/ .scrollall-con-word1,.scrollall-con-word2{width:100%;margin-bottom:20px;} .scrollall-con-workimg1,.scrollall-con-workimg2{width:100%;} .main-scrollall-backb{top:-50px;} .click-all-filter{width:100%;overflow-y:auto;}
 }
 @media all and (min-width:641px) and (max-width:720px){
