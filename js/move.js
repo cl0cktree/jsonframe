@@ -315,7 +315,7 @@ $(function(){
 			}
 			return false;
 		}
-		if ($('#article1-nav1-topmenu1').css('display')!='none')
+		if (($('#article1-nav1-topmenu1').css('display')!='none')||($('body').css('width')>480))
 		{
 			$('.body-footer-add').animate({'margin-left':'0px'},100)
 			$('.nav1-side-menu').animate({'right':'-100%'},100)
