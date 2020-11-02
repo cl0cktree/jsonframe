@@ -482,11 +482,11 @@ $(function(){
 			if ($(this).children('span').css('bottom')=='-3px')
 				{
 					$(this).children('.list-span-leftborder, .list-span-rightborder').css({'border-bottom':'3px solid #000'})
-					$(this).children('.list-span-leftborder, .list-span-rightborder').animate({'width':'50%'},100)
+					$(this).children('.list-span-leftborder, .list-span-rightborder').stop().animate({'width':'50%'},100)
 
 
 				}else{
-					$(this).children('.list-span-leftborder, .list-span-rightborder').animate({'width':'50%'},100)
+					$(this).children('.list-span-leftborder, .list-span-rightborder').stop().animate({'width':'50%'},100)
 					$(this).children('.list-span-leftborder, .list-span-rightborder').css({'border-bottom':'3px solid #4e3b29'})
 				}
 		}else if (event.type=='mouseleave')
@@ -494,11 +494,11 @@ $(function(){
 			if ($(this).children('span').css('bottom')=='-3px')
 				{
 					$(this).children('.list-span-leftborder, .list-span-rightborder').css({'border-bottom':'3px solid #000'})
-					$(this).children('.list-span-leftborder, .list-span-rightborder').animate({'width':'0%'},100)
+					$(this).children('.list-span-leftborder, .list-span-rightborder').stop().animate({'width':'0%'},100)
 
 
 				}else{
-					$(this).children('.list-span-leftborder, .list-span-rightborder').animate({'width':'0%'},100)
+					$(this).children('.list-span-leftborder, .list-span-rightborder').stop().animate({'width':'0%'},100)
 					$(this).children('.list-span-leftborder, .list-span-rightborder').css({'border-bottom':'3px solid #4e3b29'})
 				}
 		}else if (event.type=='click')
