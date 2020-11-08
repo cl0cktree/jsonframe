@@ -200,7 +200,7 @@ footer .body-footer-contaner .top-btn{width:3em;background:rgba(0,0,0,1);border:
 .body-section-content .section-content-article .content-article-wraper .article-main-welcolme{font-size:30px;line-height:80px;font-weight:400;color:#4e3b29;text-align:center; background:#fff;z-index:5;}
 .body-section-content .section-content-article .content-article-wraper .article-main-welcolme .main-welcolme-summon{animation: fadein 0.3s 1;}
 
-.body-section-content .section-content-article .content-article-wraper .main-scrollall-back{width:100%;max-width:1280px;height:100%;background:url('../images/slide/city_2.png') no-repeat;background-size:100% 100%;position:fixed;top:0px;margin-left:-10px;z-index:3;}
+.body-section-content .section-content-article .content-article-wraper .main-scrollall-back{width:100%;max-width:1280px;height:100%;background:url('../images/city_2.png') no-repeat;background-size:100% 100%;position:fixed;top:0px;margin-left:-10px;z-index:3;}
 
 .body-section-content .section-content-article .main-scrollall-backb{width:100%;height:100%;position:absolute;left:0px;z-index:3;}
 .body-section-content .section-content-article .scrollall-back-acc{width:60px;height:60px;background:rgba(0,0,0,0.4);border:1px solid #ddd;text-align:center;color:#ddd;line-height:60px;}
