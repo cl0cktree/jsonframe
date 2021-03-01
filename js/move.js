@@ -1196,6 +1196,7 @@ $(function(){
 		}else if (event.type=='click')
 		{
 			var datasum;
+			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents1';
