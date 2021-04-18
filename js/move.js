@@ -132,7 +132,7 @@ $(function(){
 	/*각 페이지 링크를 load 시킬 때 각 페이지에 맞는 title 을 지정하기 위한 함수*/
 	function title_changer(){
 		var title_text;
-		if (split_url=='index.html'){
+		if ((split_url=='index.html')||(split_url=='')){
 			title_text = 'main';
 		}else if (split_url=='sub1.html'){
 			title_text = 'introduce';
@@ -263,7 +263,7 @@ $(function(){
 		function cover_start(){
 			footer_creat();
 			header_creat();
-			if (split_url=='index.html'){
+			if ((split_url=='index.html')||(split_url=='')){
 				mainSommon();
 			}else if (split_url=='sub1.html'){
 				introSommon();
