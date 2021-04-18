@@ -1137,6 +1137,9 @@ $(function(){
 		}else if (this==document.getElementById('index-btn-num5'))
 		{
 			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
+		}else if (this==document.getElementById('index-btn-num6'))
+		{
+			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
 		}
 	})
 	/*-article-main-scrollall의 영역이 바뀜에 따라 index-btn-all의 색인표시-*/
@@ -2072,6 +2075,8 @@ $(function(){
 					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll4").offset().top-topminus },300);
 				}else if(sort_index==5){
 					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
+				}else if(sort_index==6){
+					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
 				}
 			};
 			function start_s(){
