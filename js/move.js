@@ -592,7 +592,7 @@ $(function(){
 		work_years=0;
 		var print_year=2015;
 		var start_year;
-		var this_year=2020;
+		var this_year=2021;
 		$('.article-summon-wrap').html('');
 		$('.index-btn-wrap').html('');
 		for (start_year=2016;start_year<=this_year;start_year++){
@@ -634,6 +634,9 @@ $(function(){
 						contents_box();
 					}else if((frame_year=='2020')&&(item.years_num!=='0')){
 						work_years=5;
+						contents_box();
+					}else if((frame_year=='2021')&&(item.years_num!=='0')){
+						work_years=6;
 						contents_box();
 					}
 				}
@@ -678,6 +681,9 @@ $(function(){
 					}else if(frame_year=='2020'){
 						work_years=5;
 						contents_box();
+					}else if(frame_year=='2021'){
+						work_years=6;
+						contents_box();
 					}
 				};
 			});
@@ -711,6 +717,9 @@ $(function(){
 						contents_box();
 					}else if(frame_year=='2020'){
 						work_years=5;
+						contents_box();
+					}else if(frame_year=='2021'){
+						work_years=6;
 						contents_box();
 					}
 				};
@@ -746,6 +755,9 @@ $(function(){
 					}else if(frame_year=='2020'){
 						work_years=5;
 						contents_box();
+					}else if(frame_year=='2021'){
+						work_years=6;
+						contents_box();
 					}
 				};
 			});
@@ -779,6 +791,9 @@ $(function(){
 						contents_box();
 					}else if(frame_year=='2020'){
 						work_years=5;
+						contents_box();
+					}else if(frame_year=='2021'){
+						work_years=6;
 						contents_box();
 					}
 				};
@@ -1326,6 +1341,12 @@ $(function(){
 			}else if ((this==document.getElementById('con-box5-imgborder5'))||(this==document.getElementById('con-box5-caption5')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents29';
+			}else if ((this==document.getElementById('con-box6-imgborder1'))||(this==document.getElementById('con-box6-caption1')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents30';
+			}else if ((this==document.getElementById('con-box6-imgborder2'))||(this==document.getElementById('con-box6-caption2')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents31';
 			}
 
 			else{
