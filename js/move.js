@@ -1938,7 +1938,7 @@ $(function(){
 				return false;
 			});
 
-			$('.bulet').on('click mouseover mouseleave',function(){
+			$('.bulet').on('click mouseover mouseleave',function(event){
 				if (event.type=='click')
 				{
 					setTimeout(stop_bar,0);
@@ -2065,19 +2065,20 @@ $(function(){
 				}else{
 					var topminus = 100;
 				}
-				if(sort_index==1){
-					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll1").offset().top-topminus },300);
-				}else if(sort_index==2){
-					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll2").offset().top-topminus },300);
-				}else if(sort_index==3){
-					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll3").offset().top-topminus },300);
-				}else if(sort_index==4){
-					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll4").offset().top-topminus },300);
-				}else if(sort_index==5){
-					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
-				}else if(sort_index==6){
-					$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
-				}
+				// if(sort_index==1){
+				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll1").offset().top-topminus },300);
+				// }else if(sort_index==2){
+				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll2").offset().top-topminus },300);
+				// }else if(sort_index==3){
+				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll3").offset().top-topminus },300);
+				// }else if(sort_index==4){
+				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll4").offset().top-topminus },300);
+				// }else if(sort_index==5){
+				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
+				// }else if(sort_index==6){
+				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
+				// }
+				$('body, html').stop().animate({ scrollTop: $("#article-main-scroll"+sort_index).offset().top-topminus },300);
 			};
 			function start_s(){
 				setTimeout(lazy_0,0);
