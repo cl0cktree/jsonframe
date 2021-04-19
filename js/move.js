@@ -1122,25 +1122,26 @@ $(function(){
 		}else{
 			var topminus = 100;
 		}
-		if (this==document.getElementById('index-btn-num1'))
-		{
-			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll1").offset().top-topminus },300);
-		}else if (this==document.getElementById('index-btn-num2'))
-		{
-			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll2").offset().top-topminus },300);
-		}else if (this==document.getElementById('index-btn-num3'))
-		{
-			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll3").offset().top-topminus },300);
-		}else if (this==document.getElementById('index-btn-num4'))
-		{
-			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll4").offset().top-topminus },300);
-		}else if (this==document.getElementById('index-btn-num5'))
-		{
-			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
-		}else if (this==document.getElementById('index-btn-num6'))
-		{
-			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
-		}
+		// if (this==document.getElementById('index-btn-num1'))
+		// {
+		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll1").offset().top-topminus },300);
+		// }else if (this==document.getElementById('index-btn-num2'))
+		// {
+		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll2").offset().top-topminus },300);
+		// }else if (this==document.getElementById('index-btn-num3'))
+		// {
+		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll3").offset().top-topminus },300);
+		// }else if (this==document.getElementById('index-btn-num4'))
+		// {
+		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll4").offset().top-topminus },300);
+		// }else if (this==document.getElementById('index-btn-num5'))
+		// {
+		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
+		// }else if (this==document.getElementById('index-btn-num6'))
+		// {
+		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
+		// }
+		$('body, html').stop().animate({ scrollTop: $("#article-main-scroll"+sort_index).offset().top-topminus },300);
 	})
 	/*-article-main-scrollall의 영역이 바뀜에 따라 index-btn-all의 색인표시-*/
 	$(window).scroll(function(){
