@@ -1123,25 +1123,6 @@ $(function(){
 		}else{
 			var topminus = 100;
 		}
-		// if (this==document.getElementById('index-btn-num1'))
-		// {
-		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll1").offset().top-topminus },300);
-		// }else if (this==document.getElementById('index-btn-num2'))
-		// {
-		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll2").offset().top-topminus },300);
-		// }else if (this==document.getElementById('index-btn-num3'))
-		// {
-		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll3").offset().top-topminus },300);
-		// }else if (this==document.getElementById('index-btn-num4'))
-		// {
-		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll4").offset().top-topminus },300);
-		// }else if (this==document.getElementById('index-btn-num5'))
-		// {
-		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
-		// }else if (this==document.getElementById('index-btn-num6'))
-		// {
-		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
-		// }
 		if (this==document.getElementById('index-btn-num'+data_index_btn))
 		{
 			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll"+data_index_btn).offset().top-topminus },300);
@@ -2070,19 +2051,6 @@ $(function(){
 				}else{
 					var topminus = 100;
 				}
-				// if(sort_index==1){
-				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll1").offset().top-topminus },300);
-				// }else if(sort_index==2){
-				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll2").offset().top-topminus },300);
-				// }else if(sort_index==3){
-				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll3").offset().top-topminus },300);
-				// }else if(sort_index==4){
-				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll4").offset().top-topminus },300);
-				// }else if(sort_index==5){
-				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll5").offset().top-topminus },300);
-				// }else if(sort_index==6){
-				// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
-				// }
 				$('body, html').stop().animate({ scrollTop: $("#article-main-scroll"+sort_index).offset().top-topminus },300);
 			};
 			function start_s(){
