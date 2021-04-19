@@ -606,7 +606,7 @@ $(function(){
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
 			}
-			$('.index-btn-wrap').append('<div class="index-btn-all" id="index-btn-num'+work_years+'">'+work_years+'</div>');
+			$('.index-btn-wrap').append('<div class="index-btn-all" id="index-btn-num'+work_years+'" data-btn="'+work_years+'">'+work_years+'</div>');
 		}
 	};
 	function mainSommon(){
@@ -1114,6 +1114,7 @@ $(function(){
 	})
 
 	$('.body-section-content').on('click','.index-btn-all',function(){
+		var data_index_btn = $(this).data('btn');
 		$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
 		$(this).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
 		if ($('#article1-nav1-topmenu1').css('display')=='block')
@@ -1141,8 +1142,11 @@ $(function(){
 		// {
 		// 	$('body, html').stop().animate({ scrollTop: $("#article-main-scroll6").offset().top-topminus },300);
 		// }
-		$('body, html').stop().animate({ scrollTop: $("#article-main-scroll"+sort_index).offset().top-topminus },300);
-	})
+		if (this==document.getElementById('index-btn-num'+data_index_btn))
+		{
+			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll"+data_index_btn).offset().top-topminus },300);
+		}
+	});
 	/*-article-main-scrollall의 영역이 바뀜에 따라 index-btn-all의 색인표시-*/
 	$(window).scroll(function(){
 		var scroll_delay_time_2;
