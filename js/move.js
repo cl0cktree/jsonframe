@@ -1030,10 +1030,10 @@ $(function(){
 						$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
 						$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
 					})
-					if ($(window).scrollTop()==0){
-						$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
-						$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
-					}
+					// if ($(window).scrollTop()==0){
+					// 	$('#scrollall-back-acc1').stop().animate({'top':'270px'},100)
+					// 	$('#scrollall-back-acc2').stop().animate({'top':'170px'},100)
+					// }
 					if ($(window).scrollTop()>70)
 					{
 						$('#scrollall-back-acc1').stop().animate({'top':'170px'},100)
