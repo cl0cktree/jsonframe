@@ -35,8 +35,7 @@ $(function(){
 			}else{
 				bubble_background2();
 			}
-
-		})
+		});
 		var footerIcon= $('.ul-li-img1').width();
 		// $('.ul-li-img1').css({'height':footerIcon});
 	});
@@ -1713,7 +1712,7 @@ $(function(){
 				}
 			});
 
-			$('.slide').on('touchstart touchmove touchend touchcancle click mouseover mouseleave',function(event){
+			$('.slide').on('touchstart touchmove touchend touchcancle mousedown mousemove mouseup click mouseover mouseleave',function(event){
 				cal_width = s_width*0.3;
 				cal_height = msheight*0.5;
 				var dragmove;
