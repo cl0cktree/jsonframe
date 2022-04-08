@@ -1175,7 +1175,7 @@ $(function(){
 	/*------------------------------------------------------------*/
 	/*컨탠츠썸네일 클릭시 동작 부분*/
 
-	$('.body-section-content').on('mouseover mouseleave click fadeIn fadeOut','.con-box-imgborder, .con-box-caption',function(event){
+	$('.body-section-content').on('mouseover mouseleave click keydown fadeIn fadeOut','.con-box-imgborder, .con-box-caption',function(event){
 		if (event.type=='mouseover')
 		{
 			if ($(this).is('.con-box-imgborder'))
@@ -1196,7 +1196,7 @@ $(function(){
 			$(this).children('.box-imgborder-word').stop().animate({'top':'0','margin-top':'110%'},100)
 			$(this).children('.box-imgborder-word').css({'opacity':'0'})
 			$('.box-imgborder-filter, .box-imgborder-word').remove()
-		}else if (event.type=='click')
+		}else if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
 			var datasum;
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1')))
