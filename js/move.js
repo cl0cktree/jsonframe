@@ -1198,6 +1198,7 @@ $(function(){
 			$('.box-imgborder-filter, .box-imgborder-word').remove()
 		}else if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
+			console.log(this);
 			var datasum;
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1'))||(this==document.getElementById('scrollall1-con-box1')))
 			{
