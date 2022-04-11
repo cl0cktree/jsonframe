@@ -1175,7 +1175,7 @@ $(function(){
 	/*------------------------------------------------------------*/
 	/*컨탠츠썸네일 클릭시 동작 부분*/
 
-	$('.body-section-content').on('mouseover mouseleave click keydown fadeIn fadeOut','.con-box-imgborder, .con-box-caption',function(event){
+	$('.body-section-content').on('mouseover mouseleave click keydown fadeIn fadeOut','.con-box-imgborder, .con-box-caption, .scrollall-con-box',function(event){
 		if (event.type=='mouseover')
 		{
 			if ($(this).is('.con-box-imgborder'))
