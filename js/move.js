@@ -1196,7 +1196,7 @@ $(function(){
 			$(this).children('.box-imgborder-word').stop().animate({'top':'0','margin-top':'110%'},100)
 			$(this).children('.box-imgborder-word').css({'opacity':'0'})
 			$('.box-imgborder-filter, .box-imgborder-word').remove()
-		}else if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))==13))
+		}else if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
 			console.log(this);
 			var datasum;
