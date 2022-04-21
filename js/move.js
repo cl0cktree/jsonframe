@@ -615,7 +615,7 @@ $(function(){
 			$.each(data, function(I, item){
 				frame_year=item.data_years;
 				function contents_box(){
-					$('.move-wrap'+work_years).append('<a class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+					$('.move-wrap'+work_years).append('<a role="button" class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></a>');
 				};
 				if (item.data_section=='portfolio'){
