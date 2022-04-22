@@ -1352,14 +1352,14 @@ $(function(){
 
 			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
 			$('.click-all-filter').fadeIn('fast',function(){
-				$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
+				$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 				$('.filter-conbox-contentswrap').load(datasum)
 			});
 			return false;
 		}
 		return false;
 	})
-	$('.click-all-filter').on('mousedown mouseup click fadeOut','.filter-title-closebtn',function(event){
+	$('.click-all-filter').on('mousedown mouseup click keydown fadeOut','.filter-title-closebtn',function(event){
 		if (event.type=='mousedown')
 		{
 			$('.filter-title-closebtn').children('img').css({'width':'18px','height':'18px','left':'-9px','top':'-9px'})
@@ -1368,7 +1368,7 @@ $(function(){
 		{
 			$('.filter-title-closebtn').children('img').css({'width':'20px','height':'20px','left':'-10px','top':'-10px'})
 		}
-		if (event.type=='click')
+		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
 			$('#click-all-filter-index').html('')
 			$('.click-all-filter').fadeOut('fast')
