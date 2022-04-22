@@ -1175,11 +1175,11 @@ $(function(){
 	/*------------------------------------------------------------*/
 	/*컨탠츠썸네일 클릭시 동작 부분*/
 	$('.body-section-content').on('keydown','.scrollall-con-box',function(event){
+		event.preventDefault();
 		if((event.keyCode||event.which)===9){
-			event.preventDefault();
 			$(this).next().focus();
-		}else if(event.shiftKey&&(event.keyCode||event.which)===9){
-			event.preventDefault();
+		};
+		if(event.shiftKey&&(event.keyCode||event.which)===9){
 			$(this).prev().focus();
 		};
 	});
