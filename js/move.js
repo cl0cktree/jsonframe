@@ -1175,8 +1175,10 @@ $(function(){
 	/*------------------------------------------------------------*/
 	/*컨탠츠썸네일 클릭시 동작 부분*/
 	$('.body-section-content').on('keydown','.scrollall-con-box',function(event){
-		if((event.type=='keydown')&&((event.keyCode)||(event.which))===0){
-
+		if((event.keyCode||event.which)===9){
+			$(this).next().focus();
+		}else if(event.shiftKey&&(event.keyCode||event.which)===9){
+			$(this).prev().focus();
 		};
 	});
 	$('.body-section-content').on('mouseover mouseleave click keydown fadeIn fadeOut','.con-box-imgborder, .con-box-caption, .scrollall-con-box',function(event){
