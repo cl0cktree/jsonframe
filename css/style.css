@@ -3,7 +3,10 @@
 @font-face{
 	font-family:'Nanum Gothic','NanumGothic';
 	src:url('../font/NanumGothic.eot');
-	src:url('../font/NanumGothic.eot?#iefix') format('embedded-opentype'),url('../font/NanumGothic.woff') format('woff'),url('../font/NanumGothic.ttf') format('truetype'),url('../font/NanumGothic.svg#NanumGothic') format('svg');
+	src:url('../font/NanumGothic.eot?#iefix') format('embedded-opentype');
+	src:url('../font/NanumGothic.woff') format('woff');
+	src:url('../font/NanumGothic.ttf') format('truetype');
+	src:url('../font/NanumGothic.svg#NanumGothic') format('svg');
 	src:local(※), url('../font/NanumGothic.woff') format('woff');
 }
 /*공통*/
