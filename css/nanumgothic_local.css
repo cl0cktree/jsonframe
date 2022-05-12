@@ -3,9 +3,38 @@
   font-family: 'Nanum Gothic';
   font-style: normal;
   font-weight: 400;
-  src: local('NanumGothic'), url(../font/NanumGothic.woff2) format('woff');
+  src: local('NanumGothic'), url(../font/NanumGothic.woff2) format('woff2');
 }
-
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothic'), url(../font/NanumGothic.woff) format('woff');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothic'), url(../font/NanumGothic.eot) format('eot');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothic'), url(../font/NanumGothic.eot?#iefix) format('embedded-opentype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothic'), url(../font/NanumGothic.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src: local('NanumGothic'), url(../font/NanumGothic.svg#NanumGothic) format('svg');
+}
 /* [700] */
 @font-face {
   font-family: 'Nanum Gothic';
@@ -13,10 +42,70 @@
   font-weight: 700;
   src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicBold.woff2) format('woff2');
 }
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicBold.eot) format('eot');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicBold.eot?#iefix) format('embedded-opentype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 700;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicBold.svg#NanumGothicBold) format('svg');
+}
 /* [800] */
 @font-face {
   font-family: 'Nanum Gothic';
   font-style: normal;
   font-weight: 800;
   src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicExtraBold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicExtraBold.woff) format('woff');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicExtraBold.eot) format('eot');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicExtraBold.eot?#iefix) format('embedded-opentype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicExtraBold.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Nanum Gothic';
+  font-style: normal;
+  font-weight: 800;
+  src: local('NanumGothic Bold'), local('NanumGothic-Bold'), url(../font/NanumGothicExtraBold.svg#NanumGothicExtraBold) format('svg');
 }
