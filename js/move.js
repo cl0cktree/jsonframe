@@ -1207,6 +1207,7 @@ $(function(){
 		}else if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
 			console.log(this);
+			$('body').css({'position':'fixed','overflow-y':'hidden'});
 			var datasum;
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1'))||(this==document.getElementById('scroll1-con-box1')))
 			{
@@ -1370,6 +1371,7 @@ $(function(){
 		}
 		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
+			$('body').css({'position':'','overflow-y':''});
 			$('#click-all-filter-index').html('')
 			$('.click-all-filter').fadeOut('fast')
 			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
