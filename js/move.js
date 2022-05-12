@@ -1207,7 +1207,7 @@ $(function(){
 		}else if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
 			console.log(this);
-			$('body').css({'position':'fixed','overflow-y':'hidden'});
+			$('body').css({'position':'','overflow-y':'hidden'});
 			var datasum;
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1'))||(this==document.getElementById('scroll1-con-box1')))
 			{
