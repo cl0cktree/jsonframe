@@ -1,11 +1,11 @@
 @charset "UTF-8";
 @import url('./nanumgothic_local.css');
-@font-face{
+/* @font-face{
 	font-family:'Nanum Gothic','NanumGothic';
 	src:url('/fonts/NanumGothic.eot');
 	src:url('/fonts/NanumGothic.eot?#iefix') format('embedded-opentype'),url('/fonts/NanumGothic.woff') format('woff'),url('/fonts/NanumGothic.ttf') format('truetype'),url('/fonts/NanumGothic.svg#NanumGothic') format('svg');
 	src:local(※), url('/fonts/NanumGothic.woff') format('woff');
-}
+} */
 /*공통*/
 body{width:100%;height:100%;margin:0;padding:0;background:url('../images/tile9.png'); background-size:75px 50px; font-family:'Nanum Gothic','NanumGothic','Gothic','고딕';overflow:auto;}
 section{padding:0;margin:0;border:0;display:block;position:relative;overflow:hidden;}
