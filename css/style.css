@@ -2,12 +2,13 @@
 @import url('./nanumgothic_local.css');
 @font-face{
 	font-family:'Nanum Gothic','NanumGothic';
+	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.woff2') format('woff2');
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.eot');
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.eot?#iefix') format('embedded-opentype');
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.woff') format('woff');
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.ttf') format('truetype');
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.svg#NanumGothic') format('svg');
-	src:local(※), url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.woff') format('woff');
+	src:local(※);
 }
 /*공통*/
 body{width:100%;height:100%;margin:0;padding:0;background:url('../images/tile9.png'); background-size:75px 50px; font-family:'Nanum Gothic','NanumGothic','Gothic','고딕';overflow:auto;}
