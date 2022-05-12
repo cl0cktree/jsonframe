@@ -3,11 +3,29 @@
 @font-face{
 	font-family:'Nanum Gothic','NanumGothic';
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.woff2') format('woff2');
+}
+@font-face{
+	font-family:'Nanum Gothic','NanumGothic';
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.eot');
+}
+@font-face{
+	font-family:'Nanum Gothic','NanumGothic';
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.eot?#iefix') format('embedded-opentype');
+}
+@font-face{
+	font-family:'Nanum Gothic','NanumGothic';
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.woff') format('woff');
+}
+@font-face{
+	font-family:'Nanum Gothic','NanumGothic';
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.ttf') format('truetype');
+}
+@font-face{
+	font-family:'Nanum Gothic','NanumGothic';
 	src:url('https://cl0cktree.github.io/jsonframe/font/NanumGothic.svg#NanumGothic') format('svg');
+}
+@font-face{
+	font-family:'Nanum Gothic','NanumGothic';
 	src:local(※);
 }
 /*공통*/
