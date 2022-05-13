@@ -1,6 +1,8 @@
 $(function(){
 	var portfolioindex_url = 'https://cl0cktree.github.io/jsonframe';
 	// var portfolioindex_url = 'http://clocktree.dothome.co.kr/portfoliomain';
+	var body_tag = document.body;
+	var $body = $('body');
 	var scroll_framespeed = 1000/60;
 	var nav_num;
 	var nav_num_start;
@@ -257,7 +259,7 @@ $(function(){
 	var scib2;
 	var scib3;
 
-	$('body').ready(function(){
+	$body.ready(function(){
 		/*ie9에서 탑메뉴 이동 후 동작*/
 		function cover_start(){
 			footer_creat();
@@ -1207,7 +1209,8 @@ $(function(){
 		}else if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
 			console.log(this);
-			$('body').css({'position':'','overflow-y':'hidden'});
+			$body.css({'overflow-y':'hidden'});
+			// body_tag.style.overflowY='hidden'; 위와 같은 내용.
 			var datasum;
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1'))||(this==document.getElementById('scroll1-con-box1')))
 			{
@@ -1371,7 +1374,7 @@ $(function(){
 		}
 		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
-			$('body').css({'position':'','overflow-y':''});
+			$body.css({'overflow-y':''});
 			$('#click-all-filter-index').html('')
 			$('.click-all-filter').fadeOut('fast')
 			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
@@ -1498,7 +1501,7 @@ $(function(){
 	/*-----------------------------------------------------------*/
 
 	/*index mainslide 부분*/
-	if($('body').find('#slide-wrap'))
+	if($body.find('#slide-wrap'))
 		{
 		$('#slide-wrap').append('<div id="slide-container" class="slide-container"></div><ul id="indicator" class="indicator"></ul><div id="prev-btn" class="con-btn"></div><div id="next-btn" class="con-btn"></div>');
 		var mswidth;
