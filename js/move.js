@@ -1212,6 +1212,7 @@ $(function(){
 			$body.css({'overflow-y':'hidden'});
 			// body_tag.style.overflowY='hidden'; 위와 같은 내용.
 			var datasum;
+			$('.scrollall-con-box').attr({'tabindex':'-1'});
 			if ((this==document.getElementById('con-box1-imgborder1'))||(this==document.getElementById('con-box1-caption1'))||(this==document.getElementById('scroll1-con-box1')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents1';
@@ -1366,18 +1367,19 @@ $(function(){
 	$('.click-all-filter').on('mousedown mouseup click keydown fadeOut','.filter-title-closebtn',function(event){
 		if (event.type=='mousedown')
 		{
-			$('.filter-title-closebtn').children('img').css({'width':'18px','height':'18px','left':'-9px','top':'-9px'})
+			$('.filter-title-closebtn').children('img').css({'width':'18px','height':'18px','left':'-9px','top':'-9px'});
 		}
 		if (event.type=='mouseup')
 		{
-			$('.filter-title-closebtn').children('img').css({'width':'20px','height':'20px','left':'-10px','top':'-10px'})
+			$('.filter-title-closebtn').children('img').css({'width':'20px','height':'20px','left':'-10px','top':'-10px'});
 		}
 		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13))
 		{
 			$body.css({'overflow-y':''});
-			$('#click-all-filter-index').html('')
-			$('.click-all-filter').fadeOut('fast')
-			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
+			$('#click-all-filter-index').html('');
+			$('.click-all-filter').fadeOut('fast');
+			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>');
+			$('.scrollall-con-box').attr({'tabindex':'0'});
 		}
 	})
 	$('#contents-button-inside').on('click keydown',function(){
