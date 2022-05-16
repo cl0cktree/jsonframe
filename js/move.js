@@ -1381,6 +1381,9 @@ $(function(){
 			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>');
 			$('.scrollall-con-box').attr({'tabindex':'0'});
 		}
+		else if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
+			$(this).sbling('.filter-conbox-contentswrap').find('a').focus();
+		}
 	})
 	$('#contents-button-inside').on('click keydown',function(){
 
