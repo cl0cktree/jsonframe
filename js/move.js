@@ -589,6 +589,7 @@ $(function(){
 	/*------------------------------------------------------------------*/
 
 	/*------------- 포트폴리오 데이타 소환 후 HTML 구성 ------------------*/
+	/** 페이지 구조 생성자 */
 	function box_maker(){
 		work_years=0;
 		var print_year=2015;
@@ -610,6 +611,7 @@ $(function(){
 			$('.index-btn-wrap').append('<div class="index-btn-all" id="index-btn-num'+work_years+'" data-btn="'+work_years+'">'+work_years+'</div>');
 		}
 	};
+	/** 메인 구조 구성 */
 	function mainSommon(){
 		contents_head='메인페이지 콘텐츠 묶음';
 		box_maker();
@@ -647,6 +649,7 @@ $(function(){
 		$('.main-welcolme-summon').html('<h2>환영합니다.</h2>');
 		return false;
 	};
+	/** 인트로 페이지 구성 */
 	function introSommon(){
 		contents_head='소개페이지 콘텐츠 묶음';
 		$('.article-summon-wrap').html('');
@@ -656,6 +659,7 @@ $(function(){
 		$('.scr-index-box').load(portfolioindex_url+'/sub/sub1.html .index-btn-wrap')
 		return false;
 	};
+	/** 웹 및 앱 작업 페이지 구성 */
 	function webSommon(){
 		contents_head='웹작업페이지 콘텐츠 묶음';
 		box_maker();
@@ -693,6 +697,7 @@ $(function(){
 		$('.main-welcolme-summon').html('<h2>웹&앱 퍼블리싱</h2>');
 		return false;
 	};
+	/** 동영상 작업 페이지 구성 */
 	function movieSommon(){
 		contents_head='동영상작업페이지 콘텐츠 묶음';
 		box_maker();
@@ -730,6 +735,7 @@ $(function(){
 		$('.main-welcolme-summon').html('<h2>동영상 편집작업</h2>');
 		return false;
 	};
+	/** 플래시 페이지 구성 */
 	function flashSommon(){
 		contents_head='플래시작업페이지 콘텐츠 묶음';
 		box_maker();
@@ -767,6 +773,7 @@ $(function(){
 		$('.main-welcolme-summon').html('<h2>플래시</h2>');
 		return false;
 	};
+	/** 이미지 작업 페이지 구성 */
 	function imageSommon(){
 		contents_head='랜더링및편집작업페이지 콘텐츠 묶음';
 		box_maker();
