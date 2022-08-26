@@ -1371,6 +1371,12 @@ $(function(){
 			}else if ((this==document.getElementById('con-box6-imgborder2'))||(this==document.getElementById('con-box6-caption2'))||(this==document.getElementById('scroll6-con-box2')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents31';
+			}else if ((this==document.getElementById('con-box6-imgborder3'))||(this==document.getElementById('con-box6-caption3'))||(this==document.getElementById('scroll6-con-box3')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents32';
+			}else if ((this==document.getElementById('con-box7-imgborder1'))||(this==document.getElementById('con-box7-caption1'))||(this==document.getElementById('scroll7-con-box1')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents33';
 			}
 
 			else{
