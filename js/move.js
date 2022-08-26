@@ -594,7 +594,7 @@ $(function(){
 		work_years=0;
 		var print_year=2015;
 		var start_year;
-		var this_year=2021;
+		var this_year=2022;
 		$('.article-summon-wrap').html('');
 		$('.index-btn-wrap').html('');
 		for (start_year=2016;start_year<=this_year;start_year++){
