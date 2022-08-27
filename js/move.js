@@ -641,7 +641,7 @@ $(function(){
 					}else if((frame_year=='2021')&&(item.years_num!=='0')){
 						work_years=6;
 						contents_box();
-					}else if(frame_year=='2022'){
+					}else if((frame_year=='2022')&&(item.years_num!=='0')){
 						work_years=7;
 						contents_box();
 					}
