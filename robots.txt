@@ -1,4 +1,4 @@
-(http://clocktree.dothome.co.kr/portfolioindex/robots.txt)
+(https://cl0cktree.github.io/jsonframe/robots.txt)
 User-agent: *
 Disallow: /sub/
 Disallow: /data/
