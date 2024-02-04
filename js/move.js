@@ -831,7 +831,6 @@ $(function(){
 	var $layer_sel = $(this);
 	function conbox_contents(event){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
 		if(document.getElementById('all-filter-conbox')){
-			console.log('pop ride this');
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
 			var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 			var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
@@ -840,15 +839,18 @@ $(function(){
 
 			document.addEventListener('keydown', function(event){
 				if (event.keyCode === 27){
+					console.log('pop ride this_1');
 					focus_still();
 				}else{
 					if ((event.keyCode == 9) && (event.shiftKey)) {
 						if (document.activeElement == first_content) {
+							console.log('pop ride this_2');
 							last_content.focus();
 							event.preventDefault();
 						}
 					} else if(event.keyCode == 9) {
 						if (document.activeElement == last_content) {
+							console.log('pop ride this_3');
 							first_content.focus();
 							event.preventDefault();
 						}
