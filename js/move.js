@@ -828,7 +828,7 @@ $(function(){
 	};
 	/*------------------------------------------------------------------*/
 	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
-	var $layer_sel = $(this);
+	var $layer_sel = $('body').find(this);
 	function conbox_contents(event){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
 		if(document.getElementById('all-filter-conbox')){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
@@ -860,6 +860,7 @@ $(function(){
 	};
 	function focus_still(){ // 낮은 단계의 레이어 선택 요소에 포커스 유지
 		$('.filter-title-closebtn').click();
+		console.log('$layer_sel = '+$layer_sel);
 		$layer_sel.focus();
 	};
 	/*-----------------------------------------------------------------------------------------------------------------------*/
