@@ -838,6 +838,7 @@ $(function(){
 			var last_content = conbox_content[conbox_content.length - 1];
 
 			document.addEventListener('keydown', function(event){
+				event.preventDefault();
 				if (event.keyCode === 27){
 					console.log('pop ride this_1');
 					focus_still();
@@ -846,13 +847,11 @@ $(function(){
 						if (document.activeElement == first_content) {
 							console.log('pop ride this_2');
 							last_content.focus();
-							event.preventDefault();
 						}
 					} else if(event.keyCode == 9) {
 						if (document.activeElement == last_content) {
 							console.log('pop ride this_3');
 							first_content.focus();
-							event.preventDefault();
 						}
 					}
 				}
