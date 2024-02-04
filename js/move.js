@@ -837,6 +837,8 @@ $(function(){
 			var first_content = conbox_contentswrap.querySelectorAll(focus_content)[0];
 			var last_content = conbox_content[conbox_content.length - 1];
 
+			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
+			
 			document.addEventListener('keydown', function(event){
 				event.preventDefault();
 				if (event.keyCode === 27){
@@ -858,6 +860,7 @@ $(function(){
 		}
 	};
 	function focus_still(){ // 낮은 단계의 레이어 선택 요소에 포커스 유지
+		$('#all-filter-conbox').find('[tabindex]').attr('tabindex','-1');
 		$('.filter-title-closebtn').click();
 		console.log('$layer_sel = '+$layer_sel);
 		$layer_sel.focus();
