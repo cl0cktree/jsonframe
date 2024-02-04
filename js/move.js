@@ -840,9 +840,9 @@ $(function(){
 			document.addEventListener('keydown', function(event){
 				event.preventDefault();
 				if (event.keyCode === 27){
-					console.log('pop ride this_1');
 					focus_still();
 				}else{
+					console.log('pop ride this_1');
 					if ((event.keyCode == 9) && (event.shiftKey)) {
 						if (document.activeElement == first_content) {
 							console.log('pop ride this_2');
@@ -1424,7 +1424,7 @@ $(function(){
 			$('.click-all-filter').fadeIn('fast',function(){
 				$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 				$('.filter-conbox-contentswrap').load(datasum);
-				conbox_contents();
+				conbox_contents(event);
 			});
 			return false;
 		}
