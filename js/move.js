@@ -827,7 +827,38 @@ $(function(){
 		return false;
 	};
 	/*------------------------------------------------------------------*/
+	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
+	var $layer_sel = $(this);
+	function conbox_contents(event){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
+		var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
+        var conbox_contentswrap = document.getElementById('#filter-conbox-contentswrap');
+        var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
+        var first_content = conbox_contentswrap.querySelectorAll(focus_content)[0];
+        var last_content = conbox_content[conbox_content.length - 1];
 
+		document.addEventListener('keydown', function(event){
+			if (event.keyCode === 27){
+				focus_still();
+			}else{
+				if ((event.keyCode == 9) && (event.shiftKey)) {
+					if (document.activeElement == first_content) {
+						last_content.focus();
+						event.preventDefault();
+					}
+				} else if(event.keyCode == 9) {
+					if (document.activeElement == last_content) {
+						first_content.focus();
+						event.preventDefault();
+					}
+				}
+			}
+		});
+	};
+	function focus_still(){ // 낮은 단계의 레이어 선택 요소에 포커스 유지
+		$('.filter-title-closebtn').click();
+		$layer_sel.focus();
+	};
+	/*-----------------------------------------------------------------------------------------------------------------------*/
 	/*------------------------popState 전체제어--------------------------*/
 	var agent = navigator.userAgent.toLowerCase();
 	function popstate_con(){
@@ -1388,6 +1419,7 @@ $(function(){
 				$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 				$('.filter-conbox-contentswrap').load(datasum)
 			});
+			conbox_contents();
 			return false;
 		}
 		return false;
