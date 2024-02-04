@@ -843,12 +843,12 @@ $(function(){
 					focus_still();
 				}else{
 					if ((event.keyCode === 9) && (event.shiftKey)) {
-						if (document.activeElement === first_content) {
+						if (document.activeElement === first_content.focus()) {
 							console.log('pop ride this_1');
 							last_content.focus();
 						}
 					} else if(event.keyCode === 9) {
-						if (document.activeElement === last_content) {
+						if (document.activeElement === last_content.focus()) {
 							console.log('pop ride this_2');
 							first_content.focus();
 						}
