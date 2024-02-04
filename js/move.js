@@ -1420,9 +1420,9 @@ $(function(){
 			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
 			$('.click-all-filter').fadeIn('fast',function(){
 				$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
-				$('.filter-conbox-contentswrap').load(datasum)
+				$('.filter-conbox-contentswrap').load(datasum);
+				conbox_contents();
 			});
-			conbox_contents();
 			return false;
 		}
 		return false;
