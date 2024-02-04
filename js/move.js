@@ -844,13 +844,13 @@ $(function(){
 				}else{
 					console.log('pop ride this_1');
 					if ((event.keyCode === 9) && (event.shiftKey)) {
+						console.log('pop ride this_2');
 						if (document.activeElement == first_content) {
-							console.log('pop ride this_2');
 							last_content.focus();
 						}
 					} else if(event.keyCode === 9) {
+						console.log('pop ride this_3');
 						if (document.activeElement == last_content) {
-							console.log('pop ride this_3');
 							first_content.focus();
 						}
 					}
