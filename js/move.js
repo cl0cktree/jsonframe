@@ -829,7 +829,7 @@ $(function(){
 	};
 	/*------------------------------------------------------------------*/
 	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
-	function conbox_contents(event){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
+	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
 		if(document.getElementById('all-filter-conbox')){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
 			var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
@@ -839,20 +839,21 @@ $(function(){
 
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
 			
-			document.addEventListener('keydown', function(event){
-				event.preventDefault();
-				if (event.keyCode === 27){
+			conbox_contentswrap.addEventListener('keydown', function(e){
+				var this_on_focus;
+				if (e.keyCode === 27){
 					focus_still();
 				}else{
-					if ((event.keyCode === 9) && (event.shiftKey)) {
-						if (conbox_contentswrap.activeElement == first_content.focus()) {
+					this_on_focus = document.activeElement;
+					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
 							console.log('pop ride this_1');
-							last_content.focus();
-						}
-					} else if(event.keyCode === 9) {
-						if (conbox_contentswrap.activeElement == last_content.focus()) {
-							console.log('pop ride this_2');
 							first_content.focus();
+							e.preventDefault();
+					}else if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+						if (this_on_focus == last_content) {
+							console.log('pop ride this_2');
+							last_content.focus();
+							e.preventDefault();
 						}
 					}
 				}
@@ -1426,7 +1427,7 @@ $(function(){
 			$('.click-all-filter').fadeIn('fast',function(){
 				$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><div id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></div><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 				$('.filter-conbox-contentswrap').load(datasum);
-				conbox_contents(event);
+				conbox_contents();
 			});
 			return false;
 		}
