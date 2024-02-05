@@ -1449,10 +1449,11 @@ $(function(){
 			$('.click-all-filter').fadeOut('fast');
 			$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>');
 			$('.scrollall-con-box').attr({'tabindex':'0'});
+			$layer_sel.focus();
 		}
-		else if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
-			$(this).siblings('.filter-conbox-contentswrap').find('a').focus();
-		}
+		// else if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
+		// 	$(this).siblings('.filter-conbox-contentswrap').find('a').focus();
+		// }
 	})
 	$('.filter-conbox-contentswrap').find('a').on('keydown',function(event){
 		if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
