@@ -645,6 +645,12 @@ $(function(){
 					}else if((frame_year=='2022')&&(item.years_num!=='0')){
 						work_years=7;
 						contents_box();
+					}else if((frame_year=='2023')&&(item.years_num!=='0')){
+						work_years=8;
+						contents_box();
+					}else if((frame_year=='2024')&&(item.years_num!=='0')){
+						work_years=9;
+						contents_box();
 					}
 				}
 			});
@@ -696,6 +702,12 @@ $(function(){
 					}else if(frame_year=='2022'){
 						work_years=7;
 						contents_box();
+					}else if(frame_year=='2023'){
+						work_years=8;
+						contents_box();
+					}else if(frame_year=='2024'){
+						work_years=9;
+						contents_box();
 					}
 				};
 			});
@@ -736,6 +748,12 @@ $(function(){
 						contents_box();
 					}else if(frame_year=='2022'){
 						work_years=7;
+						contents_box();
+					}else if(frame_year=='2023'){
+						work_years=8;
+						contents_box();
+					}else if(frame_year=='2024'){
+						work_years=9;
 						contents_box();
 					}
 				};
@@ -778,6 +796,12 @@ $(function(){
 					}else if(frame_year=='2022'){
 						work_years=7;
 						contents_box();
+					}else if(frame_year=='2023'){
+						work_years=8;
+						contents_box();
+					}else if(frame_year=='2024'){
+						work_years=9;
+						contents_box();
 					}
 				};
 			});
@@ -818,6 +842,12 @@ $(function(){
 						contents_box();
 					}else if(frame_year=='2022'){
 						work_years=7;
+						contents_box();
+					}else if(frame_year=='2023'){
+						work_years=8;
+						contents_box();
+					}else if(frame_year=='2024'){
+						work_years=9;
 						contents_box();
 					}
 				};
@@ -1417,6 +1447,12 @@ $(function(){
 			}else if ((this==document.getElementById('con-box7-imgborder1'))||(this==document.getElementById('con-box7-caption1'))||(this==document.getElementById('scroll7-con-box1')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents33';
+			}else if ((this==document.getElementById('con-box8-imgborder1'))||(this==document.getElementById('con-box8-caption1'))||(this==document.getElementById('scroll8-con-box1')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents34';
+			}else if ((this==document.getElementById('con-box9-imgborder1'))||(this==document.getElementById('con-box9-caption1'))||(this==document.getElementById('scroll9-con-box1')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents35';
 			}
 
 			else{
