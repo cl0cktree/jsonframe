@@ -864,7 +864,7 @@ $(function(){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
 			var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 			var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
-			var first_content = conbox_content.querySelectorAll(focus_content)[0];
+			var first_content = conbox_content[0];
 			var last_content = conbox_content[conbox_content.length - 1];
 
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
