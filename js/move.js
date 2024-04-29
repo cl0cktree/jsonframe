@@ -1453,6 +1453,9 @@ $(function(){
 			}else if ((this==document.getElementById('con-box9-imgborder1'))||(this==document.getElementById('con-box9-caption1'))||(this==document.getElementById('scroll9-con-box1')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents35';
+			}else if ((this==document.getElementById('con-box9-imgborder2'))||(this==document.getElementById('con-box9-caption2'))||(this==document.getElementById('scroll9-con-box2')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents36';
 			}
 
 			else{
