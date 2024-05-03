@@ -874,7 +874,7 @@ $(function(){
 			conbox_contentswrap.addEventListener('keydown', function(e){
 				e.preventDefault();
 				var this_on_focus;
-				console.log('last_content = '+conbox_content.length);
+				console.log('last_content = '+conbox_content);
 				if (e.keyCode === 27){
 					focus_still();
 				}else{
