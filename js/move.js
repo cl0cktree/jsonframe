@@ -867,7 +867,6 @@ $(function(){
 			$('#all-filter-conbox').find('[tabindex]').eq(0).focus();
 			
 			conbox_contentswrap.addEventListener('keydown', function(e){
-				e.preventDefault();
 				var this_on_focus;
 
 				var con_range = $('#all-filter-conbox').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
@@ -890,6 +889,7 @@ $(function(){
 						last_content.focus();
 					}
 				}
+				e.preventDefault();
 			});
 		}
 	};
