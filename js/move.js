@@ -869,6 +869,7 @@ $(function(){
 
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
+			$('#all-filter-conbox').find('[tabindex]').eq(0).focus();
 			
 			conbox_contentswrap.addEventListener('keydown', function(e){
 				var this_on_focus;
