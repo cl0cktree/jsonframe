@@ -861,7 +861,7 @@ $(function(){
 	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
 	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
 		if(document.getElementById('all-filter-conbox')){
-
+			var conbox_contentswrap = document.getElementById('all-filter-conbox');
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
 			$('#all-filter-conbox').find('[tabindex]').eq(0).focus();
@@ -870,7 +870,6 @@ $(function(){
 				e.preventDefault();
 				var this_on_focus;
 
-				var conbox_contentswrap = document.getElementById('all-filter-conbox');
 				var con_length = $('#all-filter-conbox').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]').length;
 				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 				var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
@@ -878,7 +877,7 @@ $(function(){
 				var last_content = conbox_content[conbox_content.length-1];
 
 				console.log('last_content = '+con_length);
-				
+
 				if (e.keyCode === 27){
 					focus_still();
 				}else{
