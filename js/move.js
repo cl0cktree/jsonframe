@@ -876,7 +876,7 @@ $(function(){
 				var first_content = conbox_content[0];
 				var last_content = conbox_content[conbox_content.length];
 
-				console.log('last_content = '+con_length);
+				console.log('last_content = '+conbox_content.length);
 
 				if (e.keyCode === 27){
 					focus_still();
