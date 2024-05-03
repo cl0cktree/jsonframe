@@ -889,6 +889,11 @@ $(function(){
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
+					if ((event.type=='keydown')&&((event.keyCode)||(event.which))===13){
+						var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
+						console.log('link_a = '+link_a);
+						window.open("about:blank").location.href = link_a;
+					}
 				}
 			});
 		}
@@ -1506,7 +1511,7 @@ $(function(){
 		if ((event.type=='keydown')&&((event.keyCode)||(event.which))===13){
 			var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
 			console.log('link_a = '+link_a);
-			location.href = link_a;
+			window.open("about:blank").location.href = link_a;
 		}
 		if(this_a_leng>1){
 			if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
