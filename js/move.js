@@ -872,18 +872,17 @@ $(function(){
 			$('#all-filter-conbox').find('[tabindex]').eq(0).focus();
 			
 			conbox_contentswrap.addEventListener('keydown', function(e){
+				e.preventDefault();
 				var this_on_focus;
 				if (e.keyCode === 27){
 					focus_still();
 				}else{
 					this_on_focus = document.activeElement;
 					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
-						e.preventDefault();
 						console.log('pop ride this_1');
 						first_content.focus();
 					}else if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						if (this_on_focus == last_content) {
-							e.preventDefault();
 							console.log('pop ride this_2');
 							last_content.focus();
 						}
