@@ -873,7 +873,7 @@ $(function(){
 				var con_length = $('#all-filter-conbox').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]').length;
 				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 				var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
-				var first_content = conbox_content[0];
+				var first_content = conbox_contentswrap.querySelectorAll(focus_content)[0];
 				var last_content = conbox_content[conbox_content.length];
 
 				console.log('last_content = '+conbox_content.length);
