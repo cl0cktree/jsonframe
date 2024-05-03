@@ -886,9 +886,6 @@ $(function(){
 						console.log('pop ride this_1');
 						first_content.focus();
 					}else if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
-						// if (this_on_focus == last_content) {
-							
-						// }
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
@@ -1501,11 +1498,11 @@ $(function(){
 		// 	$(this).siblings('.filter-conbox-contentswrap').find('a').focus();
 		// }
 	})
-	$('.filter-conbox-contentswrap').find('a').on('keydown',function(event){
-		if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
-			$(this).parents().parents().find('.filter-title-closebtn').focus();
-		}
-	});
+	// $('.filter-conbox-contentswrap').find('a').on('keydown',function(event){
+	// 	if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
+	// 		$(this).parents().parents().find('.filter-title-closebtn').focus();
+	// 	}
+	// });
 	$('#contents-button-inside').on('click keydown',function(event){
 		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13)){
 			$('#click-all-filter-landing').css({'z-index':'-10','opacity':'0'})
