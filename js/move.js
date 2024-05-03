@@ -867,7 +867,7 @@ $(function(){
 			var first_content = conbox_content[0];
 			var last_content = conbox_content[conbox_content.length - 1];
 
-			$('.body-section-content').find('[tabindex]').attr('tabindex','-1');
+			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
 			
 			conbox_contentswrap.addEventListener('keydown', function(e){
@@ -893,7 +893,7 @@ $(function(){
 	};
 	function focus_still(){ // 낮은 단계의 레이어 선택 요소에 포커스 유지
 		$('#all-filter-conbox').find('[tabindex]').attr('tabindex','-1');
-		$('.body-section-content').find('[tabindex]').attr('tabindex','0');
+		$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','0');
 		$('.filter-title-closebtn').click();
 		console.log('$layer_sel = '+$layer_sel);
 		$layer_sel.focus();
