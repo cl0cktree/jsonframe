@@ -862,6 +862,7 @@ $(function(){
 	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
 		if(document.getElementById('all-filter-conbox')){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
+			var con_length = $('#all-filter-conbox').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]').length;
 			var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 			var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
 			var first_content = conbox_content[0];
@@ -874,7 +875,6 @@ $(function(){
 			conbox_contentswrap.addEventListener('keydown', function(e){
 				e.preventDefault();
 				var this_on_focus;
-				var con_length = $('#all-filter-conbox').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]').length;
 				console.log('last_content = '+con_length);
 				if (e.keyCode === 27){
 					focus_still();
