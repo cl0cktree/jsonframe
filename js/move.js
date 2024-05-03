@@ -1505,6 +1505,7 @@ $(function(){
 		var this_a_leng = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').length;
 		if ((event.type=='keydown')&&((event.keyCode)||(event.which))===13){
 			var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
+			console.log('link_a = '+link_a);
 			location.href = link_a;
 		}
 		if(this_a_leng>1){
