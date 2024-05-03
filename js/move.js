@@ -870,8 +870,8 @@ $(function(){
 				e.preventDefault();
 				var this_on_focus;
 
-				var con_length = $('#all-filter-conbox').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]').length;
-				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), *[tabindex]';
+				var con_range = $('#all-filter-conbox').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 				var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
 				var first_content = conbox_contentswrap.querySelectorAll(focus_content)[0];
 				var last_content = conbox_contentswrap.querySelectorAll(focus_content)[conbox_content.length-1];
@@ -1502,8 +1502,17 @@ $(function(){
 		// if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
 		// 	$(this).parents().parents().find('.filter-title-closebtn').focus();
 		// }
+		var this_a_leng = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').length;
 		if ((event.type=='keydown')&&((event.keyCode)||(event.which))===13){
-			$(this).click();
+			$('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
+		}
+		if(this_a_leng>1){
+			if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
+				$(this).sibbling('a').focus();
+				if($(this).eq(this_a_leng-1)){
+					$(this).parents().parents().find('.filter-title-closebtn').focus();
+				}
+			}
 		}
 	});
 	$('#contents-button-inside').on('click keydown',function(event){
