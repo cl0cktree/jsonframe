@@ -172,7 +172,7 @@ footer .body-footer-contaner .top-btn{width:3em;background:rgba(0,0,0,1);border:
 .click-all-filter .filter-loader-loadingbox .loader-loadingbox-spin{width:98px;height:98px;margin:1px auto;border:10px solid #fff;border-top:10px solid #fff;border-left:1px dashed #ddd;border-right:1px dashed #ddd;border-radius:91px;animation:spiningaround 1s linear infinite;}
 .click-all-filter .filter-loader-loadingbox .loader-loadingbox-spin .loadingbox-spin-inaround{width:70px;height:70px;margin:4px auto;border:10px solid #fff;border-right:10px solid rgba(255,255,255,0);border-radius:91px;animation:spininginaround 1s linear infinite;}
 .click-all-filter .all-filter-conbox{background:#fff;border-radius:5px;margin:0 auto;margin-top:5%;margin-bottom:50px;}
-.click-all-filter .all-filter-conbox .filter-title-closebtn{border-radius:0px 5px 0px 5px;background:#000;position:absolute;top:0;right:0;z-index:11;cursor:pointer;}
+.click-all-filter .all-filter-conbox .filter-title-closebtn{position:absolute; border:0; border-radius:0px 5px 0px 5px; background:#000; top:0; right:0; z-index:11; cursor:pointer;}
 .click-all-filter .all-filter-conbox .filter-title-closebtn img{display:block;position:absolute;width:20px;height:20px;margin-left:50%;margin-top:50%;left:-10px;top:-10px;transition:all 0.05s;}
 
 .filter-conbox-contentswrap{width:100%;}

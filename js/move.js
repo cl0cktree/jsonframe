@@ -67,7 +67,7 @@ $(function(){
 			$.getJSON(jsonCover_data, function(data){
 				$.each(data, function(I, item){
 					if(item.cover_kinds=='header'){
-						nav1_toplogo.innerHTML='<h1><a href="'+portfolioindex_url+item.cover_url+'"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1>';
+						nav1_toplogo.innerHTML='<h1><a href="'+portfolioindex_url+item.cover_url+'" tabindex="0"><img src="'+portfolioindex_url+item.cover_img+'" alt="'+item.cover_alt+'"></a></h1>';
 					};
 				});
 				if ($('#article1-nav1-topmenu1').css('display')=='block')
@@ -82,8 +82,8 @@ $(function(){
 			$.getJSON(jsonHeader_data, function(data){
 				$.each(data, function(I, item){
 					headerNum++;
-					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+portfolioindex_url+item.nav_url+'"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
-					$('.menu-list-ul').append('<li class="list-ul-li"><a href="'+portfolioindex_url+item.nav_url+'" id="list-ul-li'+headerNum+'" class="ul-li-img1"><span>'+item.nav_alt+'</span></a></li>')
+					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+portfolioindex_url+item.nav_url+'" tabindex="0"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
+					$('.menu-list-ul').append('<li class="list-ul-li"><a href="'+portfolioindex_url+item.nav_url+'" id="list-ul-li'+headerNum+'" class="ul-li-img1" tabindex="0"><span>'+item.nav_alt+'</span></a></li>')
 				});
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #fff'})
 				$('.ul-li-img1').css({'border':'0px solid #999'})
@@ -867,6 +867,7 @@ $(function(){
 			var first_content = conbox_content[0];
 			var last_content = conbox_content[conbox_content.length - 1];
 
+			$('.body-section-content').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
 			
 			conbox_contentswrap.addEventListener('keydown', function(e){
@@ -892,6 +893,7 @@ $(function(){
 	};
 	function focus_still(){ // 낮은 단계의 레이어 선택 요소에 포커스 유지
 		$('#all-filter-conbox').find('[tabindex]').attr('tabindex','-1');
+		$('.body-section-content').find('[tabindex]').attr('tabindex','0');
 		$('.filter-title-closebtn').click();
 		console.log('$layer_sel = '+$layer_sel);
 		$layer_sel.focus();
