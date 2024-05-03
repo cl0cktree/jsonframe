@@ -1498,7 +1498,7 @@ $(function(){
 		// 	$(this).siblings('.filter-conbox-contentswrap').find('a').focus();
 		// }
 	})
-	$('.filter-conbox-contentswrap').find('a').on('keydown',function(event){
+	$('.all-filter-conbox').find('.filter-conbox-contentswrap').find('a').on('keydown',function(event){
 		// if ((event.type=='keydown')&&((event.keyCode||event.which)===9)||(event.shiftKey&&(event.keyCode||event.which)===9)){
 		// 	$(this).parents().parents().find('.filter-title-closebtn').focus();
 		// }
