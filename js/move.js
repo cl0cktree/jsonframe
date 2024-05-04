@@ -883,6 +883,7 @@ $(function(){
 				}else{
 					this_on_focus = document.activeElement;
 					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
+
 						console.log('pop ride this_1');
 						first_content.focus();
 					}
@@ -894,7 +895,7 @@ $(function(){
 						// var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
 						// console.log('link_a = '+link_a);
 						// window.open("about:blank").location.href = link_a;
-						$(this).click();
+						$(this).find('a, button').click();
 					}
 				}
 			});
