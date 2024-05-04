@@ -891,11 +891,11 @@ $(function(){
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
-					if ((e.keyCode===13)&&($(this).attr('class')!==('.filter-title-closebtn'))){
-						var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
-						console.log('link_a = '+link_a);
-						window.open("about:blank").location.href = link_a;
-						// $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').focus();
+					if ((e.keyCode===13)&&($('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a'))){
+						// var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
+						// console.log('link_a = '+link_a);
+						// window.open("about:blank").location.href = link_a;
+						$('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
 						console.log('in a this ='+$(this).attr('class'));
 						// $(this).click();
 					}
