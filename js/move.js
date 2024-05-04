@@ -891,7 +891,7 @@ $(function(){
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
-					if ((e.keyCode===13)&&($(this).is('.all-filter-conbox').find('.filter-title-closebtn')==false)){
+					if ((e.keyCode===13)&&($(this)!==('.filter-title-closebtn'))){
 						var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
 						console.log('link_a = '+link_a);
 						window.open("about:blank").location.href = link_a;
