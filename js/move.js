@@ -885,11 +885,12 @@ $(function(){
 					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
 						console.log('pop ride this_1');
 						first_content.focus();
-					}else if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+					}
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
-					if ((this_on_focus.tagName=='a')&&((e.type=='keydown')&&((e.keyCode)||(e.which))===13)){
+					if ((this_on_focus.tagName=='a')&&(((e.keyCode)||(e.which))===13)){
 						var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').text();
 						console.log('link_a = '+link_a);
 						window.open("about:blank").location.href = link_a;
