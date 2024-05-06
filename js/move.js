@@ -867,7 +867,6 @@ $(function(){
 			$('#all-filter-conbox').find('[tabindex]').eq(0).focus();
 			
 			conbox_contentswrap.addEventListener('keydown', function(e){
-				e.preventDefault();
 				var this_on_focus;
 
 				var con_range = $('#all-filter-conbox').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
@@ -886,10 +885,12 @@ $(function(){
 
 						console.log('pop ride this_1');
 						first_content.focus();
+						e.preventDefault();
 					}
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
 						last_content.focus();
+						e.preventDefault();
 					}
 					if ((e.keyCode===13)&&($(':focus').attr('class')!==('.filter-title-closebtn'))){
 						var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
