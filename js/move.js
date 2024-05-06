@@ -890,13 +890,17 @@ $(function(){
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
-					if ((e.keyCode===13)&&($(':focus').attr('class')!==('.filter-title-closebtn'))){
-						var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
-						console.log('link_a = '+link_a);
-						window.open("about:blank").location.href = link_a;
-						// $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
-						console.log('in a this ='+$(this).attr('class'));
-						// $(this).click();
+					if (e.keyCode===13){
+						if($(':focus').attr('class')==('.filter-title-closebtn')){
+							$('.filter-title-closebtn').click();
+						}else{
+							var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
+							console.log('link_a = '+link_a);
+							window.open("about:blank").location.href = link_a;
+							// $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
+							console.log('in a this ='+$(this).attr('class'));
+							// $(this).click();
+						};
 					}
 				};
 				e.preventDefault();
