@@ -885,12 +885,10 @@ $(function(){
 
 						console.log('pop ride this_1');
 						first_content.focus();
-						e.preventDefault();
 					}
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
 						last_content.focus();
-						e.preventDefault();
 					}
 					if ((e.keyCode===13)&&($(':focus').attr('class')!==('.filter-title-closebtn'))){
 						var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
@@ -900,7 +898,8 @@ $(function(){
 						console.log('in a this ='+$(this).attr('class'));
 						// $(this).click();
 					}
-				}
+				};
+				e.preventDefault();
 			});
 		}
 	};
