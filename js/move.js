@@ -862,7 +862,7 @@ $(function(){
 	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
 		if(document.getElementById('all-filter-conbox')){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
-			var conbox_contents_view = document.getElementById('conbox-contents-view');
+			var filter_conbox_contentswrap = document.getElementById('filter-conbox-contentswrap');
 
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
@@ -911,7 +911,7 @@ $(function(){
 				e.preventDefault();
 			});
 
-			conbox_contents_view.addEventListener('keydown', function(e){
+			filter_conbox_contentswrap.addEventListener('keydown', function(e){
 				var this_on_focus;
 
 				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
@@ -919,9 +919,9 @@ $(function(){
 				var con_last = con_range.eq(con_range.length-1);
 				
 				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
-				var conbox_content = conbox_contents_view.querySelectorAll(focus_content);
-				var first_content = conbox_contents_view.querySelectorAll(focus_content)[0];
-				var last_content = conbox_contents_view.querySelectorAll(focus_content)[conbox_content.length-1];
+				var conbox_content = filter_conbox_contentswrap.querySelectorAll(focus_content);
+				var first_content = filter_conbox_contentswrap.querySelectorAll(focus_content)[0];
+				var last_content = filter_conbox_contentswrap.querySelectorAll(focus_content)[conbox_content.length-1];
 
 				console.log('last_content = '+conbox_content.length);
 
