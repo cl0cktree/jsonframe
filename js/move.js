@@ -869,7 +869,10 @@ $(function(){
 			conbox_contentswrap.addEventListener('keydown', function(e){
 				var this_on_focus;
 
-				var con_range = $('#all-filter-conbox').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+				var con_first = con_range.eq(0);
+				var con_last = con_range.eq(con_range.length-1);
+
 				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 				var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
 				var first_content = conbox_contentswrap.querySelectorAll(focus_content)[0];
@@ -881,12 +884,12 @@ $(function(){
 					focus_still();
 				}else{
 					this_on_focus = document.activeElement;
-					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
+					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==con_last)) {
 
 						console.log('pop ride this_1');
 						first_content.focus();
 					}
-					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==con_first)) {
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
