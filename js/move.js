@@ -862,6 +862,8 @@ $(function(){
 	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
 		if(document.getElementById('all-filter-conbox')){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
+			var conbox_contents_view = document.getElementById('conbox-contents-view');
+
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
 			$('#all-filter-conbox').find('[tabindex]').eq(0).focus();
@@ -872,7 +874,7 @@ $(function(){
 				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
 				var con_first = con_range.eq(0);
 				var con_last = con_range.eq(con_range.length-1);
-
+				
 				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
 				var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
 				var first_content = conbox_contentswrap.querySelectorAll(focus_content)[0];
@@ -884,12 +886,55 @@ $(function(){
 					focus_still();
 				}else{
 					this_on_focus = document.activeElement;
-					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==con_last)) {
+					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
 
 						console.log('pop ride this_1');
 						first_content.focus();
 					}
-					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==con_first)) {
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+						console.log('pop ride this_2');
+						last_content.focus();
+					}
+					// if (e.keyCode===13){
+					// 	console.log('in a this ='+$(this).attr('class'));
+					// 	if($(this).attr('class')==('.filter-title-closebtn')){
+					// 		$('.filter-title-closebtn').click();
+					// 	}else{
+					// 		var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
+					// 		console.log('link_a = '+link_a);
+					// 		window.open("about:blank").location.href = link_a;
+					// 		// $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
+					// 		// $(this).click();
+					// 	};
+					// }
+				};
+				e.preventDefault();
+			});
+
+			conbox_contents_view.addEventListener('keydown', function(e){
+				var this_on_focus;
+
+				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+				var con_first = con_range.eq(0);
+				var con_last = con_range.eq(con_range.length-1);
+				
+				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
+				var conbox_content = conbox_contents_view.querySelectorAll(focus_content);
+				var first_content = conbox_contents_view.querySelectorAll(focus_content)[0];
+				var last_content = conbox_contents_view.querySelectorAll(focus_content)[conbox_content.length-1];
+
+				console.log('last_content = '+conbox_content.length);
+
+				if (e.keyCode === 27){
+					focus_still();
+				}else{
+					this_on_focus = document.activeElement;
+					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
+
+						console.log('pop ride this_1');
+						first_content.focus();
+					}
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
