@@ -863,7 +863,7 @@ $(function(){
 		if(document.getElementById('all-filter-conbox')){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
 			var filter_conbox_contentswrap = document.getElementById('filter-conbox-contentswrap');
-			var all_filter_landing = document.getElementById('click-all-filter-landing');
+			var filter_landing_contents = document.getElementById('filter-landing-contents');
 
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
@@ -941,7 +941,7 @@ $(function(){
 				e.preventDefault();
 			});
 
-			all_filter_landing.addEventListener('keydown', function(e){
+			filter_landing_contents.addEventListener('keydown', function(e){
 				var this_on_focus;
 
 				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
@@ -949,9 +949,9 @@ $(function(){
 				var con_last = con_range.eq(con_range.length-1);
 				
 				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
-				var conbox_content = all_filter_landing.querySelectorAll(focus_content);
-				var first_content = all_filter_landing.querySelectorAll(focus_content)[0];
-				var last_content = all_filter_landing.querySelectorAll(focus_content)[conbox_content.length-1];
+				var conbox_content = filter_landing_contents.querySelectorAll(focus_content);
+				var first_content = filter_landing_contents.querySelectorAll(focus_content)[0];
+				var last_content = filter_landing_contents.querySelectorAll(focus_content)[conbox_content.length-1];
 
 				console.log('last_content = '+conbox_content.length);
 
