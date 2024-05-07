@@ -948,6 +948,10 @@ $(function(){
 			var filter_landing_contents = document.getElementById('click-all-filter-landing');
 			console.log('landing focus on!');
 
+			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
+			$('#click-all-filter-landing').find('[tabindex]').attr('tabindex','0');
+			$('#click-all-filter-landing').find('[tabindex]').eq(0).focus();
+
 			filter_landing_contents.addEventListener('keydown', function(e){
 				var this_on_focus;
 				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
@@ -1600,9 +1604,11 @@ $(function(){
 		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13)){
 			$('#click-all-filter-landing').css({'z-index':'-10','opacity':'0'})
 			$('.move-wrap1').animate({'opacity':'1'},300)
+			$('#click-all-filter-landing').find('[tabindex]').attr('tabindex','-1');
+			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','0');
 			stop_clock();
 		}
-	})
+	});
 	/*------------------------------------------------------------*/
 	/*시계*/
 	function clock(){
