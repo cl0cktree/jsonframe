@@ -863,6 +863,7 @@ $(function(){
 		if(document.getElementById('all-filter-conbox')){
 			var conbox_contentswrap = document.getElementById('all-filter-conbox');
 			var filter_conbox_contentswrap = document.getElementById('filter-conbox-contentswrap');
+			var all_filter_landing = document.getElementById('click-all-filter-landing');
 
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','-1');
 			$('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
@@ -895,18 +896,6 @@ $(function(){
 						console.log('pop ride this_2');
 						last_content.focus();
 					}
-					// if (e.keyCode===13){
-					// 	console.log('in a this ='+$(this).attr('class'));
-					// 	if($(this).attr('class')==('.filter-title-closebtn')){
-					// 		$('.filter-title-closebtn').click();
-					// 	}else{
-					// 		var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
-					// 		console.log('link_a = '+link_a);
-					// 		window.open("about:blank").location.href = link_a;
-					// 		// $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
-					// 		// $(this).click();
-					// 	};
-					// }
 				};
 				e.preventDefault();
 			});
@@ -946,13 +935,55 @@ $(function(){
 							var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
 							console.log('link_a = '+link_a);
 							window.open("about:blank").location.href = link_a;
-							// $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
-							// $(this).click();
 						};
 					}
 				};
 				e.preventDefault();
 			});
+
+			all_filter_landing.addEventListener('keydown', function(e){
+				var this_on_focus;
+
+				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+				var con_first = con_range.eq(0);
+				var con_last = con_range.eq(con_range.length-1);
+				
+				var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
+				var conbox_content = all_filter_landing.querySelectorAll(focus_content);
+				var first_content = all_filter_landing.querySelectorAll(focus_content)[0];
+				var last_content = all_filter_landing.querySelectorAll(focus_content)[conbox_content.length-1];
+
+				console.log('last_content = '+conbox_content.length);
+
+				if (e.keyCode === 27){
+					focus_still();
+				}else{
+					this_on_focus = document.activeElement;
+					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
+
+						console.log('pop ride this_1');
+						first_content.focus();
+					}
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+						console.log('pop ride this_2');
+						last_content.focus();
+					}
+					// if (e.keyCode===13){
+					// 	console.log('in a this ='+$(this).attr('class'));
+					// 	if($(this).attr('class')==('.filter-title-closebtn')){
+					// 		$('.filter-title-closebtn').click();
+					// 	}else{
+					// 		var link_a = $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').attr('href');
+					// 		console.log('link_a = '+link_a);
+					// 		window.open("about:blank").location.href = link_a;
+					// 		// $('.filter-conbox-contentswrap').children('.filter-conbox-contents').find('.contents-view-img').find('a').click();
+					// 		// $(this).click();
+					// 	};
+					// }
+				};
+				e.preventDefault();
+			});
+
 		}
 	};
 	function focus_still(){ // 낮은 단계의 레이어 선택 요소에 포커스 유지
