@@ -946,6 +946,7 @@ $(function(){
 	function landing_contents(){
 		if(document.getElementById('filter-landing-contents')){
 			var filter_landing_contents = document.getElementById('filter-landing-contents');
+			console.log('landing focus on!');
 
 			filter_landing_contents.addEventListener('keydown', function(e){
 				var this_on_focus;
