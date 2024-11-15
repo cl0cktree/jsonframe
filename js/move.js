@@ -3,6 +3,7 @@ $(function(){
 	// var portfolioindex_url = 'http://clocktree.dothome.co.kr/portfoliomain';
 	// var portfolioindex_url = 'http://clocktree.kr';
 	// var portfolioindex_url = 'http://www.clocktree.kr/portfoliomain'
+	// var portfolioindex_url = 'http://www.clocktree.co.kr'
 
 	var body_tag = document.body;
 	var $body = $('body');
