@@ -27,14 +27,14 @@ $(function(){
 		if((this.location.href=='http://www.clocktree.co.kr/')||(this.location.href=='http://www.clocktree.co.kr/index.html')){
 			portfolioindex_url = 'http://www.clocktree.co.kr'
 			console.log('type_1 = '+portfolioindex_url);
-		}else if((this.location.href=='http://www.clocktreedomain.dothome.co.kr/')||(this.location.href=='http://www.clocktreedomain.dothome.co.kr/index.html')){
-			portfolioindex_url = 'http://www.clocktreedomain.dothome.co.kr'
+		}else if((this.location.href=='http://clocktreedomain.dothome.co.kr/')||(this.location.href=='http://clocktreedomain.dothome.co.kr/index.html')){
+			portfolioindex_url = 'http://clocktreedomain.dothome.co.kr'
 			console.log('type_2 = '+portfolioindex_url);
-		}else if((this.location.href=='http://clocktree.kr/portfoliomain/')||(this.location.href=='http://clocktree.kr/portfoliomain/index.html')){
-			portfolioindex_url = 'http://clocktree.kr/portfoliomain'
+		}else if((this.location.href=='http://www.clocktree.kr/portfoliomain/')||(this.location.href=='http://www.clocktree.kr/portfoliomain/index.html')){
+			portfolioindex_url = 'http://www.clocktree.kr/portfoliomain'
 			console.log('type_3 = '+portfolioindex_url);
-		}else if((this.location.href=='http://http://clocktree.dothome.co.kr/portfoliomain/')||(this.location.href=='http://http://clocktree.dothome.co.kr/portfoliomain/index.html')){
-			portfolioindex_url = 'http://http://clocktree.dothome.co.kr/portfoliomain'
+		}else if((this.location.href=='http://clocktree.dothome.co.kr/portfoliomain/')||(this.location.href=='http://clocktree.dothome.co.kr/portfoliomain/index.html')){
+			portfolioindex_url = 'http://clocktree.dothome.co.kr/portfoliomain'
 			console.log('type_4 = '+portfolioindex_url);
 		}else if((this.location.href=='https://cl0cktree.github.io/jsonframe/')||(this.location.href=='https://cl0cktree.github.io/jsonframe/index.html')){
 			portfolioindex_url = 'https://cl0cktree.github.io/jsonframe'
