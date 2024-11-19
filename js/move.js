@@ -21,22 +21,23 @@ $(function(){
 	var name_header=document.querySelector('.header');
 	var name_footer=document.getElementsByTagName('footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
+	var this_url_0 = this.location.href.split('/')[0];
 	var split_url = this.location.href.split('/').reverse()[0];
 
 	function select_url(){
-		if((this.location.href=='http://www.clocktree.co.kr/')||(this.location.href=='http://www.clocktree.co.kr/index.html')){
+		if((this_url_0.href=='http://www.clocktree.co.kr/')||(this_url_0.href=='http://www.clocktree.co.kr/index.html')){
 			portfolioindex_url = 'http://www.clocktree.co.kr'
 			console.log('type_1 = '+portfolioindex_url);
-		}else if((this.location.href=='http://clocktreedomain.dothome.co.kr/')||(this.location.href=='http://clocktreedomain.dothome.co.kr/index.html')){
+		}else if((this_url_0.href=='http://clocktreedomain.dothome.co.kr/')||(this_url_0.href=='http://clocktreedomain.dothome.co.kr/index.html')){
 			portfolioindex_url = 'http://clocktreedomain.dothome.co.kr'
 			console.log('type_2 = '+portfolioindex_url);
-		}else if((this.location.href=='http://www.clocktree.kr/portfoliomain/')||(this.location.href=='http://www.clocktree.kr/portfoliomain/index.html')){
+		}else if((this_url_0.href=='http://www.clocktree.kr/portfoliomain/')||(this_url_0.href=='http://www.clocktree.kr/portfoliomain/index.html')){
 			portfolioindex_url = 'http://www.clocktree.kr/portfoliomain'
 			console.log('type_3 = '+portfolioindex_url);
-		}else if((this.location.href=='http://clocktree.dothome.co.kr/portfoliomain/')||(this.location.href=='http://clocktree.dothome.co.kr/portfoliomain/index.html')){
+		}else if((this_url_0.href=='http://clocktree.dothome.co.kr/portfoliomain/')||(this_url_0.href=='http://clocktree.dothome.co.kr/portfoliomain/index.html')){
 			portfolioindex_url = 'http://clocktree.dothome.co.kr/portfoliomain'
 			console.log('type_4 = '+portfolioindex_url);
-		}else if((this.location.href=='https://cl0cktree.github.io/jsonframe/')||(this.location.href=='https://cl0cktree.github.io/jsonframe/index.html')){
+		}else if((this_url_0.href=='https://cl0cktree.github.io/jsonframe/')||(this_url_0.href=='https://cl0cktree.github.io/jsonframe/index.html')){
 			portfolioindex_url = 'https://cl0cktree.github.io/jsonframe'
 			console.log('type_5 = '+portfolioindex_url);
 		};
