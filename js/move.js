@@ -24,6 +24,7 @@ $(function(){
 	var this_url = this.location.href.split('/')[0]+this.location.href.split('/')[1]+'//'+this.location.href.split('/')+[2]+this.location.href.split('/')[3];
 	var split_url = this.location.href.split('/').reverse()[0];
 
+	console.log(this_url);
 	function select_url(){
 		if((this_url_0.href=='http://www.clocktree.co.kr/')||(this_url_0.href=='http://www.clocktree.co.kr/index.html')){
 			portfolioindex_url = 'http://www.clocktree.co.kr'
