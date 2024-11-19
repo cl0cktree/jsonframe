@@ -21,23 +21,23 @@ $(function(){
 	var name_header=document.querySelector('.header');
 	var name_footer=document.getElementsByTagName('footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
-	var this_url = this.location.href.split('/')[2];
+	var this_url = '//'+this.location.href.split('//')[1];
 	var split_url = this.location.href.split('/').reverse()[0];
 
 	function select_url(){
-		if((this_url=='http://www.clocktree.co.kr/')){
+		if((this_url=='www.clocktree.co.kr/')||(this_url=='www.clocktree.co.kr/index.html')||(this_url=='www.clocktree.co.kr/sub/sub1.html')||(this_url=='www.clocktree.co.kr/sub/sub2.html')||(this_url=='www.clocktree.co.kr/sub/sub3.html')||(this_url=='www.clocktree.co.kr/sub/sub4.html')||(this_url=='www.clocktree.co.kr/sub/sub5.html')){
 			portfolioindex_url = 'http://www.clocktree.co.kr'
 			console.log('type_1 = '+portfolioindex_url);
-		}else if((this_url=='http://clocktreedomain.dothome.co.kr/')){
+		}else if((this_url=='clocktreedomain.dothome.co.kr/')||(this_url=='clocktreedomain.dothome.co.kr/index.html')||(this_url=='clocktreedomain.dothome.co.kr/sub/sub1.html')||(this_url=='clocktreedomain.dothome.co.kr/sub/sub2.html')||(this_url=='clocktreedomain.dothome.co.kr/sub/sub3.html')||(this_url=='clocktreedomain.dothome.co.kr/sub/sub4.html')||(this_url=='clocktreedomain.dothome.co.kr/sub/sub5.html')){
 			portfolioindex_url = 'http://clocktreedomain.dothome.co.kr'
 			console.log('type_2 = '+portfolioindex_url);
-		}else if((this_url=='http://www.clocktree.kr/portfoliomain/')){
+		}else if((this_url=='www.clocktree.kr/portfoliomain/')||(this_url=='www.clocktree.kr/portfoliomain/index.html')||(this_url=='www.clocktree.kr/portfoliomain/sub/sub1.html')||(this_url=='www.clocktree.kr/portfoliomain/sub/sub2.html')||(this_url=='www.clocktree.kr/portfoliomain/sub/sub3.html')||(this_url=='www.clocktree.kr/portfoliomain/sub/sub4.html')||(this_url=='www.clocktree.kr/portfoliomain/sub/sub5.html')){
 			portfolioindex_url = 'http://www.clocktree.kr/portfoliomain'
 			console.log('type_3 = '+portfolioindex_url);
-		}else if((this_url=='http://clocktree.dothome.co.kr/portfoliomain/')){
+		}else if((this_url=='clocktree.dothome.co.kr/portfoliomain/')||(this_url=='clocktree.dothome.co.kr/portfoliomain/index.html')||(this_url=='clocktree.dothome.co.kr/portfoliomain/sub/sub1.html')||(this_url=='clocktree.dothome.co.kr/portfoliomain/sub/sub2.html')||(this_url=='clocktree.dothome.co.kr/portfoliomain/sub/sub3.html')||(this_url=='clocktree.dothome.co.kr/portfoliomain/sub/sub4.html')||(this_url=='clocktree.dothome.co.kr/portfoliomain/sub/sub5.html')){
 			portfolioindex_url = 'http://clocktree.dothome.co.kr/portfoliomain'
 			console.log('type_4 = '+portfolioindex_url);
-		}else if((this_url=='cl0cktree.github.io/jsonframe/')){
+		}else if((this_url=='cl0cktree.github.io/jsonframe/')||(this_url=='cl0cktree.github.io/jsonframe/index.html')||(this_url=='cl0cktree.github.io/jsonframe/sub/sub1.html')||(this_url=='cl0cktree.github.io/jsonframe/sub/sub2.html')||(this_url=='cl0cktree.github.io/jsonframe/sub/sub3.html')||(this_url=='cl0cktree.github.io/jsonframe/sub/sub4.html')||(this_url=='cl0cktree.github.io/jsonframe/sub/sub5.html')){
 			portfolioindex_url = 'https://cl0cktree.github.io/jsonframe'
 			console.log('type_5 = '+portfolioindex_url);
 		};
