@@ -21,7 +21,7 @@ $(function(){
 	var name_header=document.querySelector('.header');
 	var name_footer=document.getElementsByTagName('footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
-	var this_url = '//'+this.location.href.split('//')[1];
+	var this_url = this.location.href.split('//')[1];
 	var split_url = this.location.href.split('/').reverse()[0];
 
 	function select_url(){
