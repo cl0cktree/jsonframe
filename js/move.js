@@ -111,8 +111,8 @@ $(function(){
 			$.getJSON(jsonHeader_data, function(data){
 				$.each(data, function(I, item){
 					headerNum++;
-					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+portfolioindex_url+item.nav_url+'" tabindex="0"><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'">'+item.nav_title+'<span class="list-span-leftborder"></span><span class="list-span-rightborder"></span></span></a></li>')
-					$('.menu-list-ul').append('<li class="list-ul-li"><a href="'+portfolioindex_url+item.nav_url+'" id="list-ul-li'+headerNum+'" class="ul-li-img1" tabindex="0"><span>'+item.nav_alt+'</span></a></li>')
+					$('.article1-nav1-topmenu').append('<li class="nav1-topmenu1-list" data-nav-section="'+item.nav_section+'" data-nav-kinds="'+item.nav_kinds+'" id="nav1-topmenu1-list'+headerNum+'"><a href="'+portfolioindex_url+item.nav_url+'" tabindex="0" aria=hidden=""><span class="topmenu1-list-span" id="topmenu1-list-span'+headerNum+'"  aria=hidden="">'+item.nav_title+'<span class="list-span-leftborder" aria=hidden=""></span><span class="list-span-rightborder" aria=hidden=""></span></span></a></li>')
+					$('.menu-list-ul').append('<li class="list-ul-li"><a href="'+portfolioindex_url+item.nav_url+'" id="list-ul-li'+headerNum+'" class="ul-li-img1" tabindex="0" aria=hidden=""><span aria=hidden="">'+item.nav_alt+'</span></a></li>')
 				});
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #fff'})
 				$('.ul-li-img1').css({'border':'0px solid #999'})
