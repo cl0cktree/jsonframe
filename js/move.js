@@ -358,6 +358,7 @@ $(function(){
 				$('#article1-nav1-topmenu1').find('.nav1-topmenu1-list').children('a').children('span').attr('aria-hidden','true');
 				$('footer').find('.menu-list-ul').children('.list-ul-li').children('a').attr('aria-hidden','false');
 				$('footer').find('.menu-list-ul').children('.list-ul-li').children('a').children('span').attr('aria-hidden','false');
+				$('#menu-icon').click();
 				$('footer').find('.menu-list-ul').children('.list-ul-li').children('a').focus();
 				return false;
 			}
