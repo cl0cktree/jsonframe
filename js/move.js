@@ -378,7 +378,9 @@ $(function(){
 			$('#article1-nav1-topmenu1').find('.nav1-topmenu1-list').children('a').children('span').attr('aria-hidden','false');
 			$('footer').find('.menu-list-ul').children('.list-ul-li').children('a').attr('aria-hidden','true');
 			$('footer').find('.menu-list-ul').children('.list-ul-li').children('a').children('span').attr('aria-hidden','true');
-			$('#article1-nav1-topmenu1').find('.nav1-topmenu1-list').children('a').focus();
+			if($('footer').find('.menu-list-ul').children('.list-ul-li').children('a').focus()){
+				$('#article1-nav1-topmenu1').find('.nav1-topmenu1-list').children('a').focus();
+			};
 			return false;
 		}
 
