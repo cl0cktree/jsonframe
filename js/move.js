@@ -362,7 +362,7 @@ $(function(){
 					$('#menu-icon input[type=checkbox]').prop('checked',true);
 					$('.nav1-side-menu').animate({'right':'0'},100);
 					$('footer').find('.menu-list-ul').children('.list-ul-li').children('a').focus();
-				}
+				};
 				return false;
 			}
 			return false;
