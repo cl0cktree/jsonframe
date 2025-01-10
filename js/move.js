@@ -69,22 +69,22 @@ $(function(){
 				bubble_background2();
 			}
 
-			var weather_now = document.querySelector('.weather_now');
-			if(weather_now==true){
-				weather_starter();
-			}else{
-				setTimeout(function(){
-					var weather_now = document.querySelector('.weather_now');
-					weather_starter();
-					}
-				,800);
-			};
-			function weather_starter(){
-				if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
-					console.log('weathe = '+wearther_out);
-					weather_clear();
-				};
-			};
+			// var weather_now = document.querySelector('.weather_now');
+			// if(weather_now==true){
+			// 	weather_starter();
+			// }else{
+			// 	setTimeout(function(){
+			// 		var weather_now = document.querySelector('.weather_now');
+			// 		weather_starter();
+			// 		}
+			// 	,800);
+			// };
+			// function weather_starter(){
+			// 	if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
+			// 		console.log('weathe = '+wearther_out);
+			// 		weather_clear();
+			// 	};
+			// };
 		});
 		var footerIcon= $('.ul-li-img1').width();
 		// $('.ul-li-img1').css({'height':footerIcon});
@@ -1794,9 +1794,9 @@ $(function(){
 				if((location_lat!==''||location_lat!==null)&&(place!==''||place!==null)){
 					$('.filter-landing-contents').append('<div class="cover-city"><span class="weather_place">'+place+'</span> : <span class="weather_tempt">'+tempt+'℃</span> / <span class="weather_now">'+weather_this+'</span></div>');
 				};
+				console.log('weathe = '+wearther_out);
 		    });
 		};
-		console.log('weathe = '+wearther_out);
 		weather_json();
 	});
 	/*--------------------*/
