@@ -17,7 +17,8 @@ $(function(){
 	var work_years;
 	var class_add;
 	var frame_year;
-	var $layer_sel;	
+	var $layer_sel;
+	var wearther_out;
 	var name_header=document.querySelector('.header');
 	var name_footer=document.getElementsByTagName('footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
@@ -1749,7 +1750,6 @@ $(function(){
 	var country = "";
 	var loc = "";
 	var org = "";
-	var wearther_out;
 
 	$.getJSON("https://ipinfo.io", function(data) {
 		ip = data.ip // 접속자 ip
