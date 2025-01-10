@@ -77,7 +77,7 @@ $(function(){
 					var weather_now = document.querySelector('.weather_now');
 					weather_starter();
 					}
-				,500);
+				,800);
 			};
 			function weather_starter(){
 				if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
