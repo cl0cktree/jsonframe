@@ -1767,6 +1767,7 @@ $(function(){
 	var country = "";
 	var loc = "";
 	var org = "";
+	var weather_this;
 
 	$.getJSON("https://ipinfo.io", function(data) {
 		ip = data.ip // 접속자 ip
@@ -1789,14 +1790,14 @@ $(function(){
 			}).then(function(json){
 				var tempt = json.main.temp;
 				var place = json.name;
-				var weather_this = json.weather[0].main;
-				wearther_out = weather_this;
+				weather_this = json.weather[0].main;
 				if((location_lat!==''||location_lat!==null)&&(place!==''||place!==null)){
 					$('.filter-landing-contents').append('<div class="cover-city"><span class="weather_place">'+place+'</span> : <span class="weather_tempt">'+tempt+'℃</span> / <span class="weather_now">'+weather_this+'</span></div>');
 				};
-				console.log('weathe = '+wearther_out);
 		    });
 		};
+		wearther_out = weather_this;
+		console.log('weathe = '+wearther_out);
 		weather_json();
 	});
 	/*--------------------*/
