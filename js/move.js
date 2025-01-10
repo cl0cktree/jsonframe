@@ -2509,8 +2509,10 @@ $(function(){
 		var circleArray = [];
 		var loopCancel;
 		var canvas = document.createElement('canvas');
-		var context = canvas.getContext('2d');
-		b_canbus.appendChild(canvas);
+		document.querySelector('canvas').classList.add('background_bubble');
+		var background_bubble = document.querySelector('.background_bubble');
+		var context = background_bubble.getContext('2d');
+		b_canbus.appendChild(background_bubble);
 		function toRadian(d) {
 			return d * Math.PI / 180;
 		}
@@ -2554,8 +2556,8 @@ $(function(){
 	}();
 
 		function setLayout() {
-			canvas.width = window.innerWidth;
-			canvas.height = window.innerHeight*1.2;
+			background_bubble.width = window.innerWidth;
+			background_bubble.height = window.innerHeight*1.2;
 		}
 
 		function init() {
@@ -2588,7 +2590,7 @@ $(function(){
 		}
 
 		function render() {
-			context.clearRect(0, 0, canvas.width, canvas.height);
+			context.clearRect(0, 0, background_bubble.width, background_bubble.height);
 			var circle;
 
 			for (var i = 0; i < circleArray.length; i++) {
@@ -2598,12 +2600,12 @@ $(function(){
 
 			// 움직임을 아래에서 위로 주고 싶을 때 사용.
 			if (circle.y < -circle.radius) {
-				circle.y = canvas.height;
+				circle.y = background_bubble.height;
 				circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 				circle.radius = Math.floor(Math.random() * 30) + 20;
 			}
 			//  움직임을 위에서 아래로 주고 싶을 때 사용.
-			// if (circle.y > canvas.height) {
+			// if (circle.y > background_bubble.height) {
 			// 	circle.y = 0;
 			// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 			// 	circle.radius = Math.floor(Math.random() * 30) + 20;
@@ -2619,6 +2621,584 @@ $(function(){
 		window.addEventListener('resize', setLayout);
 	};
 //==========================================================
+//================particle weather==========================
+
+function weather_clear() {
+	var b_canbus = document.querySelector('.main-scrollall-backb');
+	var circleArray = [];
+	var loopCancel;
+	var canvas = document.createElement('canvas');
+	var context = canvas.getContext('2d');
+	b_canbus.appendChild(canvas);
+	function toRadian(d) {
+		return d * Math.PI / 180;
+	}
+
+	var Circle =
+	/*#__PURE__*/
+	function () {
+		function Circle(info) {
+		_classCallCheck(this, Circle);
+
+		this.index = info.index;
+		this.x = info.x;
+		this.y = info.y;
+		this.speed = info.speed;
+		this.radius = info.radius;
+		this.startAngle = info.startAngle;
+		this.endAngle = info.endAngle;
+		this.clockwise = info.clockwise;
+		this.draw();
+		}
+
+		_createClass(Circle, [{
+		key: "draw",
+		value: function draw() {
+			context.beginPath();
+			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			context.fillStyle = 'rgba(255, 255, 255, 0)';
+			context.fill();
+			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.lineWidth = '2';
+			context.stroke();
+			context.closePath();
+			context.fillStyle = '#fff';
+			//context.font = '30px bold sans-serif';
+			context.textAlign = "center";
+			//context.fillText(this.index, this.x, this.y+10);
+			}
+		}]);
+
+	return Circle;
+}();
+
+	function setLayout() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight*1.2;
+	}
+
+	function init() {
+		setLayout();
+		var x;
+		var y;
+		var speed;
+		var circle;
+
+		for (var i = 0; i < 5; i++) {
+		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+
+		speed = Math.random() * 3 + 2;
+		circle = new Circle({
+			index: i,
+			x: x,
+			y: y,
+			speed: speed,
+			radius: Math.floor(Math.random() * 30) + 20,
+			startAngle: 360,
+			endAngle: 350,
+			clockwise: false
+		});
+		circleArray.push(circle);
+		}
+
+		render();
+	}
+
+	function render() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		var circle;
+
+		for (var i = 0; i < circleArray.length; i++) {
+		circle = circleArray[i];
+		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+
+		// 움직임을 아래에서 위로 주고 싶을 때 사용.
+		if (circle.y < -circle.radius) {
+			circle.y = canvas.height;
+			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		// if (circle.y > canvas.height) {
+		// 	circle.y = 0;
+		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
+		// }
+
+		circle.draw();
+		}
+
+		loopCancel = requestAnimationFrame(render);
+	}
+
+	init();
+	window.addEventListener('resize', setLayout);
+};
+
+function weather_rain() {
+	var b_canbus = document.querySelector('.main-scrollall-backb');
+	var circleArray = [];
+	var loopCancel;
+	var canvas = document.createElement('canvas');
+	var context = canvas.getContext('2d');
+	b_canbus.appendChild(canvas);
+	function toRadian(d) {
+		return d * Math.PI / 180;
+	}
+
+	var Circle =
+	/*#__PURE__*/
+	function () {
+		function Circle(info) {
+		_classCallCheck(this, Circle);
+
+		this.index = info.index;
+		this.x = info.x;
+		this.y = info.y;
+		this.speed = info.speed;
+		this.radius = info.radius;
+		this.startAngle = info.startAngle;
+		this.endAngle = info.endAngle;
+		this.clockwise = info.clockwise;
+		this.draw();
+		}
+
+		_createClass(Circle, [{
+		key: "draw",
+		value: function draw() {
+			context.beginPath();
+			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			context.fillStyle = 'rgba(255, 255, 255, 0)';
+			context.fill();
+			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.lineWidth = '2';
+			context.stroke();
+			context.closePath();
+			context.fillStyle = '#fff';
+			//context.font = '30px bold sans-serif';
+			context.textAlign = "center";
+			//context.fillText(this.index, this.x, this.y+10);
+			}
+		}]);
+
+	return Circle;
+}();
+
+	function setLayout() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight*1.2;
+	}
+
+	function init() {
+		setLayout();
+		var x;
+		var y;
+		var speed;
+		var circle;
+
+		for (var i = 0; i < 5; i++) {
+		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+
+		speed = Math.random() * 3 + 2;
+		circle = new Circle({
+			index: i,
+			x: x,
+			y: y,
+			speed: speed,
+			radius: Math.floor(Math.random() * 30) + 20,
+			startAngle: 360,
+			endAngle: 350,
+			clockwise: false
+		});
+		circleArray.push(circle);
+		}
+
+		render();
+	}
+
+	function render() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		var circle;
+
+		for (var i = 0; i < circleArray.length; i++) {
+		circle = circleArray[i];
+		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+
+		// 움직임을 아래에서 위로 주고 싶을 때 사용.
+		if (circle.y < -circle.radius) {
+			circle.y = canvas.height;
+			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		// if (circle.y > canvas.height) {
+		// 	circle.y = 0;
+		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
+		// }
+
+		circle.draw();
+		}
+
+		loopCancel = requestAnimationFrame(render);
+	}
+
+	init();
+	window.addEventListener('resize', setLayout);
+};
+
+function weather_snow() {
+	var b_canbus = document.querySelector('.main-scrollall-backb');
+	var circleArray = [];
+	var loopCancel;
+	var canvas = document.createElement('canvas');
+	var context = canvas.getContext('2d');
+	b_canbus.appendChild(canvas);
+	function toRadian(d) {
+		return d * Math.PI / 180;
+	}
+
+	var Circle =
+	/*#__PURE__*/
+	function () {
+		function Circle(info) {
+		_classCallCheck(this, Circle);
+
+		this.index = info.index;
+		this.x = info.x;
+		this.y = info.y;
+		this.speed = info.speed;
+		this.radius = info.radius;
+		this.startAngle = info.startAngle;
+		this.endAngle = info.endAngle;
+		this.clockwise = info.clockwise;
+		this.draw();
+		}
+
+		_createClass(Circle, [{
+		key: "draw",
+		value: function draw() {
+			context.beginPath();
+			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			context.fillStyle = 'rgba(255, 255, 255, 0)';
+			context.fill();
+			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.lineWidth = '2';
+			context.stroke();
+			context.closePath();
+			context.fillStyle = '#fff';
+			//context.font = '30px bold sans-serif';
+			context.textAlign = "center";
+			//context.fillText(this.index, this.x, this.y+10);
+			}
+		}]);
+
+	return Circle;
+}();
+
+	function setLayout() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight*1.2;
+	}
+
+	function init() {
+		setLayout();
+		var x;
+		var y;
+		var speed;
+		var circle;
+
+		for (var i = 0; i < 5; i++) {
+		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+
+		speed = Math.random() * 3 + 2;
+		circle = new Circle({
+			index: i,
+			x: x,
+			y: y,
+			speed: speed,
+			radius: Math.floor(Math.random() * 30) + 20,
+			startAngle: 360,
+			endAngle: 350,
+			clockwise: false
+		});
+		circleArray.push(circle);
+		}
+
+		render();
+	}
+
+	function render() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		var circle;
+
+		for (var i = 0; i < circleArray.length; i++) {
+		circle = circleArray[i];
+		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+
+		// 움직임을 아래에서 위로 주고 싶을 때 사용.
+		if (circle.y < -circle.radius) {
+			circle.y = canvas.height;
+			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		// if (circle.y > canvas.height) {
+		// 	circle.y = 0;
+		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
+		// }
+
+		circle.draw();
+		}
+
+		loopCancel = requestAnimationFrame(render);
+	}
+
+	init();
+	window.addEventListener('resize', setLayout);
+};
+
+function weather_clouds() {
+	var b_canbus = document.querySelector('.main-scrollall-backb');
+	var circleArray = [];
+	var loopCancel;
+	var canvas = document.createElement('canvas');
+	var context = canvas.getContext('2d');
+	b_canbus.appendChild(canvas);
+	function toRadian(d) {
+		return d * Math.PI / 180;
+	}
+
+	var Circle =
+	/*#__PURE__*/
+	function () {
+		function Circle(info) {
+		_classCallCheck(this, Circle);
+
+		this.index = info.index;
+		this.x = info.x;
+		this.y = info.y;
+		this.speed = info.speed;
+		this.radius = info.radius;
+		this.startAngle = info.startAngle;
+		this.endAngle = info.endAngle;
+		this.clockwise = info.clockwise;
+		this.draw();
+		}
+
+		_createClass(Circle, [{
+		key: "draw",
+		value: function draw() {
+			context.beginPath();
+			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			context.fillStyle = 'rgba(255, 255, 255, 0)';
+			context.fill();
+			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.lineWidth = '2';
+			context.stroke();
+			context.closePath();
+			context.fillStyle = '#fff';
+			//context.font = '30px bold sans-serif';
+			context.textAlign = "center";
+			//context.fillText(this.index, this.x, this.y+10);
+			}
+		}]);
+
+	return Circle;
+}();
+
+	function setLayout() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight*1.2;
+	}
+
+	function init() {
+		setLayout();
+		var x;
+		var y;
+		var speed;
+		var circle;
+
+		for (var i = 0; i < 5; i++) {
+		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+
+		speed = Math.random() * 3 + 2;
+		circle = new Circle({
+			index: i,
+			x: x,
+			y: y,
+			speed: speed,
+			radius: Math.floor(Math.random() * 30) + 20,
+			startAngle: 360,
+			endAngle: 350,
+			clockwise: false
+		});
+		circleArray.push(circle);
+		}
+
+		render();
+	}
+
+	function render() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		var circle;
+
+		for (var i = 0; i < circleArray.length; i++) {
+		circle = circleArray[i];
+		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+
+		// 움직임을 아래에서 위로 주고 싶을 때 사용.
+		if (circle.y < -circle.radius) {
+			circle.y = canvas.height;
+			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		// if (circle.y > canvas.height) {
+		// 	circle.y = 0;
+		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
+		// }
+
+		circle.draw();
+		}
+
+		loopCancel = requestAnimationFrame(render);
+	}
+
+	init();
+	window.addEventListener('resize', setLayout);
+};
+
+function weather_haze() {
+	var b_canbus = document.querySelector('.main-scrollall-backb');
+	var circleArray = [];
+	var loopCancel;
+	var canvas = document.createElement('canvas');
+	var context = canvas.getContext('2d');
+	b_canbus.appendChild(canvas);
+	function toRadian(d) {
+		return d * Math.PI / 180;
+	}
+
+	var Circle =
+	/*#__PURE__*/
+	function () {
+		function Circle(info) {
+		_classCallCheck(this, Circle);
+
+		this.index = info.index;
+		this.x = info.x;
+		this.y = info.y;
+		this.speed = info.speed;
+		this.radius = info.radius;
+		this.startAngle = info.startAngle;
+		this.endAngle = info.endAngle;
+		this.clockwise = info.clockwise;
+		this.draw();
+		}
+
+		_createClass(Circle, [{
+		key: "draw",
+		value: function draw() {
+			context.beginPath();
+			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			context.fillStyle = 'rgba(255, 255, 255, 0)';
+			context.fill();
+			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.lineWidth = '2';
+			context.stroke();
+			context.closePath();
+			context.fillStyle = '#fff';
+			//context.font = '30px bold sans-serif';
+			context.textAlign = "center";
+			//context.fillText(this.index, this.x, this.y+10);
+			}
+		}]);
+
+	return Circle;
+}();
+
+	function setLayout() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight*1.2;
+	}
+
+	function init() {
+		setLayout();
+		var x;
+		var y;
+		var speed;
+		var circle;
+
+		for (var i = 0; i < 5; i++) {
+		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+
+		speed = Math.random() * 3 + 2;
+		circle = new Circle({
+			index: i,
+			x: x,
+			y: y,
+			speed: speed,
+			radius: Math.floor(Math.random() * 30) + 20,
+			startAngle: 360,
+			endAngle: 350,
+			clockwise: false
+		});
+		circleArray.push(circle);
+		}
+
+		render();
+	}
+
+	function render() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		var circle;
+
+		for (var i = 0; i < circleArray.length; i++) {
+		circle = circleArray[i];
+		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+
+		// 움직임을 아래에서 위로 주고 싶을 때 사용.
+		if (circle.y < -circle.radius) {
+			circle.y = canvas.height;
+			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		// if (circle.y > canvas.height) {
+		// 	circle.y = 0;
+		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
+		// }
+
+		circle.draw();
+		}
+
+		loopCancel = requestAnimationFrame(render);
+	}
+
+	init();
+	window.addEventListener('resize', setLayout);
+};
+//==========================================================
+
 	/*------------------------formmail-----------------------------*/
 
 
