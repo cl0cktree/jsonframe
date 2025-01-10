@@ -1798,7 +1798,6 @@ $(function(){
 				};
 		    });
 		};
-		wearther_out = weather_this;
 		console.log('weathe = '+weather_now.innerHTML);
 		weather_json();
 	});
