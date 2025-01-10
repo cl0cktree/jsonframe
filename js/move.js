@@ -19,6 +19,7 @@ $(function(){
 	var frame_year;
 	var $layer_sel;
 	var wearther_out;
+	var weather_now;
 	var name_header=document.querySelector('.header');
 	var name_footer=document.getElementsByTagName('footer');
 	var footer_contaner=document.querySelector('footer .body-footer-contaner');
@@ -1783,7 +1784,6 @@ $(function(){
 		var weather_key = 'f195f622a07f18107e2cac3417855541';
         var weather_api = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&APPID='+weather_key;
         var weather_fet = fetch('https://api.openweathermap.org/data/2.5/weather?lat='+location_lat+'&lon='+location_lon+'&APPID='+weather_key+'&units=metric');
-		var weather_this;
 		
 		function weather_json(){
 			weather_fet.then(function(response){
@@ -1791,14 +1791,15 @@ $(function(){
 			}).then(function(json){
 				var tempt = json.main.temp;
 				var place = json.name;
-				weather_this = json.weather[0].main;
+				var weather_this = json.weather[0].main;
 				if((location_lat!==''||location_lat!==null)&&(place!==''||place!==null)){
 					$('.filter-landing-contents').append('<div class="cover-city"><span class="weather_place">'+place+'</span> : <span class="weather_tempt">'+tempt+'℃</span> / <span class="weather_now">'+weather_this+'</span></div>');
+					weather_now = document.querySelector('.weather_now');
 				};
 		    });
 		};
 		wearther_out = weather_this;
-		console.log('weathe = '+weather_this);
+		console.log('weathe = '+weather_now.innerHTML);
 		weather_json();
 	});
 	/*--------------------*/
