@@ -1776,6 +1776,9 @@ $(function(){
 					$('.filter-landing-contents').append('<div class="cover-city">'+place+' : '+tempt+'℃ / '+weather_this+'</div>');
 				};
 		    });
+			if(weather_this=='clear'){
+				weather_clear();
+			};
 		};
 		weather_json();
 	});
@@ -2624,7 +2627,7 @@ $(function(){
 //================particle weather==========================
 
 function weather_clear() {
-	var b_canbus = document.querySelector('.main-scrollall-backb');
+	var b_canbus = document.querySelector('#click-all-filter-landing');
 	var circleArray = [];
 	var loopCancel;
 	var canvas = document.createElement('canvas');
@@ -2732,6 +2735,7 @@ function weather_clear() {
 		}
 
 		loopCancel = requestAnimationFrame(render);
+		console.log('weather is clear now.');
 	}
 
 	init();
