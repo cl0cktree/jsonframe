@@ -1775,15 +1775,15 @@ $(function(){
 				var weather_this = json.weather[0].main;
 				wearther_out = weather_this;
 				if((location_lat!==''||location_lat!==null)&&(place!==''||place!==null)){
-					$('.filter-landing-contents').append('<div class="cover-city">'+place+' : '+tempt+'℃ / '+weather_this+'</div>');
+					$('.filter-landing-contents').append('<div class="cover-city"><span class="weather_place">'+place+'</span> : <span class="weather_tempt">'+tempt+'℃</span> / <span class="weather_now">'+weather_this+'</span></div>');
 				};
 		    });
 		};
 		console.log('weathe = '+wearther_out);
 		weather_json();
 	});
-	
-	if(wearther_out=='Clear'){
+	var weather_now = document.querySelector('.weather_now');
+	if(weather_now.text=='Clear'){
 		console.log('weathe = '+wearther_out);
 		weather_clear();
 	};
