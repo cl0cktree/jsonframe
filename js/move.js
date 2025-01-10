@@ -2700,7 +2700,8 @@ function weather_clear() {
 
 	return Circle;
 }();
-
+	var boxArray = []; // Box의 인스턴스들을 넣을 배열
+	var phase; // 1: 기본상태 2: 패널 등장 3: 패널 보기
 	function setLayout() {
 		canvas.width = window.innerWidth;
 		canvas.height = window.innerHeight*1.2;
@@ -2760,6 +2761,48 @@ function weather_clear() {
 		circle.draw();
 		}
 
+		switch (phase) {
+			case 1:
+				weather_clear.panelScale = 0.1;
+				weather_clear.selectedBox = null;
+
+				for (let i = 0; i < boxArray.length; i++) {
+					box = boxArray[i];
+					// box.y = box.y - box.speed; //축약 전 모습.
+					
+					// box.y -= box.speed; //움직임을 아래에서 위로 주고 싶을 때 사용.
+					box.y += box.speed; //움직임을 위에서 아래로 주고 싶을 때 사용.
+
+					// origin 움직임을 아래에서 위로 주고 싶을 때 사용.
+					// if (box.y < -box.height) {
+					//     box.y = pan_box.height;
+					// }
+
+					// 움직임을 위에서 아래로 주고 싶을 때 사용.
+					if (box.y > pan_box.height) {
+						box.y = 0;
+					}
+
+				}
+				
+				break;
+			case 2:
+				panel.draw();
+				// panelScale += 0.02;
+				weather_clear.panelScale = weather_clear.panelScale + (1 - weather_clear.panelScale)*0.05;
+				weather_clear.panelAngle = weather_clear.panelScale * 720;
+
+				if (weather_clear.panelScale >= 0.999) {
+					weather_clear.panelScale = 1;
+					phase = 3;
+				}
+				break;
+			case 3:
+				panel.draw();
+				panel.displayContent();
+				break;
+		}
+
 		loopCancel = requestAnimationFrame(render);
 		console.log('weather is clear now.');
 	}
@@ -2774,11 +2817,11 @@ function weather_clear() {
 				e.layerY > box.y &&
 				e.layerY < box.y + box.height
 			) {
-				myApp.selectedBox = box;
+				weather_clear.selectedBox = box;
 			}
 		}
 	
-		if (phase === 1 && myApp.selectedBox) {
+		if (phase === 1 && weather_clear.selectedBox) {
 			phase = 2;
 		} else if (phase === 3) {
 			phase = 1;
