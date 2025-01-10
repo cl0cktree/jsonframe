@@ -2637,7 +2637,7 @@ function weather_clear() {
 	var loopCancel;
 	var canvas = document.createElement('canvas');
 	var context = canvas.getContext('2d');
-	b_canbus.appendChild(canvas);
+	b_canbus.prependChild(canvas);
 	function toRadian(d) {
 		return d * Math.PI / 180;
 	}
