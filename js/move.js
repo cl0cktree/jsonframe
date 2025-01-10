@@ -1782,11 +1782,6 @@ $(function(){
 		console.log('weathe = '+wearther_out);
 		weather_json();
 	});
-	var weather_now = document.querySelector('.weather_now');
-	if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
-		console.log('weathe = '+wearther_out);
-		weather_clear();
-	};
 	/*--------------------*/
 	/*-----------------------------------------------------------*/
 
@@ -2630,6 +2625,12 @@ $(function(){
 	};
 //==========================================================
 //================particle weather==========================
+
+var weather_now = document.querySelector('.weather_now');
+if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
+	console.log('weathe = '+wearther_out);
+	weather_clear();
+};
 
 function weather_clear() {
 	var b_canbus = document.querySelector('#click-all-filter-landing');
