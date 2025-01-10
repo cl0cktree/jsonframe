@@ -1781,6 +1781,7 @@ $(function(){
 		};
 		weather_json();
 	});
+	console.log('weathe = '+wearther_out);
 	if(wearther_out=='Clear'){
 		console.log('weathe = '+wearther_out);
 		weather_clear();
