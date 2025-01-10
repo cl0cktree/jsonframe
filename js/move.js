@@ -1783,7 +1783,7 @@ $(function(){
 		weather_json();
 	});
 	var weather_now = document.querySelector('.weather_now');
-	if(weather_now.innerText=='Clear'){
+	if(weather_now.innerHTML=='Clear'){
 		console.log('weathe = '+wearther_out);
 		weather_clear();
 	};
