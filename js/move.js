@@ -1795,10 +1795,11 @@ $(function(){
 				if((location_lat!==''||location_lat!==null)&&(place!==''||place!==null)){
 					$('.filter-landing-contents').append('<div class="cover-city"><span class="weather_place">'+place+'</span> : <span class="weather_tempt">'+tempt+'℃</span> / <span class="weather_now">'+weather_this+'</span></div>');
 					weather_now = document.querySelector('.weather_now');
-					console.log('weathe = '+weather_now.innerHTML);
+					wearther_out = weather_now.innerHTML;
 				};
 		    });
 		};
+		console.log('weather = '+wearther_out);
 		weather_json();
 	});
 	/*--------------------*/
