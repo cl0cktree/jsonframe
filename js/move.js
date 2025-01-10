@@ -73,8 +73,11 @@ $(function(){
 			if(weather_now==true){
 				weather_starter();
 			}else{
-				var weather_now = document.querySelector('.weather_now');
-				weather_starter();
+				setTimeout(function(){
+					var weather_now = document.querySelector('.weather_now');
+					weather_starter();
+					}
+				,500);
 			};
 			function weather_starter(){
 				if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
