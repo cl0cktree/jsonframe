@@ -2651,7 +2651,7 @@ function weather_clear() {
 	b_canbus.querySelector('canvas').classList.add('weather_clear');
 	var weather_clear = document.querySelector('.weather_clear');
 	var context = weather_clear.getContext('2d');
-	weather_clear.style.zIndex = '0';
+	weather_clear.style.zIndex = '-1';
 
 	function toRadian(d) {
 		return d * Math.PI / 180;
