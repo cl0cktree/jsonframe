@@ -2647,8 +2647,8 @@ function weather_clear() {
 	var circleArray = [];
 	var loopCancel;
 	var canvas = document.createElement('canvas');	
-	b_canbus.prepend(canvas);
-	document.querySelector('canvas').classList.add('weather_clear');
+	b_canbus.appendChild(canvas);
+	b_canbus.querySelector('canvas').classList.add('weather_clear');
 	var weather_clear = document.querySelector('.weather_clear');
 	var context = weather_clear.getContext('2d');
 	weather_clear.style.zIndex = '0';
