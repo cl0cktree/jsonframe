@@ -1796,6 +1796,9 @@ $(function(){
 					$('.filter-landing-contents').append('<div class="cover-city"><span class="weather_place">'+place+'</span> : <span class="weather_tempt">'+tempt+'℃</span> / <span class="weather_now">'+weather_this+'</span></div>');
 					weather_now = document.querySelector('.weather_now');
 					wearther_out = weather_now.innerHTML;
+					if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
+						weather_clear();
+					};
 				};
 		    });
 		};
