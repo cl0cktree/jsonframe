@@ -1749,7 +1749,8 @@ $(function(){
 	var country = "";
 	var loc = "";
 	var org = "";
-	
+	var wearther_out;
+
 	$.getJSON("https://ipinfo.io", function(data) {
 		ip = data.ip // 접속자 ip
 		hostname = data.hostname // 접속자 hostname
@@ -1772,16 +1773,17 @@ $(function(){
 				var tempt = json.main.temp;
 				var place = json.name;
 				var weather_this = json.weather[0].main;
+				wearther_out = weather_this;
 				if((location_lat!==''||location_lat!==null)&&(place!==''||place!==null)){
 					$('.filter-landing-contents').append('<div class="cover-city">'+place+' : '+tempt+'℃ / '+weather_this+'</div>');
 				};
 		    });
-			if(weather_this=='clear'){
-				weather_clear();
-			};
 		};
 		weather_json();
 	});
+	if(wearther_out=='clear'){
+		weather_clear();
+	};
 	/*--------------------*/
 	/*-----------------------------------------------------------*/
 
