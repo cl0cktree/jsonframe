@@ -1781,7 +1781,8 @@ $(function(){
 		};
 		weather_json();
 	});
-	if(wearther_out=='clear'){
+	if(wearther_out=='Clear'){
+		console.log('weathe = '+wearther_out);
 		weather_clear();
 	};
 	/*--------------------*/
