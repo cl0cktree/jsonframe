@@ -1798,7 +1798,7 @@ $(function(){
 		    });
 		};
 		wearther_out = weather_this;
-		console.log('weathe = '+wearther_out);
+		console.log('weathe = '+weather_this);
 		weather_json();
 	});
 	/*--------------------*/
