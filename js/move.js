@@ -1685,7 +1685,6 @@ $(function(){
 			$('#click-all-filter-landing').find('[tabindex]').attr('tabindex','-1');
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','0');
 			stop_clock();
-			boxClickHandler();
 		}
 	});
 	/*------------------------------------------------------------*/
@@ -2765,8 +2764,31 @@ function weather_clear() {
 		console.log('weather is clear now.');
 	}
 
+	function boxClickHandler(e) {
+		var box;
+		for (var i = 0; i < circleArray.length; i++) {
+			box = circleArray[i];
+			if (
+				e.layerX > box.x &&
+				e.layerX < box.x + box.width &&
+				e.layerY > box.y &&
+				e.layerY < box.y + box.height
+			) {
+				myApp.selectedBox = box;
+			}
+		}
+	
+		if (phase === 1 && myApp.selectedBox) {
+			phase = 2;
+		} else if (phase === 3) {
+			phase = 1;
+		}
+	};
+
 	init();
+	var contents_inside = document.getElementById('contents-button-inside');
 	window.addEventListener('resize', setLayout);
+	contents_inside.addEventListener('click', boxClickHandler);
 };
 
 function weather_rain() {
@@ -3229,26 +3251,6 @@ function weather_haze() {
 	window.addEventListener('resize', setLayout);
 };
 
-function boxClickHandler(e) {
-	var box;
-	for (var i = 0; i < boxArray.length; i++) {
-		box = boxArray[i];
-		if (
-			e.layerX > box.x &&
-			e.layerX < box.x + box.width &&
-			e.layerY > box.y &&
-			e.layerY < box.y + box.height
-		) {
-			myApp.selectedBox = box;
-		}
-	}
-
-	if (phase === 1 && myApp.selectedBox) {
-		phase = 2;
-	} else if (phase === 3) {
-		phase = 1;
-	}
-};
 //==========================================================
 
 	/*------------------------formmail-----------------------------*/
