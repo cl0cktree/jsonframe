@@ -2530,7 +2530,7 @@ $(function(){
 		var loopCancel;
 		var canvas = document.createElement('canvas');
 		b_canbus.appendChild(canvas);
-		document.querySelector('canvas').classList.add('background_bubble');
+		b_canbus.querySelector('canvas').classList.add('background_bubble');
 		var background_bubble = document.querySelector('.background_bubble');
 		var context = background_bubble.getContext('2d');
 		function toRadian(d) {
