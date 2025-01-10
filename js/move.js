@@ -71,6 +71,11 @@ $(function(){
 		});
 		var footerIcon= $('.ul-li-img1').width();
 		// $('.ul-li-img1').css({'height':footerIcon});
+		var weather_now = document.querySelector('.weather_now');
+		if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
+			console.log('weathe = '+wearther_out);
+			weather_clear();
+		};
 	});
 	/*footer 자동 구성*/
 	function footer_creat(){
@@ -2625,13 +2630,6 @@ $(function(){
 	};
 //==========================================================
 //================particle weather==========================
-
-var weather_now = document.querySelector('.weather_now');
-if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
-	console.log('weathe = '+wearther_out);
-	weather_clear();
-};
-
 function weather_clear() {
 	var b_canbus = document.querySelector('#click-all-filter-landing');
 	var circleArray = [];
