@@ -2831,7 +2831,7 @@ function weather_clear() {
 	init();
 	var contents_inside = document.getElementById('contents-button-inside');
 	window.addEventListener('resize', setLayout);
-	contents_inside.addEventListener('click', boxClickHandler);
+	contents_inside.addEventListener('click', loopCancel);
 };
 
 function weather_rain() {
