@@ -1685,6 +1685,7 @@ $(function(){
 			$('#click-all-filter-landing').find('[tabindex]').attr('tabindex','-1');
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','0');
 			stop_clock();
+			boxClickHandler();
 		}
 	});
 	/*------------------------------------------------------------*/
@@ -3226,6 +3227,27 @@ function weather_haze() {
 
 	init();
 	window.addEventListener('resize', setLayout);
+};
+
+function boxClickHandler(e) {
+	var box;
+	for (var i = 0; i < boxArray.length; i++) {
+		box = boxArray[i];
+		if (
+			e.layerX > box.x &&
+			e.layerX < box.x + box.width &&
+			e.layerY > box.y &&
+			e.layerY < box.y + box.height
+		) {
+			myApp.selectedBox = box;
+		}
+	}
+
+	if (phase === 1 && myApp.selectedBox) {
+		phase = 2;
+	} else if (phase === 3) {
+		phase = 1;
+	}
 };
 //==========================================================
 
