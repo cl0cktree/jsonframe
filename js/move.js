@@ -1767,7 +1767,6 @@ $(function(){
 	var country = "";
 	var loc = "";
 	var org = "";
-	var weather_this;
 
 	$.getJSON("https://ipinfo.io", function(data) {
 		ip = data.ip // 접속자 ip
@@ -1784,6 +1783,8 @@ $(function(){
 		var weather_key = 'f195f622a07f18107e2cac3417855541';
         var weather_api = 'https://api.openweathermap.org/data/2.5/forecast?id=524901&APPID='+weather_key;
         var weather_fet = fetch('https://api.openweathermap.org/data/2.5/weather?lat='+location_lat+'&lon='+location_lon+'&APPID='+weather_key+'&units=metric');
+		var weather_this;
+		
 		function weather_json(){
 			weather_fet.then(function(response){
 				return response.json();
