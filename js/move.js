@@ -2646,11 +2646,11 @@ function weather_clear() {
 	var b_canbus = document.querySelector('#click-all-filter-landing');
 	var circleArray = [];
 	var loopCancel;
-	var canvas = document.createElement('canvas');
-	var context = canvas.getContext('2d');
-	b_canbus.appendChild(canvas);
+	var canvas = document.createElement('canvas');	
+	b_canbus.prepend(canvas);
 	document.querySelector('canvas').classList.add('weather_clear');
 	var weather_clear = document.querySelector('.weather_clear');
+	var context = weather_clear.getContext('2d');
 	weather_clear.style.zIndex = '0';
 
 	function toRadian(d) {
