@@ -2509,10 +2509,10 @@ $(function(){
 		var circleArray = [];
 		var loopCancel;
 		var canvas = document.createElement('canvas');
-		document.querySelector('canvas').setAttribute('id','background_bubble');
-		var background_bubble = document.querySelector('#background_bubble');
+		b_canbus.appendChild(canvas);
+		document.querySelector('canvas').classList.add('background_bubble');
+		var background_bubble = document.querySelector('.background_bubble');
 		var context = background_bubble.getContext('2d');
-		b_canbus.appendChild(background_bubble);
 		function toRadian(d) {
 			return d * Math.PI / 180;
 		}
