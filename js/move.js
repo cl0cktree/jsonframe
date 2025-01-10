@@ -68,14 +68,15 @@ $(function(){
 			}else{
 				bubble_background2();
 			}
+
+			var weather_now = document.querySelector('.weather_now');
+			if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
+				console.log('weathe = '+wearther_out);
+				weather_clear();
+			};
 		});
 		var footerIcon= $('.ul-li-img1').width();
 		// $('.ul-li-img1').css({'height':footerIcon});
-		var weather_now = document.querySelector('.weather_now');
-		if((weather_now.innerHTML=='Clear')&&((weather_now.innerHTML!==null)||(weather_now.innerHTML!==''))){
-			console.log('weathe = '+wearther_out);
-			weather_clear();
-		};
 	});
 	/*footer 자동 구성*/
 	function footer_creat(){
