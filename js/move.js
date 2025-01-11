@@ -1817,7 +1817,6 @@ $(function(){
 				};
 		    });
 		};
-		console.log('weather = '+wearther_out);
 		weather_json();
 	});
 	/*--------------------*/
