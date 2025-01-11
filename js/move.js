@@ -1798,6 +1798,7 @@ $(function(){
 					wearther_out = weather_now.innerHTML;
 					if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_clear();
+						console.log('weather is clear now.');
 					};
 				};
 		    });
@@ -2715,22 +2716,22 @@ function weather_clear() {
 		var circle;
 
 		for (var i = 0; i < 5; i++) {
-		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
-		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
-		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+			x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+			//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
-		speed = Math.random() * 3 + 2;
-		circle = new Circle({
-			index: i,
-			x: x,
-			y: y,
-			speed: speed,
-			radius: Math.floor(Math.random() * 30) + 20,
-			startAngle: 360,
-			endAngle: 350,
-			clockwise: false
-		});
-		circleArray.push(circle);
+			speed = Math.random() * 3 + 2;
+			circle = new Circle({
+				index: i,
+				x: x,
+				y: y,
+				speed: speed,
+				radius: Math.floor(Math.random() * 30) + 20,
+				startAngle: 360,
+				endAngle: 350,
+				clockwise: false
+			});
+			circleArray.push(circle);
 		}
 
 		render();
@@ -2741,24 +2742,24 @@ function weather_clear() {
 		var circle;
 
 		for (var i = 0; i < circleArray.length; i++) {
-		circle = circleArray[i];
-		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
-		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+			circle = circleArray[i];
+			circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+			// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
 
-		// 움직임을 아래에서 위로 주고 싶을 때 사용.
-		if (circle.y < -circle.radius) {
-			circle.y = canvas.height;
-			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
-			circle.radius = Math.floor(Math.random() * 30) + 20;
-		}
-		//  움직임을 위에서 아래로 주고 싶을 때 사용.
-		// if (circle.y > canvas.height) {
-		// 	circle.y = 0;
-		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
-		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
-		// }
+			// 움직임을 아래에서 위로 주고 싶을 때 사용.
+			if (circle.y < -circle.radius) {
+				circle.y = canvas.height;
+				circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+				circle.radius = Math.floor(Math.random() * 30) + 20;
+			}
+			//  움직임을 위에서 아래로 주고 싶을 때 사용.
+			// if (circle.y > canvas.height) {
+			// 	circle.y = 0;
+			// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			// 	circle.radius = Math.floor(Math.random() * 30) + 20;
+			// }
 
-		circle.draw();
+			circle.draw();
 		}
 
 		switch (phase) {
@@ -2804,7 +2805,6 @@ function weather_clear() {
 		}
 
 		loopCancel = requestAnimationFrame(render);
-		console.log('weather is clear now.');
 	}
 
 	function boxClickHandler(e) {
