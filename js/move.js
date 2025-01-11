@@ -1797,8 +1797,7 @@ $(function(){
 					weather_now = document.querySelector('.weather_now');
 					wearther_out = weather_now.innerHTML;
 					if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
-						// weather_Clear();
-						weather_Wind();
+						weather_Clear();
 					}else if((wearther_out=='Fine')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Fine();
 					}else if((wearther_out=='Wind')&&((wearther_out!==null)||(wearther_out!==''))){
@@ -2703,7 +2702,7 @@ function weather_Clear() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.10)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
@@ -2888,7 +2887,7 @@ function weather_Fine() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.10)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
@@ -3073,7 +3072,7 @@ function weather_Wind() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.10)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
