@@ -2701,7 +2701,7 @@ function weather_Clear() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.10)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
@@ -2886,7 +2886,7 @@ function weather_Fine() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.10)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
@@ -3071,7 +3071,7 @@ function weather_Wind() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.10)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
@@ -3263,7 +3263,7 @@ function weather_Rain() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
@@ -3317,21 +3317,21 @@ function weather_Rain() {
 
 		for (var i = 0; i < circleArray.length; i++) {
 		circle = circleArray[i];
-		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
-		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+		// circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
 
 		// 움직임을 아래에서 위로 주고 싶을 때 사용.
-		if (circle.y < -circle.radius) {
-			circle.y = canvas.height;
-			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
-			circle.radius = Math.floor(Math.random() * 30) + 20;
-		}
-		//  움직임을 위에서 아래로 주고 싶을 때 사용.
-		// if (circle.y > canvas.height) {
-		// 	circle.y = 0;
+		// if (circle.y < -circle.radius) {
+		// 	circle.y = canvas.height;
 		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
 		// }
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		if (circle.y > canvas.height) {
+			circle.y = 0;
+			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
 
 		circle.draw();
 		}
@@ -3436,21 +3436,21 @@ function weather_Snow() {
 
 		for (var i = 0; i < circleArray.length; i++) {
 		circle = circleArray[i];
-		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
-		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+		// circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
 
 		// 움직임을 아래에서 위로 주고 싶을 때 사용.
-		if (circle.y < -circle.radius) {
-			circle.y = canvas.height;
-			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
-			circle.radius = Math.floor(Math.random() * 30) + 20;
-		}
-		//  움직임을 위에서 아래로 주고 싶을 때 사용.
-		// if (circle.y > canvas.height) {
-		// 	circle.y = 0;
+		// if (circle.y < -circle.radius) {
+		// 	circle.y = canvas.height;
 		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
 		// }
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		if (circle.y > canvas.height) {
+			circle.y = 0;
+			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
 
 		circle.draw();
 		}
