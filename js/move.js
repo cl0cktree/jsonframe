@@ -2707,9 +2707,6 @@ function weather_Clear() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-
-        	context.drawImage(weather_img, this.x, this.y, this.width, this.height);
-
 			context.strokeStyle = 'rgba(0, 0, 0, 1)';
 			context.lineWidth = '2';
 			context.stroke();
@@ -2717,6 +2714,8 @@ function weather_Clear() {
 			context.fillStyle = '#fff';
 			//context.font = '30px bold sans-serif';
 			context.textAlign = "center";
+
+			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
 			//context.fillText(this.index, this.x, this.y+10);
 			}
 		}]);
