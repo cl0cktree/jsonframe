@@ -2671,8 +2671,6 @@ function weather_Clear() {
 	b_canbus.querySelector('canvas').classList.add('weather_canvas');
 	var weather_canvas = document.querySelector('.weather_canvas');
 	var context = weather_canvas.getContext('2d');
-	var weather_img_src = portfolioindex_url+'/images/weather/weather_Clear.gif';
-	var weather_img = new Image();
 	weather_canvas.style.zIndex = '-1';
 
 	function toRadian(d) {
@@ -2699,12 +2697,21 @@ function weather_Clear() {
 		_createClass(Circle, [{
 		key: "draw",
 		value: function draw() {
+			var weather_img_src = portfolioindex_url+'/images/weather/weather_Clear.gif';
+			var weather_img = new Image();
+
 			context.beginPath();
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			// context.fillStyle = 'rgba(255, 255, 255, 0)';
 			// context.fill();
 			context.drawImage(weather_img, 0, 0);
 			weather_img.src = weather_img_src;
+			weather_img.onload = function(){
+				var weatehr_pattern = context.createPattern(weather_img,'no-repeat');
+				context.fillStyle = weatehr_pattern;
+				context.fillRect(0,0,context.width,context.height);
+			};
+
 			context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
 			context.lineWidth = '2';
 			context.stroke();
