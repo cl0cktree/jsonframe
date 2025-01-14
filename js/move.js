@@ -2716,6 +2716,7 @@ function weather_Clear() {
 			context.textAlign = "center";
 
 			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
+			console.log('weather_img_src = '+weather_img_src);
 			//context.fillText(this.index, this.x, this.y+10);
 			}
 		}]);
