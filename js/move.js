@@ -2728,7 +2728,7 @@ function weather_Clear() {
 		var speed;
 		var circle;
 
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < 16; i++) {
 			x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 			y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 			//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
@@ -2913,7 +2913,7 @@ function weather_Fine() {
 		var speed;
 		var circle;
 
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < 16; i++) {
 			x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 			y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 			//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
@@ -3098,7 +3098,7 @@ function weather_Wind() {
 		var speed;
 		var circle;
 
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < 8; i++) {
 			x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 			y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 			//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
@@ -3289,7 +3289,7 @@ function weather_Rain() {
 		var speed;
 		var circle;
 
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < 48; i++) {
 		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
@@ -3408,7 +3408,7 @@ function weather_Snow() {
 		var speed;
 		var circle;
 
-		for (var i = 0; i < 5; i++) {
+		for (var i = 0; i < 48; i++) {
 		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
