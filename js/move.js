@@ -2708,7 +2708,7 @@ function weather_Clear() {
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
 			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 1)';
+			context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
 			context.lineWidth = '2';
 			context.stroke();
 			context.closePath();
