@@ -2697,7 +2697,7 @@ function weather_Clear() {
 		_createClass(Circle, [{
 		key: "draw",
 		value: function draw() {
-			var weather_img_src = portfolioindex_url+'/images/weather/weather_Clear.png';
+			var weather_img_src = './images/weather/weather_Clear.png';
 			var weather_img = new Image();
         	weather_img.src = weather_img_src;
 
