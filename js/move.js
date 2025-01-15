@@ -2682,7 +2682,6 @@ function weather_Clear() {
 	function () {
 		function Circle(info) {
 		_classCallCheck(this, Circle);
-
 		this.index = info.index;
 		this.x = info.x;
 		this.y = info.y;
@@ -2703,6 +2702,9 @@ function weather_Clear() {
 			var weather_img = new Image();
         	weather_img.src = weather_img_src;
 
+			context.fillStyle = 'rgba(0, 120, 0, 0.7)';
+        	context.fillRect(this.x, this.y, this.width, this.height);
+			
 			// context.beginPath();
 			// context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			// context.fillStyle = 'rgba(255, 255, 255, 0)';
