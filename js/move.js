@@ -2701,7 +2701,7 @@ function weather_Clear() {
 			var weather_img = new Image();
 			weather_img.src = weather_img_src;
 
-			weather_canvas.style.opacity = 0.1;
+			weather_canvas.style.opacity = 0.5;
 
 			// context.beginPath();
 			// context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
