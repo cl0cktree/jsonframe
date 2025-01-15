@@ -1798,7 +1798,7 @@ $(function(){
 					wearther_out = weather_now.innerHTML;
 					if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
 						// weather_Clear();
-						weather_Rain();
+						weather_Snow();
 					}else if((wearther_out=='Fine')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Fine();
 					}else if((wearther_out=='Wind')&&((wearther_out!==null)||(wearther_out!==''))){
@@ -3412,34 +3412,41 @@ function weather_Snow() {
 	/*#__PURE__*/
 	function () {
 		function Circle(info) {
-		_classCallCheck(this, Circle);
-
-		this.index = info.index;
-		this.x = info.x;
-		this.y = info.y;
-		this.speed = info.speed;
-		this.radius = info.radius;
-		this.startAngle = info.startAngle;
-		this.endAngle = info.endAngle;
-		this.clockwise = info.clockwise;
-		this.draw();
+			_classCallCheck(this, Circle);
+			this.index = info.index;
+			this.x = info.x;
+			this.y = info.y;
+			this.width = info.width;
+			this.height = info.height;
+			this.speed = info.speed;
+			this.radius = info.radius;
+			this.startAngle = info.startAngle;
+			this.endAngle = info.endAngle;
+			this.clockwise = info.clockwise;
+			this.draw();
 		}
 
 		_createClass(Circle, [{
 		key: "draw",
 		value: function draw() {
-			context.beginPath();
-			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
-			context.fillStyle = 'rgba(255, 255, 255, 0)';
-			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.15)';
-			context.lineWidth = '2';
-			context.stroke();
-			context.closePath();
-			context.fillStyle = '#fff';
-			//context.font = '30px bold sans-serif';
-			context.textAlign = "center";
-			//context.fillText(this.index, this.x, this.y+10);
+			var weather_img_src = portfolioindex_url+'/images/weather/weather_Snow.png';
+			var weather_img = new Image();
+        	weather_img.src = weather_img_src;
+
+			// context.beginPath();
+			// context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			// context.fillStyle = 'rgba(255, 255, 255, 0)';
+			// context.fill();
+			// context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+			// context.lineWidth = '2';
+			// context.stroke();
+			// context.closePath();
+			// context.fillStyle = '#fff';
+			// context.font = '30px bold sans-serif';
+			// context.textAlign = "center";
+			// context.fillText(this.index, this.x, this.y+10);
+
+			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
 			}
 		}]);
 
@@ -3457,13 +3464,16 @@ function weather_Snow() {
 		var y;
 		var speed;
 		var circle;
+		var random_math;
 
-		for (var i = 0; i < 48; i++) {
+		for (var i = 0; i < 56; i++) {
 		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
-		speed = Math.random() * 3 + 2;
+		speed = Math.random() * 3 + 20;
+		random_math = Math.floor(Math.random() * 20) + 30;
+
 		circle = new Circle({
 			index: i,
 			x: x,
@@ -3472,7 +3482,9 @@ function weather_Snow() {
 			radius: Math.floor(Math.random() * 30) + 20,
 			startAngle: 360,
 			endAngle: 350,
-			clockwise: false
+			clockwise: false,
+			width: random_math,
+            height: random_math
 		});
 		circleArray.push(circle);
 		}
