@@ -2697,27 +2697,27 @@ function weather_Clear() {
 		_createClass(Circle, [{
 		key: "draw",
 		value: function draw() {
+			weather_canvas.style.opacity = 1;
+
 			var weather_img_src = portfolioindex_url+'/images/weather/weather_Clear.gif';
 			var weather_img = new Image();
 			weather_img.src = weather_img_src;
 
-			weather_canvas.style.opacity = 0.5;
 
-			// context.beginPath();
-			// context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
-			// context.fillStyle = 'rgba(255, 255, 255, 0)';
-			// context.fill();
-			// context.strokeStyle = 'rgba(0, 0, 0, 1)';
-			// context.lineWidth = '2';
-			// context.stroke();
-			// context.closePath();
-			// context.fillStyle = '#fff';
+			context.beginPath();
+			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			context.fillStyle = 'rgba(255, 255, 255, 0)';
+			context.fill();
+			context.strokeStyle = 'rgba(0, 0, 0, 1)';
+			context.lineWidth = '2';
+			context.stroke();
+			context.closePath();
+			context.fillStyle = '#fff';
 			//context.font = '30px bold sans-serif';
-			// context.textAlign = "center";
+			context.textAlign = "center";
+			//context.fillText(this.index, this.x, this.y+10);
 
 			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
-			// console.log('weather_img_src = '+weather_img_src);
-			//context.fillText(this.index, this.x, this.y+10);
 			}
 		}]);
 
