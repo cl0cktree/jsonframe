@@ -2553,6 +2553,7 @@ $(function(){
 		b_canbus.querySelector('canvas').classList.add('background_bubble');
 		var background_bubble = document.querySelector('.background_bubble');
 		var context = background_bubble.getContext('2d');
+
 		function toRadian(d) {
 			return d * Math.PI / 180;
 		}
@@ -2715,7 +2716,7 @@ function weather_Clear() {
 			// context.textAlign = "center";
 			// context.fillText(this.index, this.x, this.y+10);
 
-			context.drawImage(weather_img, this.x, this.y, toRadian(360));
+			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
 			}
 		}]);
 
@@ -2749,7 +2750,9 @@ function weather_Clear() {
 				radius: Math.floor(Math.random() * 30) + 20,
 				startAngle: 360,
 				endAngle: 350,
-				clockwise: false
+				clockwise: false,
+				width: Math.floor(Math.random() * 30) + 20,
+                height: Math.floor(Math.random() * 30) + 20
 			});
 			circleArray.push(circle);
 		}
