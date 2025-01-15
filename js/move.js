@@ -2702,9 +2702,6 @@ function weather_Clear() {
 			var weather_img = new Image();
         	weather_img.src = weather_img_src;
 
-			context.fillStyle = 'rgba(0, 120, 0, 0.7)';
-        	context.fillRect(this.x, this.y, this.width, this.height);
-			
 			// context.beginPath();
 			// context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			// context.fillStyle = 'rgba(255, 255, 255, 0)';
@@ -2718,7 +2715,7 @@ function weather_Clear() {
 			// context.textAlign = "center";
 			// context.fillText(this.index, this.x, this.y+10);
 
-			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
+			context.drawImage(weather_img, this.x, this.y, toRadian(360));
 			}
 		}]);
 
