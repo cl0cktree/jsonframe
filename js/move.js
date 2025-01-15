@@ -3472,7 +3472,7 @@ function weather_Snow() {
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
 		speed = Math.random() * 3 + 20;
-		random_math = Math.floor(Math.random() * 20) + 30;
+		random_math = Math.floor(Math.random() * 10) + 10;
 
 		circle = new Circle({
 			index: i,
