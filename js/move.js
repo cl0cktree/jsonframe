@@ -2752,7 +2752,7 @@ function weather_Clear() {
 				endAngle: 350,
 				clockwise: false,
 				width: Math.floor(Math.random() * 50) + 20,
-                height: width
+                height: this.width
 			});
 			circleArray.push(circle);
 		}
