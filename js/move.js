@@ -2742,7 +2742,7 @@ function weather_Clear() {
 			y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 			//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
-			random_math = Math.floor(Math.random() * 70) + 70;
+			random_math = Math.floor(Math.random() * 80) + 80;
 
 			speed = Math.random() * 3 + 1;
 			circle = new Circle({
@@ -2880,10 +2880,11 @@ function weather_Fine() {
 	function () {
 		function Circle(info) {
 		_classCallCheck(this, Circle);
-
 		this.index = info.index;
 		this.x = info.x;
 		this.y = info.y;
+		this.width = info.width;
+        this.height = info.height;
 		this.speed = info.speed;
 		this.radius = info.radius;
 		this.startAngle = info.startAngle;
@@ -2895,18 +2896,24 @@ function weather_Fine() {
 		_createClass(Circle, [{
 		key: "draw",
 		value: function draw() {
-			context.beginPath();
-			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
-			context.fillStyle = 'rgba(255, 255, 255, 0)';
-			context.fill();
-			context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
-			context.lineWidth = '2';
-			context.stroke();
-			context.closePath();
-			context.fillStyle = '#fff';
-			//context.font = '30px bold sans-serif';
-			context.textAlign = "center";
-			//context.fillText(this.index, this.x, this.y+10);
+			var weather_img_src = portfolioindex_url+'/images/weather/weather_Clear.png';
+			var weather_img = new Image();
+        	weather_img.src = weather_img_src;
+
+			// context.beginPath();
+			// context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			// context.fillStyle = 'rgba(255, 255, 255, 0)';
+			// context.fill();
+			// context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+			// context.lineWidth = '2';
+			// context.stroke();
+			// context.closePath();
+			// context.fillStyle = '#fff';
+			// context.font = '30px bold sans-serif';
+			// context.textAlign = "center";
+			// context.fillText(this.index, this.x, this.y+10);
+
+			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
 			}
 		}]);
 
@@ -2925,13 +2932,16 @@ function weather_Fine() {
 		var y;
 		var speed;
 		var circle;
+		var random_math;
 
-		for (var i = 0; i < 16; i++) {
+		for (var i = 0; i < 8; i++) {
 			x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 			y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 			//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
-			speed = Math.random() * 3 + 2;
+			random_math = Math.floor(Math.random() * 70) + 70;
+
+			speed = Math.random() * 3 + 1;
 			circle = new Circle({
 				index: i,
 				x: x,
@@ -2940,7 +2950,9 @@ function weather_Fine() {
 				radius: Math.floor(Math.random() * 30) + 20,
 				startAngle: 360,
 				endAngle: 350,
-				clockwise: false
+				clockwise: false,
+				width: random_math,
+                height: random_math
 			});
 			circleArray.push(circle);
 		}
