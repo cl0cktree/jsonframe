@@ -2735,11 +2735,14 @@ function weather_Clear() {
 		var y;
 		var speed;
 		var circle;
+		var random_math;
 
 		for (var i = 0; i < 16; i++) {
 			x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 			y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 			//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+
+			random_math = Math.floor(Math.random() * 50) + 20;
 
 			speed = Math.random() * 3 + 2;
 			circle = new Circle({
@@ -2751,8 +2754,8 @@ function weather_Clear() {
 				startAngle: 360,
 				endAngle: 350,
 				clockwise: false,
-				width: Math.floor(Math.random() * 50) + 20,
-                height: this.width
+				width: random_math,
+                height: random_math
 			});
 			circleArray.push(circle);
 		}
