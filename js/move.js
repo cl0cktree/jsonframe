@@ -2751,8 +2751,8 @@ function weather_Clear() {
 				startAngle: 360,
 				endAngle: 350,
 				clockwise: false,
-				width: Math.floor(Math.random() * 30) + 20,
-                height: Math.floor(Math.random() * 30) + 20
+				width: Math.floor(Math.random() * 50) + 20,
+                height: width
 			});
 			circleArray.push(circle);
 		}
