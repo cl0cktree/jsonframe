@@ -1797,8 +1797,7 @@ $(function(){
 					weather_now = document.querySelector('.weather_now');
 					wearther_out = weather_now.innerHTML;
 					if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
-						// weather_Clear();
-						weather_Snow();
+						weather_Clear();
 					}else if((wearther_out=='Fine')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Fine();
 					}else if((wearther_out=='Wind')&&((wearther_out!==null)||(wearther_out!==''))){
