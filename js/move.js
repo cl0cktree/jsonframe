@@ -2699,11 +2699,10 @@ function weather_Clear() {
 		value: function draw() {
 			weather_canvas.style.opacity = 1;
 
-			var weather_img_src = portfolioindex_url+'/images/weather/weather_Clear.gif';
+			var weather_img_src = portfolioindex_url+'/images/weather/weather_Clear.png';
 			var weather_img = new Image();
 			weather_img.src = weather_img_src;
 
-			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
 			context.beginPath();
 			context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
 			context.fillStyle = 'rgba(255, 255, 255, 0)';
@@ -2713,11 +2712,11 @@ function weather_Clear() {
 			context.stroke();
 			context.closePath();
 			context.fillStyle = '#fff';
-			//context.font = '30px bold sans-serif';
-			context.textAlign = "center";
-			//context.fillText(this.index, this.x, this.y+10);
+			// context.font = '30px bold sans-serif';
+			// context.textAlign = "center";
+			// context.fillText(this.index, this.x, this.y+10);
 
-			
+			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
 			}
 		}]);
 
