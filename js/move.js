@@ -3335,13 +3335,13 @@ function weather_Rain() {
 		var circle;
 		var random_math;
 
-		for (var i = 0; i < 48; i++) {
+		for (var i = 0; i < 56; i++) {
 		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
 		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
-		speed = Math.random() * 3 + 50;
-		random_math = Math.floor(Math.random() * 10) + 20;
+		speed = Math.random() * 3 + 40;
+		random_math = Math.floor(Math.random() * 10) + 30;
 
 		circle = new Circle({
 			index: i,
