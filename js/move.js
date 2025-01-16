@@ -3773,7 +3773,7 @@ function weather_Overcast() {
 		// }
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.x > canvas.width) {
-			circle.y = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.y = Math.random() * window.innerWidth;
 			circle.x = 0;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
