@@ -3906,7 +3906,7 @@ function weather_Hazy() {
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.y < -circle.radius) {
 			circle.y = canvas.height;
-			circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+			circle.x = Math.random() * window.innerWidth * 0.9 + Math.random() * window.innerWidth * 0.1;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
 
