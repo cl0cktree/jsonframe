@@ -166,6 +166,7 @@ $(function(){
 					nav_num_start=0;
 					$('#landing-contents-title, #landing-contents-buttonwrap').stop().animate({'text-indent':'0'},500);
 					$('.topmenu1-list-span').children('.list-span-leftborder, .list-span-rightborder').css({'bottom':'0px'});
+					$body.css({'overflow-y':'hidden'});
 					landing_contents();
 				}
 				nav_start();
@@ -1683,6 +1684,7 @@ $(function(){
 			$('#click-all-filter-landing').css({'z-index':'-10','opacity':'0'})
 			$('.move-wrap1').animate({'opacity':'1'},300)
 			$('#click-all-filter-landing').find('[tabindex]').attr('tabindex','-1');
+			$body.css({'overflow-y':''});
 			$('.body-section-content, header, footer').find('[tabindex]').attr('tabindex','0');
 			stop_clock();
 		}
@@ -1807,8 +1809,7 @@ $(function(){
 					}else if((wearther_out=='Snow')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Snow();
 					}else if((wearther_out=='Clouds')&&((wearther_out!==null)||(wearther_out!==''))){
-						// weather_Clouds();
-						weather_Hazy();
+						weather_Clouds();
 					}else if((wearther_out=='Overcast')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Overcast();
 					}else if((wearther_out=='Hazy')&&((wearther_out!==null)||(wearther_out!==''))){
