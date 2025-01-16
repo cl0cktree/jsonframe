@@ -3577,7 +3577,7 @@ function weather_Clouds() {
 			// context.textAlign = "center";
 			// context.fillText(this.index, this.x, this.y+10);
 
-			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
+			context.drawImage(weather_img, this.x, this.y*0.5, this.width, this.height);
 			}
 		}]);
 
@@ -3641,8 +3641,8 @@ function weather_Clouds() {
 		// }
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.x > canvas.width) {
-			circle.y = Math.random() * window.innerWidth * 0.1 + Math.random() * window.innerWidth * 0.1;
-			circle.x = Math.random() * window.innerWidth * 0.1 + Math.random() * window.innerWidth * 0.1;
+			circle.y = Math.random() * window.innerWidth * 0.3 + Math.random() * window.innerWidth * 0.2;
+			circle.x = Math.random() * window.innerWidth * 0.3 + Math.random() * window.innerWidth * 0.2;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
 
