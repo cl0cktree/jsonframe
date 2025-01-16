@@ -3603,7 +3603,7 @@ function weather_Clouds() {
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
 		speed = Math.random() * 2 + 1;
-		random_math = Math.floor(Math.random() * 100) + 100;
+		random_math = Math.floor(Math.random() * 200) + 200;
 
 		circle = new Circle({
 			index: i,
@@ -3631,7 +3631,7 @@ function weather_Clouds() {
 		circle = circleArray[i];
 		circle.x += circle.speed; // 움직임을 좌에서 우로 주고 싶을 때 사용.
 		// circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
-		circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
 
 		// 움직임을 아래에서 위로 주고 싶을 때 사용.
 		// if (circle.y < -circle.radius) {
