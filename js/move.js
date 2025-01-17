@@ -368,7 +368,7 @@ $(function(){
 
 		}
 
-		if ($('.body-all-header').css('width')<'480px')
+		if ($('.body-all-header').css('width')<480)
 		{
 			if ($('#article1-nav1-topmenu1').css('display')=='none')
 			{
