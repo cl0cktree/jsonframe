@@ -368,7 +368,7 @@ $(function(){
 
 		}
 
-		if ($('.body-all-header').css('width')<480)
+		if ($('.body-all-header').css('width')>480)
 		{
 			$('.body-all-header').stop().animate({'height':'100px'},100)
 			$('.article1-nav1-toplogo').stop().animate({'height':'100px'},100)
