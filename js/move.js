@@ -1829,8 +1829,10 @@ $(function(){
 						weather_Clouds();
 					}else if((wearther_out=='Overcast')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Overcast();
-					}else if((wearther_out=='Hazy')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Hazy();
+					}else if((wearther_out=='Mist')&&((wearther_out!==null)||(wearther_out!==''))){
+						weather_Mist();
+					}else if((wearther_out=='Haze')&&((wearther_out!==null)||(wearther_out!==''))){
+						weather_Haze();
 					};
 					console.log('weather is '+wearther_out+' now.');
 				};
@@ -3806,7 +3808,139 @@ function weather_Overcast() {
 	window.addEventListener('resize', setLayout);
 };
 
-function weather_Hazy() {
+function weather_Mist() {
+	var b_canbus = document.querySelector('#click-all-filter-landing');
+	var circleArray = [];
+	var loopCancel;
+	var canvas = document.createElement('canvas');	
+	b_canbus.appendChild(canvas);
+	b_canbus.querySelector('canvas').classList.add('weather_canvas');
+	var weather_canvas = document.querySelector('.weather_canvas');
+	var context = weather_canvas.getContext('2d');
+	weather_canvas.style.zIndex = '-1';
+
+	function toRadian(d) {
+		return d * Math.PI / 180;
+	}
+
+	var Circle =
+	/*#__PURE__*/
+	function () {
+		function Circle(info) {
+			_classCallCheck(this, Circle);
+			this.index = info.index;
+			this.x = info.x;
+			this.y = info.y;
+			this.width = info.width;
+			this.height = info.height;
+			this.speed = info.speed;
+			this.radius = info.radius;
+			this.startAngle = info.startAngle;
+			this.endAngle = info.endAngle;
+			this.clockwise = info.clockwise;
+			this.draw();
+		}
+
+		_createClass(Circle, [{
+		key: "draw",
+		value: function draw() {
+			var weather_img_src = portfolioindex_url+'/images/weather/weather_Hazy.png';
+			var weather_img = new Image();
+        	weather_img.src = weather_img_src;
+
+			// context.beginPath();
+			// context.arc(this.x, this.y, this.radius, this.startAngle, this.endAngle, toRadian(360), this.clockwise);
+			// context.fillStyle = 'rgba(255, 255, 255, 0)';
+			// context.fill();
+			// context.strokeStyle = 'rgba(0, 0, 0, 0.08)';
+			// context.lineWidth = '2';
+			// context.stroke();
+			// context.closePath();
+			// context.fillStyle = '#fff';
+			// context.font = '30px bold sans-serif';
+			// context.textAlign = "center";
+			// context.fillText(this.index, this.x, this.y+10);
+
+			context.drawImage(weather_img, this.x, this.y, this.width, this.height);
+			}
+		}]);
+
+	return Circle;
+}();
+
+	function setLayout() {
+		canvas.width = window.innerWidth;
+		canvas.height = window.innerHeight*1.2;
+	}
+
+	function init() {
+		setLayout();
+		var x;
+		var y;
+		var speed;
+		var circle;
+		var random_math;
+
+		for (var i = 0; i < 8; i++) {
+		x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
+		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
+
+		speed = Math.random() * 0.5 + 1;
+		random_math = Math.floor(Math.random() * 800) + 700;
+
+		circle = new Circle({
+			index: i,
+			x: x,
+			y: y,
+			speed: speed,
+			radius: Math.floor(Math.random() * 30) + 20,
+			startAngle: 360,
+			endAngle: 350,
+			clockwise: false,
+			width: random_math,
+            height: random_math
+		});
+		circleArray.push(circle);
+		}
+
+		render();
+	}
+
+	function render() {
+		context.clearRect(0, 0, canvas.width, canvas.height);
+		var circle;
+
+		for (var i = 0; i < circleArray.length; i++) {
+		circle = circleArray[i];
+		// circle.x += circle.speed; // 움직임을 좌에서 우로 주고 싶을 때 사용.
+		circle.y -= circle.speed; // 움직임을 아래에서 위로 주고 싶을 때 사용.
+		// circle.y += circle.speed; // 움직임을 위에서 아래로 주고 싶을 때 사용.
+
+		// 움직임을 아래에서 위로 주고 싶을 때 사용.
+		// if (circle.y < -circle.radius) {
+		// 	circle.y = canvas.height;
+		// 	circle.x = Math.random() * window.innerWidth * 0.8 + Math.random() * window.innerWidth * 0.2;
+		// 	circle.radius = Math.floor(Math.random() * 30) + 20;
+		// }
+		//  움직임을 위에서 아래로 주고 싶을 때 사용.
+		if (circle.y < -circle.radius) {
+			circle.y = canvas.height;
+			circle.x = Math.random() * window.innerWidth * 0.9 + Math.random() * window.innerWidth * 0.1;
+			circle.radius = Math.floor(Math.random() * 30) + 20;
+		}
+
+		circle.draw();
+		}
+
+		loopCancel = requestAnimationFrame(render);
+	}
+
+	init();
+	window.addEventListener('resize', setLayout);
+};
+
+function weather_Haze() {
 	var b_canbus = document.querySelector('#click-all-filter-landing');
 	var circleArray = [];
 	var loopCancel;
