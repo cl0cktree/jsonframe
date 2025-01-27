@@ -691,7 +691,7 @@ $(function(){
 		for (start_year=2016;start_year<=this_year;start_year++){
 			work_years++;
 			print_year++;
-			$('.article-summon-wrap').append('<div class="article-main-scrollall" id="article-main-scroll'+work_years+'"><div class="main-scrollall-head" id="main-scroll'+work_years+'-head"><h3></h3></div></div>')
+			$('.article-summon-wrap').append('<div class="article-main-scrollall" id="article-main-scroll'+work_years+'" data-index="'+work_years+'"><div class="main-scrollall-head" id="main-scroll'+work_years+'-head"><h3></h3></div></div>')
 			if($('#article-main-scroll'+work_years).find('h3')){
 				$('#article-main-scroll'+work_years).find('h3').append(print_year);
 				$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
@@ -1427,10 +1427,10 @@ $(function(){
 					}
 					if ($(window).scrollTop()>=$(this).offset().top-topminus2)
 					{
-						var scm = $(this).attr('id').substring(19,20,21);
-						// var data_index_btn = $(this).data('btn');
+						// var scm = $(this).attr('id').substring(19,20,21);
+						var data_index_frame = $(this).data('index');
 						$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
-						$('#index-btn-num'+scm).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
+						$('#index-btn-num'+data_index_frame).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
 					}
 				})
 			},scroll_framespeed);
