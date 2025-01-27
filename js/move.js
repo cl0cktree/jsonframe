@@ -685,7 +685,7 @@ $(function(){
 		work_years=0;
 		var print_year=2015;
 		var start_year;
-		var this_year=2024;
+		var this_year=2025;
 		$('.article-summon-wrap').html('');
 		$('.index-btn-wrap').html('');
 		for (start_year=2016;start_year<=this_year;start_year++){
@@ -740,6 +740,9 @@ $(function(){
 						contents_box();
 					}else if((frame_year=='2024')&&(item.years_num!=='0')){
 						work_years=9;
+						contents_box();
+					}else if((frame_year=='2025')&&(item.years_num!=='0')){
+						work_years=10;
 						contents_box();
 					}
 				}
@@ -798,6 +801,9 @@ $(function(){
 					}else if(frame_year=='2024'){
 						work_years=9;
 						contents_box();
+					}else if(frame_year=='2025'){
+						work_years=10;
+						contents_box();
 					}
 				};
 			});
@@ -844,6 +850,9 @@ $(function(){
 						contents_box();
 					}else if(frame_year=='2024'){
 						work_years=9;
+						contents_box();
+					}else if(frame_year=='2025'){
+						work_years=10;
 						contents_box();
 					}
 				};
@@ -892,6 +901,9 @@ $(function(){
 					}else if(frame_year=='2024'){
 						work_years=9;
 						contents_box();
+					}else if(frame_year=='2025'){
+						work_years=10;
+						contents_box();
 					}
 				};
 			});
@@ -938,6 +950,9 @@ $(function(){
 						contents_box();
 					}else if(frame_year=='2024'){
 						work_years=9;
+						contents_box();
+					}else if(frame_year=='2025'){
+						work_years=10;
 						contents_box();
 					}
 				};
