@@ -1427,8 +1427,8 @@ $(function(){
 					}
 					if ($(window).scrollTop()>=$(this).offset().top-topminus2)
 					{
-						var scm = $(this).attr('id').substring(19,20);
-						var data_index_btn = $(this).data('btn');
+						var scm = $(this).attr('id').substring(19,20,21);
+						// var data_index_btn = $(this).data('btn');
 						$('.index-btn-all').css({'background':'rgba(0,0,0,1)','border':'1px solid #fff','color':'#fff'})
 						$('#index-btn-num'+data_index_btn).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
 					}
