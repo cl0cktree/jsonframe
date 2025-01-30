@@ -726,16 +726,13 @@ $(function(){
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
 						if(frame_year==start_year){
-							contents_box();
-							// if(obj.has("data_years") && obj.isNull(start_year)){
-							// 	empty_box();
-							// 	console.log('--ride empty_box!! = '+frame_year);
-							// }else{
-							// 	contents_box();
-							// }
-						}else{
-							empty_box();
-							console.log('--ride empty_box!! = '+frame_year);
+							if(frame_year.indexOf(start_year)){
+								contents_box();
+							}else{
+								
+								empty_box();
+								console.log('--ride empty_box!! = '+frame_year);
+							}
 						}
 					};
 
