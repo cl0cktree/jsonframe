@@ -728,7 +728,8 @@ $(function(){
 						if(frame_year==start_year){
 							contents_box();
 						}
-						if(($('.main-scrollall-con').children('div').html()=='')||($('.main-scrollall-con').children('div').html()==null)){
+						if($('.main-scrollall-con').children('div').find('.scrollall-con-box').length<1){
+							console.log('-- length = '+$('.main-scrollall-con').children('div').find('.scrollall-con-box').length);
 							empty_box();
 						}
 					};
