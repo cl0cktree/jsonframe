@@ -727,11 +727,11 @@ $(function(){
 						work_years++;
 						if(frame_year==start_year){
 							if(frame_year.indexOf(start_year)){
-								contents_box();
-							}else{
-								
 								empty_box();
 								console.log('--ride empty_box!! = '+frame_year);
+							}else{
+								contents_box();
+								
 							}
 						}
 					};
