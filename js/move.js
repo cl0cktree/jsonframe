@@ -727,7 +727,7 @@ $(function(){
 						work_years++;
 						if((start_year==frame_year)==false){
 							empty_box();
-							console.log('--ride empty_box!!');
+							console.log('--ride empty_box!! = '+frame_year);
 						}else{
 							if((frame_year==start_year)){
 								contents_box();
