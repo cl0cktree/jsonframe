@@ -732,7 +732,7 @@ $(function(){
 						}
 					};
 
-					if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+					if($('.main-scrollall-con').find('.scrollall-con-box').length<0){
 						console.log('2 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 						empty_box();
 					}
