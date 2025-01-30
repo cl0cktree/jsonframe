@@ -726,11 +726,10 @@ $(function(){
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
 						if(frame_year==start_year){
-							if(($('.main-scrollall-con').children('div').html()=='')||($('.main-scrollall-con').children('div').html()==null)){
-								empty_box();
-							}else{
-								contents_box();
-							}
+							contents_box();
+						}
+						if(($('.main-scrollall-con').children('div').html()=='')||($('.main-scrollall-con').children('div').html()==null)){
+							empty_box();
 						}
 					};
 
