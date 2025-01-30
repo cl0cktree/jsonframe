@@ -727,11 +727,10 @@ $(function(){
 						work_years++;
 						if(frame_year==start_year){
 							console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
-							console.log('1-2 -- length = '+$('.main-scrollall-con').children('.move-wrap10').find('.scrollall-con-box').length);
 							contents_box();
 						}
 					};
-
+					console.log('1-2 -- length = '+$('.main-scrollall-con').children('.move-wrap10').find('.scrollall-con-box').length);
 					if($('.main-scrollall-con').find('.scrollall-con-box').length<0){
 						console.log('2 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 						empty_box();
