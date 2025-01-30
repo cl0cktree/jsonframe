@@ -725,7 +725,7 @@ $(function(){
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
-						if(((start_year!==frame_year))){
+						if(((frame_year-start_year)>0)){
 							empty_box();
 							console.log('--ride empty_box!!');
 						}else{
