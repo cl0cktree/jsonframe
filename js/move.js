@@ -714,37 +714,48 @@ $(function(){
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
 				};
 				if (item.data_section=='portfolio'){
-					if((frame_year=='2016')&&(item.years_num!=='0')){
-						work_years=1;
-						contents_box();
-					}else if((frame_year=='2017')&&(item.years_num!=='0')){
-						work_years=2;
-						contents_box();
-					}else if((frame_year=='2018')&&(item.years_num!=='0')){
-						work_years=3;
-						contents_box();
-					}else if((frame_year=='2019')&&(item.years_num!=='0')){
-						work_years=4;
-						contents_box();
-					}else if((frame_year=='2020')&&(item.years_num!=='0')){
-						work_years=5;
-						contents_box();
-					}else if((frame_year=='2021')&&(item.years_num!=='0')){
-						work_years=6;
-						contents_box();
-					}else if((frame_year=='2022')&&(item.years_num!=='0')){
-						work_years=7;
-						contents_box();
-					}else if((frame_year=='2023')&&(item.years_num!=='0')){
-						work_years=8;
-						contents_box();
-					}else if((frame_year=='2024')&&(item.years_num!=='0')){
-						work_years=9;
-						contents_box();
-					}else if((frame_year=='2025')&&(item.years_num!=='0')){
-						work_years=10;
-						contents_box();
-					}
+					work_years=0;
+					var start_year;
+					var this_year=2025;
+					
+					for (start_year=2016;start_year<=this_year;start_year++){
+						work_years++;
+						if(item.years_num!=='0'){
+							contents_box();
+						}
+					};
+
+					// if((frame_year=='2016')&&(item.years_num!=='0')){
+					// 	work_years=1;
+					// 	contents_box();
+					// }else if((frame_year=='2017')&&(item.years_num!=='0')){
+					// 	work_years=2;
+					// 	contents_box();
+					// }else if((frame_year=='2018')&&(item.years_num!=='0')){
+					// 	work_years=3;
+					// 	contents_box();
+					// }else if((frame_year=='2019')&&(item.years_num!=='0')){
+					// 	work_years=4;
+					// 	contents_box();
+					// }else if((frame_year=='2020')&&(item.years_num!=='0')){
+					// 	work_years=5;
+					// 	contents_box();
+					// }else if((frame_year=='2021')&&(item.years_num!=='0')){
+					// 	work_years=6;
+					// 	contents_box();
+					// }else if((frame_year=='2022')&&(item.years_num!=='0')){
+					// 	work_years=7;
+					// 	contents_box();
+					// }else if((frame_year=='2023')&&(item.years_num!=='0')){
+					// 	work_years=8;
+					// 	contents_box();
+					// }else if((frame_year=='2024')&&(item.years_num!=='0')){
+					// 	work_years=9;
+					// 	contents_box();
+					// }else if((frame_year=='2025')&&(item.years_num!=='0')){
+					// 	work_years=10;
+					// 	contents_box();
+					// }
 				}
 			});
 		});
