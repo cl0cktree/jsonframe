@@ -729,7 +729,7 @@ $(function(){
 							console.log('1 -- length = '+$('.main-scrollall-con').children('div').find('.scrollall-con-box').length);
 							contents_box();
 						}
-						if($('.main-scrollall-con').children('div').find('.scrollall-con-box').length<1){
+						if($('.main-scrollall-con').children('div').find('.scrollall-con-box').length==0){
 							console.log('2 -- length = '+$('.main-scrollall-con').children('div').find('.scrollall-con-box').length);
 							empty_box();
 						}
