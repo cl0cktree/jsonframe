@@ -725,11 +725,13 @@ $(function(){
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
-						if(frame_year==start_year){
-							console.log('1 -- length = '+$('.main-scrollall-con').children('div').find('.scrollall-con-box').length);
-							contents_box();
-						}
-						if($('.main-scrollall-con').children('div').find('.scrollall-con-box').length==0){
+						
+						if($('.main-scrollall-con').children('div').find('.scrollall-con-box')){
+							if(frame_year==start_year){
+								console.log('1 -- length = '+$('.main-scrollall-con').children('div').find('.scrollall-con-box').length);
+								contents_box();
+							}
+						}else{
 							console.log('2 -- length = '+$('.main-scrollall-con').children('div').find('.scrollall-con-box').length);
 							empty_box();
 						}
