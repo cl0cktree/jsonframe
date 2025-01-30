@@ -725,11 +725,11 @@ $(function(){
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
-						if((frame_year==false)){
-							empty_box();
-							console.log('--ride empty_box!! = '+frame_year);
-						}else{
-							if((frame_year==start_year)){
+						if(frame_year==start_year){
+							if(item.isNull(start_year)){
+								empty_box();
+								console.log('--ride empty_box!! = '+frame_year);
+							}else{
 								contents_box();
 							}
 						}
