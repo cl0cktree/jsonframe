@@ -880,7 +880,7 @@ $(function(){
 						if(frame_year==start_year){
 							// console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 							contents_box();
-							if($('.move-wrap'+work_years).find('.scrollall-con-box').data('empty')=='true'){
+							if($('.move-wrap'+work_years).find('.scrollall-con-box').attr('data-empty','true').length>0){
 								console.log('-- empty this = '+$(this));
 								$(this).remove();
 							}
