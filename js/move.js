@@ -877,13 +877,13 @@ $(function(){
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
 
-						if($('.scrollall-con-box').data('empty')=='true'){
-							console.log('-- empty this = '+$(this));
-							$(this).remove();
-						}
 						if(frame_year==start_year){
 							// console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 							contents_box();
+							if($('.scrollall-con-box').data('empty')=='true'){
+								console.log('-- empty this = '+$(this));
+								$(this).remove();
+							}
 						}
 						// if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
 						// 	empty_box();
