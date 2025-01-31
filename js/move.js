@@ -697,7 +697,13 @@ $(function(){
 				$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
 			}
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
-				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
+				// $('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
+
+				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'">\
+					<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>\
+					</div>');
+			}
 			}
 			$('.index-btn-wrap').append('<div class="index-btn-all" id="index-btn-num'+work_years+'" data-btn="'+work_years+'">'+work_years+'</div>');
 		}
