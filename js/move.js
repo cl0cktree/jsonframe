@@ -697,12 +697,12 @@ $(function(){
 				$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
 			}
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
-				// $('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
+				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
 
-				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'">\
-					<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
-					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>\
-					</div>');
+				// $('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'">\
+					// <div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" data-empty="true" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					// <img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>\
+				// </div>');
 
 			}
 			$('.index-btn-wrap').append('<div class="index-btn-all" id="index-btn-num'+work_years+'" data-btn="'+work_years+'">'+work_years+'</div>');
@@ -712,7 +712,9 @@ $(function(){
 	function mainSommon(){
 		contents_head='메인페이지 콘텐츠 묶음';
 		box_maker();
-		$('.scrollall-con-box').remove();
+		// if($('.scrollall-con-box').data('empty')=='true'){
+		// 	$(this).remove();
+		// }
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
 				frame_year=item.data_years;
@@ -737,11 +739,6 @@ $(function(){
 							contents_box();
 						}
 					};
-					console.log('1-2 -- length = '+$('.main-scrollall-con').children('.move-wrap10').find('.scrollall-con-box').length);
-					if($('.main-scrollall-con').find('.scrollall-con-box').length<0){
-						console.log('2 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
-						empty_box();
-					}
 
 					// if((frame_year=='2016')&&(item.years_num!=='0')){
 					// 	work_years=1;
@@ -775,6 +772,13 @@ $(function(){
 					// 	contents_box();
 					// }
 				}
+
+				console.log('1-2 -- length = '+$('.main-scrollall-con').children('.move-wrap10').find('.scrollall-con-box').length);
+				if($('.main-scrollall-con').find('.scrollall-con-box').length<0){
+					console.log('2 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
+					empty_box();
+				}
+
 			});
 		});
 		$('.section-heading').html(contents_head);
