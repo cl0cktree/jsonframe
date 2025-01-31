@@ -698,12 +698,6 @@ $(function(){
 			}
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
 				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
-
-				// $('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'">\
-					// <div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" data-empty="true" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
-					// <img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>\
-				// </div>');
-
 			}
 			$('.index-btn-wrap').append('<div class="index-btn-all" id="index-btn-num'+work_years+'" data-btn="'+work_years+'">'+work_years+'</div>');
 		}
@@ -712,9 +706,6 @@ $(function(){
 	function mainSommon(){
 		contents_head='메인페이지 콘텐츠 묶음';
 		box_maker();
-		// if($('.scrollall-con-box').data('empty')=='true'){
-		// 	$(this).remove();
-		// }
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
 				frame_year=item.data_years;
@@ -735,7 +726,6 @@ $(function(){
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
 						if(frame_year==start_year){
-							console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 							contents_box();
 						}
 					};
@@ -771,13 +761,11 @@ $(function(){
 					// 	work_years=10;
 					// 	contents_box();
 					// }
-				}
+				};
 
-				console.log('1-2 -- length = '+$('.main-scrollall-con').children('.move-wrap10').find('.scrollall-con-box').length);
 				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-					console.log('2 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 					empty_box();
-				}
+				};
 
 			});
 		});
@@ -806,38 +794,57 @@ $(function(){
 					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
 				};
+				function empty_box(){
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
+				};
+
 				if(item.data_kinds=='web'){
-					if(frame_year=='2016'){
-						work_years=1;
-						contents_box();
-					}else if(frame_year=='2017'){
-						work_years=2;
-						contents_box();
-					}else if(frame_year=='2018'){
-						work_years=3;
-						contents_box();
-					}else if(frame_year=='2019'){
-						work_years=4;
-						contents_box();
-					}else if(frame_year=='2020'){
-						work_years=5;
-						contents_box();
-					}else if(frame_year=='2021'){
-						work_years=6;
-						contents_box();
-					}else if(frame_year=='2022'){
-						work_years=7;
-						contents_box();
-					}else if(frame_year=='2023'){
-						work_years=8;
-						contents_box();
-					}else if(frame_year=='2024'){
-						work_years=9;
-						contents_box();
-					}else if(frame_year=='2025'){
-						work_years=10;
-						contents_box();
-					}
+					work_years=0;
+					var start_year;
+					var this_year=2025;
+
+					for (start_year=2016;start_year<=this_year;start_year++){
+						work_years++;
+						if(frame_year==start_year){
+							// console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
+							contents_box();
+						}
+					};
+					// if(frame_year=='2016'){
+						// work_years=1;
+						// contents_box();
+					// }else if(frame_year=='2017'){
+						// work_years=2;
+						// contents_box();
+					// }else if(frame_year=='2018'){
+						// work_years=3;
+						// contents_box();
+					// }else if(frame_year=='2019'){
+						// work_years=4;
+						// contents_box();
+					// }else if(frame_year=='2020'){
+						// work_years=5;
+						// contents_box();
+					// }else if(frame_year=='2021'){
+						// work_years=6;
+						// contents_box();
+					// }else if(frame_year=='2022'){
+						// work_years=7;
+						// contents_box();
+					// }else if(frame_year=='2023'){
+						// work_years=8;
+						// contents_box();
+					// }else if(frame_year=='2024'){
+						// work_years=9;
+						// contents_box();
+					// }else if(frame_year=='2025'){
+						// work_years=10;
+						// contents_box();
+					// }
+				};
+				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+					empty_box();
 				};
 			});
 		});
