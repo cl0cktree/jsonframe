@@ -915,10 +915,10 @@ $(function(){
 						// contents_box();
 					// }
 				};
-				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-					for (start_year=2016;start_year<=this_year;start_year++){
+				for (start_year=2016;start_year<=this_year;start_year++){
+					if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
 						empty_box();
-					}
+					};
 				};
 			});
 		});
