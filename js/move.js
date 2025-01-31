@@ -714,7 +714,7 @@ $(function(){
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
 				};
 				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
 					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
 				};
 
@@ -795,7 +795,7 @@ $(function(){
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
 				};
 				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
 					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
 				};
 
@@ -865,7 +865,7 @@ $(function(){
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
 				};
 				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
 					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
 				};
 
@@ -874,9 +874,12 @@ $(function(){
 					var start_year;
 					var this_year=2025;
 
-					$('.scrollall-con-box').remove();
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
+
+						if($('.scrollall-con-box').data('empty')=='true'){
+							$(this).remove();
+						}
 						if(frame_year==start_year){
 							// console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 							contents_box();
