@@ -712,6 +712,7 @@ $(function(){
 	function mainSommon(){
 		contents_head='메인페이지 콘텐츠 묶음';
 		box_maker();
+		$('.scrollall-con-box').children().remove();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
 				frame_year=item.data_years;
@@ -729,7 +730,6 @@ $(function(){
 					var start_year;
 					var this_year=2025;
 
-					$('.scrollall-con-box').children().remove();
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
 						if(frame_year==start_year){
