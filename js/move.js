@@ -867,7 +867,7 @@ $(function(){
 					console.log('-- empty this = '+this.tagName);
 					if($('.move-wrap'+work_years).find('.scrollall-con-box').attr('data-empty','true').length>0){
 						console.log('-- empty length = '+$('.move-wrap'+work_years).find('.scrollall-con-box').attr('data-empty','true').length);
-						$(this).remove();
+						$('.move-wrap'+work_years).find('.scrollall-con-box').attr('data-empty','true').remove();
 					}
 				};
 				function empty_box(){
