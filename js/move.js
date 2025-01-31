@@ -874,6 +874,7 @@ $(function(){
 					var start_year;
 					var this_year=2025;
 
+					$('.scrollall-con-box').remove();
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
 						if(frame_year==start_year){
