@@ -712,7 +712,7 @@ $(function(){
 	function mainSommon(){
 		contents_head='메인페이지 콘텐츠 묶음';
 		box_maker();
-		$('.scrollall-con-box').children().remove();
+		$('.main-scrollall-con').children().children().remove();
 		$.getJSON(jsonFrame_data, function(data){
 			$.each(data, function(I, item){
 				frame_year=item.data_years;
