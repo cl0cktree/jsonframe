@@ -878,6 +878,7 @@ $(function(){
 						work_years++;
 
 						if($('.scrollall-con-box').data('empty')=='true'){
+							console.log('-- empty this = '+$(this));
 							$(this).remove();
 						}
 						if(frame_year==start_year){
