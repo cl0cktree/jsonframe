@@ -879,6 +879,9 @@ $(function(){
 							// console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 							contents_box();
 						}
+						if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+							empty_box();
+						};
 					};
 					// if(frame_year=='2016'){
 						// work_years=1;
