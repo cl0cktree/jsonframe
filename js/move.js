@@ -864,11 +864,10 @@ $(function(){
 					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
 					
-					console.log('-- empty this = '+this.tagName);
-					if($('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').length>0){
-						console.log('-- empty length = '+$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').length);
-						$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
-					}
+					$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
+					// if($('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').length>0){
+					// 	$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
+					// }
 				};
 				function empty_box(){
 					$('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
