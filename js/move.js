@@ -880,9 +880,9 @@ $(function(){
 							// console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
 							contents_box();
 						}
-						if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-							empty_box();
-						};
+						// if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+						// 	empty_box();
+						// };
 					};
 					// if(frame_year=='2016'){
 						// work_years=1;
@@ -920,8 +920,9 @@ $(function(){
 					work_years=0;
 					var start_year;
 					var this_year=2025;
-					
+
 					for (start_year=2016;start_year<=this_year;start_year++){
+						work_years++;
 						empty_box();
 					};
 				};
