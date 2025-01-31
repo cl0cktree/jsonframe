@@ -733,6 +733,7 @@ $(function(){
 						work_years++;
 						if(frame_year==start_year){
 							console.log('1 -- length = '+$('.main-scrollall-con').find('.scrollall-con-box').length);
+							$('.move-wrap'+work_years).children().remove();
 							contents_box();
 						}
 					};
