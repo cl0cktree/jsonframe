@@ -4038,7 +4038,7 @@ function weather_Mist() {
 		var circle;
 		var random_math;
 
-		for (var i = 0; i < 2; i++) {
+		for (var i = 0; i < 1; i++) {
 		x = 0;
 		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
@@ -4082,7 +4082,7 @@ function weather_Mist() {
 		// }
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.y < -circle.radius) {
-			circle.y = canvas.height*0.5;
+			circle.y = canvas.height*0.2;
 			circle.x = 0;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
