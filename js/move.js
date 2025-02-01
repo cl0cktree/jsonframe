@@ -4082,7 +4082,7 @@ function weather_Mist() {
 		// }
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.y < -circle.radius) {
-			circle.y = canvas.height*1.5;
+			circle.y = canvas.height*3;
 			circle.x = 0;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
