@@ -4000,7 +4000,7 @@ function weather_Mist() {
 		_createClass(Circle, [{
 		key: "draw",
 		value: function draw() {
-			var weather_img_src = portfolioindex_url+'/images/weather/weather_Hazy.png';
+			var weather_img_src = portfolioindex_url+'/images/weather/weather_Mist.png';
 			var weather_img = new Image();
         	weather_img.src = weather_img_src;
 
