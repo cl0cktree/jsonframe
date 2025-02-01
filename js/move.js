@@ -1972,8 +1972,8 @@ $(function(){
 					weather_now = document.querySelector('.weather_now');
 					wearther_out = weather_now.innerHTML;
 					if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
-						// weather_Clear();
-						weather_Mist();
+						weather_Clear();
+						// weather_Mist();
 					}else if((wearther_out=='Fine')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Fine();
 					}else if((wearther_out=='Wind')&&((wearther_out!==null)||(wearther_out!==''))){
@@ -1983,7 +1983,8 @@ $(function(){
 					}else if((wearther_out=='Snow')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Snow();
 					}else if((wearther_out=='Clouds')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Clouds();
+						// weather_Clouds();
+						weather_Mist();
 					}else if((wearther_out=='Overcast')&&((wearther_out!==null)||(wearther_out!==''))){
 						weather_Overcast();
 					}else if((wearther_out=='Mist')&&((wearther_out!==null)||(wearther_out!==''))){
