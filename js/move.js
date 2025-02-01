@@ -4039,7 +4039,7 @@ function weather_Mist() {
 		var random_math;
 
 		for (var i = 0; i < 1; i++) {
-		x = Math.random() * window.innerWidth * 1;
+		x = 0;
 		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
@@ -4083,7 +4083,7 @@ function weather_Mist() {
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.y < -circle.radius) {
 			circle.y = canvas.height;
-			circle.x = Math.random() * window.innerWidth * 1.2;
+			circle.x = 0;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
 
@@ -4171,7 +4171,7 @@ function weather_Haze() {
 		var random_math;
 
 		for (var i = 0; i < 16; i++) {
-		x = 0; //넓이 random생성.
+		x = Math.random() * window.innerWidth * 1.2; //넓이 random생성.
 		y = Math.random() * window.innerHeight * 0.9; //높이 random생성.
 		//y = window.innerHeight+100; //처음부터 맨 아래에서 생성하고 싶은 경우 사용.
 
@@ -4215,7 +4215,7 @@ function weather_Haze() {
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.y < -circle.radius) {
 			circle.y = canvas.height;
-			circle.x = 0;
+			circle.x = Math.random() * window.innerWidth*1.2;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
 
