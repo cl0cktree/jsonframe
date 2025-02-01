@@ -1969,28 +1969,31 @@ $(function(){
 				var weather_this = json.weather[0].main;
 				if((location_lat!==''||location_lat!==null)&&(place!==''||place!==null)){
 					$('.filter-landing-contents').append('<div class="cover-city"><span class="weather_place">'+place+'</span> : <span class="weather_tempt">'+tempt+'℃</span> / <span class="weather_now">'+weather_this+'</span></div>');
-					weather_now = document.querySelector('.weather_now');
-					wearther_out = weather_now.innerHTML;
-					if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Clear();
-					}else if((wearther_out=='Fine')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Fine();
-					}else if((wearther_out=='Wind')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Wind();
-					}else if((wearther_out=='Rain')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Rain();
-					}else if((wearther_out=='Snow')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Snow();
-					}else if((wearther_out=='Clouds')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Clouds();
-					}else if((wearther_out=='Overcast')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Overcast();
-					}else if((wearther_out=='Mist')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Mist();
-					}else if((wearther_out=='Haze')&&((wearther_out!==null)||(wearther_out!==''))){
-						weather_Haze();
-					};
-					console.log('weather is '+wearther_out+' now.');
+					if(document.querySelector('.weather_now')){
+						weather_now = document.querySelector('.weather_now');
+						wearther_out = weather_now.innerHTML;
+						if((wearther_out=='Clear')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Clear();
+						}else if((wearther_out=='Fine')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Fine();
+						}else if((wearther_out=='Wind')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Wind();
+						}else if((wearther_out=='Rain')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Rain();
+						}else if((wearther_out=='Snow')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Snow();
+						}else if((wearther_out=='Clouds')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Clouds();
+						}else if((wearther_out=='Overcast')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Overcast();
+						}else if((wearther_out=='Mist')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Mist();
+						}else if((wearther_out=='Haze')&&((wearther_out!==null)||(wearther_out!==''))){
+							weather_Haze();
+						};
+						console.log('weather is '+wearther_out+' now.');
+					}
+					
 				};
 		    });
 		};
