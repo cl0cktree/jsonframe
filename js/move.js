@@ -10,6 +10,7 @@ $(function(){
 	var body_tag = document.body;
 	var $body = $('body');
 	var scroll_framespeed = 1000/60;
+	var cal_year = 2025;
 	var nav_num;
 	var nav_num_start;
 	var contents_head;
@@ -685,7 +686,7 @@ $(function(){
 		work_years=0;
 		var print_year=2015;
 		var start_year;
-		var this_year=2025;
+		var this_year=cal_year;
 		$('.article-summon-wrap').html('');
 		$('.index-btn-wrap').html('');
 		for (start_year=2016;start_year<=this_year;start_year++){
@@ -696,9 +697,15 @@ $(function(){
 				$('#article-main-scroll'+work_years).find('h3').append(print_year);
 				$('#article-main-scroll'+work_years).append('<div id="main-scroll'+work_years+'-con" class="main-scrollall-con"></div>');
 			}
+			// if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
+				// $('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
+			// }
+
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
-				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"></div>');
+				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"><div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div></div>');
 			}
+
 			$('.index-btn-wrap').append('<div class="index-btn-all" id="index-btn-num'+work_years+'" data-btn="'+work_years+'">'+work_years+'</div>');
 		}
 	};
@@ -715,15 +722,15 @@ $(function(){
 					
 					$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
 				};
-				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
-					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
-				};
+				// function empty_box(){
+					// $('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					// <img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
+				// };
 
 				if (item.data_section=='portfolio'){
 					work_years=0;
 					var start_year;
-					var this_year=2025;
+					var this_year=cal_year;
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
@@ -765,16 +772,16 @@ $(function(){
 					// }
 				};
 
-				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-					work_years=0;
-					var start_year;
-					var this_year=2025;
-
-					for (start_year=2016;start_year<=this_year;start_year++){
-						work_years++;
-						empty_box();
-					};
-				};
+				// if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+					// work_years=0;
+					// var start_year;
+					// var this_year=cal_year;
+				// 
+					// for (start_year=2016;start_year<=this_year;start_year++){
+						// work_years++;
+						// empty_box();
+					// };
+				// };
 
 			});
 		});
@@ -804,15 +811,15 @@ $(function(){
 					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
 					$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
 				};
-				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
-					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
-				};
+				// function empty_box(){
+					// $('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					// <img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
+				// };
 
 				if(item.data_kinds=='web'){
 					work_years=0;
 					var start_year;
-					var this_year=2025;
+					var this_year=cal_year;
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
@@ -852,16 +859,16 @@ $(function(){
 						// contents_box();
 					// }
 				};
-				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-					work_years=0;
-					var start_year;
-					var this_year=2025;
-
-					for (start_year=2016;start_year<=this_year;start_year++){
-						work_years++;
-						empty_box();
-					};
-				};
+				// if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+					// work_years=0;
+					// var start_year;
+					// var this_year=cal_year;
+				// 
+					// for (start_year=2016;start_year<=this_year;start_year++){
+						// work_years++;
+						// empty_box();
+					// };
+				// };
 			});
 		});
 		$('.section-heading').html(contents_head);
@@ -881,15 +888,15 @@ $(function(){
 					
 					$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
 				};
-				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
-					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
-				};
+				// function empty_box(){
+					// $('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					// <img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
+				// };
 
 				if(item.data_kinds=='movie'){
 					work_years=0;
 					var start_year;
-					var this_year=2025;
+					var this_year=cal_year;
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
@@ -929,16 +936,16 @@ $(function(){
 						// contents_box();
 					// }
 				};
-				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-					work_years=0;
-					var start_year;
-					var this_year=2025;
-
-					for (start_year=2016;start_year<=this_year;start_year++){
-						work_years++;
-						empty_box();
-					};
-				};
+				// if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+					// work_years=0;
+					// var start_year;
+					// var this_year=cal_year;
+				// 
+					// for (start_year=2016;start_year<=this_year;start_year++){
+						// work_years++;
+						// empty_box();
+					// };
+				// };
 			});
 		});
 		$('.section-heading').html(contents_head);
@@ -958,15 +965,15 @@ $(function(){
 					
 					$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
 				};
-				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
-					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
-				};
+				// function empty_box(){
+					// $('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					// <img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
+				// };
 
 				if(item.data_kinds=='flash'){
 					work_years=0;
 					var start_year;
-					var this_year=2025;
+					var this_year=cal_year;
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
@@ -1006,16 +1013,16 @@ $(function(){
 						// contents_box();
 					// }
 				};
-				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-					work_years=0;
-					var start_year;
-					var this_year=2025;
-
-					for (start_year=2016;start_year<=this_year;start_year++){
-						work_years++;
-						empty_box();
-					};
-				};
+				// if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+					// work_years=0;
+					// var start_year;
+					// var this_year=cal_year;
+				// 
+					// for (start_year=2016;start_year<=this_year;start_year++){
+						// work_years++;
+						// empty_box();
+					// };
+				// };
 			});
 		});
 		$('.section-heading').html(contents_head);
@@ -1035,15 +1042,15 @@ $(function(){
 					
 					$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
 				};
-				function empty_box(){
-					$('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
-					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
-				};
+				// function empty_box(){
+					// $('.move-wrap'+work_years).append('<div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+					// <img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div>');
+				// };
 
 				if(item.data_kinds=='image'){
 					work_years=0;
 					var start_year;
-					var this_year=2025;
+					var this_year=cal_year;
 
 					for (start_year=2016;start_year<=this_year;start_year++){
 						work_years++;
@@ -1083,16 +1090,16 @@ $(function(){
 						// contents_box();
 					// }
 				};
-				if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
-					work_years=0;
-					var start_year;
-					var this_year=2025;
-
-					for (start_year=2016;start_year<=this_year;start_year++){
-						work_years++;
-						empty_box();
-					};
-				};
+				// if($('.main-scrollall-con').find('.scrollall-con-box').length<=0){
+					// work_years=0;
+					// var start_year;
+					// var this_year=cal_year;
+				// 
+					// for (start_year=2016;start_year<=this_year;start_year++){
+						// work_years++;
+						// empty_box();
+					// };
+				// };
 			});
 		});
 		$('.section-heading').html(contents_head);
