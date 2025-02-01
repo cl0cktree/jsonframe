@@ -4055,8 +4055,8 @@ function weather_Mist() {
 			startAngle: 360,
 			endAngle: 350,
 			clockwise: false,
-			width: window.innerWidth,
-            height: window.innerHeight
+			width: window.innerWidth*1.2,
+            height: window.innerHeight*1.2
 		});
 		circleArray.push(circle);
 		}
@@ -4082,7 +4082,7 @@ function weather_Mist() {
 		// }
 		//  움직임을 위에서 아래로 주고 싶을 때 사용.
 		if (circle.y < -circle.radius) {
-			circle.y = canvas.height+1920;
+			circle.y = canvas.height-100;
 			circle.x = 0;
 			circle.radius = Math.floor(Math.random() * 30) + 20;
 		}
