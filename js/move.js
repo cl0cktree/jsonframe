@@ -1334,11 +1334,11 @@ $(function(){
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
 	function wheel_con(event){		
 		var prevScroll = 0;		
-		$('body, html').on('wheel', '.body-section-content', function(event){		
+		$('body, html').on('mousewheel', '.body-section-content', function(event){		
 			event.preventDefault();
         	event.stopPropagation();	
 			console.log('this event = '+this,'events');
-			if(event.type=='wheel'){				
+			if(event.type=='mousewheel'){				
 				var nowScroll = window.scrollY;
 				if(nowScroll>prevScroll){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
