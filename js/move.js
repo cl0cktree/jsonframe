@@ -1334,10 +1334,10 @@ $(function(){
 
 	/*topmenu 및 top-btn scroll*/
 	var scrollindex = $('.article-main-scrollall').each(Array).length;
-	$(window).scroll(function(){
+	$(window).scroll(function(event){
 		var scroll_delay_time_1;		
 		if(!scroll_delay_time_1){
-			scroll_delay_time_1 = setTimeout(function(event){
+			scroll_delay_time_1 = setTimeout(function(){
 				scroll_delay_time_1=null;
 				event.preventDefault();
             	event.stopPropagation();
