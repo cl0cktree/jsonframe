@@ -1335,35 +1335,34 @@ $(function(){
 	function wheel_con(event){		
 		var prevScroll = 0;		
 		$('body, html').on('mousewheel', '.body-section-content', function(event){			
-			// passiveSupport(['touchstart', 'touchmove', 'mousewheel'])
-			// if(event.type=='mousewheel'){
-			// 	event.preventDefault();
-        	// 	event.stopPropagation();				
-			// 	var nowScroll = window.scrollY;
-			// 	if(nowScroll>prevScroll){
-			// 		$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
-			// 		console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-			// 	}else{
-			// 		$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
-			// 		console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-			// 	};
-			// 	prevScroll = nowScroll;
-			// 	console.log('nowScroll is alive = '+nowScroll);
-			// };
 			if(event.type=='mousewheel'){
 				// event.preventDefault();
         		// event.stopPropagation();				
-				// var nowScroll = window.scrollY;
-				if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
+				var nowScroll = window.scrollY;
+				if(nowScroll>prevScroll){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
 					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
 				}else{
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
 					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 				};
+				prevScroll = nowScroll;
+				console.log('nowScroll is alive = '+nowScroll);
+			};
+			// if(event.type=='mousewheel'){
+				// event.preventDefault();
+        		// event.stopPropagation();				
+				// var nowScroll = window.scrollY;
+				// if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
+				// 	$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
+				// 	console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+				// }else{
+				// 	$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
+				// 	console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+				// };
 				// prevScroll = nowScroll;
 				// console.log('nowScroll is alive = '+nowScroll);
-			};
+			// };
 			
 		});
 		console.log('wheel_con() is alive = '+$(window).scrollTop());	
