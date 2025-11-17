@@ -1336,6 +1336,13 @@ $(function(){
 	var scrollindex = $('.article-main-scrollall').each(Array).length;
 	$(window).scroll(function(){
 		var scroll_delay_time_1;
+		if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+100},300);
+		}else{
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-100},300);
+		};
+		
+		
 		if(!scroll_delay_time_1){
 			scroll_delay_time_1 = setTimeout(function(){
 				scroll_delay_time_1=null;
