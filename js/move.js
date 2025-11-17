@@ -1338,8 +1338,8 @@ $(function(){
 			if(event.type=='mousewheel'){
 				// event.preventDefault();
         		// event.stopPropagation();				
-				var nowScroll;
-				if(nowScroll>prevScroll){
+				var nowScroll = window.scrollY;
+				if((nowScroll>prevScroll)){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
 					prevScroll = $(window).scrollTop();
 					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
@@ -1348,7 +1348,7 @@ $(function(){
 					prevScroll = $(window).scrollTop();
 					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 				};
-				nowScroll = window.scrollY;
+				nowScroll = $(window).scrollTop();
 				console.log('nowScroll is alive = '+nowScroll);
 			};
 			// if(event.type=='mousewheel'){
