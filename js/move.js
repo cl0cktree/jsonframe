@@ -1345,8 +1345,7 @@ $(function(){
 			};			
 		});
 		console.log('wheel_con() is alive = '+$(window).scrollTop());	
-	};
-				
+	};				
 	/*-------------------------------------------*/
 	/*topmenu 및 top-btn scroll*/
 	var scrollindex = $('.article-main-scrollall').each(Array).length;
