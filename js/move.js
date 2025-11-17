@@ -1337,7 +1337,7 @@ $(function(){
 	$(window).scroll(function(){
 		var scroll_delay_time_1;		
 		if(!scroll_delay_time_1){
-			scroll_delay_time_1 = setTimeout(function(){
+			scroll_delay_time_1 = setTimeout(function(event){
 				scroll_delay_time_1=null;
 				event.preventDefault();
             	event.stopPropagation();
