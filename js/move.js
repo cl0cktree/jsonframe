@@ -1335,6 +1335,7 @@ $(function(){
 	function wheel_con(event){		
 		var prevScroll = 0;		
 		$(window).on('wheel', '.body-section-content', function(event){			
+			console.log('this event = '+this,'events');
 			if(event.type=='wheel'){
 				event.preventDefault();
         		event.stopPropagation();
