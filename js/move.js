@@ -1338,11 +1338,12 @@ $(function(){
 		$(window).on('mousewheel','body',function(e){
 			if(e.type=='mousewheel'){
 				if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+100},500);
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
 				}else{
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-100},500);
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
 				};
-			};			
+			};
+			return false;		
 		});
 		console.log('wheel_con() is alive = '+$(window).scrollTop());	
 	};				
