@@ -1340,11 +1340,11 @@ $(function(){
         		// event.stopPropagation();				
 				var nowScroll = window.scrollY;
 				if(nowScroll>prevScroll){
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
+					$('body, html').stop().animate({scrollTop: Meth($(window).scrollTop()+130)},300);
 					prevScroll = nowScroll;
 					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
 				}else{
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
+					$('body, html').stop().animate({scrollTop: Meth($(window).scrollTop()-130)},300);
 					prevScroll = nowScroll;
 					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 				};				
