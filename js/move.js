@@ -1334,8 +1334,8 @@ $(function(){
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
 	function wheel_con(event){		
 		var prevScroll = 0;		
-		$('body, html').on('mousewheel', '.body-section-content', function(event){			
-			passiveSupport(['touchstart', 'touchmove', 'mousewheel'])
+		$('body, html').on('mousewheel', '.body-section-content', false, function(event){			
+			// passiveSupport(['touchstart', 'touchmove', 'mousewheel'])
 			// if(event.type=='mousewheel'){
 			// 	event.preventDefault();
         	// 	event.stopPropagation();				
