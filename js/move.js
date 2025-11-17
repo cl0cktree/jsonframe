@@ -1338,7 +1338,7 @@ $(function(){
 			if(event.type=='mousewheel'){
 				// event.preventDefault();
         		// event.stopPropagation();				
-				var nowScroll = window.scrollY;
+				var nowScroll;
 				if(nowScroll>prevScroll){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
 					prevScroll = $(window).scrollTop();
@@ -1347,7 +1347,8 @@ $(function(){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
 					prevScroll = $(window).scrollTop();
 					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-				};				
+				};
+				nowScroll = window.scrollY;
 				console.log('nowScroll is alive = '+nowScroll);
 			};
 			// if(event.type=='mousewheel'){
