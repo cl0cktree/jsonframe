@@ -1336,33 +1336,20 @@ $(function(){
 		var prevScroll = 0;		
 		$('body, html').on('wheel', '.body-section-content', function(event){			
 			console.log('this event = '+this,'events');
-			// if(event.type=='wheel'){
-			// 	event.preventDefault();
-        	// 	event.stopPropagation();
-			// 	var nowScroll = window.scrollY;
-			// 	if(nowScroll>prevScroll){
-			// 		$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
-			// 		console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-			// 	}else{
-			// 		$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
-			// 		console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-			// 	};
-			// 	prevScroll = nowScroll;
-			// 	console.log('nowScroll is alive = '+nowScroll);
-			// };
-			event.preventDefault();
-        	event.stopPropagation();
-			var nowScroll = window.scrollY;
-			if(nowScroll>prevScroll){
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
-				console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-			}else{
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
-				console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+			if(event.type=='wheel'){
+				event.preventDefault();
+        		event.stopPropagation();
+				var nowScroll = window.scrollY;
+				if(nowScroll>prevScroll){
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
+					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+				}else{
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
+					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+				};
+				prevScroll = nowScroll;
+				console.log('nowScroll is alive = '+nowScroll);
 			};
-			prevScroll = nowScroll;
-			console.log('nowScroll is alive = '+nowScroll);
-			return false;
 		});
 		console.log('wheel_con() is alive = '+$(window).scrollTop());	
 	};				
