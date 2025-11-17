@@ -1337,9 +1337,9 @@ $(function(){
 	$(window).scroll(function(){
 		var scroll_delay_time_1;
 		if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+100},300);
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+100},100);
 		}else{
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-100},300);
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-100},100);
 		};
 		
 		
