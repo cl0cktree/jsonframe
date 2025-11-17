@@ -1335,8 +1335,8 @@ $(function(){
 	function wheel_con(event){
 		event.preventDefault();
         event.stopPropagation();
-		$(window).on('mousewheel','body',function(e){
-			if(e.type=='mousewheel'){
+		$(window).on('mousewheel', 'body, html', function(event){
+			if(event.type=='mousewheel'){
 				if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
 					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
