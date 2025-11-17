@@ -1343,7 +1343,8 @@ $(function(){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-100},500);
 				};
 			};			
-		});		
+		});
+		console.log('wheel_con() is alive = '+$(window).scrollTop());	
 	};
 				
 	/*-------------------------------------------*/
