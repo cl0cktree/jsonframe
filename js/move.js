@@ -1362,7 +1362,7 @@ $(function(){
 					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 				};
 				// prevScroll = nowScroll;
-				console.log('nowScroll is alive = '+nowScroll);
+				// console.log('nowScroll is alive = '+nowScroll);
 			};
 			
 		});
