@@ -1334,22 +1334,37 @@ $(function(){
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
 	function wheel_con(event){		
 		var prevScroll = 0;		
-		$('body, html').on('mousewheel', '.body-section-content', function(event){		
-			event.preventDefault();
-        	event.stopPropagation();	
+		$('body, html').on('mousewheel', '.body-section-content', function(event){			
 			console.log('this event = '+this,'events');
-			if(event.type=='mousewheel'){				
-				var nowScroll = window.scrollY;
-				if(nowScroll>prevScroll){
+			// if(event.type=='mousewheel'){
+			// 	event.preventDefault();
+        	// 	event.stopPropagation();				
+			// 	var nowScroll = window.scrollY;
+			// 	if(nowScroll>prevScroll){
+			// 		$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
+			// 		console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+			// 	}else{
+			// 		$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
+			// 		console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+			// 	};
+			// 	prevScroll = nowScroll;
+			// 	console.log('nowScroll is alive = '+nowScroll);
+			// };
+			if(event.type=='mousewheel'){
+				event.preventDefault();
+        		event.stopPropagation();				
+				// var nowScroll = window.scrollY;
+				if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
 					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
 				}else{
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
 					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 				};
-				prevScroll = nowScroll;
+				// prevScroll = nowScroll;
 				console.log('nowScroll is alive = '+nowScroll);
 			};
+			
 		});
 		console.log('wheel_con() is alive = '+$(window).scrollTop());	
 	};				
