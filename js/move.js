@@ -1334,8 +1334,8 @@ $(function(){
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
 	function wheel_con(event){		
 		var prevScroll = 0;		
-		$(window).on('mousewheel', '.body-section-content', function(event){			
-			if(event.type=='mousewheel'){
+		$(window).on('wheel', '.body-section-content', function(event){			
+			if(event.type=='wheel'){
 				event.preventDefault();
         		event.stopPropagation();
 				var nowScroll = window.scrollY;
@@ -1349,7 +1349,7 @@ $(function(){
 				prevScroll = nowScroll;
 				console.log('nowScroll is alive = '+nowScroll);
 			};
-			return false;		
+			return false;	
 		});
 		console.log('wheel_con() is alive = '+$(window).scrollTop());	
 	};				
