@@ -1332,11 +1332,11 @@ $(function(){
 	}
 	/*-------------------------------------------------------------------*/
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
-	function wheel_con(event){
-		event.preventDefault();
-        event.stopPropagation();
+	function wheel_con(event){		
 		var prevScroll = 0;		
 		$(window).on('mousewheel', '.body-section-content', function(event){
+			event.preventDefault();
+        	event.stopPropagation();
 			if(event.type=='mousewheel'){
 				var nowScroll = window.scrollY;
 				if(nowScroll>prevScroll){
