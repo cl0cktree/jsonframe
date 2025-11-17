@@ -1334,7 +1334,7 @@ $(function(){
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
 	function wheel_con(event){		
 		var prevScroll = 0;		
-		$('body, html').on('mousewheel', '.body-section-content', false, function(event){			
+		$('body, html').on('mousewheel', '.body-section-content', function(event){			
 			// passiveSupport(['touchstart', 'touchmove', 'mousewheel'])
 			// if(event.type=='mousewheel'){
 			// 	event.preventDefault();
@@ -1351,8 +1351,8 @@ $(function(){
 			// 	console.log('nowScroll is alive = '+nowScroll);
 			// };
 			if(event.type=='mousewheel'){
-				event.preventDefault();
-        		event.stopPropagation();				
+				// event.preventDefault();
+        		// event.stopPropagation();				
 				// var nowScroll = window.scrollY;
 				if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
 					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
