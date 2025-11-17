@@ -1336,7 +1336,7 @@ $(function(){
 		event.preventDefault();
         event.stopPropagation();
 		var prevScroll = 0;		
-		$(window).on('mousewheel', 'body, html', function(event){
+		$(window).on('mousewheel', '.body-section-content', function(event){
 			if(event.type=='mousewheel'){
 				var nowScroll = window.scrollY;
 				if(nowScroll>prevScroll){
