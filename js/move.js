@@ -1335,17 +1335,18 @@ $(function(){
 	/*topmenu 및 top-btn scroll*/
 	var scrollindex = $('.article-main-scrollall').each(Array).length;
 	$(window).scroll(function(){
-		var scroll_delay_time_1;
-		if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+100},100);
-		}else{
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-100},100);
-		};
-		
-		
+		var scroll_delay_time_1;		
 		if(!scroll_delay_time_1){
 			scroll_delay_time_1 = setTimeout(function(){
 				scroll_delay_time_1=null;
+				event.preventDefault();
+            	event.stopPropagation();
+				if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+100},100);
+				}else{
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-100},100);
+				};
+
 				if ($('#article1-nav1-topmenu1').css('display')=='block')
 				{
 					$('.body-all-header').stop().animate({'height':'50px'},100)
