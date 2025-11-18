@@ -1335,7 +1335,7 @@ $(function(){
 	function wheel_con(event){
 		// oldScroll = 0;
 		// nowScroll = $(window).scrollTop();
-		if(e.originalEvent.wheelDelta >= 0){
+		if(event.originalEvent.wheelDelta >= 0){
 			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
 			// oldScroll = nowScroll;
 			// nowScroll = $(window).scrollTop();
