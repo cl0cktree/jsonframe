@@ -1332,20 +1332,22 @@ $(function(){
 	}
 	/*-------------------------------------------------------------------*/
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
-	function wheel_con(event){		
-		var oldScroll = 0;
-		var nowScroll = window.scrollY;
-		if((nowScroll>oldScroll)){
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
-			oldScroll = nowScroll;
-			nowScroll = $(window).scrollTop();
-			console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-		}else{
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
-			oldScroll = nowScroll;
-			nowScroll = $(window).scrollTop();
-			console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-		};
+	function wheel_con(event){
+		// oldScroll = 0;
+		// nowScroll = $(window).scrollTop();
+		if(){
+			if(e.originalEvent.wheelDelta >= 0){
+				$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
+				// oldScroll = nowScroll;
+				// nowScroll = $(window).scrollTop();
+				console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+			}else{
+				$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
+				// oldScroll = nowScroll;
+				// nowScroll = $(window).scrollTop();
+				console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+			};
+		};	
 		// nowScroll = $(window).scrollTop();
 		console.log('nowScroll is alive = '+nowScroll);		
 			// if(event.type=='mousewheel'){
@@ -1364,10 +1366,12 @@ $(function(){
 			// };
 			console.log('wheel_con() is alive = '+$(window).scrollTop());
 	};
-	$('body, html').on('mousewheel', '.body-section-content', function(event){
+	$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
 		if(event.type=='mousewheel'){
 			// event.preventDefault();
-       		// event.stopPropagation();				
+       		// event.stopPropagation();
+			var oldScroll;
+			var nowScroll;			
 			wheel_con(event);
 		};		
 	});
