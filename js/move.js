@@ -1336,55 +1336,71 @@ $(function(){
 		$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
 			// event.preventDefault();
 			var wheel_delay_time_1;
-			var wheel_delay = 145;
-			var wheel_range = 30;
-			var wheel_speed = wheel_range*2;
+			var wheel_delay = 150;
+			var wheel_range = 300;
+			var wheel_speed = 150;
 
+			// if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
+				// if(!wheel_delay_time_1){
+					// wheel_delay_time_1 = setTimeout(function(){
+						// wheel_delay_time_1=null;
+						// $('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed, function(){
+							// $('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range/2},wheel_speed/2)
+						// });
+						// console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+					// },wheel_delay)
+				// }			
+			// }else{
+				// if(!wheel_delay_time_1){
+					// wheel_delay_time_1 = setTimeout(function(){
+						// wheel_delay_time_1=null;
+						// $('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed, function(){
+							// $('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range/4},wheel_speed/4)
+						// });
+						// console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+					// },wheel_delay)
+				// }			
+			// };		
 			if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
-				if(!wheel_delay_time_1){
-					wheel_delay_time_1 = setTimeout(function(){
-						$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);
-						console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-					},wheel_delay)
-				}			
+				$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);			
 			}else{
-				if(!wheel_delay_time_1){
-					wheel_delay_time_1 = setTimeout(function(){
-						$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);
-						console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-					},wheel_delay)
-				}			
-			};			
+				$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);			
+			};		
 		});
 	};
 	$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
 		// event.preventDefault();
 		var wheel_delay_time_1;
 		var wheel_delay = 150;
-		var wheel_range = 30;
-		var wheel_speed = wheel_range*2;
+		var wheel_range = 300;
+		var wheel_speed = 150;
 		
+		// if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
+			// if(!wheel_delay_time_1){
+				// wheel_delay_time_1 = setTimeout(function(){
+					// wheel_delay_time_1=null;
+					// $('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed, function(){
+						// $('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range/2},wheel_speed/2)
+					// });
+					// console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+				// },wheel_delay)
+			// }			
+		// }else{
+			// if(!wheel_delay_time_1){
+				// wheel_delay_time_1 = setTimeout(function(){
+					// wheel_delay_time_1=null;
+					// $('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed, function(){
+						// $('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range/4},wheel_speed/4)
+					// });
+					// console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+				// },wheel_delay)
+			// }			
+		// };		
 		if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
-			if(!wheel_delay_time_1){
-				wheel_delay_time_1 = setTimeout(function(){
-					wheel_delay_time_1=null;
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed, function(){
-						$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range/2},wheel_speed/2)
-					});
-					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-				},wheel_delay)
-			}			
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);			
 		}else{
-			if(!wheel_delay_time_1){
-				wheel_delay_time_1 = setTimeout(function(){
-					wheel_delay_time_1=null;
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed, function(){
-						$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range/2},wheel_speed/2)
-					});
-					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-				},wheel_delay)
-			}			
-		};		
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);			
+		};
 	});
 	/*-------------------------------------------*/
 	/*topmenu 및 top-btn scroll*/
