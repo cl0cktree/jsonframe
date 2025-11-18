@@ -1336,7 +1336,7 @@ $(function(){
 		$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
 			// event.preventDefault();
 			var wheel_delay_time_1;
-			var wheel_delay = 150;
+			var wheel_delay = 145;
 			var wheel_speed = 150;
 			if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
 				if(!wheel_delay_time_1){
@@ -1358,7 +1358,7 @@ $(function(){
 	$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
 		// event.preventDefault();
 		var wheel_delay_time_1;
-		var wheel_delay = 155;
+		var wheel_delay = 145;
 		var wheel_speed = 150;
 		if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
 			if(!wheel_delay_time_1){
