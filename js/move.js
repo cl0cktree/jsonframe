@@ -1333,23 +1333,19 @@ $(function(){
 	/*-------------------------------------------------------------------*/
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
 	function wheel_con(event){		
-		var prevScroll = 0;
-		if(event.type=='mousewheel'){
-			event.preventDefault();
-       		event.stopPropagation();				
-			var nowScroll = window.scrollY;
-			if((nowScroll>prevScroll)){
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
-				prevScroll = $(window).scrollTop();
-				console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-			}else{
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
-				prevScroll = $(window).scrollTop();
-				console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-			};
-			nowScroll = $(window).scrollTop();
-			console.log('nowScroll is alive = '+nowScroll);
+		var oldScroll = 0;
+		var nowScroll = window.scrollY;
+		if((nowScroll>oldScroll)){
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
+			oldScroll = nowScroll;
+			console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+		}else{
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
+			oldScroll = nowScroll;
+			console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 		};
+		// nowScroll = $(window).scrollTop();
+		console.log('nowScroll is alive = '+nowScroll);		
 			// if(event.type=='mousewheel'){
 				// event.preventDefault();
         		// event.stopPropagation();				
@@ -1361,13 +1357,17 @@ $(function(){
 				// 	$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
 				// 	console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 				// };
-				// prevScroll = nowScroll;
+				// oldScroll = nowScroll;
 				// console.log('nowScroll is alive = '+nowScroll);
 			// };
 			console.log('wheel_con() is alive = '+$(window).scrollTop());
 	};
-	$('body, html').on('mousewheel', '.body-section-content', function(event){			
-		wheel_con(event);
+	$('body, html').on('mousewheel', '.body-section-content', function(event){
+		if(event.type=='mousewheel'){
+			// event.preventDefault();
+       		// event.stopPropagation();				
+			wheel_con(event);
+		};		
 	});
 	/*-------------------------------------------*/
 	/*topmenu 및 top-btn scroll*/
