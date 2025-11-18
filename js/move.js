@@ -1384,12 +1384,12 @@ $(function(){
 			// };
 		// };
 		if(event.originalEvent.wheelDelta >= 0){
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},200);
 			// oldScroll = nowScroll;
 			// nowScroll = $(window).scrollTop();
 			console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
 		}else{
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},200);
 			// oldScroll = nowScroll;
 			// nowScroll = $(window).scrollTop();
 			console.log('--- wheel_con() is minus = '+$(window).scrollTop());
