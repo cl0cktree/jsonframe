@@ -1332,68 +1332,49 @@ $(function(){
 	}
 	/*-------------------------------------------------------------------*/
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
-	function wheel_con(event){
-		// oldScroll = 0;
-		// nowScroll = $(window).scrollTop();
-		if(event.originalEvent.wheelDelta >= 0){
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
-			// oldScroll = nowScroll;
-			// nowScroll = $(window).scrollTop();
-			console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-		}else{
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
-			// oldScroll = nowScroll;
-			// nowScroll = $(window).scrollTop();
-			console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-		};
-		// nowScroll = $(window).scrollTop();
-		console.log('nowScroll is alive = '+nowScroll);		
-			// if(event.type=='mousewheel'){
-				// event.preventDefault();
-        		// event.stopPropagation();				
-				// var nowScroll = window.scrollY;
-				// if($(window).height()+$(window).scrollTop()>$(window).scrollTop()){
-				// 	$('body, html').stop().animate({scrollTop: $(window).scrollTop()+150},500);
-				// 	console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-				// }else{
-				// 	$('body, html').stop().animate({scrollTop: $(window).scrollTop()-150},500);
-				// 	console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-				// };
-				// oldScroll = nowScroll;
-				// console.log('nowScroll is alive = '+nowScroll);
-			// };
-			console.log('wheel_con() is alive = '+$(window).scrollTop());
+	function wheel_con(event){ // 함수의 형태로 같이 실행 될 경우 사용.
+		$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
+			var wheel_delay_time_1;
+			var wheel_delay = 150;
+			var wheel_speed = 150;
+			if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
+				if(!wheel_delay_time_1){
+					wheel_delay_time_1 = setTimeout(function(){
+						$('body, html').stop().animate({scrollTop: $(window).scrollTop()-300},wheel_speed);
+						console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+					},wheel_delay)
+				}			
+			}else{
+				if(!wheel_delay_time_1){
+					wheel_delay_time_1 = setTimeout(function(){
+						$('body, html').stop().animate({scrollTop: $(window).scrollTop()+300},wheel_speed);
+						console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+					},wheel_delay)
+				}			
+			};
+			return false;
+		});
 	};
 	$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
-		// if(event.type=='mousewheel'){
-			// event.preventDefault();
-       		// event.stopPropagation();
-			// var oldScroll;
-			// var nowScroll;			
-			// wheel_con(event);
-			// if(event.originalEvent.wheelDelta >= 0){
-				// $('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
-				// oldScroll = nowScroll;
-				// nowScroll = $(window).scrollTop();
-				// console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-			// }else{
-				// $('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
-				// oldScroll = nowScroll;
-				// nowScroll = $(window).scrollTop();
-				// console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-			// };
-		// };
-		if(event.originalEvent.wheelDelta >= 0){
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-250},180);
-			// oldScroll = nowScroll;
-			// nowScroll = $(window).scrollTop();
-			console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+		var wheel_delay_time_1;
+		var wheel_delay = 150;
+		var wheel_speed = 150;
+		if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
+			if(!wheel_delay_time_1){
+				wheel_delay_time_1 = setTimeout(function(){
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-300},wheel_speed);
+					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+				},wheel_delay)
+			}			
 		}else{
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+250},180);
-			// oldScroll = nowScroll;
-			// nowScroll = $(window).scrollTop();
-			console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+			if(!wheel_delay_time_1){
+				wheel_delay_time_1 = setTimeout(function(){
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+300},wheel_speed);
+					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+				},wheel_delay)
+			}			
 		};
+		return false;
 	});
 	/*-------------------------------------------*/
 	/*topmenu 및 top-btn scroll*/
