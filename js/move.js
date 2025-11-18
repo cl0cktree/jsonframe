@@ -1335,19 +1335,17 @@ $(function(){
 	function wheel_con(event){
 		// oldScroll = 0;
 		// nowScroll = $(window).scrollTop();
-		if(){
-			if(e.originalEvent.wheelDelta >= 0){
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
-				// oldScroll = nowScroll;
-				// nowScroll = $(window).scrollTop();
-				console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
-			}else{
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
-				// oldScroll = nowScroll;
-				// nowScroll = $(window).scrollTop();
-				console.log('--- wheel_con() is minus = '+$(window).scrollTop());
-			};
-		};	
+		if(e.originalEvent.wheelDelta >= 0){
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
+			// oldScroll = nowScroll;
+			// nowScroll = $(window).scrollTop();
+			console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+		}else{
+			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
+			// oldScroll = nowScroll;
+			// nowScroll = $(window).scrollTop();
+			console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+		};
 		// nowScroll = $(window).scrollTop();
 		console.log('nowScroll is alive = '+nowScroll);		
 			// if(event.type=='mousewheel'){
