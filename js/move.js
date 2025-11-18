@@ -1368,7 +1368,9 @@ $(function(){
 			if(!wheel_delay_time_1){
 				wheel_delay_time_1 = setTimeout(function(){
 					wheel_delay_time_1=null;
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed, function(){
+						$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed/2)
+					});
 					console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
 				},wheel_delay)
 			}			
@@ -1376,7 +1378,9 @@ $(function(){
 			if(!wheel_delay_time_1){
 				wheel_delay_time_1 = setTimeout(function(){
 					wheel_delay_time_1=null;
-					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);
+					$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed, function(){
+						$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed/2)
+					});
 					console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 				},wheel_delay)
 			}			
