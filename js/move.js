@@ -1338,10 +1338,12 @@ $(function(){
 		if((nowScroll>oldScroll)){
 			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
 			oldScroll = nowScroll;
+			nowScroll = $(window).scrollTop();
 			console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
 		}else{
 			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
 			oldScroll = nowScroll;
+			nowScroll = $(window).scrollTop();
 			console.log('--- wheel_con() is minus = '+$(window).scrollTop());
 		};
 		// nowScroll = $(window).scrollTop();
