@@ -1368,9 +1368,20 @@ $(function(){
 		if(event.type=='mousewheel'){
 			// event.preventDefault();
        		// event.stopPropagation();
-			var oldScroll;
-			var nowScroll;			
-			wheel_con(event);
+			// var oldScroll;
+			// var nowScroll;			
+			// wheel_con(event);
+			if(event.originalEvent.wheelDelta >= 0){
+				$('body, html').stop().animate({scrollTop: $(window).scrollTop()+130},300);
+				// oldScroll = nowScroll;
+				// nowScroll = $(window).scrollTop();
+				console.log('+++ wheel_con() is plus = '+$(window).scrollTop());
+			}else{
+				$('body, html').stop().animate({scrollTop: $(window).scrollTop()-130},300);
+				// oldScroll = nowScroll;
+				// nowScroll = $(window).scrollTop();
+				console.log('--- wheel_con() is minus = '+$(window).scrollTop());
+			};
 		};		
 	});
 	/*-------------------------------------------*/
