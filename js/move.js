@@ -1334,7 +1334,7 @@ $(function(){
 	/*전체 마우스휠 이벤트 발생 시 스크롤 이동 속도 제어*/
 	function wheel_con(event){ // 함수의 형태로 같이 실행 될 경우 사용.
 		$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
-			// event.preventDefault();
+			event.preventDefault();
 			var wheel_delay_time_1;
 			var wheel_delay = 150;
 			var wheel_speed = 150;
@@ -1356,7 +1356,7 @@ $(function(){
 		});
 	};
 	$('body, html').on('wheel mousewheel DOMMouseScroll', '.body-section-content', function(event){
-		// event.preventDefault();
+		event.preventDefault();
 		var wheel_delay_time_1;
 		var wheel_delay = 150;
 		var wheel_speed = 150;
