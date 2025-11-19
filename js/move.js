@@ -1372,8 +1372,8 @@ $(function(){
 		// event.preventDefault();
 		var wheel_delay_time_1;
 		var wheel_delay = 150;
-		var wheel_range = 300;
-		var wheel_speed = 150;
+		var wheel_range = 200;
+		var wheel_speed = 200;
 		
 		// if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
 			// if(!wheel_delay_time_1){
