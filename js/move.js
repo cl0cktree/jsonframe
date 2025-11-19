@@ -1362,9 +1362,9 @@ $(function(){
 				// }			
 			// };		
 			if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);			
+				$('body, html').stop(false,true).animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);			
 			}else{
-				$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);			
+				$('body, html').stop(false,true).animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);			
 			};		
 		});
 	};
@@ -1397,9 +1397,9 @@ $(function(){
 			// }			
 		// };		
 		if(event.originalEvent.wheelDelta >= 0){	// 휠 업다운에 따라 음수와 양수 값을 내장 함수에서 직접 받아옴.		
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);			
+			$('body, html').stop(false,true).animate({scrollTop: $(window).scrollTop()-wheel_range},wheel_speed);			
 		}else{
-			$('body, html').stop().animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);			
+			$('body, html').stop(false,true).animate({scrollTop: $(window).scrollTop()+wheel_range},wheel_speed);			
 		};
 	});
 	/*-------------------------------------------*/
