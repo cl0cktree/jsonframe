@@ -1625,12 +1625,12 @@ $(function(){
 				// };
 
 				$('.article-main-scrollall').each(function(){
-					var topminus2 = 0;
+					var topminus3 = 30;
 					if ($(window).scrollTop()>50)
 					{
 						$('.move-wrap1').addClass('on');
 					}
-					if ($(window).scrollTop()>=$(this).offset().top-topminus2)
+					if ($(window).scrollTop()>=$(this).offset().top-topminus3)
 					{
 						// var scm = $(this).attr('id').substring(19,20,21);
 						var mw = $(this).data('index');
