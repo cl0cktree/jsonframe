@@ -1405,6 +1405,24 @@ $(function(){
 	/*-------------------------------------------*/
 	/*topmenu 및 top-btn scroll*/
 	var scrollindex = $('.article-main-scrollall').each(Array).length;
+
+	function scroll_side(){
+		$('.article-main-scrollall').each(function(){
+			var topminus3 = 50;
+			if ($(window).scrollTop()>50)
+			{
+				$('.move-wrap1').addClass('on');
+			}
+			if ($(window).scrollTop()>=$(this).offset().top-topminus3)
+			{
+				// var scm = $(this).attr('id').substring(19,20,21);
+				var mw = $(this).data('index');
+				$('.move-wrap'+mw).addClass('on');
+				console.log('<<< mw num = '+[mw]);
+			}
+		});
+	};
+
 	$(window).scroll(function(event){
 		var scroll_delay_time_1;
 		if(!scroll_delay_time_1){
@@ -1603,20 +1621,8 @@ $(function(){
 					scpar = 200;
 				}
 
-				$('.article-main-scrollall').each(function(){
-					var topminus3 = 70;
-					if ($(window).scrollTop()>50)
-					{
-						$('.move-wrap1').addClass('on');
-					}
-					if ($(window).scrollTop()>=$(this).offset().top-topminus3)
-					{
-						// var scm = $(this).attr('id').substring(19,20,21);
-						var mw = $(this).data('index');
-						$('.move-wrap'+mw).addClass('on');
-						console.log('<<< mw num = '+[mw]);
-					}
-				});
+				scroll_side();
+
 				// var ml = $('.move-wrap').length;
 				// var mw1 = $('.move-wrap1').height();
 				// var mw2 = $('.move-wrap2').height();
@@ -1660,6 +1666,7 @@ $(function(){
 		if (this==document.getElementById('index-btn-num'+data_index_btn))
 		{
 			$('body, html').stop().animate({ scrollTop: $("#article-main-scroll"+data_index_btn).offset().top-topminus },300);
+			$('.move-wrap'+data_index_btn).addClass('on');
 		}
 	});
 	/*-article-main-scrollall의 영역이 바뀜에 따라 index-btn-all의 색인표시-*/
@@ -2443,9 +2450,11 @@ $(function(){
 						}else{
 							if(yvalue>cal_height){
 								$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
+								$('.move-wrap'+sort_index).addClass('on');
 							}else if(yvalue<cal_height){
 								if((yvalue*-1)>cal_height){
 									$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
+									$('.move-wrap'+sort_index).addClass('on');
 								}
 							}
 						}
@@ -2510,9 +2519,11 @@ $(function(){
 						}else{
 							if(yvalue>cal_height){
 								$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
+								$('.move-wrap'+sort_index).addClass('on');
 							}else if(yvalue<cal_height){
 								if((yvalue*-1)>cal_height){
 									$('body, html').stop().animate({ scrollTop: $("body").offset().top+yvalue },300);
+									$('.move-wrap'+sort_index).addClass('on');
 								}
 							}
 						}
