@@ -1624,26 +1624,20 @@ $(function(){
 					// }
 				// };
 
-				var scroll_delay_time_4;
-				if(!scroll_delay_time_4){
-					scroll_delay_time_4 = setTimeout(function(){
-						scroll_delay_time_4=null;
-						$('.article-main-scrollall').each(function(){
-							var topminus2 = 0;
-							if ($(window).scrollTop()>50)
-							{
-								$('.move-wrap1').addClass('on');
-							}
-							if ($(window).scrollTop()>=$(this).offset().top-topminus2)
-							{
-								// var scm = $(this).attr('id').substring(19,20,21);
-								var mw = $(this).data('index');
-								$('#move-wrap'+mw).addClass('on');
-								console.log('<<< mw num = '+[mw]);
-							}
-						})
-					},scroll_framespeed);
-				};
+				$('.article-main-scrollall').each(function(){
+					var topminus2 = 0;
+					if ($(window).scrollTop()>50)
+					{
+						$('.move-wrap1').addClass('on');
+					}
+					if ($(window).scrollTop()>=$(this).offset().top-topminus2)
+					{
+						// var scm = $(this).attr('id').substring(19,20,21);
+						var mw = $(this).data('index');
+						$('#move-wrap'+mw).addClass('on');
+						console.log('<<< mw num = '+[mw]);
+					}
+				});
 		
 				// if ($(window).scrollTop()>50)
 				// {
