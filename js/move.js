@@ -1634,7 +1634,7 @@ $(function(){
 					{
 						// var scm = $(this).attr('id').substring(19,20,21);
 						var mw = $(this).data('index');
-						$('#move-wrap'+mw).addClass('on');
+						$('.move-wrap'+mw).addClass('on');
 						console.log('<<< mw num = '+[mw]);
 					}
 				});
