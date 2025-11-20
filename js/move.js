@@ -1609,13 +1609,14 @@ $(function(){
 				var mw3 = $('.move-wrap3').height();
 				var mw4 = $('.move-wrap4').height();
 
-				for(var m=1;m<=ml;m++){
-					var mw =  $('.move-wrap'+m);
-					if ($(window).scrollTop()>50){
-						$('.move-wrap1').addClass('.on');
-					}
-					if ($(window).scrollTop()>mw.height()){
-						mw.addClass('.on');
+				if ($(window).scrollTop()>50){
+					for(var m=1;m<=ml;m++){
+						var mw =  $('.move-wrap'+m);
+						$('.move-wrap1').addClass('on');
+						if ($(window).scrollTop()>mw.height()){
+							mw.addClass('on');
+						}
+						console.log('<<< mw num = '+mw);
 					}
 				}
 		
