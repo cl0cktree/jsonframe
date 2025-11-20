@@ -1616,8 +1616,9 @@ $(function(){
 							var mw =  $('.move-wrap'+i);
 							if ($(window).scrollTop()>mw.height()){
 								mw.addClass('on');
-								console.log('<<< mw num = '+mw);
+								
 							}
+							console.log('<<< mw num = '+mw);
 						}
 					}
 				};
