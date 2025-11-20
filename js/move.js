@@ -1602,7 +1602,7 @@ $(function(){
 				{
 					scpar = 200;
 				}
-
+				// --스크롤 시 좌우에서 중앙으로 이동하며 컨탠츠가 보이게 함.--
 				$('.article-main-scrollall').each(function(){
 					var topminus3 = 70;
 					if ($(window).scrollTop()>50)
@@ -1611,12 +1611,12 @@ $(function(){
 					}
 					if ($(window).scrollTop()>=$(this).offset().top-topminus3)
 					{
-						// var scm = $(this).attr('id').substring(19,20,21);
 						var mw = $(this).data('index');
 						$('.move-wrap'+mw).addClass('on');
 						console.log('<<< mw num = '+[mw]);
 					}
 				});
+				// 구버전
 				// var ml = $('.move-wrap').length;
 				// var mw1 = $('.move-wrap1').height();
 				// var mw2 = $('.move-wrap2').height();
@@ -1643,6 +1643,7 @@ $(function(){
 						// }
 					// }
 				// }
+				// ----------------------------------------------------------
 			},scroll_framespeed);
 		};
 	})
@@ -2126,7 +2127,7 @@ $(function(){
 		$.getJSON(jsonLocation, function(data){
 			$.each(data, function(I, item){
 				slideNum++;
-				$('.slide-container').append('<div class="slide" id="slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+'"></div>');
+				$('.slide-container').append('<div class="slide" id="slide'+slideNum+'" data-index="'+slideNum+'"><img src='+item.img_url+' alt="'+item.alt_text+'" fetchpriority="high"></div>');
 				$('.indicator').append('<li id="bulet'+slideNum+'" class="bulet" data-index="'+slideNum+'">●</li>');
 				$('.bulet').css({'color':'#999'});
 				$('#bulet1').css({'color':'#000'});
