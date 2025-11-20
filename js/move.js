@@ -1625,7 +1625,7 @@ $(function(){
 				// };
 
 				$('.article-main-scrollall').each(function(){
-					var topminus3 = 30;
+					var topminus3 = 50;
 					if ($(window).scrollTop()>50)
 					{
 						$('.move-wrap1').addClass('on');
