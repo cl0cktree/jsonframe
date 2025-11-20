@@ -723,7 +723,7 @@ $(function(){
 			// }
 
 			if($('.article-main-scrollall').find('#main-scroll'+work_years+'-con')){
-				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap'+work_years+'"><div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
+				$('#main-scroll'+work_years+'-con').append('<div class="move-wrap move-wrap'+work_years+'"><div class="scrollall-con-box box-all-empty" id="scroll'+work_years+'-con-box0" aria-haspopup="true" role="button" tabindex="0" data-empty="true"><div id="con-box'+work_years+'-imgborder0" class="con-box-imgborder">\
 					<img src="https://cl0cktree.github.io/jsonframe/images/project/mistery3.gif" alt="내용없음"></div><div id="con-box'+work_years+'-caption0" class="con-box-caption"><span>내용없음</span></div></div></div>');
 			}
 
@@ -1603,31 +1603,42 @@ $(function(){
 					scpar = 200;
 				}
 		
+				var ml = $('.move-wrap').length;				
 				var mw1 = $('.move-wrap1').height();
 				var mw2 = $('.move-wrap2').height();
 				var mw3 = $('.move-wrap3').height();
 				var mw4 = $('.move-wrap4').height();
-		
-				if ($(window).scrollTop()>50)
-				{
-					$('.move-wrap1').animate({'opacity':'1'},400)
-					if ($(window).scrollTop()>mw1)
-					{
-						$('.move-wrap2').animate({'left':'0','opacity':'1'},400)
-						if ($(window).scrollTop()>mw1+mw2)
-						{
-							$('.move-wrap3').animate({'left':'0','opacity':'1'},400)
-							if ($(window).scrollTop()>mw1+mw2+mw3)
-							{
-								$('.move-wrap4').animate({'left':'0','opacity':'1'},400)
-								if ($(window).scrollTop()>mw1+mw2+mw3+mw4)
-								{
-									$('.move-wrap5').animate({'left':'0','opacity':'1'},400)
-								}
-							}
-						}
+
+				for(var m=1;m<=ml;m++){
+					var mw =  $('.move-wrap'+m);
+					if ($(window).scrollTop()>50){
+						$('.move-wrap1').addClass('.on');
+					}
+					if ($(window).scrollTop()>mw.height()){
+						mw.addClass('.on');
 					}
 				}
+		
+				// if ($(window).scrollTop()>50)
+				// {
+					// $('.move-wrap1').animate({'opacity':'1'},400)
+					// if ($(window).scrollTop()>mw1)
+					// {
+						// $('.move-wrap2').animate({'left':'0','opacity':'1'},400)
+						// if ($(window).scrollTop()>mw1+mw2)
+						// {
+							// $('.move-wrap3').animate({'left':'0','opacity':'1'},400)
+							// if ($(window).scrollTop()>mw1+mw2+mw3)
+							// {
+								// $('.move-wrap4').animate({'left':'0','opacity':'1'},400)
+								// if ($(window).scrollTop()>mw1+mw2+mw3+mw4)
+								// {
+									// $('.move-wrap5').animate({'left':'0','opacity':'1'},400)
+								// }
+							// }
+						// }
+					// }
+				// }
 			},scroll_framespeed);
 		};
 	})
