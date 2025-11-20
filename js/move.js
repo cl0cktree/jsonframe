@@ -1610,15 +1610,17 @@ $(function(){
 				var mw4 = $('.move-wrap4').height();
 
 				if ($(window).scrollTop()>50){
+					$('.move-wrap1').addClass('on');
 					for(var m=1;m<=ml;m++){
-						var mw =  $('.move-wrap'+m);
-						$('.move-wrap1').addClass('on');
-						if ($(window).scrollTop()>mw.height()){
-							mw.addClass('on');
+						for(var i;i<=m;i++){
+							var mw =  $('.move-wrap'+i);
+							if ($(window).scrollTop()>mw.height()){
+								mw.addClass('on');
+								console.log('<<< mw num = '+mw);
+							}
 						}
-						console.log('<<< mw num = '+mw);
 					}
-				}
+				};
 		
 				// if ($(window).scrollTop()>50)
 				// {
