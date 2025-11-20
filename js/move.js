@@ -1614,11 +1614,12 @@ $(function(){
 					for(var m=1;m<=ml;m++){
 						for(var i;i<=m;i++){
 							var mw =  $('.move-wrap'+i);
+							console.log('<< mw num = '+[mw]);
 							if ($(window).scrollTop()>mw.height()){
 								mw.addClass('on');
 								
 							}
-							console.log('<<< mw num = '+mw);
+							console.log('<<< mw num = '+[mw]);
 						}
 					}
 				};
