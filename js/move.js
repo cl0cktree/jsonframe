@@ -1613,7 +1613,7 @@ $(function(){
 					{
 						var mw = $(this).data('index');
 						$('.move-wrap'+mw).addClass('on');
-						console.log('<<< mw num = '+[mw]);
+						// console.log('<<< mw num = '+[mw]);
 					}
 				});
 				// 구버전
