@@ -359,7 +359,9 @@ $(function(){
 			}else if (split_url=='sub4.html'){
 				flashSommon();
 			}else if (split_url=='sub5.html'){
-				imageSommon();
+				// imageSommon();
+				var image_summ = new pageSommon('랜더링및편집작업페이지 콘텐츠 묶음','image','<h2>2D랜더링&편집작업</h2>');
+				pageSommon(head_this, h2_this, data_kind);
 			}
 			$('.section-heading').html(contents_head);
 		};
@@ -639,7 +641,9 @@ $(function(){
 			}else if (this==document.getElementById('topmenu1-list-span5'))
 			{
 				nav_num = 5;
-				imageSommon();
+				// imageSommon();
+				var image_summ = new pageSommon('랜더링및편집작업페이지 콘텐츠 묶음','image','<h2>2D랜더링&편집작업</h2>');
+				pageSommon(head_this, h2_this, data_kind);
 			}
 			title_changer();
 			nav_move();
@@ -693,7 +697,9 @@ $(function(){
 			}else if (this==document.getElementById('list-ul-li5'))
 			{
 				nav_num = 5;
-				imageSommon();
+				// imageSommon();
+				var image_summ = new pageSommon('랜더링및편집작업페이지 콘텐츠 묶음','image','<h2>2D랜더링&편집작업</h2>');
+				pageSommon(head_this, h2_this, data_kind);
 			}
 			title_changer();
 			nav_move();
@@ -1127,6 +1133,48 @@ $(function(){
 		$('.main-welcolme-summon').html('<h2>2D랜더링&편집작업</h2>');
 		return false;
 	};
+	/** 각 페이지 버튼 선택 시 공통 작업 페이지 구성 */
+	function pageSommon(head_this, h2_this, data_kind){
+		this.contents_head = head_this;
+		this.contents_h2 = h2_this;
+		this.data_kinds = data_kind;
+		
+		contents_head = this.contents_head;
+		contents_title = this.contents_h2;
+		var page_data = this.data_kinds;
+
+		box_maker();
+		$.getJSON(jsonFrame_data, function(data){
+			$.each(data, function(I, item){
+				frame_year=item.data_years;
+				function contents_box(){
+					$('.move-wrap'+work_years).append('<div class="scrollall-con-box" id="scroll'+work_years+'-con-box'+item.years_num+'" aria-haspopup="true" role="button" tabindex="0"><div id="con-box'+work_years+'-imgborder'+item.years_num+'" class="con-box-imgborder">\
+					<img src="'+item.data_img+'" alt="'+item.data_alt+'"></div><div id="con-box'+work_years+'-caption'+item.years_num+'" class="con-box-caption"><span>'+item.data_title+'</span></div></div>');
+					$('.move-wrap'+work_years).find('.box-all-empty').attr('data-empty','true').remove();
+				};
+
+				if(item.data_kinds==page_data){
+					work_years=0;
+					var start_year;
+					var this_year=cal_year;
+
+					for (start_year=2016;start_year<=this_year;start_year++){
+						work_years++;
+						if(frame_year==start_year){
+							contents_box();
+						}
+					};
+				};
+			});
+		});
+		$('.section-heading').html(contents_head);
+		$('.main-welcolme-summon').html(contents_title);
+		return false;
+	};
+	var web_summ = new pageSommon('웹작업페이지 콘텐츠 묶음','web','<h2>웹&앱 퍼블리싱</h2>');
+	var movie_summ = new pageSommon('동영상작업페이지 콘텐츠 묶음','movie','<h2>동영상 편집작업</h2>');
+	var flash_summ = new pageSommon('플래시작업페이지 콘텐츠 묶음','flash','<h2>플래시</h2>');
+	// var image_summ = new pageSommon('랜더링및편집작업페이지 콘텐츠 묶음','image','<h2>2D랜더링&편집작업</h2>');
 	/*------------------------------------------------------------------*/
 	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
 	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
@@ -1315,7 +1363,9 @@ $(function(){
 				$('#list-ul-li5').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				imageSommon();
+				// imageSommon();
+				var image_summ = new pageSommon('랜더링및편집작업페이지 콘텐츠 묶음','image','<h2>2D랜더링&편집작업</h2>');
+				pageSommon(head_this, h2_this, data_kind);
 			}
 			title_changer();
 			$('.body-filter-preloader').hide();
