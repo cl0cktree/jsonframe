@@ -354,16 +354,16 @@ $(function(){
 				introSommon();
 			}else if (split_url=='sub2.html'){
 				// webSommon();
-				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (split_url=='sub3.html'){
 				// movieSommon();
-				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+				new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if (split_url=='sub4.html'){
 				// flashSommon();
-				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
+				new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if (split_url=='sub5.html'){
 				// imageSommon();
-				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
+				new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 			}
 			$('.section-heading').html(contents_head);
 		};
@@ -632,22 +632,22 @@ $(function(){
 			{
 				nav_num = 2;
 				// webSommon();
-				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (this==document.getElementById('topmenu1-list-span3'))
 			{
 				nav_num = 3;
 				// movieSommon();
-				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+				new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if (this==document.getElementById('topmenu1-list-span4'))
 			{
 				nav_num = 4;
 				// flashSommon();
-				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
+				new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if (this==document.getElementById('topmenu1-list-span5'))
 			{
 				nav_num = 5;
 				// imageSommon();
-				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
+				new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 			}
 			title_changer();
 			nav_move();
@@ -690,22 +690,22 @@ $(function(){
 			{
 				nav_num = 2;
 				// webSommon();
-				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (this==document.getElementById('list-ul-li3'))
 			{
 				nav_num = 3;
 				// movieSommon();
-				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+				new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if (this==document.getElementById('list-ul-li4'))
 			{
 				nav_num = 4;
 				// flashSommon();
-				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
+				new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if (this==document.getElementById('list-ul-li5'))
 			{
 				nav_num = 5;
 				// imageSommon();
-				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
+				new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 			}
 			title_changer();
 			nav_move();
@@ -1140,7 +1140,7 @@ $(function(){
 		return false;
 	};
 	/** 각 페이지 버튼 선택 시 공통 작업 페이지 구성 */
-	function PageSommon(head_this, h2_this, data_kind){
+	function PageSummon(head_this, h2_this, data_kind){
 		this.contents_head = head_this;
 		this.contents_h2 = h2_this;
 		this.data_kinds = data_kind;
@@ -1177,10 +1177,10 @@ $(function(){
 		$('.main-welcolme-summon').html(contents_title);
 		return false;
 	};
-	var web_summ = new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
-	var movie_summ = new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
-	var flash_summ = new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
-	var image_summ = new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
+	var web_summ = new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+	var movie_summ = new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+	var flash_summ = new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
+	var image_summ = new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 	/*------------------------------------------------------------------*/
 	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
 	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
@@ -1340,7 +1340,7 @@ $(function(){
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
 				// webSommon();
-				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if(location.href==portfolioindex_url+'/sub/sub3.html'){
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span3').css({'border-bottom':'3px solid #bbb'})
@@ -1351,7 +1351,7 @@ $(function(){
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
 				// movieSommon();
-				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+				new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if(location.href==portfolioindex_url+'/sub/sub4.html'){
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span4').css({'border-bottom':'3px solid #bbb'})
@@ -1362,7 +1362,7 @@ $(function(){
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
 				// flashSommon();
-				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
+				new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if(location.href==portfolioindex_url+'/sub/sub5.html'){
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span5').css({'border-bottom':'3px solid #bbb'})
@@ -1372,7 +1372,7 @@ $(function(){
 				$('#list-ul-li5').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
+				new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 			}
 			title_changer();
 			$('.body-filter-preloader').hide();
