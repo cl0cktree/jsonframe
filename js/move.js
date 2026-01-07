@@ -526,8 +526,10 @@ $(function(){
 				$('.body-filter-preloader').hide();
 				history.pushState(null,null,portfolioindex_url+'/index.html');
 				title_changer();
+				$('.move-wrap1').addClass('on');
 			}else{
 				location.href=portfolioindex_url+'/index.html'
+				$('.move-wrap1').addClass('on');
 			}
 
 		}else{
@@ -558,6 +560,7 @@ $(function(){
 			$('.body-filter-preloader').hide();
 			history.pushState(null,null,portfolioindex_url+'/index.html');
 			title_changer();
+			$('.move-wrap1').addClass('on');
 		}
 	})
 	$('.body-section-all').on('click','#phon-icon',function(){
