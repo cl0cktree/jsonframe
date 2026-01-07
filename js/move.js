@@ -1175,6 +1175,7 @@ $(function(){
 		});
 		$('.section-heading').html(contents_head);
 		$('.main-welcolme-summon').html(contents_title);
+		$('.move-wrap1').addClass('on');
 		return false;
 	};
 	var web_summ = new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
