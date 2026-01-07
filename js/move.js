@@ -353,16 +353,17 @@ $(function(){
 			}else if (split_url=='sub1.html'){
 				introSommon();
 			}else if (split_url=='sub2.html'){
-				webSommon();
+				// webSommon();
+				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (split_url=='sub3.html'){
-				movieSommon();
+				// movieSommon();
+				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if (split_url=='sub4.html'){
-				flashSommon();
+				// flashSommon();
+				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if (split_url=='sub5.html'){
 				// imageSommon();
 				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
-				// var image_summ = new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');;
-				// PageSommon(head_this, h2_this, data_kind);
 			}
 			$('.section-heading').html(contents_head);
 		};
@@ -630,22 +631,23 @@ $(function(){
 			}else if (this==document.getElementById('topmenu1-list-span2'))
 			{
 				nav_num = 2;
-				webSommon();
+				// webSommon();
+				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (this==document.getElementById('topmenu1-list-span3'))
 			{
 				nav_num = 3;
-				movieSommon();
+				// movieSommon();
+				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if (this==document.getElementById('topmenu1-list-span4'))
 			{
 				nav_num = 4;
-				flashSommon();
+				// flashSommon();
+				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if (this==document.getElementById('topmenu1-list-span5'))
 			{
 				nav_num = 5;
 				// imageSommon();
 				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
-				// var image_summ = new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');;
-				// PageSommon(head_this, h2_this, data_kind);
 			}
 			title_changer();
 			nav_move();
@@ -687,22 +689,23 @@ $(function(){
 			}else if (this==document.getElementById('list-ul-li2'))
 			{
 				nav_num = 2;
-				webSommon();
+				// webSommon();
+				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (this==document.getElementById('list-ul-li3'))
 			{
 				nav_num = 3;
-				movieSommon();
+				// movieSommon();
+				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if (this==document.getElementById('list-ul-li4'))
 			{
 				nav_num = 4;
-				flashSommon();
+				// flashSommon();
+				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if (this==document.getElementById('list-ul-li5'))
 			{
 				nav_num = 5;
 				// imageSommon();
 				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
-				// var image_summ = new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');;
-				// PageSommon(head_this, h2_this, data_kind);
 			}
 			title_changer();
 			nav_move();
@@ -1174,9 +1177,9 @@ $(function(){
 		$('.main-welcolme-summon').html(contents_title);
 		return false;
 	};
-	var web_summ = new PageSommon('웹작업페이지 콘텐츠 묶음','web','<h2>웹&앱 퍼블리싱</h2>');
-	var movie_summ = new PageSommon('동영상작업페이지 콘텐츠 묶음','movie','<h2>동영상 편집작업</h2>');
-	var flash_summ = new PageSommon('플래시작업페이지 콘텐츠 묶음','flash','<h2>플래시</h2>');
+	var web_summ = new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+	var movie_summ = new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+	var flash_summ = new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 	var image_summ = new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 	/*------------------------------------------------------------------*/
 	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
@@ -1336,7 +1339,8 @@ $(function(){
 				$('#list-ul-li2').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				webSommon();
+				// webSommon();
+				new PageSommon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if(location.href==portfolioindex_url+'/sub/sub3.html'){
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span3').css({'border-bottom':'3px solid #bbb'})
@@ -1346,7 +1350,8 @@ $(function(){
 				$('#list-ul-li3').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				movieSommon();
+				// movieSommon();
+				new PageSommon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
 			}else if(location.href==portfolioindex_url+'/sub/sub4.html'){
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span4').css({'border-bottom':'3px solid #bbb'})
@@ -1356,7 +1361,8 @@ $(function(){
 				$('#list-ul-li4').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				flashSommon();
+				// flashSommon();
+				new PageSommon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
 			}else if(location.href==portfolioindex_url+'/sub/sub5.html'){
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span5').css({'border-bottom':'3px solid #bbb'})
@@ -1366,10 +1372,7 @@ $(function(){
 				$('#list-ul-li5').css({'border':'3px solid #999'})
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
-				// imageSommon();
 				new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
-				// var image_summ = new PageSommon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');;
-				// PageSommon(head_this, h2_this, data_kind);
 			}
 			title_changer();
 			$('.body-filter-preloader').hide();
