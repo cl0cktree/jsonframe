@@ -354,8 +354,7 @@ $(function(){
 				introSommon();
 			}else if (split_url=='sub2.html'){
 				// webSommon();
-				// new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
-				return web_summ;
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (split_url=='sub3.html'){
 				// movieSommon();
 				new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
@@ -636,8 +635,7 @@ $(function(){
 			{
 				nav_num = 2;
 				// webSommon();
-				// new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
-				return web_summ;
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (this==document.getElementById('topmenu1-list-span3'))
 			{
 				nav_num = 3;
@@ -696,8 +694,7 @@ $(function(){
 			{
 				nav_num = 2;
 				// webSommon();
-				// new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
-				return web_summ;
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if (this==document.getElementById('list-ul-li3'))
 			{
 				nav_num = 3;
@@ -1348,8 +1345,7 @@ $(function(){
 				$('#slide-wrap').css({'display':'block'})
 				$('#slide-wrap-i').css({'display':'none'})
 				// webSommon();
-				// new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
-				return web_summ;
+				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
 			}else if(location.href==portfolioindex_url+'/sub/sub3.html'){
 				$('.topmenu1-list-span').css({'border-bottom':'0px solid #bbb'})
 				$('#topmenu1-list-span3').css({'border-bottom':'3px solid #bbb'})
