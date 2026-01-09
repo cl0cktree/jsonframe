@@ -1666,7 +1666,7 @@ $(function(){
 				}
 				// --스크롤 시 좌우에서 중앙으로 이동하며 컨탠츠가 보이게 함.--
 				$('.article-main-scrollall').each(function(){
-					var topminus3 = 70;
+					var topminus3 = 71;
 					if ($(window).scrollTop()>50)
 					{
 						$('.move-wrap1').addClass('on');
@@ -1735,9 +1735,9 @@ $(function(){
 					var topminus2 = 0;
 					if ($('#article1-nav1-topmenu1').css('display')=='block')
 					{
-						var topminus2 = 55;
+						var topminus2 = 56;
 					}else{
-						var topminus2 = 105;
+						var topminus2 = 106;
 					}
 					if ($(window).scrollTop()>=$(this).offset().top-topminus2)
 					{
