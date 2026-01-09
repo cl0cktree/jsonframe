@@ -366,6 +366,7 @@ $(function(){
 				new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 			}
 			$('.section-heading').html(contents_head);
+			console.log('++++ in cover_start() ++++');
 		};
 		cover_start();
 	})
@@ -1182,10 +1183,11 @@ $(function(){
 		$('.main-welcolme-summon').html(contents_title);
 		return false;
 	};
-	var web_summ = new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
-	var movie_summ = new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
-	var flash_summ = new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
-	var image_summ = new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
+	// var main_summ = new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+	// var web_summ = new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+	// var movie_summ = new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+	// var flash_summ = new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
+	// var image_summ = new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
 	/*------------------------------------------------------------------*/
 	/*-모달로그 창 위 컨텐츠의 포커스 요소만 순회하는 함수+esc키 눌렀을 때 모달로그 닫히기+낮은 단계의 레이어 선택 요소에 포커스 유지-*/
 	function conbox_contents(){ // 높은 단계의 모달로그 컨텐츠의 포커스 요소만 순회 함수 + esc 키 눌렀을 시 닫히기
