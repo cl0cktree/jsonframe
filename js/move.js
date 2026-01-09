@@ -2025,7 +2025,7 @@ $(function(){
 	$('#contents-button-inside').on('click keydown',function(event){
 		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13)){
 			$('#click-all-filter-landing').css({'z-index':'-10','opacity':'0'})
-			$('.move-wrap1').animate({'opacity':'1'},300)
+			// $('.move-wrap1').animate({'opacity':'1'},300)
 			$('.move-wrap1').addClass('on');
 			$('#click-all-filter-landing').find('[tabindex]').attr('tabindex','-1');
 			$body.css({'overflow-y':''});
