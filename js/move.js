@@ -355,18 +355,22 @@ $(function(){
 			}else if (split_url=='sub2.html'){
 				// webSommon();
 				new PageSummon('웹작업페이지 콘텐츠 묶음','<h2>웹&앱 퍼블리싱</h2>','web');
+				$('.move-wrap1').addClass('on');
 			}else if (split_url=='sub3.html'){
 				// movieSommon();
 				new PageSummon('동영상작업페이지 콘텐츠 묶음','<h2>동영상 편집작업</h2>','movie');
+				$('.move-wrap1').addClass('on');
 			}else if (split_url=='sub4.html'){
 				// flashSommon();
 				new PageSummon('플래시작업페이지 콘텐츠 묶음','<h2>플래시</h2>','flash');
+				$('.move-wrap1').addClass('on');
 			}else if (split_url=='sub5.html'){
 				// imageSommon();
 				new PageSummon('랜더링및편집작업페이지 콘텐츠 묶음','<h2>2D랜더링&편집작업</h2>','image');
+				$('.move-wrap1').addClass('on');
 			}
 			$('.section-heading').html(contents_head);
-			console.log('++++ in cover_start() ++++');
+			// console.log('++++ in cover_start() ++++');
 		};
 		cover_start();
 	})
