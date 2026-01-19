@@ -1725,9 +1725,9 @@ $(function(){
 		$(this).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
 		if ($('#article1-nav1-topmenu1').css('display')=='block')
 		{
-			var topminus = 51;
+			var topminus = 53;
 		}else{
-			var topminus = 101;
+			var topminus = 103;
 		}
 		if (this==document.getElementById('index-btn-num'+data_index_btn))
 		{
