@@ -1675,7 +1675,7 @@ $(function(){
 				}
 				// --스크롤 시 좌우에서 중앙으로 이동하며 컨탠츠가 보이게 함.--
 				$('.article-main-scrollall').each(function(){
-					var topminus3 = 71;
+					var topminus3 = 75;
 					if ($(window).scrollTop()>50)
 					{
 						$('.move-wrap1').addClass('on');
