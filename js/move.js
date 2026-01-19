@@ -1675,7 +1675,7 @@ $(function(){
 				}
 				// --스크롤 시 좌우에서 중앙으로 이동하며 컨탠츠가 보이게 함.--
 				$('.article-main-scrollall').each(function(){
-					var topminus3 = 71;
+					var topminus3 = 81;
 					if ($(window).scrollTop()>50)
 					{
 						$('.move-wrap1').addClass('on');
@@ -1725,9 +1725,9 @@ $(function(){
 		$(this).css({'background':'rgba(255,255,255,1)','border':'1px solid #000','color':'#000'})
 		if ($('#article1-nav1-topmenu1').css('display')=='block')
 		{
-			var topminus = 53;
+			var topminus = 50;
 		}else{
-			var topminus = 103;
+			var topminus = 100;
 		}
 		if (this==document.getElementById('index-btn-num'+data_index_btn))
 		{
