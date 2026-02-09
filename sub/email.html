@@ -59,7 +59,7 @@
     <form id="mail_form">
       <div class="contact_form" id="contact_form">
         <h3>이메일 문의</h3>
-        <table>
+        <table id="mail_table" class="mail_table">
 		      <tr>
             <th>이메일</th>
             <td>
@@ -109,15 +109,15 @@
       var message_input = document.getElementById('message');
       var hidden_input = document.getElementById('h_message');
 
-      if(document.getElementById('contact_form')){
-          var conbox_contentswrap = document.getElementById('contact_form');
+      if(document.getElementById('mail_table')){
+          var conbox_contentswrap = document.getElementById('mail_table');
           // var filter_conbox_contentswrap = document.getElementById('filter-conbox-contentswrap');
           var all_filter_conbox = document.getElementById('all-filter-conbox');
           
           $('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
           $('#all-filter-conbox').find('[tabindex]').eq(0).focus();
           
-          $('#mail_form').on('keydown', function(e){
+          $('#mail_table').on('keydown', function(e){
             console.log('email tabindex');
 
             var this_on_focus;
@@ -130,7 +130,7 @@
             var conbox_content = conbox_contentswrap.querySelectorAll(focus_content);
             var first_content = conbox_contentswrap.querySelectorAll(focus_content)[0];
             var last_content = conbox_contentswrap.querySelectorAll(focus_content)[conbox_content.length-1];
-            // var first_content_0 = conbox_contentswrap.querySelectorAll(focus_content)[1];
+            var first_content_0 = conbox_contentswrap.querySelectorAll(focus_content)[0];
 
             console.log('last_content = '+conbox_content.length);
 
@@ -138,13 +138,11 @@
             console.log('this_on_focus = '+this_on_focus);
             if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
               console.log('pop ride this_1');
-              // first_content.focus();
-              last_content.focus();
+              first_content.focus();
             }
             if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
               console.log('pop ride this_2');
-              first_content.focus();
-              // last_content.focus();
+              last_content.focus();
             }
             // e.preventDefault();
           });
