@@ -119,7 +119,7 @@ $(function(){
 				$('.body-footer-contaner').prepend('<div id="body-footer-add1" class="body-footer-add"><address></address></div>')
 				$.each(data, function(I, item){
 					if(item.cover_kinds=='footer'){
-						$('.body-footer-contaner').find('address').append(item.cover_name+' <span class="footer-add-num">'+item.cover_phone+'</span><br>'+item.cover_address+'<br><a href="mailto:'+item.cover_email+'" tabindex="0">'+item.cover_email+'</a><br><span class="Copyright">'+item.cover_Copyright+'</span><br>')
+						$('.body-footer-contaner').find('address').append(item.cover_name+' <span class="footer-add-num">'+item.cover_phone+'</span><br>'+item.cover_address+'<br><a href="mailto:'+item.cover_email+'" class="email_btn" tabindex="0">'+item.cover_email+'</a><br><span class="Copyright">'+item.cover_Copyright+'</span><br>')
 					}
 				});
 			});
@@ -2031,6 +2031,19 @@ $(function(){
 	// 		}
 	// 	}
 	// });
+	$('.body-footer-contaner').on('click keydown fadeIn', '.email_btn', function(event){
+		$layer_sel = $(this);
+		$body.css({'overflow-y':'hidden'});
+		$('.scrollall-con-box').attr({'tabindex':'-1'});
+		$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
+		$('.click-all-filter').fadeIn('fast',function(){
+			$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></button><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
+			$('.filter-conbox-contentswrap').html('<iframe src="'+portfolioindex_url+'/sub/email.html" width="100%" height="100%"></iframe>');
+			conbox_contents();
+		});
+		// return false;
+		// $layer_sel.focus();
+	});
 	$('#contents-button-inside').on('click keydown',function(event){
 		if ((event.type=='click')||((event.type=='keydown')&&((event.keyCode)||(event.which))===13)){
 			$('#click-all-filter-landing').css({'z-index':'-10','opacity':'0'})
