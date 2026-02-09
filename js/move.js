@@ -2033,6 +2033,7 @@ $(function(){
 	// });
 	$('.body-footer-contaner').on('click keydown fadeIn', '.email_btn', function(event){
 		event.preventDefault();
+		event.stopPropagation();
 		$layer_sel = $(this);
 		$body.css({'overflow-y':'hidden'});
 		$('.scrollall-con-box').attr({'tabindex':'-1'});
