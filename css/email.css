@@ -34,8 +34,15 @@ input[type=select]{appearance:none;}
 .contact_form table td{min-width:280px;max-width:420px;font-size:0.8em;text-align:right;word-break:keep-all;}
 .contact_form table td input[type=text]{width:100%; height: 30px; line-height:30px; padding:0px 4px; border: 1px solid #cccccc; color: #333333; text-align:left;}
 .contact_form table td textarea{box-sizing:border-box; width: 100%; height: 198px; border: 1px solid #cccccc; padding:4px 4px; color: #333333; font-family:'Nanum Gothic','NanumGothic','Gothic','고딕','Sans-serif'; font-weight: 400; text-align:left; resize:none;}
-.contact_form table td button{width:100%;height:50px;background:#000;border:0;color:#fff;font-size:18px;cursor:pointer;}
-.contact_form table td #h_button{display:none;}
+.contact_form table td button{width:100%;height:50px;background:#000;border:0;border-radius:5px;color:#fff;font-size:18px;cursor:pointer;}
+.contact_form table td #h_button{display:block;}
+.contact_form table td #path_button{display:none;}
+
+.dimm_filter{position:fixed;display:none;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.6);z-index:60;}
+.dimm_filter.on{display:block;}
+.dimm_filter .popup_content{position:relative; min-width:320px; min-height:150px; position:absolute; top:20%; left:50%; margin-top:-75px; margin-left:-160px; background:rgba(255,255,255,1); border-radius:5px; padding:20px;}
+.dimm_filter .popup_content>p{margin-bottom:70px;text-align:center;font-size:0.8em;font-weight:600;color:#000;}
+.dimm_filter .popup_content>button{position:absolute; width:100%; height:50px; background:#000; border:0; border-radius:5px; left:0; bottom:0px; color:#fff; font-size:18px; cursor:pointer;}
 
 @media all and (max-width:320px){
 	body{font-size:15px;}
