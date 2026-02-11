@@ -8,15 +8,15 @@
     <!-- 모바일을 위한 viewport설정 -->
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>문의메일</title>
-    <link rel="stylesheet" type="text/css" href="../css/email.css">
+    <link rel="stylesheet" type="text/css" href="../css/email.css" id="email_css">
     <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js" id="email_js_lib"></script>
     <!-- <script type="text/javascript" src="./js/email.min.js"></script> -->
     
   </head>
  
   <body>
-     <script type="text/javascript">
+     <script type="text/javascript" id="email_js_01">
         (function() {
             // https://dashboard.emailjs.com/admin/account
             emailjs.init({
@@ -24,7 +24,7 @@
             });
         })();
     </script>
-    <script>
+    <script id="email_js_02">
     //document.getElementById('message').value='';
       var p_button;
       var h_button;
@@ -158,7 +158,7 @@
             </button>
         </div>
     </div>
-    <script>
+    <script id="email_js_03">
     $(function(){
       document.getElementById('message').value='';
       var p_button = document.getElementById('path_button');
