@@ -2041,9 +2041,8 @@ $(function(){
 		$('.click-all-filter').fadeIn('fast',function(){
 			$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></button><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
 			// $('.filter-conbox-contentswrap').html('<iframe src="'+portfolioindex_url+'/sub/email.html" width="100%" height="485px" frame-border="0" marginheight="0" marginwidth="0" scrolling="yes"></iframe>');
-			$('.filter-conbox-contentswrap').load(portfolioindex_url+'/sub/email.html #mail_form',function(){
-				$('.filter-conbox-contentswrap').load(portfolioindex_url+'/sub/email.html .dimm_filter');
-			});
+			$('.filter-conbox-contentswrap').load(portfolioindex_url+'/sub/email.html #mail_form');
+			$('.filter-conbox-contentswrap').load(portfolioindex_url+'/sub/email.html .dimm_filter');
 			conbox_contents();
 		});
 		// return false;
