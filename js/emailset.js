@@ -25,9 +25,10 @@ document.addEventListener("DOMContentLoaded", function(){
     dimm_filter = document.querySelector('.dimm_filter');
     p_button = document.getElementById('path_button');
     popup_close = document.getElementById('popup_close');
-            
+    popup_content = document.querySelector('.popup_content');
+
     function h_button_click(){
-        popup_content = document.querySelector('.popup_content');
+        // popup_content = document.querySelector('.popup_content');
         vali = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
         console.log('dimm_filter = '+dimm_filter.className);
 
@@ -51,11 +52,18 @@ document.addEventListener("DOMContentLoaded", function(){
             p_button.click();
             dimm_filter.classList.remove('on');
         };
+        popup_close.focus();
     };
-    popup_close.addEventListener('click',function(){
+    popup_close.addEventListener('click',function(e){
         dimm_filter.classList.remove('on');
         popup_content.querySelector('p').innerHTML='';
     });
+    // popup_content.addEventListener('keydown',function(e){
+    //     if((e.keyCode=='27')||(e.key=='Escape')||(e.keyCode=='13')||(e.key=='Enter')){
+    //         dimm_filter.classList.remove('on');
+    //         popup_content.querySelector('p').innerHTML='';
+    //     }
+    // });
     h_button.addEventListener('click',h_button_click);
 
 
