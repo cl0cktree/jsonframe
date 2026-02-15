@@ -4,7 +4,7 @@
     publicKey: "8stEfALCtlUyN_beC",
     });
 })();
-if(document.getElementById('email_wrap')){
+if(document.querySelector('.email_wrap')){
     var p_button;
     var h_button;
     var e_mail;
