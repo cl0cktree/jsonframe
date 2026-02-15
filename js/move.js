@@ -1231,7 +1231,7 @@ $(function(){
 						last_content.focus();
 					}
 				};
-				e.preventDefault();
+				// e.preventDefault();
 			});
 
 			filter_conbox_contentswrap.addEventListener('keydown', function(e){
@@ -1272,7 +1272,7 @@ $(function(){
 						};
 					}
 				};
-				e.preventDefault();
+				// e.preventDefault();
 			});
 		}
 	};
