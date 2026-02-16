@@ -16,7 +16,7 @@ if(document.querySelector('.email_wrap')){
     var popup_close;
     var vali;
 
-    document.addEventListener("DOMContentLoaded", function(){
+    //document.addEventListener("DOMContentLoaded", function(){
         e_mail =document.getElementById('email');
         e_name = document.getElementById('name');
         e_title = document.getElementById('title');
@@ -90,5 +90,5 @@ if(document.querySelector('.email_wrap')){
                     });
         });
 
-    });
+    //});
 }
