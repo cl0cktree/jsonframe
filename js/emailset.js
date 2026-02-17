@@ -5,6 +5,7 @@
     });
 })();
 if(document.querySelector('.email_wrap')){
+    var e_mail_wrap;
     var p_button;
     var h_button;
     var e_mail;
@@ -16,8 +17,9 @@ if(document.querySelector('.email_wrap')){
     var popup_close;
     var vali;
 
-    //document.addEventListener("DOMContentLoaded", function(){
-        e_mail =document.getElementById('email');
+    document.addEventListener("DOMContentLoaded", function(){
+        e_mail_wrap = document.querySelector('.email_wrap');
+        e_mail = document.getElementById('email');
         e_name = document.getElementById('name');
         e_title = document.getElementById('title');
         message_input = document.getElementById('message');
@@ -90,5 +92,5 @@ if(document.querySelector('.email_wrap')){
                     });
         });
 
-    //});
-}
+    });
+};
