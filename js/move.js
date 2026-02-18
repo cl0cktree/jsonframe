@@ -1300,12 +1300,13 @@ $(function(){
 	
 					console.log('pop ride this_1');
 					first_content.focus();
+					e.preventDefault();
 				}
 				if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 					console.log('pop ride this_2');
 					last_content.focus();
+					e.preventDefault();
 				}
-				e.preventDefault();
 			});
 		}
 	};
@@ -2063,31 +2064,21 @@ $(function(){
 							// <button id="path_button" type="submit" tabindex="-1" aria-hidden="true" aria-label="문의하기 버튼" value="문의하기">문의하기</button></td></tr></table></div></form>
 							// <div class="dimm_filter"><div class="popup_content"><p></p><button id="popup_close" type="button" tabindex="5" aria-hidden="false" aria-label="확인 버튼" value="확인">확인</button></div></div></div>`;
 			
-		console.log('--- email out ---');
-		if(document.querySelector('.email_wrap')){
-			var e_mail_wrap;
-			var p_button;
-			var h_button;
-			var e_mail;
-			var e_name;
-			var e_title;
-			var message_input;
-			var popup_content;
-			var dimm_filter;
-			var popup_close;
-			var vali;
-			console.log('--- email in ---');
-			//document.addEventListener("DOMContentLoaded", function(){
-				e_mail_wrap = document.querySelector('.email_wrap');
-				e_mail = document.getElementById('email');
-				e_name = document.getElementById('name');
-				e_title = document.getElementById('title');
-				message_input = document.getElementById('message');
-				h_button = document.getElementById('h_button');
-				dimm_filter = document.querySelector('.dimm_filter');
-				p_button = document.getElementById('path_button');
-				popup_close = document.getElementById('popup_close');
-				popup_content = document.querySelector('.popup_content');
+			console.log('--- email out ---');
+			if(document.querySelector('.email_wrap')){
+				var e_mail_wrap = document.querySelector('.email_wrap');
+				var p_button = document.getElementById('path_button');
+				var h_button = document.getElementById('h_button');
+				var e_mail = document.getElementById('email');
+				var e_name = document.getElementById('name');
+				var e_title = document.getElementById('title');
+				var message_input = document.getElementById('message');
+				var popup_content = document.querySelector('.popup_content');
+				var dimm_filter = document.querySelector('.dimm_filter');
+				var popup_close = document.getElementById('popup_close');
+				var vali;
+				
+				console.log('--- email in ---');
 
 				function h_button_click(){
 					// popup_content = document.querySelector('.popup_content');
@@ -2151,11 +2142,8 @@ $(function(){
 								// alert('메일 발송에 실패하였습니다.');
 							});
 				});
+			};
 
-			//});
-		};
-
-			
 
 			conbox_contents();
 		});
