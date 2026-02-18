@@ -1219,19 +1219,26 @@ $(function(){
 
 				if (e.keyCode === 27){
 					focus_still();
+					e.preventDefault();
 				}else{
 					this_on_focus = document.activeElement;
-					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
-
-						console.log('pop ride this_1');
-						first_content.focus();
-					}
-					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
-						console.log('pop ride this_2');
-						last_content.focus();
-					}
+					if(e.keyCode===9 && !e.shiftKey){
+						this.nextElementSibling.focus();
+						if (this_on_focus==last_content) {
+							console.log('pop ride this_1');
+							first_content.focus();
+						}
+						e.preventDefault();
+					};
+					if(e.keyCode===9 && !e.shiftKey){
+						this.previousElementSibling.focus();
+						if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+							console.log('pop ride this_2');
+							last_content.focus();
+						}
+						e.preventDefault();
+					};
 				};
-				e.preventDefault();
 			});
 
 			filter_conbox_contentswrap.addEventListener('keydown', function(e){
@@ -2079,6 +2086,8 @@ $(function(){
 				var vali;
 				
 				console.log('--- email in ---');
+				$('.email_wrap').find('[tabindex]').attr('tabindex','0');
+          		$('.email_wrap').find('[tabindex]').eq(0).focus();
 
 				function h_button_click(){
 					// popup_content = document.querySelector('.popup_content');
