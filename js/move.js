@@ -2052,7 +2052,7 @@ $(function(){
 							<button id="path_button" type="submit" tabindex="-1" aria-hidden="true" aria-label="문의하기 버튼" value="문의하기">문의하기</button></td></tr></table></div></form>
 							<div class="dimm_filter"><div class="popup_content"><p></p><button id="popup_close" type="button" tabindex="5" aria-hidden="false" aria-label="확인 버튼" value="확인">확인</button></div></div></div>
 				</div></div>`), function(){
-					
+					console/log('--- email out ---');
 					if(document.querySelector('.email_wrap')){
 						var e_mail_wrap;
 						var p_button;
@@ -2065,7 +2065,7 @@ $(function(){
 						var dimm_filter;
 						var popup_close;
 						var vali;
-
+						console/log('--- email in ---');
 						document.addEventListener("DOMContentLoaded", function(){
 							e_mail_wrap = document.querySelector('.email_wrap');
 							e_mail = document.getElementById('email');
