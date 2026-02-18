@@ -2064,12 +2064,6 @@ $(function(){
 							// <div class="dimm_filter"><div class="popup_content"><p></p><button id="popup_close" type="button" tabindex="5" aria-hidden="false" aria-label="확인 버튼" value="확인">확인</button></div></div></div>`;
 			
 			
-		(function() {
-			// https://dashboard.emailjs.com/admin/account
-			emailjs.init({
-			publicKey: "8stEfALCtlUyN_beC",
-			});
-		})();
 		if(document.querySelector('.email_wrap')){
 			var e_mail_wrap;
 			var p_button;
