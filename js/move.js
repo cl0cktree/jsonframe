@@ -1216,7 +1216,6 @@ $(function(){
 				var last_content = conbox_contentswrap.querySelectorAll(focus_content)[conbox_content.length-1];
 
 				console.log('last_content = '+conbox_content.length);
-				con_first.focus();
 				if (e.keyCode === 27){
 					focus_still();
 				}else{
@@ -1226,7 +1225,7 @@ $(function(){
 						// this_on_focus.nextElementSibling.focus();
 						if (this_on_focus==last_content) {
 							console.log('pop ride this_1');
-							// e.preventDefault();
+							e.preventDefault();
 							first_content.focus();
 						}
 						
@@ -1236,7 +1235,7 @@ $(function(){
 						// this_on_focus.previousElementSibling.focus();
 						if(this_on_focus==first_content) {
 							console.log('pop ride this_2');
-							// e.preventDefault();
+							e.preventDefault();
 							last_content.focus();
 						}
 						
@@ -1265,10 +1264,12 @@ $(function(){
 					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
 
 						console.log('pop ride this_1');
+						e.preventDefault();
 						first_content.focus();
 					}
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
+						e.preventDefault();
 						last_content.focus();
 					}
 					if (e.keyCode===13){
@@ -1282,7 +1283,6 @@ $(function(){
 						};
 					}
 				};
-				e.preventDefault();
 			});
 		}
 	};
