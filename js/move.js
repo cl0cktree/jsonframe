@@ -1221,7 +1221,7 @@ $(function(){
 				}else{
 					this_on_focus = document.activeElement;
 					if(e.keyCode===9){
-						if (this_on_focus==last_content) {
+						if ((this_on_focus==last_content)&&(last_content.style.display!=='none')) {
 							console.log('pop ride this_1');
 							first_content.focus();
 							e.preventDefault();
@@ -1266,7 +1266,7 @@ $(function(){
 				}else{
 					this_on_focus = document.activeElement;
 					if(e.keyCode===9){
-						if (this_on_focus==last_content) {
+						if ((this_on_focus==last_content)&&(last_content.style.display!=='none')) {
 							console.log('pop ride this_1');
 							first_content.focus();
 							e.preventDefault();
