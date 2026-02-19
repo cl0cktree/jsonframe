@@ -1223,14 +1223,14 @@ $(function(){
 					if((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)){
 						// this_on_focus.nextElementSibling.focus();
 						console.log('pop ride this_1');
-						e.preventDefault();
 						first_content.focus();
+						e.preventDefault();
 					};
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)){
 						// this_on_focus.previousElementSibling.focus();
 						console.log('pop ride this_2');
-						e.preventDefault();
 						last_content.focus();
+						e.preventDefault();
 					};
 				};
 			});
@@ -1255,13 +1255,13 @@ $(function(){
 					this_on_focus = document.activeElement;
 					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
 						console.log('pop ride this_1');
-						e.preventDefault();
 						first_content.focus();
+						e.preventDefault();
 					}
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
-						e.preventDefault();
 						last_content.focus();
+						e.preventDefault();
 					}
 					if (e.keyCode===13){
 						console.log('in a this ='+$(this).attr('class'));
