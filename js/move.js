@@ -1223,7 +1223,7 @@ $(function(){
 					this_on_focus = document.activeElement;
 					if(e.keyCode===9 && !e.shiftKey){
 						
-						this_on_focus.nextElementSibling.focus();
+						// this_on_focus.nextElementSibling.focus();
 						if (this_on_focus==last_content) {
 							console.log('pop ride this_1');
 							// e.preventDefault();
@@ -1233,7 +1233,7 @@ $(function(){
 					};
 					if(e.keyCode===9 && e.shiftKey){
 						
-						this_on_focus.previousElementSibling.focus();
+						// this_on_focus.previousElementSibling.focus();
 						if(this_on_focus==first_content) {
 							console.log('pop ride this_2');
 							// e.preventDefault();
