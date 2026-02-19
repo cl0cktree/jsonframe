@@ -1229,7 +1229,8 @@ $(function(){
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)){
 						// this_on_focus.previousElementSibling.focus();
 						console.log('pop ride this_2');
-						last_content.focus();
+						// last_content.focus();
+						first_content.focus();
 						e.preventDefault();
 					};
 				};
@@ -1260,7 +1261,8 @@ $(function(){
 					}
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
-						last_content.focus();
+						// last_content.focus();
+						first_content.focus();
 						e.preventDefault();
 					}
 					if (e.keyCode===13){
