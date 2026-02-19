@@ -1216,7 +1216,7 @@ $(function(){
 				var last_content = conbox_contentswrap.querySelectorAll(focus_content)[conbox_content.length-1];
 
 				console.log('last_content = '+conbox_content.length);
-
+				con_first.focus();
 				if (e.keyCode === 27){
 					focus_still();
 				}else{
