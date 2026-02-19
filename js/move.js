@@ -1226,7 +1226,7 @@ $(function(){
 						this_on_focus.nextElementSibling.focus();
 						if (this_on_focus==last_content) {
 							console.log('pop ride this_1');
-							e.preventDefault();
+							// e.preventDefault();
 							first_content.focus();
 						}
 						
@@ -1235,8 +1235,8 @@ $(function(){
 						
 						this_on_focus.previousElementSibling.focus();
 						if(this_on_focus==first_content) {
-							e.preventDefault();
 							console.log('pop ride this_2');
+							// e.preventDefault();
 							last_content.focus();
 						}
 						
