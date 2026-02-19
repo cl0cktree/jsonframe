@@ -1219,22 +1219,23 @@ $(function(){
 
 				if (e.keyCode === 27){
 					focus_still();
-					e.preventDefault();
 				}else{
 					this_on_focus = document.activeElement;
 					if(e.keyCode===9 && !e.shiftKey){
-						e.preventDefault();
+						
 						this_on_focus.nextElementSibling.focus();
 						if (this_on_focus==last_content) {
 							console.log('pop ride this_1');
+							e.preventDefault();
 							first_content.focus();
 						}
 						
 					};
 					if(e.keyCode===9 && e.shiftKey){
-						e.preventDefault();
+						
 						this_on_focus.previousElementSibling.focus();
 						if(this_on_focus==first_content) {
+							e.preventDefault();
 							console.log('pop ride this_2');
 							last_content.focus();
 						}
