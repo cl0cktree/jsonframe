@@ -1220,30 +1220,30 @@ $(function(){
 					focus_still();
 				}else{
 					this_on_focus = document.activeElement;
-					if(e.keyCode===9){
-						if ((this_on_focus==last_content)&&(last_content.style.display!=='none')) {
-							console.log('pop ride this_1');
-							first_content.focus();
-							e.preventDefault();
-						}
-						if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
-							console.log('pop ride this_2');
-							last_content.focus();
-							// first_content.focus();
-							e.preventDefault();
-						}
-					}
-					// if((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)){
-					// 	console.log('pop ride this_1');
-					// 	first_content.focus();
-					// 	e.preventDefault();
-					// };
-					// if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)){
-					// 	console.log('pop ride this_2');
-					// 	// last_content.focus();
-					// 	first_content.focus();
-					// 	e.preventDefault();
-					// };
+					// if(e.keyCode===9){
+					// 	if((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)){
+					// 		console.log('pop ride this_1');
+					// 		first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// 	if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+					// 		console.log('pop ride this_2');
+					// 		last_content.focus();
+					// 		// first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// }
+					if((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)){
+						console.log('pop ride this_1');
+						first_content.focus();
+						e.preventDefault();
+					};
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)){
+						console.log('pop ride this_2');
+						last_content.focus();
+						// first_content.focus();
+						e.preventDefault();
+					};
 				};
 			});
 
@@ -1265,30 +1265,29 @@ $(function(){
 					focus_still();
 				}else{
 					this_on_focus = document.activeElement;
-					if(e.keyCode===9){
-						if ((this_on_focus==last_content)&&(last_content.style.display!=='none')) {
-							console.log('pop ride this_3');
-							first_content.focus();
-							e.preventDefault();
-						}
-						if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
-							console.log('pop ride this_4');
-							last_content.focus();
-							// first_content.focus();
-							e.preventDefault();
-						}
+					// if(e.keyCode===9){
+					// 	if ((this_on_focus==last_content)&&(last_content.style.display!=='none')) {
+					// 		console.log('pop ride this_3');
+					// 		first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// 	if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+					// 		console.log('pop ride this_4');
+					// 		last_content.focus();
+					// 		// first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// }
+					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
+						console.log('pop ride this_1');
+						first_content.focus();
+						e.preventDefault();
 					}
-					// if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
-					// 	console.log('pop ride this_1');
-					// 	first_content.focus();
-					// 	e.preventDefault();
-					// }
-					// if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
-					// 	console.log('pop ride this_2');
-					// 	// last_content.focus();
-					// 	first_content.focus();
-					// 	e.preventDefault();
-					// }
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+						console.log('pop ride this_2');
+						last_content.focus();
+						e.preventDefault();
+					}
 					if (e.keyCode===13){
 						console.log('in a this ='+$(this).attr('class'));
 						if($(this).attr('class')==('.filter-title-closebtn')){
@@ -2068,7 +2067,7 @@ $(function(){
 		$('.scrollall-con-box').attr({'tabindex':'-1'});
 		$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
 		$('.click-all-filter').fadeIn('fast',function(){
-			$('.click-all-filter').html(`<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0">
+			$('.click-all-filter').append(`<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0">
 				<img src="`+portfolioindex_url+`/images/closebtn.png" alt="결과물 자세히보기 종료"></button><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap">
 				<div class="email_wrap" id="email_wrap"><form id="mail_form"><div class="contact_form" id="contact_form"><h3>이메일 문의</h3><table id="mail_table" class="mail_table">
 							<tr><th>이메일</th><td><input type="text" id="email" name="email" size="32" tabindex="1" placeholder="이메일 입력" aria-hidden="false" aria-label="이메일 입력" required/>
