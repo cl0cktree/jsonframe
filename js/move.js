@@ -582,20 +582,20 @@ $(function(){
 		{
 			//$('.body-footer-add').animate({'margin-left':'-100%'},100)//footer와 연동하여 밀리는 부분으로 필요시 사용.
 			$('.nav1-side-menu').animate({'right':'0px'},100)
-			$('.top-btn').stop().animate({'bottom':'90px'},100)
-			$('.index-btn-wrap').stop().animate({'bottom':'144px'},100)
+			$('.top-btn').stop().animate({'bottom':'105px'},100)
+			$('.index-btn-wrap').stop().animate({'bottom':'160px'},100)
 		}else{
 			//$('.body-footer-add').animate({'margin-left':'0px'},100)
 			$('.nav1-side-menu').animate({'right':'-100%'},100)
 			if($(window).height()+$(window).scrollTop()>=$(document).height())//현재 window와 현재의 scroll값을 더한 값이 보여지는 document 이상일 경우(현재 scroll 위치) -> top 기준이기 때문에 탑메뉴의 height가 늘어나면 연산을 다시해서 재실행 되는 문제가 있음.
 			{
-				$('.top-btn').stop().animate({'bottom':'90px'},100)
+				$('.top-btn').stop().animate({'bottom':'105px'},100)
 			}else{
 				$('.top-btn').stop().animate({'bottom':'50px'},100)
 			}
 			if($(window).height()+$(window).scrollTop()>=$(document).height())//현재 window와 현재의 scroll값을 더한 값이 보여지는 document 이상일 경우(현재 scroll 위치) -> top 기준이기 때문에 탑메뉴의 height가 늘어나면 연산을 다시해서 재실행 되는 문제가 있음.
 			{
-				$('.index-btn-wrap').stop().animate({'bottom':'144px'},100)
+				$('.index-btn-wrap').stop().animate({'bottom':'160px'},100)
 			}else{
 				$('.index-btn-wrap').stop().animate({'bottom':'104px'},100)
 			}
@@ -1588,7 +1588,7 @@ $(function(){
 		
 						if(($(window).height()+$(window).scrollTop()>=$('.body-section-content').height())||($('.nav1-side-menu').css('right')=='0px'))//현재 window와 현재의 scroll값을 더한 값이 보여지는 document 이상일 경우(현재 scroll 위치) -> top 기준이기 때문에 탑메뉴의 height가 늘어나면 연산을 다시해서 재실행 되는 문제가 있음.
 						{
-							$('.top-btn').stop().animate({'bottom':'90px'},200)
+							$('.top-btn').stop().animate({'bottom':'105px'},200)
 						}else{
 							$('.top-btn').stop().animate({'bottom':'50px'},200)
 						}
@@ -1596,7 +1596,7 @@ $(function(){
 						$('.top-btn').css({'opacity':'0.5','z-index':'59','cursor':'pointer'})
 						if (($(window).height()+$(window).scrollTop()>=$('.body-section-content').height())||($('.nav1-side-menu').css('right')=='0px'))
 						{
-							$('.top-btn').stop().animate({'bottom':'90px'},200)
+							$('.top-btn').stop().animate({'bottom':'105px'},200)
 		
 						}else{
 							$('.top-btn').stop().animate({'bottom':'50px'},200)
@@ -1606,7 +1606,7 @@ $(function(){
 		
 						if (($(window).height()+$(window).scrollTop()>=$('.body-section-content').height())||($('.nav1-side-menu').css('right')=='0px'))//현재 window와 현재의 scroll값을 더한 값이 보여지는 document 이상일 경우(현재 scroll 위치) -> top 기준이기 때문에 탑메뉴의 height가 늘어나면 연산을 다시해서 재실행 되는 문제가 있음.
 						{
-							$('.index-btn-wrap').stop().animate({'bottom':'144px'},150)
+							$('.index-btn-wrap').stop().animate({'bottom':'160px'},150)
 						}else{
 							$('.index-btn-wrap').stop().animate({'bottom':'104px'},150)
 						}
@@ -1623,7 +1623,7 @@ $(function(){
 		
 						if (($(window).height()+$(window).scrollTop()>=$('.body-section-content').height())||($('.nav1-side-menu').css('right')=='0px'))
 						{
-							$('.index-btn-wrap').stop().animate({'bottom':'144px'},150)
+							$('.index-btn-wrap').stop().animate({'bottom':'160px'},150)
 						}else{
 							$('.index-btn-wrap').stop().animate({'bottom':'104px'},150)
 						}
