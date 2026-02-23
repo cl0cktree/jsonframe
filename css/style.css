@@ -152,7 +152,7 @@ textarea{box-sizing:border-box;}
 .body-section-content .section-content-article .content-article-wraper .scr-index-box #index-btn-wrap1{width:3em;min-height:96px;position:fixed;bottom:100px;transition:all 0.2s;z-index:-1;opacity:0;}
 .body-section-content .section-content-article .content-article-wraper .scr-index-box .index-btn-wrap .index-btn-all{width:30px;height:30px;background:rgba(0,0,0,1);margin:2px auto;border:1px solid #fff;border-radius:200px;cursor:pointer;text-align:center;font-size:14px;color:#fff;line-height:30px;transition:all 0.2s;}
 
-footer .body-footer-contaner{width:100%;height:80px;max-width:1080px;margin:0 auto;color:#4e3b29;}
+footer .body-footer-contaner{width:100%;min-height:80px;max-width:1080px;margin:0 auto;color:#4e3b29;}
 footer .body-footer-contaner .body-footer-add{width:100%;text-align:center;line-height:19px;font-size:17px;font-weight:700;padding-top:2px;padding-bottom:2px;float:left;margin-left:0%;}
 footer .body-footer-contaner .body-footer-add a{color:#4e3b29;text-decoration:none;}
 footer .body-footer-contaner .body-footer-add address{font-style:normal;}
