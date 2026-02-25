@@ -2070,9 +2070,9 @@ $(function(){
 			$('.click-all-filter').append(`<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0">
 				<img src="`+portfolioindex_url+`/images/closebtn.png" alt="결과물 자세히보기 종료"></button><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap">
 				<div class="email_wrap" id="email_wrap"><form id="mail_form"><div class="contact_form" id="contact_form"><h3>이메일 문의</h3><table id="mail_table" class="mail_table">
-							<tr><th>이메일</th><td><input type="text" id="email" name="email" size="32" tabindex="1" placeholder="이메일 입력" aria-hidden="false" aria-label="이메일 입력" required/>
-							</td></tr><tr><th>보내는 사람</th><td><input type="text" id="name" name="name" size="32" tabindex="2" placeholder="이름 입력" aria-hidden="false" aria-label="이름 입력" required/>
-							</td></tr><tr><th>제목</th><td><input type="text" id="title" name="title" size="128" tabindex="3" placeholder="제목 입력" aria-hidden="false" aria-label="제목 입력" required/>
+							<tr><th>이메일</th><td><input type="text" inputmode="email" id="email" name="email" size="32" tabindex="1" placeholder="이메일 입력" aria-hidden="false" aria-label="이메일 입력" required/>
+							</td></tr><tr><th>보내는 사람</th><td><input type="text" inputmode="text" id="name" name="name" size="32" tabindex="2" placeholder="이름 입력" aria-hidden="false" aria-label="이름 입력" required/>
+							</td></tr><tr><th>제목</th><td><input type="text" inputmode="text" id="title" name="title" size="128" tabindex="3" placeholder="제목 입력" aria-hidden="false" aria-label="제목 입력" required/>
 							</td></tr><tr><th>내용</th><td><textarea id="message" name="message" rows="5" cols="26" tabindex="4" placeholder="내용 입력" aria-hidden="false" aria-label="내용 입력" required></textarea>
 							</td></tr><tr><td colspan="2" class="ps_1">(답변이 필요 하신 분은 꼭 연락처를 남겨주세요.)</td></tr><tr><td colspan="2" style="padding-top:20px;">
 							<button id="path_button" type="submit" tabindex="-1" aria-hidden="true" aria-label="문의하기 버튼" value="문의하기">문의하기</button>
@@ -2315,7 +2315,7 @@ $(function(){
 							weather_Clouds();
 						}else if((wearther_out=='Overcast')&&((wearther_out!==null)||(wearther_out!==''))){
 							weather_Overcast();
-						}else if((wearther_out=='Mist')&&((wearther_out!==null)||(wearther_out!==''))){
+						}else if((wearther_out=='Mist'||wearther_out=='Fog')&&((wearther_out!==null)||(wearther_out!==''))){
 							weather_Mist();
 						}else if((wearther_out=='Haze')&&((wearther_out!==null)||(wearther_out!==''))){
 							weather_Haze();
