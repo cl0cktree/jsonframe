@@ -2070,15 +2070,15 @@ $(function(){
 			$('.click-all-filter').append(`<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0">
 				<img src="`+portfolioindex_url+`/images/closebtn.png" alt="결과물 자세히보기 종료"></button><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap">
 				<div class="email_wrap" id="email_wrap"><form id="mail_form"><div class="contact_form" id="contact_form"><h3>이메일 문의</h3><table id="mail_table" class="mail_table">
-							<tr><th>이메일</th><td><input type="text" inputmode="email" id="email" name="email" size="32" tabindex="1" placeholder="이메일 입력" aria-hidden="false" aria-label="이메일 입력" required/>
-							</td></tr><tr><th>보내는 사람</th><td><input type="text" inputmode="text" id="name" name="name" size="32" tabindex="2" placeholder="이름 입력" aria-hidden="false" aria-label="이름 입력" required/>
-							</td></tr><tr><th>제목</th><td><input type="text" inputmode="text" id="title" name="title" size="128" tabindex="3" placeholder="제목 입력" aria-hidden="false" aria-label="제목 입력" required/>
-							</td></tr><tr><th>내용</th><td><textarea id="message" name="message" rows="5" cols="26" tabindex="4" placeholder="내용 입력" aria-hidden="false" aria-label="내용 입력" required></textarea>
+							<tr><th>이메일</th><td><input type="text" inputmode="email" id="email" name="email" size="32" tabindex="0" placeholder="이메일 입력" aria-hidden="false" aria-label="이메일 입력" required/>
+							</td></tr><tr><th>보내는 사람</th><td><input type="text" inputmode="text" id="name" name="name" size="32" tabindex="0" placeholder="이름 입력" aria-hidden="false" aria-label="이름 입력" required/>
+							</td></tr><tr><th>제목</th><td><input type="text" inputmode="text" id="title" name="title" size="128" tabindex="0" placeholder="제목 입력" aria-hidden="false" aria-label="제목 입력" required/>
+							</td></tr><tr><th>내용</th><td><textarea id="message" name="message" rows="5" cols="26" tabindex="0" placeholder="내용 입력" aria-hidden="false" aria-label="내용 입력" required></textarea>
 							</td></tr><tr><td colspan="2" class="ps_1">(답변이 필요 하신 분은 꼭 연락처를 남겨주세요.)</td></tr><tr><td colspan="2" style="padding-top:20px;">
 							<button id="path_button" type="submit" tabindex="-1" aria-hidden="true" aria-label="문의하기 버튼" value="문의하기">문의하기</button>
-							<button id="h_button" type="button" tabindex="5" aria-hidden="false" aria-label="문의하기 버튼" value="문의하기">문의하기</button>
+							<button id="h_button" type="button" tabindex="0" aria-hidden="false" aria-label="문의하기 버튼" value="문의하기">문의하기</button>
 							</td></tr></table></div></form>
-							<div class="dimm_filter"><div class="popup_content"><p></p><button id="popup_close" type="button" tabindex="5" aria-hidden="false" aria-label="확인 버튼" value="확인">확인</button></div></div></div>
+							<div class="dimm_filter"><div class="popup_content"><p></p><button id="popup_close" type="button" tabindex="-1" aria-hidden="false" aria-label="확인 버튼" value="확인">확인</button></div></div></div>
 				</div></div>`);
 			// $('.filter-conbox-contentswrap').html('<iframe src="'+portfolioindex_url+'/sub/email.html" width="100%" height="485px" frame-border="0" marginheight="0" marginwidth="0" scrolling="yes"></iframe>');
 			// filter_conbox_contentswrap.innerHTML=`<div class="email_wrap" id="email_wrap"><form id="mail_form"><div class="contact_form" id="contact_form"><h3>이메일 문의</h3><table id="mail_table" class="mail_table">
@@ -2134,11 +2134,19 @@ $(function(){
 							p_button.click();
 							dimm_filter.classList.remove('on');
 						};
+						form_tabindex.forEach(function(item){
+							item.setAttribute('tabindex','-1');
+						});
+						popup_close.setAttribute('tabindex','0');
 						popup_close.focus();
 					};
 					popup_close.addEventListener('click',function(e){
 						dimm_filter.classList.remove('on');
 						popup_content.querySelector('p').innerHTML='';
+						form_tabindex.forEach(function(item){
+							item.setAttribute('tabindex','0');
+						});
+						popup_close.setAttribute('tabindex','-1');
 					});
 					// popup_content.addEventListener('keydown',function(e){
 					//     if((e.keyCode=='27')||(e.key=='Escape')||(e.keyCode=='13')||(e.key=='Enter')){
@@ -2164,10 +2172,18 @@ $(function(){
 									e_name.value='';
 									e_title.value='';
 									message_input.value='';
+									form_tabindex.forEach(function(item){
+										item.setAttribute('tabindex','0');
+									});
+									popup_close.setAttribute('tabindex','-1');
 								}, (error) => {
 									// console.log('FAILED...', error);
 									dimm_filter.classList.add('on');
 									popup_content.querySelector('p').innerHTML+='<span>메일 발송에 실패하였습니다.</span><br>';
+									form_tabindex.forEach(function(item){
+										item.setAttribute('tabindex','0');
+									});
+									popup_close.setAttribute('tabindex','-1');
 									// alert('메일 발송에 실패하였습니다.');
 								});
 					});
