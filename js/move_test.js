@@ -1206,7 +1206,7 @@ $(function(){
 			conbox_contentswrap.addEventListener('keydown', function(e){
 				var this_on_focus;
 
-				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+				var con_range = $('.all-filter-conbox, .conbox-contents-view, .email_wrap').find('.filter-title-closebtn, .filter-conbox-contentswrap, .mail_form').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
 				var con_first = con_range.eq(0);
 				var con_last = con_range.eq(con_range.length-1);
 				
@@ -1216,28 +1216,41 @@ $(function(){
 				var last_content = conbox_contentswrap.querySelectorAll(focus_content)[conbox_content.length-1];
 
 				console.log('last_content = '+conbox_content.length);
-
 				if (e.keyCode === 27){
 					focus_still();
 				}else{
 					this_on_focus = document.activeElement;
-					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
-
+					// if(e.keyCode===9){
+					// 	if((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)){
+					// 		console.log('pop ride this_1');
+					// 		first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// 	if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+					// 		console.log('pop ride this_2');
+					// 		last_content.focus();
+					// 		// first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// }
+					if((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)){
 						console.log('pop ride this_1');
 						first_content.focus();
-					}
-					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+						e.preventDefault();
+					};
+					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)){
 						console.log('pop ride this_2');
 						last_content.focus();
-					}
+						// first_content.focus();
+						e.preventDefault();
+					};
 				};
-				e.preventDefault();
 			});
 
 			filter_conbox_contentswrap.addEventListener('keydown', function(e){
 				var this_on_focus;
 
-				var con_range = $('.all-filter-conbox, .conbox-contents-view').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+				var con_range = $('.all-filter-conbox, .conbox-contents-view, .email_wrap').find('.filter-title-closebtn, .filter-conbox-contentswrap').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
 				var con_first = con_range.eq(0);
 				var con_last = con_range.eq(con_range.length-1);
 				
@@ -1252,14 +1265,28 @@ $(function(){
 					focus_still();
 				}else{
 					this_on_focus = document.activeElement;
+					// if(e.keyCode===9){
+					// 	if ((this_on_focus==last_content)&&(last_content.style.display!=='none')) {
+					// 		console.log('pop ride this_3');
+					// 		first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// 	if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+					// 		console.log('pop ride this_4');
+					// 		last_content.focus();
+					// 		// first_content.focus();
+					// 		e.preventDefault();
+					// 	}
+					// }
 					if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
-
 						console.log('pop ride this_1');
 						first_content.focus();
+						e.preventDefault();
 					}
 					if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
 						console.log('pop ride this_2');
 						last_content.focus();
+						e.preventDefault();
 					}
 					if (e.keyCode===13){
 						console.log('in a this ='+$(this).attr('class'));
@@ -1272,7 +1299,6 @@ $(function(){
 						};
 					}
 				};
-				e.preventDefault();
 			});
 		}
 	};
@@ -1298,14 +1324,15 @@ $(function(){
 				this_on_focus = document.activeElement;
 				if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
 	
-					console.log('pop ride this_1');
+					console.log('pop ride this_3');
 					first_content.focus();
+					e.preventDefault();
 				}
 				if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
-					console.log('pop ride this_2');
+					console.log('pop ride this_4');
 					last_content.focus();
+					e.preventDefault();
 				}
-				e.preventDefault();
 			});
 		}
 	};
@@ -2034,14 +2061,137 @@ $(function(){
 	$('.body-footer-contaner').on('click keydown fadeIn', '.email_btn', function(event){
 		event.preventDefault();
 		event.stopPropagation();
+		var filter_conbox_contentswrap = document.querySelector('.filter-conbox-contentswrap');
 		$layer_sel = $(this);
 		$body.css({'overflow-y':'hidden'});
 		$('.scrollall-con-box').attr({'tabindex':'-1'});
 		$('#click-all-filter-index').html('<div class="filter-loader-loadingbox"><div class="loader-loadingbox-spin"><div class="loadingbox-spin-inaroundf"></div></div></div>')
 		$('.click-all-filter').fadeIn('fast',function(){
-			$('.click-all-filter').html('<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0"><img src="'+portfolioindex_url+'/images/closebtn.png" alt="결과물 자세히보기 종료"></button><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap"></div></div>');
-			$('.filter-conbox-contentswrap').html('<iframe src="'+portfolioindex_url+'/sub/sns.html"></iframe>');
-			conbox_contents();
+			$('.click-all-filter').append(`<div id="all-filter-conbox" class="all-filter-conbox"><button type="button" id="filter-title-closebtn" class="filter-title-closebtn" tabindex="0">
+				<img src="`+portfolioindex_url+`/images/closebtn.png" alt="결과물 자세히보기 종료"></button><div id="filter-conbox-contentswrap" class="filter-conbox-contentswrap">
+				<div class="email_wrap" id="email_wrap"><form id="mail_form"><div class="contact_form" id="contact_form"><h3>이메일 문의</h3><table id="mail_table" class="mail_table">
+							<tr><th>이메일</th><td><input type="text" inputmode="email" id="email" name="email" size="32" tabindex="0" placeholder="이메일 입력" aria-hidden="false" aria-label="이메일 입력" required/>
+							</td></tr><tr><th>보내는 사람</th><td><input type="text" inputmode="text" id="name" name="name" size="32" tabindex="0" placeholder="이름 입력" aria-hidden="false" aria-label="이름 입력" required/>
+							</td></tr><tr><th>제목</th><td><input type="text" inputmode="text" id="title" name="title" size="128" tabindex="0" placeholder="제목 입력" aria-hidden="false" aria-label="제목 입력" required/>
+							</td></tr><tr><th>내용</th><td><textarea id="message" name="message" rows="5" cols="26" tabindex="0" placeholder="내용 입력" aria-hidden="false" aria-label="내용 입력" required></textarea>
+							</td></tr><tr><td colspan="2" class="ps_1">(답변이 필요 하신 분은 꼭 연락처를 남겨주세요.)</td></tr><tr><td colspan="2" style="padding-top:20px;">
+							<button id="path_button" type="submit" tabindex="-1" aria-hidden="true" aria-label="문의하기 버튼" value="문의하기">문의하기</button>
+							<button id="h_button" type="button" tabindex="0" aria-hidden="false" aria-label="문의하기 버튼" value="문의하기">문의하기</button>
+							</td></tr></table></div></form>
+							<div class="dimm_filter"><div class="popup_content"><p></p><button id="popup_close" type="button" tabindex="-1" aria-hidden="false" aria-label="확인 버튼" value="확인">확인</button></div></div></div>
+				</div></div>`);
+			// $('.filter-conbox-contentswrap').html('<iframe src="'+portfolioindex_url+'/sub/email.html" width="100%" height="485px" frame-border="0" marginheight="0" marginwidth="0" scrolling="yes"></iframe>');
+			// filter_conbox_contentswrap.innerHTML=`<div class="email_wrap" id="email_wrap"><form id="mail_form"><div class="contact_form" id="contact_form"><h3>이메일 문의</h3><table id="mail_table" class="mail_table">
+							// <tr><th>이메일</th><td><input type="text" id="email" name="email" size="32" tabindex="1" placeholder="이메일 입력" aria-hidden="false" aria-label="이메일 입력" required/>
+							// </td></tr><tr><th>보내는 사람</th><td><input type="text" id="name" name="name" size="32" tabindex="2" placeholder="이름 입력" aria-hidden="false" aria-label="이름 입력" required/>
+							// </td></tr><tr><th>제목</th><td><input type="text" id="title" name="title" size="128" tabindex="3" placeholder="제목 입력" aria-hidden="false" aria-label="제목 입력" required/>
+							// </td></tr><tr><th>내용</th><td><textarea id="message" name="message" rows="5" cols="26" tabindex="4" placeholder="내용 입력" aria-hidden="false" aria-label="내용 입력" required></textarea>
+							// </td></tr><tr><td colspan="2" class="ps_1">(답변이 필요 하신 분은 꼭 연락처를 남겨주세요.)</td></tr><tr><td colspan="2" style="padding-top:20px;">
+							// <button id="h_button" type="button" tabindex="5" aria-hidden="false" aria-label="문의하기 버튼" value="문의하기">문의하기</button>
+							// <button id="path_button" type="submit" tabindex="-1" aria-hidden="true" aria-label="문의하기 버튼" value="문의하기">문의하기</button></td></tr></table></div></form>
+							// <div class="dimm_filter"><div class="popup_content"><p></p><button id="popup_close" type="button" tabindex="5" aria-hidden="false" aria-label="확인 버튼" value="확인">확인</button></div></div></div>`;
+			setTimeout( function(){
+				console.log('--- email out ---');
+				if(document.querySelector('.email_wrap')){
+					var e_mail_wrap = document.querySelector('.email_wrap');
+					var p_button = document.getElementById('path_button');
+					var h_button = document.getElementById('h_button');
+					var e_mail = document.getElementById('email');
+					var e_name = document.getElementById('name');
+					var e_title = document.getElementById('title');
+					var message_input = document.getElementById('message');
+					var popup_content = document.querySelector('.popup_content');
+					var dimm_filter = document.querySelector('.dimm_filter');
+					var popup_close = document.getElementById('popup_close');
+					var vali;
+					
+					console.log('--- email in ---');
+					$('.email_wrap').find('[tabindex]').attr('tabindex','0');
+					$('.email_wrap').find('[tabindex]').eq(0).focus();
+
+					function h_button_click(){
+						// popup_content = document.querySelector('.popup_content');
+						vali = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+						console.log('dimm_filter = '+dimm_filter.className);
+
+						dimm_filter.classList.add('on');
+						if(e_mail.value==''){
+							popup_content.querySelector('p').innerHTML+='<span>이메일을 입력 해주세요.</span><br>';
+						};
+						if((e_mail.value!=='')&&(!vali.test(e_mail.value))){
+							popup_content.querySelector('p').innerHTML+='<span>이메일 주소가 형식에 맞지 않습니다.</span><br>';
+						}
+						if(e_name.value==''){
+							popup_content.querySelector('p').innerHTML+='<span>이름을 입력 해주세요.</span><br>';
+						};
+						if(e_title.value==''){
+							popup_content.querySelector('p').innerHTML+='<span>제목을 입력 해주세요.</span><br>';
+						};
+						if(message_input.value==''){
+							popup_content.querySelector('p').innerHTML+='<span>내용을 입력 해주세요.</span><br>';
+						};
+						if(e_mail.value!=''&&e_name.value!=''&&e_title.value!=''&&message_input.value!=''&&vali.test(e_mail.value)){
+							p_button.click();
+							dimm_filter.classList.remove('on');
+						};
+						form_tabindex.forEach(function(item){
+							item.setAttribute('tabindex','-1');
+						});
+						popup_close.setAttribute('tabindex','0');
+						popup_close.focus();
+					};
+					popup_close.addEventListener('click',function(e){
+						dimm_filter.classList.remove('on');
+						popup_content.querySelector('p').innerHTML='';
+						form_tabindex.forEach(function(item){
+							item.setAttribute('tabindex','0');
+						});
+						popup_close.setAttribute('tabindex','-1');
+					});
+					// popup_content.addEventListener('keydown',function(e){
+					//     if((e.keyCode=='27')||(e.key=='Escape')||(e.keyCode=='13')||(e.key=='Enter')){
+					//         dimm_filter.classList.remove('on');
+					//         popup_content.querySelector('p').innerHTML='';
+					//     }
+					// });
+					h_button.addEventListener('click',h_button_click);
+
+
+					document.getElementById('mail_form').addEventListener('submit', function(event) {
+						event.preventDefault();
+						popup_content = document.querySelector('.popup_content');
+						dimm_filter = document.querySelector('.dimm_filter');
+						// these IDs from the previous steps
+						emailjs.sendForm('clocktree', 'template_n3hysjz', this)
+							.then(() => {
+									// console.log('SUCCESS!');
+									dimm_filter.classList.add('on');
+									popup_content.querySelector('p').innerHTML+='<span>메일이 발송 되었습니다.</span><br>';
+									// alert('메일이 발송 되었습니다.');
+									e_mail.value='';
+									e_name.value='';
+									e_title.value='';
+									message_input.value='';
+									form_tabindex.forEach(function(item){
+										item.setAttribute('tabindex','0');
+									});
+									popup_close.setAttribute('tabindex','-1');
+								}, (error) => {
+									// console.log('FAILED...', error);
+									dimm_filter.classList.add('on');
+									popup_content.querySelector('p').innerHTML+='<span>메일 발송에 실패하였습니다.</span><br>';
+									form_tabindex.forEach(function(item){
+										item.setAttribute('tabindex','0');
+									});
+									popup_close.setAttribute('tabindex','-1');
+									// alert('메일 발송에 실패하였습니다.');
+								});
+					});
+				};
+
+
+				conbox_contents();
+			}, 50);
 		});
 		// return false;
 		// $layer_sel.focus();
@@ -2181,7 +2331,7 @@ $(function(){
 							weather_Clouds();
 						}else if((wearther_out=='Overcast')&&((wearther_out!==null)||(wearther_out!==''))){
 							weather_Overcast();
-						}else if((wearther_out=='Mist')&&((wearther_out!==null)||(wearther_out!==''))){
+						}else if((wearther_out=='Mist'||wearther_out=='Fog')&&((wearther_out!==null)||(wearther_out!==''))){
 							weather_Mist();
 						}else if((wearther_out=='Haze')&&((wearther_out!==null)||(wearther_out!==''))){
 							weather_Haze();

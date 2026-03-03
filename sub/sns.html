@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
     <title>메일선택</title>
     <link rel="stylesheet" type="text/css" href="../css/email.css">
-   
+    <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
   </head>
  
   <div class="section_sns">
@@ -36,7 +36,58 @@
             </li>
         </ul>
     </div>
+    <script>
+    $(function(){
+      if(document.getElementById('sns_wrap')){
+          // var email_wrap = document.getElementById('mail_table');
+          var sns_wrap = document.getElementById('sns_wrap');
+          // var filter_conbox_contentswrap = document.getElementById('filter-conbox-contentswrap');
+          var all_filter_conbox = document.getElementById('all-filter-conbox');
+          
+          // $('#all-filter-conbox').find('[tabindex]').attr('tabindex','0');
+          // $('#all-filter-conbox').find('[tabindex]').eq(0).focus();
+          
+          $('.sns_wrap').find('[tabindex]').attr('tabindex','0');
+          $('.sns_wrap').find('[tabindex]').eq(0).focus();
+          
+          $('.sns_wrap').on('keydown', function(e){
+            console.log('email tabindex');
 
+            var this_on_focus;
+
+            var con_range = $('.all-filter-conbox, .conbox-contents-view, .sns_wrap').find('.filter-title-closebtn, .filter-conbox-contentswrap, .popup_content').find('a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), submit, submit:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]');
+            var con_first = con_range.eq(0);
+            var con_last = con_range.eq(con_range.length-1);
+            
+            var focus_content = 'a[href], area[href], input:not([disabled]), select:not([disabled]), textarea:not([disabled]), button, button:not([disabled]), submit, submit:not([disabled]), iframe, object, embed, *[tabindex], *[contenteditable]';
+           
+            var conbox_content = sns_wrap.querySelectorAll(focus_content);
+            var first_content = sns_wrap.querySelectorAll(focus_content)[0];
+            var last_content = sns_wrap.querySelectorAll(focus_content)[conbox_content.length-1];
+            var first_content_0 = sns_wrap.querySelectorAll(focus_content)[0];
+
+            console.log('last_content = '+conbox_content.length);
+
+            this_on_focus = document.activeElement;
+            console.log('this_on_focus = '+this_on_focus);
+            if ((e.keyCode===9 && !e.shiftKey)&&(this_on_focus==last_content)) {
+              console.log('pop ride this_1');
+              first_content.focus();
+              e.preventDefault();
+            }
+            if((e.keyCode===9 && e.shiftKey)&&(this_on_focus==first_content)) {
+              console.log('pop ride this_2');
+              last_content.focus();
+              // first_content.focus();
+              e.preventDefault();
+            }
+            // e.preventDefault();
+          });
+      };
+
+    });
+    
+    </script>
   </body>
  
 </html>
