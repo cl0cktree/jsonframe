@@ -129,6 +129,7 @@
                             });
                             popup_close.setAttribute('tabindex','-1');
                             h_button.focus();
+                            window.close();
                         }, (error) => {
                             // console.log('FAILED...', error);
                             dimm_filter.classList.add('on');
@@ -139,6 +140,7 @@
                             });
                             popup_close.setAttribute('tabindex','-1');
                             h_button.focus();
+                            window.close();
                             // alert('메일 발송에 실패하였습니다.');
                         });
                 
