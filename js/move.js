@@ -10,7 +10,7 @@ $(function(){
 	var body_tag = document.body;
 	var $body = $('body');
 	var scroll_framespeed = 1000/60;
-	var cal_year = 2025;
+	var cal_year = 2026;
 	var nav_num;
 	var nav_num_start;
 	var contents_head;
