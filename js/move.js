@@ -1980,6 +1980,9 @@ $(function(){
 			}else if ((this==document.getElementById('con-box9-imgborder3'))||(this==document.getElementById('con-box9-caption3'))||(this==document.getElementById('scroll9-con-box3')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents37';
+			}else if ((this==document.getElementById('con-box10-imgborder1'))||(this==document.getElementById('con-box10-caption1'))||(this==document.getElementById('scroll10-con-box1')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents38';
 			}
 
 			else{
