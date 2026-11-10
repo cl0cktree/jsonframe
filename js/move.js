@@ -1983,6 +1983,9 @@ $(function(){
 			}else if ((this==document.getElementById('con-box10-imgborder1'))||(this==document.getElementById('con-box10-caption1'))||(this==document.getElementById('scroll10-con-box1')))
 			{
 				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents38';
+			}else if ((this==document.getElementById('con-box10-imgborder2'))||(this==document.getElementById('con-box10-caption2'))||(this==document.getElementById('scroll10-con-box2')))
+			{
+				datasum = portfolioindex_url+'/data/data.html #filter-conbox-contents39';
 			}
 
 			else{
